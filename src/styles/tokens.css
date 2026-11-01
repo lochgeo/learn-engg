@@ -1,0 +1,140 @@
+/* Design tokens — the only place palette, type and shape values live.
+   Dark mode remaps tokens instead of restyling components. */
+:root {
+  /* Type */
+  --font-sans: 'DM Sans', sans-serif;
+  --serif: 'Manrope', sans-serif;
+
+  /* Surfaces */
+  --paper: #f7f7f4;
+  --surface: #fff;
+  --surface-soft: #fafbf8;
+  --surface-sunken: #f5f7f2;
+  --sidebar: #fff;
+
+  /* Ink */
+  --ink: #262a25;
+  --ink-strong: #2b302b;
+  --ink-body: #4e554b;
+  --muted-soft: #999e95;
+
+  /* Lines */
+  --line: #e9eae4;
+  --line-soft: #f0f1ed;
+
+  /* Accent */
+  --accent-deep: #304b39;
+  --accent-ink: #3f6048;
+  --accent-soft: #eff3ed;
+  --green-pale: #eef3ed;
+
+  /* Subject tints */
+  --blue: #4b7590;
+  --blue-soft: #e9f1f5;
+  --orange: #bc8053;
+  --orange-soft: #f8eee5;
+  --purple: #78669a;
+  --purple-soft: #f0edf6;
+
+  /* Progress + completion */
+  --progress-track: #eff0eb;
+  --progress-fill: #789177;
+  --complete-bg: var(--surface);
+  --complete-border: #dfe5dc;
+  --complete-ink: #5c745d;
+  --complete-done-bg: #edf3eb;
+  --complete-done-border: #d9e4d6;
+  --complete-done-ink: #5c745d;
+
+  /* Learning blocks */
+  --block-concept-bg: #f2f6f0;
+  --block-concept-line: #dbe5d8;
+  --block-concept-accent: #74916e;
+  --block-concept-ink: #587052;
+  --block-example-bg: #eef5f7;
+  --block-example-line: #d9e7ec;
+  --block-example-accent: #7695a4;
+  --block-example-ink: #547987;
+  --block-check-bg: #faf5ec;
+  --block-check-line: #eee1cd;
+  --block-check-accent: #b08a57;
+  --block-check-ink: #8c6a3b;
+  --block-mistake-bg: #fbf0ed;
+  --block-mistake-line: #efdcd6;
+  --block-mistake-accent: #b87969;
+  --block-mistake-ink: #925f52;
+  --block-recap-bg: #f2f4ed;
+  --block-recap-line: #e0e5d8;
+  --block-recap-accent: #8d9c78;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-pill: 20px;
+  --shadow-pop: 0 16px 50px #20271c25;
+
+  /* Motion */
+  --ease: .15s ease;
+
+  font-family: var(--font-sans);
+  /* Page-level text colour differs slightly from the app ink (#252923 vs #262a25). */
+  color: #252923;
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.dark {
+  --paper: #101719;
+  --surface: #192326;
+  --surface-soft: #202c2f;
+  --surface-sunken: #202d29;
+  --sidebar: #151f22;
+  --ink: #e5eeea;
+  --ink-strong: #e5eeea;
+  --ink-body: #bdc9c2;
+  --muted-soft: #aab8b1;
+  --line: #2b393b;
+  --line-soft: #303e3f;
+  --accent-deep: #c4dfc9;
+  --accent-ink: #c2e1c4;
+  --accent-soft: #21332e;
+  --green-pale: #21332e;
+  --blue: #9bc7d4;
+  --blue-soft: #26383e;
+  --orange: #e2b48a;
+  --orange-soft: #3b3027;
+  --purple: #c0b1e0;
+  --purple-soft: #322d3e;
+  --progress-track: #303d3e;
+  --progress-fill: #83a98b;
+  --complete-bg: #202d2b;
+  --complete-border: #3a4b42;
+  --complete-ink: #c8ddc4;
+  --complete-done-bg: #2a4034;
+  --complete-done-border: #47644e;
+  --complete-done-ink: #c7e0c4;
+  --block-concept-bg: #20332d;
+  --block-concept-line: #365246;
+  --block-concept-accent: #8eb796;
+  --block-concept-ink: #bad4bd;
+  --block-example-bg: #203139;
+  --block-example-line: #354f5a;
+  --block-example-accent: #8db8c5;
+  --block-example-ink: #b6d4dc;
+  --block-check-bg: #352f23;
+  --block-check-line: #554a34;
+  --block-check-accent: #d0ae77;
+  --block-check-ink: #e0c89b;
+  --block-mistake-bg: #382a28;
+  --block-mistake-line: #583e38;
+  --block-mistake-accent: #d59786;
+  --block-mistake-ink: #e0b2a6;
+  --block-recap-bg: #293229;
+  --block-recap-line: #414e3d;
+  --block-recap-accent: #a9ba90;
+}
+

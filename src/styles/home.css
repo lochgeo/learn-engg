@@ -1,0 +1,469 @@
+/* Home: welcome, subjects, continue learning, weekly rhythm, library */
+.welcome-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #5f755c;
+  background: #eff3ec;
+  border-radius: var(--radius-pill);
+  padding: 6px 9px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .9px;
+}
+
+.welcome-pill span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #78946f;
+}
+
+.welcome-date {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #a2a69d;
+}
+
+.welcome-heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 206px;
+  margin: 8px 0 13px;
+  overflow: hidden;
+}
+
+.welcome-heading h1 {
+  font: 500 43px/1.13 var(--serif);
+  letter-spacing: -2.5px;
+  margin: 5px 0 13px;
+  color: var(--ink-strong);
+}
+
+.welcome-heading h1 em {
+  font-weight: 500;
+  color: #6e8968;
+}
+
+.welcome-heading p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #888e84;
+  margin: 0;
+}
+
+/* Decorative orbit illustration */
+.welcome-illustration {
+  width: 340px;
+  height: 195px;
+  position: absolute;
+  right: 13px;
+  top: -2px;
+  display: grid;
+  place-items: center;
+  color: #8da184;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid #dce4d8;
+  border-radius: 50%;
+  transform: rotate(-22deg);
+}
+
+.orbit-one { width: 275px; height: 126px }
+
+.orbit-two {
+  width: 238px;
+  height: 160px;
+  transform: rotate(33deg);
+  border-color: #e5e9e1;
+}
+
+.illustration-sun {
+  position: absolute;
+  font-size: 16px;
+  top: 38px;
+  right: 68px;
+  color: #b4bd93;
+}
+
+.illustration-book {
+  width: 92px;
+  height: 76px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: #edf0e5;
+  color: #71806a;
+  border-radius: 5px 12px 8px 4px;
+  box-shadow: 8px 8px 0 #e1e5da;
+  font: 30px Georgia;
+  transform: rotate(-8deg);
+}
+
+.illustration-book small { font: italic 11px Georgia }
+
+.spark { position: absolute; color: #a5b08c }
+
+.spark-one { font-size: 16px; top: 58px; left: 77px }
+
+.spark-two { font-size: 27px; bottom: 43px; right: 66px }
+
+.spark-three {
+  font-size: 11px;
+  bottom: 38px;
+  left: 91px;
+  color: #c4ac88;
+}
+
+/* Section headers */
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin: 21px 0 12px;
+}
+
+.section-heading h2,
+.library-heading h2 {
+  font: 600 18px var(--serif);
+  letter-spacing: -.6px;
+  margin: 5px 0 0;
+}
+
+.text-link {
+  border: 0;
+  background: transparent;
+  color: #7e8877;
+  font-size: 9px;
+  padding: 4px 0;
+}
+
+.text-link span { color: #a6ad9d; margin-left: 4px }
+
+/* Subject cards */
+.subject-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.course-card {
+  min-height: 151px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  text-align: left;
+  padding: 14px 15px 11px;
+  transition: transform var(--ease), border-color var(--ease);
+}
+
+.course-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7d1c4;
+}
+
+.course-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+.card-blue .course-icon { background: #edf3f5; color: #5c8195 }
+
+.card-orange .course-icon { background: #f8f0e8; color: #c2895e }
+
+.card-purple .course-icon { background: #f1eff6; color: #80719b }
+
+.course-arrow { color: #adb2aa; font-size: 13px }
+
+.course-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 600 13px var(--serif);
+  margin-top: 11px;
+}
+
+.chapter-total { font: 9px 'DM Sans', sans-serif; color: var(--muted-soft) }
+
+.course-card p {
+  font-size: 9px;
+  color: #858b82;
+  margin: 4px 0 13px;
+}
+
+.course-progress {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #899084;
+  font-size: 8px;
+}
+
+.progress-track {
+  height: 4px;
+  background: var(--progress-track);
+  border-radius: 6px;
+  display: block;
+  flex: 1;
+  overflow: hidden;
+}
+
+.progress-track > span {
+  display: block;
+  height: 100%;
+  background: var(--progress-fill);
+  border-radius: 6px;
+}
+
+/* Continue learning + weekly rhythm */
+.learning-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(205px, .85fr);
+  gap: 19px;
+  margin-top: 30px;
+}
+
+.section-heading.compact { margin: 0 0 11px }
+
+.section-heading.compact h2 { font-size: 17px }
+
+.continue-card {
+  width: 100%;
+  min-height: 161px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  text-align: left;
+  overflow: hidden;
+  padding: 0;
+}
+
+.continue-art {
+  background: #eef1e9;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  min-height: 161px;
+  color: #72846c;
+}
+
+.ring {
+  position: absolute;
+  border: 1px solid #d5ddcf;
+  border-radius: 50%;
+}
+
+.ring-a { width: 133px; height: 133px }
+
+.ring-b { width: 98px; height: 98px }
+
+.art-symbol {
+  font: 38px Georgia;
+  color: #79896e;
+  z-index: 1;
+}
+
+.art-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 14px;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #899480;
+}
+
+.art-star {
+  position: absolute;
+  right: 22px;
+  top: 21px;
+  color: #a3ad8b;
+}
+
+.continue-info { padding: 16px 17px 12px }
+
+.continue-meta {
+  font-size: 8px;
+  letter-spacing: .6px;
+  font-weight: 700;
+  color: #8d9389;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-dot {
+  width: 7px;
+  height: 7px;
+  background: #8099a1;
+  border-radius: 50%;
+}
+
+.mini-dot.chemistry { background: #cc9468 }
+
+.mini-dot.mathematics { background: #9382af }
+
+.meta-divider { color: #c2c6bd }
+
+.continue-info h3 {
+  font: 600 14px var(--serif);
+  letter-spacing: -.3px;
+  margin: 10px 0 5px;
+}
+
+.continue-info > p {
+  font-size: 9px;
+  line-height: 1.55;
+  color: #92978e;
+  margin: 0;
+  max-width: 370px;
+}
+
+.continue-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.resume-button {
+  font-size: 9px;
+  font-weight: 600;
+  color: #49634d;
+}
+
+.resume-button span { padding-left: 7px }
+
+.lesson-time { font-size: 8px; color: #a0a49b }
+
+.weekly-card {
+  border: 1px solid #e6e9df;
+  border-radius: var(--radius-md);
+  background: #f0f2eb;
+  padding: 17px 16px 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.weekly-top { display: flex; justify-content: space-between }
+
+.weekly-top h3 {
+  font: 500 15px/1.4 var(--serif);
+  letter-spacing: -.4px;
+  margin: 8px 0 0;
+}
+
+.weekly-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e2e8dc;
+  color: #839078;
+  font-size: 12px;
+}
+
+.weekly-card > p {
+  font-size: 9px;
+  line-height: 1.65;
+  color: #82897e;
+  margin: 14px 0 19px;
+}
+
+.weekly-card > p strong { font-weight: 700; color: #5d6857 }
+
+.weekly-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7px;
+  letter-spacing: .8px;
+  color: #91978c;
+  margin-bottom: 7px;
+}
+
+.weekly-progress-header strong {
+  font-size: 9px;
+  color: #63785e;
+  letter-spacing: 0;
+}
+
+.weekly-note {
+  border-top: 1px solid #dfe4d9;
+  margin-top: 15px;
+  padding-top: 11px;
+  color: #858d7f;
+  font-size: 8px;
+}
+
+.weekly-note span { color: #91a17b; margin-right: 5px }
+
+/* Library rows */
+.library-heading { margin-top: 31px }
+
+.library-heading h2 { font-size: 17px }
+
+.library-list {
+  border-top: 1px solid var(--line);
+  margin-top: 12px;
+}
+
+.library-row {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 11px;
+  padding: 10px 5px;
+}
+
+.library-row:hover { background: rgba(240, 242, 235, .5) }
+
+.library-icon { height: 28px; width: 28px }
+
+.library-title { font-size: 10px; font-weight: 600 }
+
+.library-title small {
+  display: block;
+  color: var(--muted-soft);
+  font-weight: 400;
+  font-size: 8px;
+  margin-top: 3px;
+}
+
+.library-count {
+  margin-left: auto;
+  color: var(--muted-soft);
+  font-size: 9px;
+}
+
+.library-arrow {
+  color: #a0a59c;
+  font-size: 12px;
+  padding-left: 4px;
+}

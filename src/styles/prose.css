@@ -1,0 +1,94 @@
+/* Markdown typography inside lessons */
+.lesson-prose {
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--ink-body);
+}
+
+.lesson-prose h2 {
+  font: 600 18px var(--serif);
+  letter-spacing: -.5px;
+  color: #31382f;
+  margin: 5px 0 11px;
+}
+
+.lesson-prose h3 {
+  font: 600 14px var(--serif);
+  color: #3b4339;
+  margin: 23px 0 7px;
+}
+
+.lesson-prose p { margin: 0 0 13px }
+
+.lesson-prose blockquote {
+  margin: 16px 0;
+  padding: 10px 14px;
+  border-left: 2px solid #91a487;
+  background: #f1f4ee;
+  color: #6c7868;
+  font: italic 12px/1.7 var(--serif);
+}
+
+.lesson-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 20px;
+  font-size: 10px;
+}
+
+.lesson-prose th {
+  text-align: left;
+  background: #f1f3ee;
+  color: #596652;
+  font-size: 9px;
+}
+
+.lesson-prose th,
+.lesson-prose td {
+  padding: 8px;
+  border: 1px solid var(--line);
+}
+
+.lesson-prose details {
+  background: #f2f4ef;
+  border: 1px solid #e8ebe4;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 12px 0;
+  color: #64735f;
+}
+
+.lesson-prose summary {
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lesson-prose details p { font-size: 10px; margin: 8px 0 0 }
+
+/* Display maths: a scrollable card rather than a full-bleed row */
+.lesson-prose .katex-display {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.4rem auto;
+  padding: .8rem 1.2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  background: #f7f9f5;
+  border: 1px solid #82977f;
+  border-radius: var(--radius-md);
+  scrollbar-width: thin;
+  scrollbar-color: #c7d2c4 transparent;
+}
+
+.lesson-prose .katex-display > .katex {
+  font-size: 1.12em;
+  white-space: nowrap;
+}
+
+.lesson-prose p .katex {
+  font-size: 1.04em;
+  color: #3f5e48;
+}

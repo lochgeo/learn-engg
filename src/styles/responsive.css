@@ -1,0 +1,383 @@
+/* Breakpoints: 1200 desktop scale, 950 tablet, 850 subject grid, 680 phone */
+@media (min-width: 1200px) {
+  .topbar {
+    height: 70px;
+    padding-inline: clamp(40px, 4.2vw, 72px);
+  }
+
+  .breadcrumb { font-size: 12px; gap: 12px }
+
+  .search-trigger {
+    font-size: 12px;
+    min-width: 248px;
+    padding: 9px 11px;
+  }
+
+  .search-trigger kbd { font-size: 10px }
+
+  .help-button { font-size: 12px }
+
+  .page-content {
+    max-width: 1320px;
+    padding: 45px clamp(40px, 4.6vw, 72px) 84px;
+  }
+
+  .sidebar { width: 270px; padding: 27px 18px 17px }
+
+  .main-panel { margin-left: 270px }
+
+  .brand { font-size: 23px; padding-bottom: 47px }
+
+  .sidebar-label { font-size: 10px }
+
+  .nav-link,
+  .subject-link { font-size: 13px; height: 42px }
+
+  .subject-count { font-size: 11px }
+
+  .chapter-heading { font-size: 10px; padding-block: 8px }
+
+  .chapter-link { font-size: 11px; padding-block: 8px }
+
+  .welcome-pill { font-size: 10px; padding: 7px 11px }
+
+  .welcome-date { font-size: 10px }
+
+  .welcome-heading { min-height: 246px; margin-top: 12px }
+
+  .welcome-heading h1 { font-size: 56px; letter-spacing: -3px }
+
+  .welcome-heading p { font-size: 14px }
+
+  .welcome-illustration {
+    transform: scale(1.12);
+    transform-origin: center right;
+  }
+
+  .section-heading { margin: 27px 0 15px }
+
+  .section-heading h2,
+  .library-heading h2 { font-size: 22px }
+
+  .eyebrow { font-size: 10px; letter-spacing: 1.4px }
+
+  .text-link { font-size: 11px }
+
+  .subject-cards { gap: 16px }
+
+  .course-card {
+    min-height: 178px;
+    padding: 18px 19px 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .course-icon { width: 34px; height: 34px; font-size: 18px }
+
+  .course-name { font-size: 16px; margin-top: 14px }
+
+  .chapter-total { font-size: 11px }
+
+  .course-card p { font-size: 12px; margin: 6px 0 15px }
+
+  .course-progress { font-size: 10px }
+
+  .learning-grid { gap: 22px; margin-top: 38px }
+
+  .section-heading.compact { margin-bottom: 14px }
+
+  .section-heading.compact h2 { font-size: 21px }
+
+  .continue-card {
+    grid-template-columns: 190px 1fr;
+    min-height: 194px;
+    border-radius: var(--radius-lg);
+  }
+
+  .continue-art { min-height: 194px }
+
+  .continue-info { padding: 21px 22px 16px }
+
+  .continue-meta { font-size: 10px }
+
+  .continue-info h3 { font-size: 18px; margin: 12px 0 7px }
+
+  .continue-info > p { font-size: 12px; line-height: 1.65 }
+
+  .continue-bottom { margin-top: 17px }
+
+  .resume-button { font-size: 11px }
+
+  .lesson-time { font-size: 10px }
+
+  .weekly-card { padding: 21px 20px 16px }
+
+  .weekly-top h3 { font-size: 19px }
+
+  .weekly-card > p { font-size: 11px }
+
+  .weekly-progress-header { font-size: 9px }
+
+  .weekly-progress-header strong { font-size: 11px }
+
+  .weekly-note { font-size: 10px }
+
+  .library-heading { margin-top: 39px }
+
+  .library-row { padding: 13px 7px; gap: 13px }
+
+  .library-icon { width: 34px; height: 34px; font-size: 16px }
+
+  .library-title { font-size: 13px }
+
+  .library-title small { font-size: 10px }
+
+  .library-count { font-size: 11px }
+
+  .lesson-page { max-width: 980px }
+
+  .lesson-title-row h1 { font-size: 40px }
+
+  .lesson-deck { font-size: 14px }
+
+  .lesson-meta { font-size: 11px }
+
+  .lesson-layout {
+    grid-template-columns: 205px minmax(0, 1fr);
+    gap: 46px;
+    padding-top: 28px;
+  }
+
+  .toc-card,
+  .objectives-card { padding: 16px 15px }
+
+  .toc-card a { font-size: 13px; padding: 8px 0 }
+
+  .lesson-prose { font-size: 15px; line-height: 1.9 }
+
+  .lesson-prose h2 { font-size: 23px; margin-top: 8px }
+
+  .lesson-prose h3 { font-size: 18px; margin-top: 28px }
+
+  .lesson-prose table { font-size: 13px }
+
+  .lesson-prose th { font-size: 11px }
+
+  .lesson-prose th,
+  .lesson-prose td { padding: 10px }
+
+  .lesson-prose blockquote { font-size: 15px; padding: 13px 17px }
+
+  .lesson-prose summary { font-size: 12px }
+
+  .lesson-prose details p { font-size: 13px }
+
+  .complete-button { font-size: 11px; padding: 10px 13px }
+
+  .lesson-actions > span,
+  .lesson-pagination button { font-size: 11px }
+
+  .lesson-prose .katex-display { margin: 1.65rem auto; padding: 1.2rem 1.6rem }
+
+  .lesson-prose .katex-display > .katex { font-size: 1.18em }
+}
+
+@media (max-width: 950px) {
+  .sidebar { width: 220px }
+
+  .main-panel { margin-left: 220px }
+
+  .topbar { padding: 0 26px }
+
+  .page-content { padding: 29px 27px 55px }
+
+  .welcome-illustration { right: -48px; opacity: .75 }
+
+  .learning-grid { grid-template-columns: 1fr }
+
+  .weekly-card { display: none }
+
+  .lesson-layout {
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .chapter-catalog { grid-template-columns: 1fr }
+}
+
+@media (max-width: 680px) {
+  body { min-width: 320px }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform .2s;
+    width: 260px;
+    box-shadow: 8px 0 24px #1f281616;
+  }
+
+  .sidebar.sidebar-open { transform: translateX(0) }
+
+  .main-panel { margin-left: 0 }
+
+  .topbar { height: 55px; padding: 0 16px }
+
+  .mobile-menu {
+    display: block;
+    border: 0;
+    background: none;
+    color: #6e766b;
+    font-size: 16px;
+    padding: 4px 7px 4px 0;
+  }
+
+  .breadcrumb {
+    margin-right: auto;
+    margin-left: 5px;
+    gap: 6px;
+    font-size: 9px;
+  }
+
+  .top-actions { gap: 5px }
+
+  .search-trigger {
+    min-width: 0;
+    width: 33px;
+    height: 31px;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 0;
+  }
+
+  .search-trigger > span { font-size: 20px }
+
+  .search-trigger kbd,
+  .help-button { display: none }
+
+  .page-content { padding: 24px 17px 45px }
+
+  .welcome-heading { min-height: 200px }
+
+  .welcome-heading h1 { font-size: 38px }
+
+  .welcome-heading p { font-size: 10px }
+
+  .welcome-illustration { right: -121px; opacity: .46 }
+
+  .welcome-date { font-size: 7px }
+
+  .subject-cards { grid-template-columns: 1fr; gap: 8px }
+
+  .course-card { min-height: 126px }
+
+  .course-card p { margin-bottom: 10px }
+
+  .section-heading { margin-top: 21px }
+
+  .learning-grid { margin-top: 25px }
+
+  .continue-card { grid-template-columns: 108px 1fr }
+
+  .continue-art { min-height: 175px }
+
+  .ring-a { width: 97px; height: 97px }
+
+  .ring-b { width: 74px; height: 74px }
+
+  .continue-info { padding: 13px 11px }
+
+  .continue-meta { font-size: 7px; flex-wrap: wrap }
+
+  .continue-info h3 { font-size: 12px; line-height: 1.4 }
+
+  .continue-info > p { font-size: 8px }
+
+  .resume-button { font-size: 8px }
+
+  .library-heading { margin-top: 25px }
+
+  .lesson-title-row { align-items: flex-start; flex-direction: column }
+
+  .lesson-title-row h1 { font-size: 27px }
+
+  .lesson-title-row .complete-button { display: none }
+
+  .lesson-layout { grid-template-columns: 1fr; gap: 18px }
+
+  .lesson-aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: static;
+  }
+
+  .toc-card a { font-size: 12px }
+
+  .objectives-card p { font-size: 12px }
+
+  .lesson-prose { font-size: 11px }
+
+  .lesson-prose h2 { font-size: 17px }
+
+  .lesson-pagination button { font-size: 9px }
+
+  .lesson-meta { font-size: 8px }
+
+  .desktop-break { display: none }
+
+  .section-heading.compact .text-link { font-size: 8px }
+
+  .lesson-prose .katex-display {
+    margin: 1.1rem auto;
+    padding: .85rem .7rem;
+    border-radius: 8px;
+  }
+
+  .lesson-prose .katex-display > .katex { font-size: 1.02em }
+
+  .learning-block { padding: 12px 13px; margin: 17px 0 }
+
+  .lesson-prose figure.lesson-figure { margin: 20px 0 }
+
+  .lesson-prose figure.lesson-figure figcaption { font-size: 10px }
+
+  .lesson-prose figure.lesson-figure--portrait { max-width: 290px }
+
+  .font-controls { padding: 1px }
+
+  .font-size-button { font-size: 9px; padding: 6px 4px }
+
+  .reading-label { display: none }
+
+  .subject-page-heading { gap: 12px; margin-top: 4px }
+
+  .subject-page-icon { width: 48px; height: 48px; font-size: 24px }
+
+  .subject-page-heading h1 { font-size: 28px }
+
+  .subject-page-heading p { font-size: 12px }
+
+  .subject-progress-summary { flex-wrap: wrap }
+
+  .catalog-chapter-heading { padding: 14px }
+
+  .catalog-lesson { padding: 13px 4px }
+
+  .toc-card,
+  .objectives-card { font-size: 12px }
+
+  .toc-card a,
+  .objectives-card p { font-size: 12px }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+
+  .app-shell { transition: none }
+}

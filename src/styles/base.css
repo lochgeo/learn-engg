@@ -1,0 +1,39 @@
+/* Reset and shell */
+* { box-sizing: border-box }
+
+body {
+  margin: 0;
+  min-width: 360px;
+  background: var(--paper);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #668770;
+  outline-offset: 2px;
+}
+
+.app-shell {
+  --reading-scale: 1;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  transition: background .2s, color .2s;
+  zoom: var(--reading-scale);
+}
+
+/* Shared label treatment used by the sidebar, section headers and cards */
+.sidebar-label,
+.eyebrow {
+  color: #999e94;
+  font-size: 9px;
+  letter-spacing: 1.25px;
+  font-weight: 700;
+}

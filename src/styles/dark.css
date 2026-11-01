@@ -1,0 +1,276 @@
+/* Dark theme — colour remaps only. Layout and type come from the shared layers,
+   and the systematic palette above is already swapped in tokens.css. */
+.dark .topbar {
+  background: #151f22;
+  border-color: #29373a;
+}
+
+.dark .brand-mark { background: #416957; color: #eef8f1 }
+
+.dark .brand-dot { color: #8fbc9d }
+
+.dark .brand,
+.dark .welcome-heading h1 { color: #e3e8df }
+
+.dark .sidebar-label,
+.dark .eyebrow { color: #9aaba1 }
+
+.dark .nav-link,
+.dark .subject-link { color: #c0ccc5 }
+
+.dark .nav-link.selected,
+.dark .subject-current { background: #263a32; color: #d7ebd9 }
+
+.dark .subject-count,
+.dark .subject-caret { color: #a2b1a8 }
+
+.dark .chapter-nav { border-color: #34463e }
+
+.dark .chapter-heading { color: #bdc9c1 }
+
+.dark .chapter-number,
+.dark .chapter-link { color: #a6b4aa }
+
+.dark .chapter-heading.chapter-current,
+.dark .chapter-active { color: #b9d9be }
+
+.dark .chapter-line { border-color: #75877a }
+
+.dark .chapter-active .chapter-line {
+  background: #8fba99;
+  border-color: #8fba99;
+}
+
+.dark .streak-card {
+  background: #1b2827;
+  border-color: #30403d;
+}
+
+.dark .streak-top,
+.dark .streak-days { color: #b4cfaa }
+
+.dark .streak-day span { background: #3a4239 }
+
+.dark .profile-name { color: #dbe5df }
+
+.dark .avatar { background: #473c32; color: #e4c4a5 }
+
+.dark .breadcrumb,
+.dark .crumb-current,
+.dark .help-button,
+.dark .icon-button { color: #b5c1b9 }
+
+.dark .crumb-divider { color: #65736b }
+
+.dark .search-trigger {
+  border-color: #354448;
+  color: #bdc8c1;
+}
+
+.dark .search-trigger kbd,
+.dark .search-input-row kbd {
+  background: #202a2c;
+  border-color: #3c494a;
+  color: #aab8b1;
+}
+
+.dark .font-controls {
+  border-color: #354448;
+  background: #202c2f;
+}
+
+.dark .font-size-button { color: #c1cec4 }
+
+.dark .font-size-button:disabled { color: #65736b }
+
+.dark .reading-label { color: #aab8b1 }
+
+.dark .welcome-pill {
+  background: #24372f;
+  color: #b9d3ad;
+}
+
+.dark .welcome-pill span { background: #9cbd89 }
+
+.dark .resume-button { color: #b2c9a6 }
+
+.dark .welcome-date,
+.dark .welcome-heading p { color: #a9b7ae }
+
+.dark .welcome-heading h1 em { color: #a0b991 }
+
+.dark .orbit { border-color: #354941 }
+
+.dark .orbit-two { border-color: #303d3c }
+
+.dark .illustration-book {
+  background: #26352f;
+  color: #b1c6a7;
+  box-shadow: 8px 8px 0 #1c2b27;
+}
+
+.dark .illustration-sun,
+.dark .spark { color: #a8bb8f }
+
+.dark .course-card,
+.dark .continue-card,
+.dark .toc-card,
+.dark .objectives-card {
+  border-color: #2d3b3d;
+}
+
+.dark .course-card:hover,
+.dark .continue-card:hover { border-color: #4a6558 }
+
+.dark .card-blue .course-icon { background: #26383e; color: #9bc7d4 }
+
+.dark .card-orange .course-icon { background: #3b3027; color: #e2b48a }
+
+.dark .card-purple .course-icon { background: #322d3e; color: #c0b1e0 }
+
+.dark .course-name,
+.dark .continue-info h3,
+.dark .library-title,
+.dark .section-heading h2,
+.dark .library-heading h2,
+.dark .weekly-top h3 { color: #e5eeea }
+
+.dark .chapter-total,
+.dark .course-card p,
+.dark .continue-info > p,
+.dark .lesson-time,
+.dark .library-title small,
+.dark .library-count { color: #aab8b1 }
+
+.dark .continue-art {
+  background: #22312c;
+  color: #adbf9e;
+}
+
+.dark .ring { border-color: #40544a }
+
+.dark .art-symbol { color: #adbf9e }
+
+.dark .art-caption { color: #b3c0ab }
+
+.dark .weekly-card {
+  background: #1d2a27;
+  border-color: #31423c;
+}
+
+.dark .weekly-card > p,
+.dark .weekly-note,
+.dark .weekly-progress-header { color: #aab8ad }
+
+.dark .weekly-card > p strong,
+.dark .weekly-progress-header strong { color: #c2d5b7 }
+
+.dark .weekly-icon { background: #2c4035; color: #b7ccaa }
+
+.dark .weekly-note { border-color: #34463e }
+
+.dark .library-list,
+.dark .library-row { border-color: #2b393b }
+
+.dark .library-row:hover,
+.dark .search-result:hover { background: #202d2c }
+
+.dark .lesson-title-row h1,
+.dark .lesson-prose h2,
+.dark .lesson-prose h3 { color: #e5eeea }
+
+.dark .lesson-deck,
+.dark .lesson-prose,
+.dark .lesson-aside,
+.dark .lesson-meta { color: #bdc9c2 }
+
+.dark .lesson-prose blockquote {
+  background: #21332e;
+  border-color: #71977b;
+  color: #c5d6c5;
+}
+
+.dark .lesson-prose th { background: #24342f; color: #d1e0d2 }
+
+.dark .lesson-prose td,
+.dark .lesson-prose th { border-color: #354345 }
+
+.dark .lesson-prose details {
+  background: #202f2c;
+  border-color: #35453f;
+  color: #c6d6c8;
+}
+
+.dark .toc-card a { color: #b8c6bd; border-color: #303e3f }
+
+.dark .toc-card a.toc-active { color: var(--accent-ink) }
+
+.dark .objectives-card p { color: #b8c6bd }
+
+.dark .lesson-actions,
+.dark .lesson-pagination,
+.dark .lesson-meta { border-color: #2d3b3d }
+
+.dark .lesson-actions > span { color: #a6b4ad }
+
+.dark .lesson-pagination button,
+.dark .back-link { color: #b8d1b5 }
+
+.dark .search-modal { border-color: #344244 }
+
+.dark .search-input-row { border-color: #344244; color: #aab8b1 }
+
+.dark .search-caption,
+.dark .search-footer,
+.dark .result-time { color: #a6b4ac }
+
+.dark .result-icon { background: #283a33; color: #b7d1b3 }
+
+.dark .empty-search { color: #aab8b1 }
+
+.dark .search-result-active { background: #293d35 }
+
+.dark .subject-nav { scrollbar-color: transparent transparent }
+
+.dark .subject-nav:hover { scrollbar-color: #52645a transparent }
+
+.dark .subject-nav:hover::-webkit-scrollbar-thumb { background: #52645a }
+
+.dark .subject-nav::-webkit-scrollbar-thumb:hover { background: #718877 }
+
+/* Lesson maths, blocks and figures */
+.dark .lesson-prose .katex-display {
+  background: #1b2926;
+  border-color: #82977f;
+  scrollbar-color: #52675a transparent;
+}
+
+.dark .lesson-prose p .katex { color: #bdd7bd }
+
+.dark .lesson-prose figure.lesson-figure img {
+  border-color: #33423f;
+  background: #1d2a28;
+}
+
+.dark .lesson-prose figure.lesson-figure figcaption { color: #a4b3ab }
+
+.dark .lesson-prose figure.lesson-figure figcaption em { color: #87968d }
+
+/* Subject page */
+.dark .catalog-chapter-heading { background: #202d29 }
+
+.dark .catalog-number { color: #a9c29f }
+
+.dark .catalog-chapter-heading p,
+.dark .catalog-lesson-title small { color: #acb9ad }
+
+.dark .catalog-lesson:hover { background: #202d2c }
+
+.dark .subject-progress-summary span { color: #c1cec4 }
+
+@media (min-width: 1200px) {
+  .dark .course-card p,
+  .dark .continue-info > p,
+  .dark .lesson-prose,
+  .dark .lesson-deck { color: #bdc9c2 }
+}
