@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
 import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -10,6 +10,7 @@ import 'katex/dist/katex.min.css'
 
 type View = 'home' | 'lesson'
 type Heading = { id: string; label: string; level: 2 | 3 }
+const readingScales = [1, 1.15, 1.3, 1.45] as const
 
 const headingId = (value: string) => value
   .toLowerCase()
@@ -39,10 +40,15 @@ function App() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchIndex, setSearchIndex] = useState(0)
   const [dark, setDark] = useState(() => localStorage.getItem('studyroom-theme') === 'dark')
+  const [fontScale, setFontScale] = useState(() => {
+    const savedScale = Number(localStorage.getItem('studyroom-reading-scale'))
+    return readingScales.includes(savedScale as typeof readingScales[number]) ? savedScale : 1
+  })
   const [mobileMenu, setMobileMenu] = useState(false)
 
   useEffect(() => { localStorage.setItem('studyroom-completed', JSON.stringify(completed)) }, [completed])
   useEffect(() => { localStorage.setItem('studyroom-theme', dark ? 'dark' : 'light') }, [dark])
+  useEffect(() => { localStorage.setItem('studyroom-reading-scale', String(fontScale)) }, [fontScale])
   useEffect(() => {
     const handleShortcut = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); setSearchOpen(true) }
@@ -82,8 +88,10 @@ function App() {
   function openLesson(lesson: Lesson) { setActiveId(lesson.id); setActiveSubject(lesson.subject); setView('lesson'); setSearchOpen(false); setQuery(''); setMobileMenu(false); window.scrollTo(0, 0) }
   function toggleComplete() { setCompleted((items) => items.includes(activeId) ? items.filter((id) => id !== activeId) : [...items, activeId]) }
   function goTo(offset: number) { const index = lessons.findIndex((lesson) => lesson.id === activeId); const next = lessons[index + offset]; if (next) openLesson(next) }
+  const readingScaleIndex = readingScales.indexOf(fontScale as typeof readingScales[number])
+  function changeReadingSize(direction: -1 | 1) { setFontScale(readingScales[Math.max(0, Math.min(readingScales.length - 1, readingScaleIndex + direction))]) }
 
-  return <div className={`app-shell ${dark ? 'dark' : ''}`}>
+  return <div className={`app-shell ${dark ? 'dark' : ''}`} style={{ '--reading-scale': fontScale } as CSSProperties}>
     <aside className={`sidebar ${mobileMenu ? 'sidebar-open' : ''}`}>
       <button className="brand" onClick={() => setView('home')} aria-label="Studyroom home"><span className="brand-mark">s.</span><span>studyroom<span className="brand-dot">.</span></span></button>
       <div className="sidebar-label">YOUR CLASSROOM</div>
@@ -107,7 +115,7 @@ function App() {
       <div className="sidebar-bottom"><div className="streak-card"><div className="streak-top"><span>✳</span><span className="streak-days">{completed.length ? '1' : '0'} day streak</span></div><p>A little progress each day adds up.</p><div className="streak-bars">{['M','T','W','T','F','S','S'].map((d,i)=><div key={i} className="streak-day"><span className={i < completed.length ? 'streak-filled' : ''} />{d}</div>)}</div></div><button className="profile-row"><span className="avatar">S</span><span className="profile-name">Student account<small>Class 11 · Learning mode</small></span><span className="profile-menu">···</span></button></div>
     </aside>
     <main className="main-panel">
-      <header className="topbar"><button className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)} aria-label="Toggle menu">☰</button><div className="breadcrumb"><span>Class 11</span><span className="crumb-divider">/</span><span>{view === 'home' ? activeSubject : activeLesson.subject}</span>{view === 'lesson' && <><span className="crumb-divider">/</span><span className="crumb-current">{activeLesson.chapterTitle}</span></>}</div><div className="top-actions"><button className="search-trigger" onClick={() => setSearchOpen(true)}><span>⌕</span> Search anything <kbd>⌘ K</kbd></button><button className="icon-button" aria-label="Toggle theme" onClick={() => setDark(!dark)}>{dark ? '☼' : '◐'}</button><button className="help-button">Help <span>↗</span></button></div></header>
+      <header className="topbar"><button className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)} aria-label="Toggle menu">☰</button><div className="breadcrumb"><span>Class 11</span><span className="crumb-divider">/</span><span>{view === 'home' ? activeSubject : activeLesson.subject}</span>{view === 'lesson' && <><span className="crumb-divider">/</span><span className="crumb-current">{activeLesson.chapterTitle}</span></>}</div><div className="top-actions"><button className="search-trigger" onClick={() => setSearchOpen(true)}><span>⌕</span> Search anything <kbd>⌘ K</kbd></button><div className="font-controls" aria-label="Reading size"><button className="font-size-button" onClick={() => changeReadingSize(-1)} disabled={readingScaleIndex === 0} aria-label="Decrease reading size">A−</button><span className="reading-label" aria-live="polite">{Math.round(fontScale * 100)}%</span><button className="font-size-button" onClick={() => changeReadingSize(1)} disabled={readingScaleIndex === readingScales.length - 1} aria-label="Increase reading size">A+</button></div><button className="icon-button" aria-label="Toggle theme" onClick={() => setDark(!dark)}>{dark ? '☼' : '◐'}</button><button className="help-button">Help <span>↗</span></button></div></header>
       <div className="page-content">
         {view === 'home' ? <Home activeSubject={activeSubject} completed={completed} openLesson={openLesson} setActiveSubject={setActiveSubject} /> : <LessonPage lesson={activeLesson} markdown={markdown} completed={completed.includes(activeId)} onComplete={toggleComplete} onBack={() => setView('home')} onNavigate={goTo} />}
       </div>
