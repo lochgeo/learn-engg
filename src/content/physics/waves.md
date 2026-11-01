@@ -6,7 +6,9 @@ A wave carries a disturbance and energy from place to place. In a travelling wav
 
 In a transverse wave, oscillation is perpendicular to travel; in a longitudinal wave, it is parallel. Wavelength $\lambda$ is the distance between points in the same phase, frequency $f$ is cycles per second, and period $T=1/f$. Wave speed is
 
-$$v=f\lambda.$$
+$$
+v=f\lambda.
+$$
 
 When waves overlap, their displacements add (superposition). Interference can reinforce or reduce the resulting displacement. A standing wave forms from two similar waves travelling in opposite directions; nodes remain still and antinodes oscillate with maximum amplitude. For a string fixed at both ends, allowed wavelengths satisfy $L=n\lambda/2$ for positive integer $n$.
 

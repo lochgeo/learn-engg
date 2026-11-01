@@ -10,7 +10,9 @@ Physics turns observations into statements we can compare, test, and share. A **
 
 If a desk is 1.2 metres long, **1.2** is the numerical value and **metre (m)** is the unit. Together they describe the length. The same length can be written as 120 centimetres because the unit changed while the physical length stayed the same.
 
-$$\text{physical quantity} = \text{numerical value} \times \text{unit}$$
+$$
+\text{physical quantity} = \text{numerical value} \times \text{unit}
+$$
 
 Measurements are useful when different people can repeat them and understand the result in the same way. A shared system of units makes that possible. Without standard units, “three handspans” could describe very different lengths for different people.
 
@@ -30,7 +32,9 @@ Some quantities are chosen as foundations. Length, mass, and time are familiar e
 
 A cyclist rides at a steady $5\ \text{m/s}$ for $12\ \text{s}$. Distance is speed multiplied by time:
 
-$$d = vt = (5\ \text{m/s})(12\ \text{s}) = 60\ \text{m}$$
+$$
+d = vt = (5\ \text{m/s})(12\ \text{s}) = 60\ \text{m}
+$$
 
 The seconds cancel in the multiplication, leaving metres. The answer is a length, which is exactly what we expected.
 

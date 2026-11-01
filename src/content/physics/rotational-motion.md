@@ -12,7 +12,9 @@ Torque is $\vec\tau=\vec r\times\vec F$; its magnitude is $rF\sin\theta$. For a 
 
 A perpendicular $10\ \text{N}$ force acts at the end of a $0.40\ \text{m}$ lever. The torque magnitude is
 
-$$\tau=rF=(0.40)(10)=4.0\ \text{N·m}.$$
+$$
+\tau=rF=(0.40)(10)=4.0\ \text{N·m}.
+$$
 
 If the same force points along the lever, its torque is zero because its perpendicular moment arm is zero.
 

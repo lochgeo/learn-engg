@@ -12,7 +12,9 @@ Momentum is $\vec p=m\vec v$. Impulse $\vec J=\Delta\vec p$ measures the effect 
 
 A $4\ \text{kg}$ trolley has a net horizontal force of $12\ \text{N}$. Its acceleration is
 
-$$a=F_{\text{net}}/m=12/4=3\ \text{m/s}^2.$$
+$$
+a=F_{\text{net}}/m=12/4=3\ \text{m/s}^2.
+$$
 
 This is the net force after all horizontal pushes and friction have been combined with signs.
 

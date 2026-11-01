@@ -6,7 +6,9 @@ If you know how much net work acts on an object, can you predict how its speed c
 
 Kinetic energy is the energy associated with motion:
 
-$$K=\frac12mv^2.$$
+$$
+K=\frac12mv^2.
+$$
 
 It is a scalar: it depends on speed, not direction. A $2\ \text{kg}$ cart moving east at $3\ \text{m/s}$ and the same cart moving west at $3\ \text{m/s}$ each have $K=9\ \text{J}$.
 
@@ -16,15 +18,21 @@ Kinetic energy depends on the reference frame because speed does. A passenger at
 
 For motion along one line, Newton’s second law gives $F_{net}=ma$. The constant-acceleration relation
 
-$$v^2-u^2=2a\Delta x$$
+$$
+v^2-u^2=2a\Delta x
+$$
 
 can be rearranged and multiplied by $m/2$:
 
-$$F_{net}\Delta x=ma\Delta x=\frac12m(v^2-u^2)=K_f-K_i.$$
+$$
+F_{net}\Delta x=ma\Delta x=\frac12m(v^2-u^2)=K_f-K_i.
+$$
 
 The left side is net work. So
 
-$$\boxed{W_{net}=\Delta K=K_f-K_i}.$$
+$$
+\boxed{W_{net}=\Delta K=K_f-K_i}.
+$$
 
 The theorem remains valid when the force varies: add up the small amounts of net work over the path. The net work is the sum of the work done by **all** forces on the object.
 
@@ -38,7 +46,9 @@ The theorem remains valid when the force varies: add up the small amounts of net
 
 A $1200\ \text{kg}$ car slows from $20\ \text{m/s}$ to $10\ \text{m/s}$. The net work done on it is
 
-$$W_{net}=\frac12(1200)(10^2-20^2)=-180{,}000\ \text{J}.$$
+$$
+W_{net}=\frac12(1200)(10^2-20^2)=-180{,}000\ \text{J}.
+$$
 
 The negative sign says that $180\ \text{kJ}$ of kinetic energy was removed. It does **not** mean the car’s kinetic energy became negative; the final kinetic energy is still $60\ \text{kJ}$.
 
@@ -48,7 +58,9 @@ Use it when the question asks for speed after a displacement or the work needed 
 
 For a $4\ \text{kg}$ object initially at rest, a net $50\ \text{J}$ of work gives
 
-$$50=\frac12(4)v^2\quad\Rightarrow\quad v=5\ \text{m/s}.$$
+$$
+50=\frac12(4)v^2\quad\Rightarrow\quad v=5\ \text{m/s}.
+$$
 
 If you know only the work of one force, first include the work of the other forces. For example, gravity may do work while friction removes energy.
 
@@ -69,7 +81,9 @@ Initial kinetic energy is $K_i=\frac12(3)(25)=37.5\ \text{J}$. Final kinetic ene
 
 <details><summary>Show the reasoning</summary>
 
-$$80=\frac12m(6^2-2^2)=16m\quad\Rightarrow\quad m=5\ \text{kg}.$$
+$$
+80=\frac12m(6^2-2^2)=16m\quad\Rightarrow\quad m=5\ \text{kg}.
+$$
 </details>
 
 **C.** Can net work be zero while an object’s velocity changes?

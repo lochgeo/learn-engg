@@ -28,7 +28,9 @@ Prefixes let us describe very large and very small measurements without long str
 
 Replace each kilometre by 1000 metres and each hour by 3600 seconds:
 
-$$72\ \frac{\text{km}}{\text{h}} \times \frac{1000\ \text{m}}{1\ \text{km}} \times \frac{1\ \text{h}}{3600\ \text{s}} = 20\ \text{m/s}$$
+$$
+72\ \frac{\text{km}}{\text{h}} \times \frac{1000\ \text{m}}{1\ \text{km}} \times \frac{1\ \text{h}}{3600\ \text{s}} = 20\ \text{m/s}
+$$
 
 The kilometres and hours cancel. Keeping units in the calculation is a simple way to catch a mistaken conversion.
 

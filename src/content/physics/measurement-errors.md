@@ -8,7 +8,9 @@ No measurement is perfectly exact. Instruments have limited resolution, and the 
 
 For a measured value $x$ with an estimated absolute uncertainty $\Delta x$, the relative uncertainty is $\Delta x/x$. As a percentage:
 
-$$\text{percentage uncertainty} = \frac{\Delta x}{x} \times 100\%$$
+$$
+\text{percentage uncertainty} = \frac{\Delta x}{x} \times 100\%
+$$
 
 Uncertainty is part of the measurement, not a mistake to hide. When adding or subtracting measured values, absolute uncertainties are added as a cautious estimate. For multiplication or division, percentage uncertainties are added.
 
@@ -18,7 +20,9 @@ Uncertainty is part of the measurement, not a mistake to hide. When adding or su
 
 A strip is measured as $(20.0 \pm 0.1)\ \text{cm}$. Its percentage uncertainty is
 
-$$\frac{0.1}{20.0} \times 100\% = 0.5\%$$
+$$
+\frac{0.1}{20.0} \times 100\% = 0.5\%
+$$
 
 The uncertainty is small compared with the length, so the measurement is reasonably precise. The notation also makes clear that the final decimal place is estimated, not exact.
 

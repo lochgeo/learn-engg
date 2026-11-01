@@ -12,7 +12,9 @@ Heat travels by conduction through material interactions, convection through bul
 
 How much energy warms $0.5\ \text{kg}$ of water by $10^\circ\text{C}$? Using $c=4200\ \text{J/(kg·K)}$:
 
-$$Q=mc\Delta T=(0.5)(4200)(10)=21{,}000\ \text{J}.$$
+$$
+Q=mc\Delta T=(0.5)(4200)(10)=21{,}000\ \text{J}.
+$$
 
 A temperature interval of $10^\circ\text{C}$ equals $10\ \text{K}$.
 

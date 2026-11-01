@@ -6,7 +6,9 @@ Work tells us **how much** energy was transferred. Power tells us **how quickly*
 
 Over a time interval $\Delta t$,
 
-$$P_{avg}=\frac{W}{\Delta t}=\frac{\Delta E}{\Delta t}.$$
+$$
+P_{avg}=\frac{W}{\Delta t}=\frac{\Delta E}{\Delta t}.
+$$
 
 The SI unit is the watt: $1\ \text{W}=1\ \text{J/s}$. A kilowatt is $1000\ \text{W}$. Power is not energy; multiplying power by time gives transferred energy when power is constant.
 
@@ -14,7 +16,9 @@ The SI unit is the watt: $1\ \text{W}=1\ \text{J/s}$. A kilowatt is $1000\ \text
 
 A $50\ \text{kg}$ student climbs a vertical height of $3.0\ \text{m}$ in $5.0\ \text{s}$. The gain in gravitational potential energy is $mgh=1470\ \text{J}$, so the average useful mechanical power is
 
-$$P_{avg}=1470/5.0=294\ \text{W}.$$
+$$
+P_{avg}=1470/5.0=294\ \text{W}.
+$$
 
 The student’s body uses more metabolic energy because muscles are not perfectly efficient.
 
@@ -22,7 +26,9 @@ The student’s body uses more metabolic energy because muscles are not perfectl
 
 Power at a particular instant is the rate of doing work:
 
-$$P=\frac{dW}{dt}=\vec F\cdot\vec v=Fv\cos\theta.$$
+$$
+P=\frac{dW}{dt}=\vec F\cdot\vec v=Fv\cos\theta.
+$$
 
 If force and velocity point in the same direction, $P=Fv$. If they are opposite, power delivered by that force is negative. A perpendicular force has zero instantaneous power. This is why the centripetal force in uniform circular motion does no work.
 
@@ -34,7 +40,9 @@ When a vehicle moves steadily against a resistive force $F$ at speed $v$, the mo
 
 Not all input energy becomes the useful output we want. Efficiency is
 
-$$\eta=\frac{\text{useful output energy}}{\text{input energy}}=\frac{\text{useful output power}}{\text{input power}}.$$
+$$
+\eta=\frac{\text{useful output energy}}{\text{input energy}}=\frac{\text{useful output power}}{\text{input power}}.
+$$
 
 It is often reported as a percentage. For an ordinary device, $0\leq\eta\leq1$; the rest of the input is transferred to unwanted forms such as heat or sound.
 
@@ -51,7 +59,9 @@ The gain in gravitational energy is $mgh=10{,}000\ \text{J}$. Thus $P=10{,}000/1
 
 <details><summary>Show the reasoning</summary>
 
-$$P_{useful}=\eta P_{in}=0.75(2.0\ \text{kW})=1.5\ \text{kW}.$$
+$$
+P_{useful}=\eta P_{in}=0.75(2.0\ \text{kW})=1.5\ \text{kW}.
+$$
 </details>
 
 ## Take away

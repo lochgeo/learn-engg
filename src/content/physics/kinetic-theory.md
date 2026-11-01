@@ -6,7 +6,9 @@ Kinetic theory links a gas’s large-scale pressure and temperature to the motio
 
 In the ideal-gas model, particles are far apart, have negligible volume, move randomly, and collide elastically. The equation of state is $pV=nRT=Nk_BT$. Pressure results from momentum transferred to container walls. For a monatomic ideal gas, average translational kinetic energy per molecule is
 
-$$\langle K\rangle=\frac32k_BT.$$
+$$
+\langle K\rangle=\frac32k_BT.
+$$
 
 Temperature in kelvin is therefore proportional to average random translational kinetic energy. At the same temperature, different ideal gases have the same average translational kinetic energy, though their typical speeds differ because their molecular masses differ. The root-mean-square speed is $v_{rms}=\sqrt{3RT/M}$ for molar mass $M$.
 

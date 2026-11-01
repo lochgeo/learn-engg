@@ -14,7 +14,9 @@ For an equation to be dimensionally consistent, the dimensions on its left and r
 
 Suppose an object starts from rest and accelerates uniformly. A proposed relation is $s = \frac12 at^2$. The left side has dimension $[L]$. On the right:
 
-$$[a][t]^2 = ([L][T]^{-2})[T]^2 = [L]$$
+$$
+[a][t]^2 = ([L][T]^{-2})[T]^2 = [L]
+$$
 
 Both sides have the dimension of length, so the formula passes this dimensional check.
 

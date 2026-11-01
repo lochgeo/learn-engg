@@ -8,7 +8,9 @@ Displacement is $\Delta x=x_2-x_1$. Average velocity is displacement divided by 
 
 For constant acceleration, the definitions lead to a compact set of relations:
 
-$$v=u+at,\qquad x-x_0=ut+\frac12at^2,\qquad v^2=u^2+2a(x-x_0).$$
+$$
+v=u+at,\qquad x-x_0=ut+\frac12at^2,\qquad v^2=u^2+2a(x-x_0).
+$$
 
 Here $u$ and $v$ are initial and final velocities. These equations only apply when acceleration stays constant. Pick a sign convention first and keep it throughout the solution.
 
@@ -16,7 +18,9 @@ Here $u$ and $v$ are initial and final velocities. These equations only apply wh
 
 A cyclist starts from rest and accelerates uniformly at $2\ \text{m/s}^2$ for $5\ \text{s}$. The distance is
 
-$$x-x_0=ut+\frac12at^2=0+\frac12(2)(5^2)=25\ \text{m}.$$
+$$
+x-x_0=ut+\frac12at^2=0+\frac12(2)(5^2)=25\ \text{m}.
+$$
 
 The final speed is $v=u+at=10\ \text{m/s}$. The units check: acceleration times time squared is a length.
 
