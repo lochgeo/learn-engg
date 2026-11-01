@@ -13,6 +13,8 @@ This chapter is a set of connected tools, not one formula to memorise. A focused
 
 After each lesson, close the explanation and try its questions from a blank page. Mark it complete only after you can explain why the method applies. Take a short break halfway through.
 
+After this core pass, use the optional **JEE Main timed practice** module for a $45$-minute mixed set. Save it for when you can already solve the chapter tools one at a time; its value is in choosing the right tool under time pressure.
+
 ## First choose the tool
 
 | Clue in the question | Start with |
