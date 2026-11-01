@@ -24,6 +24,12 @@ $$v_f=\frac{(2)(3)+(1)(0)}{2+1}=2\ \text{m/s}.$$
 
 Initial kinetic energy is $9\ \text{J}$; final kinetic energy is $\frac12(3)(2^2)=6\ \text{J}$. The decrease of $3\ \text{J}$ became other forms of energy during impact. Momentum is conserved; kinetic energy is not.
 
+For a one-dimensional completely inelastic collision, the kinetic-energy decrease can be found directly from the relative approach speed:
+
+$$K_i-K_f=\frac12\frac{m_1m_2}{m_1+m_2}(u_1-u_2)^2.$$
+
+This quantity is never negative. It is zero only when the bodies already have the same velocity, so there is no relative motion to deform them during impact.
+
 ## 3. One-dimensional elastic collisions
 
 For an elastic collision, relative separation speed equals relative approach speed:
@@ -44,6 +50,14 @@ Momentum is a vector, so conserve it separately along perpendicular axes:
 $$\sum p_{x,i}=\sum p_{x,f},\qquad \sum p_{y,i}=\sum p_{y,f}.$$
 
 For an elastic collision, also conserve total kinetic energy. For an inelastic one, do not impose kinetic-energy conservation. Draw initial and final velocity vectors before splitting them into components.
+
+### A useful equal-mass result
+
+Suppose equal masses collide elastically, with one initially at rest. Conservation of momentum and kinetic energy then give
+
+$$\vec v_{1f}\cdot\vec v_{2f}=0.$$
+
+Their final velocity vectors are therefore perpendicular (unless one final speed is zero, the head-on limiting case). This result is a consequence of the stated conditions; do not use it for unequal masses or an inelastic collision.
 
 ## Practice
 
