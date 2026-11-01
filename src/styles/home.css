@@ -1,4 +1,4 @@
-/* Home: welcome, subjects, continue learning, weekly rhythm, library */
+/* Home: welcome, continue learning, weekly rhythm, subject cards */
 .welcome-line {
   display: flex;
   align-items: center;
@@ -133,27 +133,17 @@
   margin: 21px 0 12px;
 }
 
-.section-heading h2,
-.library-heading h2 {
+.section-heading h2 {
   font: 600 18px var(--serif);
   letter-spacing: -.6px;
   margin: 5px 0 0;
 }
 
-.text-link {
-  border: 0;
-  background: transparent;
-  color: #7e8877;
-  font-size: 9px;
-  padding: 4px 0;
-}
-
-.text-link span { color: #a6ad9d; margin-left: 4px }
-
 /* Subject cards */
+/* Two or three cards depending on the space between sidebar and edge. */
 .subject-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 12px;
 }
 
@@ -199,11 +189,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  min-width: 0;
   font: 600 13px var(--serif);
   margin-top: 11px;
 }
 
-.chapter-total { font: 9px 'DM Sans', sans-serif; color: var(--muted-soft) }
+.course-title {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chapter-total {
+  flex: none;
+  white-space: nowrap;
+  font: 9px 'DM Sans', sans-serif;
+  color: var(--muted-soft);
+}
 
 .course-card p {
   font-size: 9px;
@@ -419,51 +423,3 @@
 }
 
 .weekly-note span { color: #91a17b; margin-right: 5px }
-
-/* Library rows */
-.library-heading { margin-top: 31px }
-
-.library-heading h2 { font-size: 17px }
-
-.library-list {
-  border-top: 1px solid var(--line);
-  margin-top: 12px;
-}
-
-.library-row {
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  background: transparent;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 11px;
-  padding: 10px 5px;
-}
-
-.library-row:hover { background: rgba(240, 242, 235, .5) }
-
-.library-icon { height: 28px; width: 28px }
-
-.library-title { font-size: 10px; font-weight: 600 }
-
-.library-title small {
-  display: block;
-  color: var(--muted-soft);
-  font-weight: 400;
-  font-size: 8px;
-  margin-top: 3px;
-}
-
-.library-count {
-  margin-left: auto;
-  color: var(--muted-soft);
-  font-size: 9px;
-}
-
-.library-arrow {
-  color: #a0a59c;
-  font-size: 12px;
-  padding-left: 4px;
-}

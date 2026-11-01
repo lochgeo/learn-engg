@@ -1,4 +1,6 @@
-/* Breakpoints: 1200 desktop scale, 950 tablet, 850 subject grid, 680 phone */
+/* Breakpoints: 1200 desktop scale, 1024 drawer, 950 tablet, 850 catalog,
+   680 phone, 520 narrow phone. Rules here must be able to override the
+   component layers, so this file is imported after them. */
 @media (min-width: 1200px) {
   .topbar {
     height: 70px;
@@ -14,8 +16,6 @@
   }
 
   .search-trigger kbd { font-size: 10px }
-
-  .help-button { font-size: 12px }
 
   .page-content {
     max-width: 1320px;
@@ -39,6 +39,8 @@
 
   .chapter-link { font-size: 11px; padding-block: 8px }
 
+  .chapter-more { font-size: 10px }
+
   .welcome-pill { font-size: 10px; padding: 7px 11px }
 
   .welcome-date { font-size: 10px }
@@ -56,12 +58,9 @@
 
   .section-heading { margin: 27px 0 15px }
 
-  .section-heading h2,
-  .library-heading h2 { font-size: 22px }
+  .section-heading h2 { font-size: 22px }
 
   .eyebrow { font-size: 10px; letter-spacing: 1.4px }
-
-  .text-link { font-size: 11px }
 
   .subject-cards { gap: 16px }
 
@@ -121,18 +120,6 @@
 
   .weekly-note { font-size: 10px }
 
-  .library-heading { margin-top: 39px }
-
-  .library-row { padding: 13px 7px; gap: 13px }
-
-  .library-icon { width: 34px; height: 34px; font-size: 16px }
-
-  .library-title { font-size: 13px }
-
-  .library-title small { font-size: 10px }
-
-  .library-count { font-size: 11px }
-
   .lesson-page { max-width: 980px }
 
   .lesson-title-row h1 { font-size: 40px }
@@ -181,20 +168,61 @@
   .lesson-prose .katex-display > .katex { font-size: 1.18em }
 }
 
-@media (max-width: 950px) {
-  .sidebar { width: 220px }
+/* Below this width the sidebar becomes a drawer, so the page keeps its full width. */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform .2s;
+    width: 280px;
+    padding: 22px 16px 16px;
+    box-shadow: 8px 0 24px #1f281616;
+    z-index: 8;
+  }
 
-  .main-panel { margin-left: 220px }
+  .sidebar.sidebar-open { transform: translateX(0) }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(32, 37, 31, .28);
+    z-index: 7;
+  }
+
+  .main-panel { margin-left: 0 }
 
   .topbar { padding: 0 26px }
 
+  .mobile-menu {
+    display: block;
+    border: 0;
+    background: none;
+    color: #6e766b;
+    font-size: 17px;
+    padding: 4px 9px 4px 0;
+  }
+
+  .breadcrumb {
+    flex: 1 1 auto;
+    margin-left: 4px;
+    margin-right: 12px;
+  }
+
+  .top-actions { flex: none }
+
+  /* Drawer height is scarce: the streak shrinks to a single line. */
+  .streak-card { padding: 9px 10px; margin-bottom: 10px }
+
+  .streak-card p,
+  .streak-bars { display: none }
+}
+
+@media (max-width: 950px) {
   .page-content { padding: 29px 27px 55px }
 
   .welcome-illustration { right: -48px; opacity: .75 }
 
   .learning-grid { grid-template-columns: 1fr }
-
-  .weekly-card { display: none }
 
   .lesson-layout {
     grid-template-columns: 145px minmax(0, 1fr);
@@ -209,34 +237,21 @@
 @media (max-width: 680px) {
   body { min-width: 320px }
 
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform .2s;
-    width: 260px;
-    box-shadow: 8px 0 24px #1f281616;
-  }
-
-  .sidebar.sidebar-open { transform: translateX(0) }
-
-  .main-panel { margin-left: 0 }
-
   .topbar { height: 55px; padding: 0 16px }
 
-  .mobile-menu {
-    display: block;
-    border: 0;
-    background: none;
-    color: #6e766b;
-    font-size: 16px;
-    padding: 4px 7px 4px 0;
-  }
+  .sidebar { width: 260px }
 
+  .mobile-menu { font-size: 16px; padding: 4px 7px 4px 0 }
+
+  /* Only the final crumb survives on a phone; it ellipsises instead of wrapping. */
   .breadcrumb {
-    margin-right: auto;
-    margin-left: 5px;
     gap: 6px;
+    margin-left: 5px;
+    margin-right: 8px;
     font-size: 9px;
   }
+
+  .breadcrumb > *:not(:last-child) { display: none }
 
   .top-actions { gap: 5px }
 
@@ -253,30 +268,36 @@
 
   .search-trigger > span { font-size: 20px }
 
-  .search-trigger kbd,
-  .help-button { display: none }
+  .search-trigger kbd { display: none }
 
   .page-content { padding: 24px 17px 45px }
 
-  .welcome-heading { min-height: 200px }
+  .welcome-heading {
+    min-height: 0;
+    margin: 6px 0 2px;
+  }
 
   .welcome-heading h1 { font-size: 38px }
 
   .welcome-heading p { font-size: 10px }
 
-  .welcome-illustration { right: -121px; opacity: .46 }
+  /* Decorative orbit only competes with the resume card on a phone. */
+  .welcome-illustration { display: none }
 
   .welcome-date { font-size: 7px }
 
-  .subject-cards { grid-template-columns: 1fr; gap: 8px }
+  .learning-grid { margin-top: 20px }
 
-  .course-card { min-height: 126px }
+  /* On a phone the rhythm card keeps only the progress line. */
+  .weekly-card { padding: 12px 14px }
 
-  .course-card p { margin-bottom: 10px }
+  .weekly-top { align-items: center }
 
-  .section-heading { margin-top: 21px }
+  .weekly-top h3 { display: none }
 
-  .learning-grid { margin-top: 25px }
+  .weekly-card > p { font-size: 9px; margin: 10px 0 12px }
+
+  .weekly-note { display: none }
 
   .continue-card { grid-template-columns: 108px 1fr }
 
@@ -296,20 +317,72 @@
 
   .resume-button { font-size: 8px }
 
-  .library-heading { margin-top: 25px }
+  .section-heading { margin-top: 25px }
 
-  .lesson-title-row { align-items: flex-start; flex-direction: column }
+  .subject-cards { grid-template-columns: 1fr; gap: 8px }
+
+  .course-card { min-height: 126px }
+
+  .course-card p { margin-bottom: 10px }
+
+  .lesson-title-row { align-items: flex-start; flex-direction: column; gap: 12px }
 
   .lesson-title-row h1 { font-size: 27px }
 
-  .lesson-title-row .complete-button { display: none }
+  /* The completion action stays on the title row instead of only at the end. */
+  .lesson-title-row .complete-button { align-self: flex-start }
 
   .lesson-layout { grid-template-columns: 1fr; gap: 18px }
 
   .lesson-aside {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     position: static;
+    gap: 9px;
+  }
+
+  /* TOC and objectives collapse into two compact rows above the prose. */
+  .toc-card,
+  .objectives-card { padding: 4px 12px }
+
+  .rail-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 11px 2px;
+    text-align: left;
+  }
+
+  .rail-toggle .eyebrow { margin-bottom: 0 }
+
+  .rail-count {
+    color: var(--muted-soft);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .rail-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .rail-chevron {
+    color: #9aa296;
+    font-size: 12px;
+    transition: transform .15s ease;
+  }
+
+  .is-open .rail-chevron { transform: rotate(180deg) }
+
+  .rail-body { display: none }
+
+  .is-open .rail-body {
+    display: block;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 2px;
   }
 
   .toc-card a { font-size: 12px }
@@ -325,8 +398,6 @@
   .lesson-meta { font-size: 8px }
 
   .desktop-break { display: none }
-
-  .section-heading.compact .text-link { font-size: 8px }
 
   .lesson-prose .katex-display {
     margin: 1.1rem auto;
@@ -369,6 +440,16 @@
 
   .toc-card a,
   .objectives-card p { font-size: 12px }
+}
+
+@media (max-width: 520px) {
+  /* Narrow phones give the whole resume card to the text. */
+  .continue-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .continue-art { display: none }
 }
 
 @media (prefers-reduced-motion: reduce) {

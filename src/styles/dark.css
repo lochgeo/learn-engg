@@ -57,7 +57,6 @@
 
 .dark .breadcrumb,
 .dark .crumb-current,
-.dark .help-button,
 .dark .icon-button { color: #b5c1b9 }
 
 .dark .crumb-divider { color: #65736b }
@@ -130,17 +129,13 @@
 
 .dark .course-name,
 .dark .continue-info h3,
-.dark .library-title,
 .dark .section-heading h2,
-.dark .library-heading h2,
 .dark .weekly-top h3 { color: #e5eeea }
 
 .dark .chapter-total,
 .dark .course-card p,
 .dark .continue-info > p,
-.dark .lesson-time,
-.dark .library-title small,
-.dark .library-count { color: #aab8b1 }
+.dark .lesson-time { color: #aab8b1 }
 
 .dark .continue-art {
   background: #22312c;
@@ -169,11 +164,16 @@
 
 .dark .weekly-note { border-color: #34463e }
 
-.dark .library-list,
-.dark .library-row { border-color: #2b393b }
-
-.dark .library-row:hover,
 .dark .search-result:hover { background: #202d2c }
+
+.dark .chapter-more { color: #b9d9be }
+
+.dark .chapter-more span { color: #6d7b71 }
+
+.dark .sidebar-backdrop { background: rgba(6, 11, 10, .55) }
+
+.dark .rail-count,
+.dark .rail-chevron { color: #a6b4aa }
 
 .dark .lesson-title-row h1,
 .dark .lesson-prose h2,

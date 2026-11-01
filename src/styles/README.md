@@ -8,12 +8,12 @@ The styles are split by responsibility and imported in cascade order from
 | `tokens.css` | Palette, type families, radii, shadows, motion. Light values in `:root`, dark values in `.dark`. |
 | `base.css` | Reset, focus rings, the `.app-shell` frame, shared `.eyebrow` label. |
 | `layout.css` | Fixed sidebar, subject/chapter navigation, top bar, page frame, reading-size control. |
-| `home.css` | Hero, subject cards, continue card, weekly card, library rows. |
+| `home.css` | Hero, continue card, weekly progress, subject cards. |
 | `subject.css` | Subject header and chapter catalog. |
 | `lesson.css` | Lesson header, sticky TOC/objectives rail, completion actions, learning blocks, figures. |
 | `prose.css` | Typographic rules for rendered Markdown, tables, disclosure, KaTeX. |
 | `search.css` | Search backdrop and results dialog. |
-| `responsive.css` | All breakpoints: 1200, 950, 850, 680, reduced motion. |
+| `responsive.css` | All breakpoints: 1200, 1024, 950, 850, 680, 520, reduced motion. |
 | `dark.css` | Dark-only colour remaps for the values not covered by tokens. |
 
 ## Conventions
