@@ -10,7 +10,8 @@ import 'katex/dist/katex.min.css'
 
 type View = 'home' | 'subject' | 'lesson'
 type Heading = { id: string; label: string; level: 2 | 3 }
-const readingScales = [1, 1.15, 1.3, 1.45] as const
+const readingScales = [1, 1.2, 1.35, 1.5] as const
+const defaultReadingScale = 1.2
 
 const headingId = (value: string) => value
   .toLowerCase()
@@ -67,7 +68,13 @@ function App() {
   const [dark, setDark] = useState(() => localStorage.getItem('studyroom-theme') === 'dark')
   const [fontScale, setFontScale] = useState(() => {
     const savedScale = Number(localStorage.getItem('studyroom-reading-scale'))
-    return readingScales.includes(savedScale as typeof readingScales[number]) ? savedScale : 1
+    if (!readingScales.includes(savedScale as typeof readingScales[number])) return defaultReadingScale
+    // One-time upgrade: anyone still on the old 100% default moves to the new larger default.
+    if (savedScale === 1 && localStorage.getItem('studyroom-reading-scale-v2') !== 'done') {
+      localStorage.setItem('studyroom-reading-scale-v2', 'done')
+      return defaultReadingScale
+    }
+    return savedScale
   })
   const [mobileMenu, setMobileMenu] = useState(false)
 
