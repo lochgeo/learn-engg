@@ -164,10 +164,10 @@
 .dark .subject-nav:hover::-webkit-scrollbar-thumb{background:#52645a}
 .dark .subject-nav::-webkit-scrollbar-thumb:hover{background:#718877}
 @media(min-width:1200px){.dark .welcome-heading h1{font-size:56px}.dark .course-card p,.dark .continue-info>p,.dark .lesson-prose,.dark .lesson-deck{color:#bdc9c2}}
-.lesson-prose .katex-display{margin:1.4rem 0;padding:1rem 1.2rem;max-width:100%;overflow-x:auto;overflow-y:hidden;text-align:center;background:#f7f9f5;border:1px solid #dfe6dc;border-radius:8px;scrollbar-width:thin;scrollbar-color:#c7d2c4 transparent}
+.lesson-prose .katex-display{margin:1.4rem 0;padding:1rem 1.2rem;max-width:100%;overflow-x:auto;overflow-y:hidden;text-align:center;background:#f7f9f5;border:1px solid #cbd7c8;border-radius:8px;scrollbar-width:thin;scrollbar-color:#c7d2c4 transparent}
 .lesson-prose .katex-display>.katex{font-size:1.12em;white-space:nowrap}
 .lesson-prose p .katex{font-size:1.04em;color:#3f5e48}
-.dark .lesson-prose .katex-display{background:#1b2926;border-color:#354640;scrollbar-color:#52675a transparent}
+.dark .lesson-prose .katex-display{background:#1b2926;border-color:#4b6255;scrollbar-color:#52675a transparent}
 .dark .lesson-prose p .katex{color:#bdd7bd}
 @media(min-width:1200px){.lesson-prose .katex-display{margin:1.65rem 0;padding:1.2rem 1.6rem}.lesson-prose .katex-display>.katex{font-size:1.18em}}
 @media(max-width:680px){.lesson-prose .katex-display{margin:1.1rem -2px;padding:.85rem .7rem;border-radius:0 6px 6px 0}.lesson-prose .katex-display>.katex{font-size:1.02em}}
