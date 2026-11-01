@@ -6,17 +6,23 @@ In everyday speech, “work” can mean effort. In mechanics, work measures ener
 
 Work uses the **scalar product** (or dot product) of two vectors. For vectors $\vec A$ and $\vec B$ separated by angle $\theta$,
 
-$$\vec A\cdot\vec B=AB\cos\theta.$$
+$$
+\vec A\cdot\vec B=AB\cos\theta.
+$$
 
 The result is a scalar, not a new vector. It measures how much one vector lies along the other: parallel vectors have a positive dot product, perpendicular vectors have zero dot product, and oppositely directed vectors have a negative dot product. In components,
 
-$$\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.$$
+$$
+\vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z.
+$$
 
 This also explains why only the component of force in the direction of displacement matters. Dot products are commutative and distributive, so $\vec A\cdot\vec B=\vec B\cdot\vec A$ and $\vec A\cdot(\vec B+\vec C)=\vec A\cdot\vec B+\vec A\cdot\vec C$.
 
 For a constant force $\vec F$ and displacement $\Delta\vec r$,
 
-$$W=\vec F\cdot\Delta\vec r=F\,\Delta r\cos\theta,$$
+$$
+W=\vec F\cdot\Delta\vec r=F\,\Delta r\cos\theta,
+$$
 
 where $\theta$ is the angle between the force and displacement. Work is a **scalar**. Its SI unit is the joule: $1\ \text{J}=1\ \text{N·m}$.
 
@@ -32,7 +38,9 @@ Only the component of force parallel to the displacement contributes.
 
 A force of $30\ \text{N}$ pulls a crate $4\ \text{m}$ along the floor at $60^\circ$ above the horizontal. The displacement is horizontal, so
 
-$$W=F\Delta r\cos\theta=(30)(4)\cos60^\circ=60\ \text{J}.$$
+$$
+W=F\Delta r\cos\theta=(30)(4)\cos60^\circ=60\ \text{J}.
+$$
 
 Using all $30\ \text{N}$ as if it were horizontal would incorrectly give $120\ \text{J}$. Draw the angle between force and displacement, not between the force and some unrelated axis.
 
@@ -40,7 +48,9 @@ Using all $30\ \text{N}$ as if it were horizontal would incorrectly give $120\ \
 
 When several forces act, calculate each force’s work or combine the forces into a net force. The **net work** is the sum of the individual works:
 
-$$W_{net}=W_1+W_2+\cdots.$$
+$$
+W_{net}=W_1+W_2+\cdots.
+$$
 
 For a box sliding $5\ \text{m}$ across a floor, suppose a pull does $40\ \text{J}$ of work, friction does $-15\ \text{J}$, and gravity and the normal force each do zero work. The total is $W_{net}=25\ \text{J}$.
 
@@ -48,7 +58,9 @@ For a box sliding $5\ \text{m}$ across a floor, suppose a pull does $40\ \text{J
 
 If a one-dimensional force varies with position, divide the motion into tiny displacements. Each small piece contributes $dW=F_x\,dx$, so
 
-$$W_{a\to b}=\int_a^b F_x(x)\,dx.$$
+$$
+W_{a\to b}=\int_a^b F_x(x)\,dx.
+$$
 
 On a graph of force against position, work is the **signed area** between the curve and the position axis. Areas above the axis are positive; areas below are negative. A changing force does not mean “use the average force” unless that average has been calculated correctly.
 
@@ -56,7 +68,9 @@ On a graph of force against position, work is the **signed area** between the cu
 
 For a variable net force, split the path into tiny displacements. On each piece, $dW_{net}=F_{net,x}\,dx$. Adding every piece gives
 
-$$W_{net}=\int \vec F_{net}\cdot d\vec r=K_f-K_i.$$
+$$
+W_{net}=\int \vec F_{net}\cdot d\vec r=K_f-K_i.
+$$
 
 So $W_{net}=\Delta K$ is not limited to constant forces or straight-line, constant-acceleration motion. It applies to the **net** work; individual forces may add or remove energy while their sum determines the change in kinetic energy.
 
@@ -64,7 +78,9 @@ So $W_{net}=\Delta K$ is not limited to constant forces or straight-line, consta
 
 For a spring displaced by $x$ from its relaxed length, Hooke’s law gives $F_s=-kx$. The minus sign says that the spring force points back toward equilibrium. If an external agent slowly stretches it from $x=0$ to $x=A$, the external work is
 
-$$W_{ext}=\int_0^A kx\,dx=\frac12kA^2.$$
+$$
+W_{ext}=\int_0^A kx\,dx=\frac12kA^2.
+$$
 
 The spring itself does the opposite work, $W_s=-\frac12kA^2$.
 
@@ -96,7 +112,9 @@ The angle is $180^\circ$: $W=12(3)\cos180^\circ=-36\ \text{J}$. The force transf
 
 <details><summary>Show the reasoning</summary>
 
-$$W=\int_0^3 2x\,dx=[x^2]_0^3=9\ \text{J}.$$
+$$
+W=\int_0^3 2x\,dx=[x^2]_0^3=9\ \text{J}.
+$$
 
 This is also the triangular area under the straight-line $F_x$–$x$ graph: $\frac12(3\ \text{m})(6\ \text{N})=9\ \text{J}$.
 </details>
