@@ -48,8 +48,10 @@ $$
 
 Together with momentum conservation, this gives
 
-$$v_1=\frac{(m_1-m_2)u_1+2m_2u_2}{m_1+m_2},\qquad
-v_2=\frac{2m_1u_1+(m_2-m_1)u_2}{m_1+m_2}.$$
+$$
+v_1=\frac{(m_1-m_2)u_1+2m_2u_2}{m_1+m_2},\qquad
+v_2=\frac{2m_1u_1+(m_2-m_1)u_2}{m_1+m_2}.
+$$
 
 For equal masses in a head-on elastic collision, the objects exchange velocities. This is a useful result to understand, not a formula to apply without checking that the collision is elastic and one-dimensional.
 
