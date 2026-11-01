@@ -44,6 +44,11 @@ $$
 
 Stretching or compressing by the same distance stores the same energy. Doubling the displacement stores four times the energy. The zero is normally chosen at the relaxed length, but another reference can be used if changes are calculated consistently.
 
+<figure class="lesson-figure lesson-figure--square">
+  <img src="images/work-energy/compressed-spring.jpg" alt="A small coil spring removed from a ballpoint pen, partly compressed between two fingers" loading="lazy" />
+  <figcaption>A compressed spring stores elastic potential energy proportional to the square of its displacement from the <strong>relaxed</strong> length, so stretching and compressing by the same amount store the same energy. <em>Photo: Rhetos, Wikimedia Commons (CC0).</em></figcaption>
+</figure>
+
 ### Worked example: a compressed spring
 
 A spring with $k=200\ \text{N/m}$ is compressed $0.10\ \text{m}$:
@@ -54,7 +59,7 @@ $$
 
 When released, this energy can become the kinetic energy of a block, gravitational potential energy, or a mixture of both.
 
-## 4. The force points downhill in potential energy
+## 4. Force from a potential-energy graph
 
 In one dimension, the conservative force points toward decreasing potential energy:
 
@@ -62,7 +67,33 @@ $$
 F_x=-\frac{dU}{dx}.
 $$
 
-You can read the direction of force from a potential-energy graph: the force points down the graph’s slope. A flat point has zero force at that point; whether it is a stable equilibrium depends on whether nearby potential energy is higher or lower.
+The force is the **negative slope** of the $U$–$x$ graph. On a slope, the force points downhill; at a flat point the force is zero. A steep slope means a large force, and the sign of the slope gives the force direction without any calculation.
+
+## 5. Equilibrium, turning points and energy diagrams
+
+A point where $dU/dx=0$ is an **equilibrium**. Its stability depends on the shape of the graph:
+
+| Shape at the point | Equilibrium | Behaviour after a small displacement |
+| --- | --- | --- |
+| $U$ minimum | stable | force pushes back toward the point |
+| $U$ maximum | unstable | force pushes farther away |
+| flat $U$ | neutral | no force in that region |
+
+For a particle with total mechanical energy $E$, the kinetic energy is $K=E-U(x)$. Because $K\ge0$, the particle can only be where $U(x)\le E$. A point where $U(x)=E$ has $K=0$ and is a **turning point**; the particle reverses there. A region where $U>E$ is classically forbidden.
+
+### Worked example: reading a potential-energy curve
+
+For $U(x)=x^2-4x$ joules with $x$ in metres,
+
+$$
+F_x=-\frac{dU}{dx}=-(2x-4)=4-2x.
+$$
+
+The equilibrium is at $x=2\ \text{m}$, where $F_x=0$. Since $U$ has a minimum there ($d^2U/dx^2=2>0$), it is stable. With total energy $E=-3\ \text{J}$, the turning points satisfy $x^2-4x=-3$, so $x=1\ \text{m}$ and $x=3\ \text{m}$. The particle moves between them, and its kinetic energy is largest at $x=2\ \text{m}$:
+
+$$
+K=E-U_{\text{min}}=-3-(-4)=1\ \text{J}.
+$$
 
 ## Practice
 
@@ -90,4 +121,6 @@ $$
 
 - Potential energy is defined for conservative interactions.
 - A change in potential energy is the negative of conservative work.
+- The force is the negative slope of the $U$–$x$ graph.
+- Minima, maxima and flat regions of $U$ give stable, unstable and neutral equilibrium.
 - Choose a convenient reference zero and stay consistent.

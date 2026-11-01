@@ -1,6 +1,6 @@
 ## JEE Main sprint: how to use this set
 
-This is a **45-minute, no-notes** practice set for after you complete the chapter lessons. Use $g=10\ \text{m/s}^2$ unless a question gives another value. Spend roughly 15 minutes on Section A, 20 on Section B, and 10 on Section C. Mark a question for review after 90 seconds; do not let one calculation consume the paper.
+This is a **50-minute, no-notes** practice set for after you complete the chapter lessons. Use $g=10\ \text{m/s}^2$ unless a question gives another value. Spend roughly 15 minutes on Section A, 20 on Section B, 10 on Section C, and 5 on Section D. Mark a question for review after 90 seconds; do not let one calculation consume the paper.
 
 The goal is not only an answer. Before writing an equation, name the system and choose the tool: net work, energy, radial force, momentum, or components of momentum.
 
@@ -14,7 +14,7 @@ The goal is not only an answer. Before writing an equation, name the system and 
 | Friction or a push transfers energy | $\Delta K+\Delta U=W_{nc}$ | Friction is usually negative work on the mechanical system. |
 | A rate is asked for | $P=\Delta E/\Delta t$ or $P=\vec F\cdot\vec v$ | Force and velocity need not be parallel. |
 | A vertical circle | Energy **plus** $\sum F_r=mv^2/r$ | At the limiting top point for a string, $T=0$. |
-| A brief collision | $\sum\vec p_i=\sum\vec p_f$ | External impulse must be negligible; conserve $K$ only if elastic. |
+| A brief collision | $\sum\vec p_i=\sum\vec p_f$ | External impulse must be negligible; conserve $K$ only if $e=1$; otherwise use $e=(v_2-v_1)/(u_1-u_2)$. |
 
 <learning-block type="mistake" title="The fastest sanity checks">
 
@@ -303,18 +303,80 @@ A calculation for a collision uses momentum conservation and produces a final ki
 You need to know whether an internal energy source acted. A firework or explosion can raise kinetic energy while conserving momentum. For an ordinary passive collision with no released stored energy, a kinetic-energy increase would signal an error.
 </details>
 
+## Section D — 2 full-length numericals
+
+### 26. Partly inelastic collision
+
+A $3\ \text{kg}$ cart moving at $4\ \text{m/s}$ collides head-on with a stationary $1\ \text{kg}$ cart. The coefficient of restitution is $e=0.50$. Find the final velocity of each cart and the kinetic energy lost in the collision. Take the original direction of motion as positive.
+
+<details><summary>Answer</summary>
+
+Momentum conservation gives $3v_1+v_2=12$.
+
+The restitution relation gives $v_2-v_1=e(u_1-u_2)=0.50(4)=2$.
+
+Substituting $v_2=v_1+2$ into the momentum equation: $3v_1+v_1+2=12$, so $v_1=2.5\ \text{m/s}$ and $v_2=4.5\ \text{m/s}$. Both carts move in the original direction; the heavier one is slowed and the lighter one is struck forward.
+
+$K_i=\frac12(3)(4^2)=24\ \text{J}$ and $K_f=\frac12(3)(2.5^2)+\frac12(1)(4.5^2)=9.375+10.125=19.5\ \text{J}$.
+
+The kinetic energy lost is $4.5\ \text{J}$. A useful check is $e=0.5<1$, so kinetic energy **must** fall, and the loss is stored as deformation, sound and thermal energy.
+</details>
+
+### 27. Reading a potential-energy curve
+
+A $1\ \text{kg}$ particle moves along the $x$-axis under a conservative force with potential energy
+
+$$
+U(x)=x^2-6x+5\ \text{J},
+$$
+
+where $x$ is in metres.
+
+1. Find the equilibrium position and decide whether it is stable or unstable.
+2. The particle has total mechanical energy $E=0\ \text{J}$. Find its turning points.
+3. Find the maximum kinetic energy and the maximum speed.
+
+<details><summary>Answer</summary>
+
+**1.** Equilibrium requires $F_x=-dU/dx=0$:
+
+$$
+-\frac{dU}{dx}=-(2x-6)=0 \quad\Rightarrow\quad x=3\ \text{m}.
+$$
+
+Since $d^2U/dx^2=2>0$, the curve is concave upward: $x=3\ \text{m}$ is a **stable** equilibrium, a potential-energy minimum.
+
+**2.** At a turning point $K=0$, so $U(x)=E=0$:
+
+$$
+x^2-6x+5=0 \quad\Rightarrow\quad (x-1)(x-5)=0,
+$$
+
+giving $x=1\ \text{m}$ and $x=5\ \text{m}$. The motion is trapped between them.
+
+**3.** Kinetic energy is largest where $U$ is smallest, at the equilibrium point:
+
+$$
+U(3)=9-18+5=-4\ \text{J}, \qquad K_{\max}=E-U_{\min}=0-(-4)=4\ \text{J}.
+$$
+
+For $1\ \text{kg}$, $\frac12(1)v_{\max}^2=4$, so $v_{\max}=\sqrt{8}=2.83\ \text{m/s}$.
+
+The sign of $F_x=6-2x$ is a quick sanity check: for $x<3$ the force is toward $+x$, and for $x>3$ it is toward $-x$, so the particle is always pushed back toward $x=3\ \text{m}$.
+</details>
+
 ## Review by error, not by score
 
 | If you missed… | Revisit | Then retry |
 | --- | --- | --- |
 | 1–3 or 11–12 | Work: force through displacement | Identify signs and the force component before calculating. |
-| 4–5, 13–14 or 20–21 | Potential energy & conservation | Draw initial/final energy states and define the system. |
+| 4–5, 13–14, 20–21 or 27 | Potential energy & conservation | Draw initial/final energy states and define the system. |
 | 6 or 15 | Power, rate & efficiency | Write the dot product before simplifying to $Fv$. |
 | 8, 16–17 or 22 | Motion in a vertical circle | Separate the energy equation from the radial-force equation. |
-| 9–10, 18–19 or 24–25 | Collisions | State whether momentum, kinetic energy, or both are conserved—and why. |
+| 9–10, 18–19, 24–26 | Collisions | State whether momentum, kinetic energy, or both are conserved—and why. |
 
 <learning-block type="recap" title="Ready for a timed set?">
 
-Aim for at least 20 correct with a written method choice for every question. Questions you solve correctly but cannot justify are revision targets, not mastered topics.
+Aim for at least 22 correct out of 27 with a written method choice for every question. Questions you solve correctly but cannot justify are revision targets, not mastered topics.
 
 </learning-block>

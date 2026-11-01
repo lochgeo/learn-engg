@@ -2,6 +2,11 @@
 
 Energy does not disappear. But **mechanical energy**—kinetic plus potential—stays constant only under specific conditions. A good solution names the system and accounts for every transfer.
 
+<figure class="lesson-figure">
+  <img src="images/work-energy/waterfall.jpg" alt="A tall waterfall dropping into a forest pool" loading="lazy" />
+  <figcaption>Water at the top of a waterfall has gravitational potential energy; by the time it reaches the pool most of that energy has become kinetic energy, and then thermal energy and sound. Tracking each transfer is the whole method. <em>Photo: Martin Eklund, Wikimedia Commons (CC0).</em></figcaption>
+</figure>
+
 ## 1. When is mechanical energy conserved?
 
 For a system acted on only by conservative forces,
@@ -53,7 +58,27 @@ $$
 
 Because $\Delta U=-60\ \text{J}$, we get $\Delta K=42\ \text{J}$ and $v=\sqrt{42}\approx6.48\ \text{m/s}$. Some gravitational energy became thermal energy rather than kinetic energy.
 
-## 5. Springs and turning points
+## 5. Connected bodies: use the whole system
+
+When blocks are joined by a string over a pulley, tension is an **internal** force of the block–string–Earth system. It does positive work on one block and negative work on the other, and the two amounts cancel. Analyse the whole system and you can leave tension out; analyse one block alone and you must include it.
+
+### Worked example: an Atwood machine
+
+Masses $3\ \text{kg}$ and $1\ \text{kg}$ hang from a light string over a frictionless pulley. The heavier mass falls $0.50\ \text{m}$ from rest. For the two-mass system, the change in gravitational potential energy is
+
+$$
+\Delta U=-(3)(10)(0.50)+(1)(10)(0.50)=-10\ \text{J}.
+$$
+
+No non-conservative force does work, so the kinetic energy gained is $10\ \text{J}$:
+
+$$
+10=\frac12(3+1)v^2\quad\Rightarrow\quad v=\sqrt5\approx2.24\ \text{m/s}.
+$$
+
+Both masses have the same speed because the string is inextensible. For one block alone, gravity and tension both do work; for the $3\ \text{kg}$ mass, $(30-T)(0.50)=\frac12(3)v^2$, and for the $1\ \text{kg}$ mass, $(T-10)(0.50)=\frac12(1)v^2$. Adding the two equations eliminates $T$ and returns the system result.
+
+## 6. Springs and turning points
 
 At a turning point, instantaneous speed is zero, so $K=0$. That does **not** mean total energy is zero: energy may be stored in a spring or gravitational field. For a horizontal frictionless block–spring system released from rest at stretch $A$, the maximum speed occurs as the spring passes its relaxed length:
 
@@ -85,4 +110,5 @@ The non-conservative work changes mechanical energy: $E_f=E_i+W_f=40-12=28\ \tex
 
 - Use $K+U=\text{constant}$ only when non-conservative work is zero.
 - With external or dissipative work, use $\Delta K+\Delta U=W_{nonconservative}$.
+- For connected bodies, internal tension cancels when you use the whole system.
 - Choose a system and reference zeros before substituting values.

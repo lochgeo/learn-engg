@@ -2,6 +2,11 @@
 
 Work tells us **how much** energy was transferred. Power tells us **how quickly** it was transferred. Two motors can do the same work but have different power if one takes less time.
 
+<figure class="lesson-figure">
+  <img src="images/work-energy/climbing-stairs.jpg" alt="A person with an umbrella walking up a long flight of stone steps" loading="lazy" />
+  <figcaption>Climbing the same stairs in half the time requires twice the average power, although the change in gravitational potential energy is identical. Power is a rate, not an amount of energy. <em>Photo: Yiannis Theologos Michellis, Wikimedia Commons (CC0).</em></figcaption>
+</figure>
+
 ## 1. Average power
 
 Over a time interval $\Delta t$,
@@ -36,7 +41,33 @@ If force and velocity point in the same direction, $P=Fv$. If they are opposite,
 
 When a vehicle moves steadily against a resistive force $F$ at speed $v$, the motor must supply the same forward force. The required mechanical power is approximately $P=Fv$. Doubling speed doubles the required power if the resisting force stays constant. In real vehicles, air drag itself usually rises with speed, so the actual power demand rises faster.
 
-## 3. Efficiency
+## 3. Motion under constant power
+
+A motor that delivers constant power does **not** produce constant acceleration. Starting from rest with no other horizontal force,
+
+$$
+P=\frac{dK}{dt}=\frac{d}{dt}\left(\frac12mv^2\right)=mv\frac{dv}{dt}.
+$$
+
+Because $v\,dv/dt=\frac12\,d(v^2)/dt$, integration gives
+
+$$
+v^2=\frac{2Pt}{m}\quad\Rightarrow\quad v=\sqrt{\frac{2Pt}{m}}.
+$$
+
+Speed grows as $\sqrt t$, so the acceleration $a=P/(mv)$ falls as the vehicle speeds up. The model breaks down at $t=0$, where it predicts infinite force; a real motor has a maximum force limited by traction and its design.
+
+### Commercial unit of energy
+
+Electricity is sold in kilowatt-hours. Since $1\ \text{kW}=1000\ \text{W}$ and $1\ \text{h}=3600\ \text{s}$,
+
+$$
+1\ \text{kWh}=(1000)(3600)=3.6\times10^6\ \text{J}.
+$$
+
+A $100\ \text{W}$ fan running for $10\ \text{h}$ uses $1\ \text{kWh}$, often called one “unit” of electricity.
+
+## 4. Efficiency
 
 Not all input energy becomes the useful output we want. Efficiency is
 
@@ -64,8 +95,23 @@ P_{useful}=\eta P_{in}=0.75(2.0\ \text{kW})=1.5\ \text{kW}.
 $$
 </details>
 
+**C.** A $2.0\ \text{kW}$ motor drives a $500\ \text{kg}$ vehicle from rest on a level frictionless road. Find its speed after $10\ \text{s}$.
+
+<details><summary>Show the reasoning</summary>
+
+Using $v=\sqrt{2Pt/m}$,
+
+$$
+v=\sqrt{\frac{2(2000)(10)}{500}}=\sqrt{80}\approx8.9\ \text{m/s}.
+$$
+
+The acceleration is not constant: it is largest at the start and decreases as the speed rises.
+</details>
+
 ## Take away
 
 - Work is measured in joules; power is measured in watts.
 - Instantaneous power is the dot product $\vec F\cdot\vec v$.
+- Under constant power, speed grows as $\sqrt t$ and acceleration decreases.
+- Electrical energy is commonly measured in kilowatt-hours: $1\ \text{kWh}=3.6\times10^6\ \text{J}$.
 - Efficiency compares useful output with input; it is not an energy source.

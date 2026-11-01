@@ -2,6 +2,11 @@
 
 In everyday speech, “work” can mean effort. In mechanics, work measures energy transferred by a force while its point of application moves. A force can be large and tiring yet do **zero mechanical work** on an object if that object does not move in the force’s direction.
 
+<figure class="lesson-figure">
+  <img src="images/work-energy/pushing-cart.jpg" alt="Silhouette of a person pushing a loaded hand truck" loading="lazy" />
+  <figcaption>A push at an angle to the motion transfers energy through only the component of force along the displacement. The vertical part of the push changes the normal force, not the work done. <em>Photo: maique madeira, Wikimedia Commons (CC0).</em></figcaption>
+</figure>
+
 ## 1. The scalar product: the mathematical tool for work
 
 Work uses the **scalar product** (or dot product) of two vectors. For vectors $\vec A$ and $\vec B$ separated by angle $\theta$,
@@ -64,6 +69,14 @@ $$
 
 On a graph of force against position, work is the **signed area** between the curve and the position axis. Areas above the axis are positive; areas below are negative. A changing force does not mean “use the average force” unless that average has been calculated correctly.
 
+In two or three dimensions, add the contributions along the actual path:
+
+$$
+W_{a\to b}=\int_a^b \vec F\cdot d\vec r=\int_a^b(F_x\,dx+F_y\,dy+F_z\,dz).
+$$
+
+Only the component of force along each small displacement contributes.
+
 ### The work–energy theorem still holds
 
 For a variable net force, split the path into tiny displacements. On each piece, $dW_{net}=F_{net,x}\,dx$. Adding every piece gives
@@ -83,6 +96,10 @@ W_{ext}=\int_0^A kx\,dx=\frac12kA^2.
 $$
 
 The spring itself does the opposite work, $W_s=-\frac12kA^2$.
+
+### Work depends on the frame
+
+Displacement depends on the observer, so the work done by a given force can differ between inertial frames. The work–energy theorem still holds in each inertial frame because the change in kinetic energy changes by exactly the same amount as the net work. Choose one frame and keep it for the whole calculation.
 
 ## 5. A reliable problem method
 

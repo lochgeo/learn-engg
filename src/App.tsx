@@ -20,13 +20,36 @@ const headingId = (value: string) => value
 
 const cleanHeading = (value: string) => value.replace(/^\d+(?:\.\d+)*[.)]?\s+/, '').trim()
 
+type MarkdownNode = { type: string; tagName?: string; properties?: Record<string, unknown>; children?: MarkdownNode[]; value?: string }
+
+const textContent = (node: MarkdownNode): string => {
+  if (node.type === 'text') return node.value ?? ''
+  const className = node.properties?.className
+  const classes = Array.isArray(className) ? className.map(String) : [String(className ?? '')]
+  if (classes.some((name) => name.includes('katex') || name.includes('math'))) return ''
+  return (node.children ?? []).map(textContent).join('')
+}
+
+// Generate heading ids from the rendered text so the lesson TOC and the page agree,
+// including headings that begin with a section number.
+const rehypeLessonIds = () => (tree: MarkdownNode) => {
+  const visit = (node: MarkdownNode) => {
+    if (node.type === 'element' && (node.tagName === 'h2' || node.tagName === 'h3')) {
+      node.properties = { ...node.properties, id: headingId(textContent(node)) }
+    }
+    ;(node.children ?? []).forEach(visit)
+  }
+  visit(tree)
+}
+
 const headingsFromMarkdown = (markdown: string): Heading[] => markdown
   .split('\n')
   .flatMap((line) => {
     const match = /^(#{2,3})\s+(.+?)\s*#*\s*$/.exec(line)
     if (!match) return []
-    const label = cleanHeading(match[2].replace(/[*_`]/g, '').replace(/\$+/g, ''))
-    return [{ id: headingId(label), label, level: match[1].length as 2 | 3 }]
+    const raw = match[2].replace(/[*_`]/g, '').trim()
+    const idSource = raw.replace(/\$[^$]*\$/g, '')
+    return [{ id: headingId(idSource), label: cleanHeading(raw.replace(/\$+/g, '')), level: match[1].length as 2 | 3 }]
   })
 
 const saved = (key: string, fallback: string[]) => {
@@ -174,7 +197,7 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
     return () => observer.disconnect()
   }, [headings])
 
-  return <article className="lesson-page"><button className="back-link" onClick={onBack}>← <span>All lessons</span></button><div className="lesson-kicker"><span className="lesson-subject-dot">◉</span>{lesson.subject.toUpperCase()}<span>·</span>{lesson.chapterTitle.toUpperCase()}</div><div className="lesson-title-row"><div><h1>{lesson.title}</h1><p className="lesson-deck">A clear, practical introduction. Learn the idea, see it at work, then try it yourself.</p></div><button className={`complete-button ${completed ? 'is-complete' : ''}`} onClick={onComplete}>{completed ? '✓ Completed' : '○ Mark complete'}</button></div><div className="lesson-meta"><span>◷ {lesson.duration} min read</span><span>·</span><span>Updated for your learning path</span></div><div className="lesson-layout"><aside className="lesson-aside"><nav className="toc-card" aria-label="In this lesson"><span className="eyebrow">IN THIS LESSON</span>{headings.map((heading) => <a key={heading.id} className={`${heading.level === 3 ? 'toc-subheading' : ''} ${activeHeading === heading.id ? 'toc-active' : ''}`} href={`#${heading.id}`} onClick={() => setActiveHeading(heading.id)}>{heading.label}</a>)}</nav><div className="objectives-card"><span className="eyebrow">YOU’LL BE ABLE TO</span>{lesson.objectives.map((objective) => <p key={objective}><span>✓</span>{objective}</p>)}</div></aside><div className="lesson-body"><div className="lesson-prose"><ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex]} components={{ 'learning-block': StudyBlock, h2: ({ children, ...props }: { children?: ReactNode; id?: string; className?: string }) => <h2 {...props}>{cleanHeading(String(children))}</h2>, h3: ({ children, ...props }: { children?: ReactNode; id?: string; className?: string }) => <h3 {...props}>{cleanHeading(String(children))}</h3> } as unknown as Components}>{markdown || '# Lesson coming soon\n\nThis lesson is being prepared.'}</ReactMarkdown></div><div className="lesson-actions"><button className={`complete-button ${completed ? 'is-complete' : ''}`} onClick={onComplete}>{completed ? '✓ Completed' : '✓ Mark lesson complete'}</button><span>Nice work showing up today.</span></div><div className="lesson-pagination"><button onClick={() => onNavigate(-1)}>← <span>Previous lesson</span></button><button onClick={() => onNavigate(1)}><span>Next lesson</span> →</button></div></div></div></article>
+  return <article className="lesson-page"><button className="back-link" onClick={onBack}>← <span>All lessons</span></button><div className="lesson-kicker"><span className="lesson-subject-dot">◉</span>{lesson.subject.toUpperCase()}<span>·</span>{lesson.chapterTitle.toUpperCase()}</div><div className="lesson-title-row"><div><h1>{lesson.title}</h1><p className="lesson-deck">A clear, practical introduction. Learn the idea, see it at work, then try it yourself.</p></div><button className={`complete-button ${completed ? 'is-complete' : ''}`} onClick={onComplete}>{completed ? '✓ Completed' : '○ Mark complete'}</button></div><div className="lesson-meta"><span>◷ {lesson.duration} min read</span><span>·</span><span>Updated for your learning path</span></div><div className="lesson-layout"><aside className="lesson-aside"><nav className="toc-card" aria-label="In this lesson"><span className="eyebrow">IN THIS LESSON</span>{headings.map((heading) => <a key={heading.id} className={`${heading.level === 3 ? 'toc-subheading' : ''} ${activeHeading === heading.id ? 'toc-active' : ''}`} href={`#${heading.id}`} onClick={() => setActiveHeading(heading.id)}>{heading.label}</a>)}</nav><div className="objectives-card"><span className="eyebrow">YOU’LL BE ABLE TO</span>{lesson.objectives.map((objective) => <p key={objective}><span>✓</span>{objective}</p>)}</div></aside><div className="lesson-body"><div className="lesson-prose"><ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeRaw, rehypeSlug, rehypeKatex, rehypeLessonIds]} components={{ 'learning-block': StudyBlock, h2: ({ children, ...props }: { children?: ReactNode; id?: string; className?: string }) => <h2 {...props}>{cleanHeading(String(children))}</h2>, h3: ({ children, ...props }: { children?: ReactNode; id?: string; className?: string }) => <h3 {...props}>{cleanHeading(String(children))}</h3> } as unknown as Components}>{markdown || '# Lesson coming soon\n\nThis lesson is being prepared.'}</ReactMarkdown></div><div className="lesson-actions"><button className={`complete-button ${completed ? 'is-complete' : ''}`} onClick={onComplete}>{completed ? '✓ Completed' : '✓ Mark lesson complete'}</button><span>Nice work showing up today.</span></div><div className="lesson-pagination"><button onClick={() => onNavigate(-1)}>← <span>Previous lesson</span></button><button onClick={() => onNavigate(1)}><span>Next lesson</span> →</button></div></div></div></article>
 }
 
 export default App
