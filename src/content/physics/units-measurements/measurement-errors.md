@@ -56,7 +56,7 @@ The digits you write are a claim about how well you measured. The rules for whic
 
 **Scientific notation removes the ambiguity.** Write $1.2 \times 10^{3}$ for two figures or $1.200 \times 10^{3}$ for four; the power of ten does not affect the count. Exact counts and defined conversions (12 eggs, $1\ \text{km} = 1000\ \text{m}$) carry unlimited significant figures — they never limit a result.
 
-When rounding to $n$ figures, look at the first dropped digit: below 5 it leaves the kept digit alone (3.14 → 3.1), above 5 raises it (2.497 → 2.50 to three figures), and exactly 5 with nothing after it is commonly resolved to the nearest *even* digit (2.35 → 2.4, but 2.45 → 2.4 as well). Rounding a 5 always upward is also seen; either convention is fine as long as you use it consistently.
+When rounding to $n$ figures, look at the first dropped digit: below 5 it leaves the kept digit alone (3.14 → 3.1), above 5 raises it (2.497 → 2.50 to three figures), and exactly 5 with nothing after it is commonly resolved to the nearest *even* digit (2.35 → 2.4, but 2.45 → 2.4 as well). Rounding a 5 always upward is also seen; either convention is fine as long as you use it consistently. Carry the full unrounded digits through every intermediate step and round **once**, at the end — rounding after each step feeds small errors into the next one.
 
 For arithmetic on measurements:
 
