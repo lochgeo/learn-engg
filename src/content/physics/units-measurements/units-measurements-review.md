@@ -37,7 +37,7 @@ State the number of significant figures in each measurement: (a) $0.00450\ \text
 
 <details><summary>Answer and reasoning</summary>
 
-(a) **3** — the leading zeros only place the decimal point; the sandwiched 5 and the final zero (after the decimal point) count. (b) **4** — the zero between 2 and 8 is sandwiched. (c) **Ambiguous** — 1 and 2 certainly count; the trailing zeros may or may not be measured. Write $1.2 \times 10^{3}$ km for two figures or $1.200 \times 10^{3}$ km for four. (d) **3** — scientific notation states the count explicitly.
+(a) **3** — the leading zeros, including the one right after the decimal point, only position it; the 4 and 5 are significant, and so is the final zero because it sits after the decimal point. (b) **4** — the zero between 2 and 8 is sandwiched. (c) **Ambiguous** — 1 and 2 certainly count; the trailing zeros may or may not be measured. Write $1.2 \times 10^{3}$ km for two figures or $1.200 \times 10^{3}$ km for four. (d) **3** — scientific notation states the count explicitly.
 </details>
 
 ### 2. Round it
@@ -96,7 +96,7 @@ Mean $\bar{T} = (2.71+2.64+2.50+2.79+2.86)/5 = 13.50/5 = 2.70\ \text{s}$. The ma
 
 ### 8. Dimensions of a constant
 
-Stokes' law for the drag on a small sphere moving slowly through a viscous fluid is $F = 6\pi \eta r v$, with $r$ the radius and $v$ the speed. (a) Find the dimensions of the coefficient of viscosity $\eta$. (b) Which common pair does this *not* clash with: does $\eta$ share dimensions with pressure, with force per length, or with neither?
+Stokes' law for the drag on a small sphere moving slowly through a viscous fluid is $F = 6\pi \eta r v$, with $r$ the radius and $v$ the speed. (a) Find the dimensions of the coefficient of viscosity $\eta$. (b) Surface tension is force per unit length; find its dimensions and say whether it could be confused with $\eta$ in a dimensional check.
 
 <details><summary>Answer and reasoning</summary>
 
@@ -104,7 +104,7 @@ Stokes' law for the drag on a small sphere moving slowly through a viscous fluid
 $$
 [\eta]=\frac{[M][L][T]^{-2}}{[L]\,[L][T]^{-1}}=[M][L]^{-1}[T]^{-1},
 $$
-which is exactly the pascal-second: $\text{Pa·s} = \text{N·s/m}^2 = \text{kg}\,\text{m}^{-1}\,\text{s}^{-1}$. (b) Neither of the candidates — pressure is $[M][L]^{-1}[T]^{-2]$… let us compute: force per length (surface tension) is $[M][T]^{-2}$, pressure is $[M][L]^{-1}[T]^{-2}$, and $[\eta] = [M][L]^{-1}[T]^{-1}$ matches neither. One extra power of time separates viscosity from pressure.
+which is exactly the pascal-second: $\text{Pa·s} = \text{N·s/m}^2 = \text{kg}\,\text{m}^{-1}\,\text{s}^{-1}$. (b) Surface tension has $[M][L][T]^{-2} \div [L] = [M][T]^{-2}$. Different powers of $L$ and $T$ keep the two apart — but compare with pressure, $[M][L]^{-1}[T]^{-2}$: viscosity is one full power of time away from it, so a hurried $[T]^{-1}$ versus $[T]^{-2}$ slip is exactly the kind of error a dimensions check exists to catch.
 </details>
 
 ### 9. Impossible at first sight
@@ -118,7 +118,7 @@ Which of these relations is dimensionally impossible? (a) $v^2 = u^2 + 2as$, (b)
 
 ### 10. Push the error through a formula
 
-A cylinder's volume is $V = \pi r^{2} h$. Its radius carries a $2\%$ uncertainty and its height $1\%$. (a) Find the maximum percentage uncertainty in $V$. (b) Would reporting the diameter $D = 2r$ instead and using $V = \pi D^{2} h/4$ change the answer? (c) In a different lab, $A = (10.0 \pm 0.2)\ \text{cm}$ and $B = (9.8 \pm 0.2)\ \text{cm}$. Find $A - B$ and its percentage error, and explain why the result is so much worse than the $2\%$ and $2\%$ of the two tapes.
+A cylinder's volume is $V = \pi r^{2} h$. Its radius carries a $2\%$ uncertainty and its height $1\%$. (a) Find the maximum percentage uncertainty in $V$. (b) Would reporting the diameter $D = 2r$ instead and using $V = \pi D^{2} h/4$ change the answer? (c) In a different lab, $A = (10.0 \pm 0.2)\ \text{cm}$ and $B = (9.8 \pm 0.2)\ \text{cm}$. Find $A - B$ and its percentage error, and explain why the result is so much worse than the roughly $2\%$ that each length carries on its own.
 
 <details><summary>Answer and reasoning</summary>
 

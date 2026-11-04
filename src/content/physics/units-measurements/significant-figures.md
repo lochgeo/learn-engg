@@ -34,11 +34,12 @@ All three mean the same length; they differ only in the precision claimed. This 
 
 ## 3. Rounding rules
 
-Round only once, at the end of a calculation, using the full unrounded digits throughout. The rules for the digit(s) you drop:
+Round only once, at the end of a calculation, using the full unrounded digits throughout. Look at the digits you are about to drop:
 
-- Drop $4$, round up $6$ and above. Dropping $45$: the first dropped digit decides, so $2.345 \to 2.34$ and $2.356 \to 2.36$ (both to 3 SF).
-- A dropped $5$ **followed by non-zero digits** rounds up: $2.351 \to 2.4$ (3 SF).
-- A dropped $5$ **with nothing (or only zeros) after it** rounds so the final kept digit is **even**: $2.35 \to 2.4$, but $2.45 \to 2.4$ as well, because the 4 stays even. This convention — used in exam marking schemes — stops a systematic upward drift when many values are rounded.
+- First dropped digit **below 5** — keep the last kept digit: $2.344 \to 2.34$ (3 SF).
+- First dropped digit **above 5** — round the last kept digit up: $2.356 \to 2.36$ (3 SF).
+- A **5 followed by any non-zero digit** also rounds up: $2.3451 \to 2.35$ (3 SF).
+- A **bare 5, with nothing but zeros after it**, rounds so the last kept digit is **even**: $2.345 \to 2.34$ (the 4 stays), but $2.355 \to 2.36$ (the 5 goes up to 6). This convention, used in exam marking schemes, stops a systematic upward drift when many values are rounded.
 
 Calculators typically round a bare $5$ upward. Either way, state your convention and apply it consistently within one calculation.
 
@@ -49,7 +50,7 @@ Two situations, two rules:
 - **Multiplication and division:** the result keeps as many significant figures as the input with the **fewest** significant figures. In $4.234 \times 1.3 = 5.5042$, the factor $1.3$ has only 2 significant figures, so report $5.5$.
 - **Addition and subtraction:** the result keeps as many **decimal places** as the input with the fewest. In $12.60 + 3.4 = 16.00$, the sum is honest only to one decimal place: $16.0$.
 
-**Exact numbers are free.** Counts, definitions such as $1\ \text{m} = 100\ \text{cm}$, and clean factors like the 2 in $2\pi r$ have unlimited precision and never limit the result. Timing twenty oscillations divides by exactly 20, so a stopwatch reading of $40.0\ \text{s}$ gives a period of $2.000\ \text{s}$ — the zeros are earned, not invented, and the timing method (in the previous lesson) is what sets the uncertainty on that last digit.
+**Exact numbers are free.** Counts, definitions such as $1\ \text{m} = 100\ \text{cm}$, and clean factors like the 2 in $2\pi r$ have unlimited precision and never limit the result. Timing twenty oscillations divides by exactly 20, so a stopwatch reading of $40.0\ \text{s}$ gives a period of $2.00\ \text{s}$: three significant figures in, three out. (Carrying the least-count uncertainty as in the previous lesson refines that to $(2.000 \pm 0.005)\ \text{s}$ — the extra digits are earned by the stated error, not invented.)
 
 ## Worked example
 
