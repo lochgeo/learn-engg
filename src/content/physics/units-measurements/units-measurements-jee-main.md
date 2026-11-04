@@ -18,7 +18,7 @@ Use $g = 10\ \text{m/s}^2$ unless a question states otherwise. For numerical ans
 
 <learning-block type="mistake" title="Fast sanity checks for this chapter">
 
-Stop and re-examine your setup if: a percentage error comes out **larger** than the largest input error after a power was applied backwards; a rounded result claims more digits than its uncertainty supports; a "dimensionless" answer still carries units; or a unit conversion changes the number of significant figures you report.
+Stop and re-examine your setup if: taking a square root made a percentage error **grow** (a root halves it, a power multiplies it); a rounded result claims more digits than its uncertainty supports; a "dimensionless" answer still carries units; or a unit conversion changed the number of significant figures you report.
 
 </learning-block>
 
@@ -144,7 +144,7 @@ The thickness of a sheet is about $0.3\ \text{mm}$. Which instrument is appropri
 
 <details><summary>Answer</summary>
 
-**C.** With a millimetre rule the reading would be almost all uncertainty; calipers give only about $30\%$ resolution on $0.3\ \text{mm}$. The screw gauge's $0.01\ \text{mm}$ least count makes the uncertainty a few per cent.
+**C.** With a millimetre rule the reading would be almost all uncertainty; the calipers' $0.1\ \text{mm}$ least count is already about a third of the $0.3\ \text{mm}$ sheet. The screw gauge's $0.01\ \text{mm}$ least count makes the uncertainty a few per cent.
 
 </details>
 
@@ -163,7 +163,7 @@ Impulse equals force times the time for which it acts. Its dimensional formula i
 
 </details>
 
-### 10. Dimensions of surface tension
+### 10. Not dimensionless
 
 Which of these quantities is **not** dimensionless?
 
@@ -349,9 +349,9 @@ How many of the statements are correct?
 | If you missed… | Revisit | Then retry |
 | --- | --- | --- |
 | 1, 6, 15, 20 | Significant figures & rounding | Count digits first, then apply one rounding rule at the end. |
-| 2, 4, 8, 19 | The SI system | Build derived units from base units instead of recalling them. |
-| 3, 7, 11, 12, 13, 14, 17 | Uncertainty in measurement | Separate absolute from percentage error before combining anything. |
-| 5, 9, 10, 16, 18 | Dimensions & dimensional analysis | Write $[M]$, $[L]$, $[T]$ exponents explicitly; remember the method's limits. |
+| 2, 4 | The SI system | Build derived units from base units instead of recalling them. |
+| 3, 7, 8, 11, 12, 13, 14, 17 | Uncertainty in measurement | Separate absolute from percentage error before combining anything; pick the instrument by least count. |
+| 5, 9, 10, 16, 18, 19 | Dimensions & dimensional analysis | Write $[M]$, $[L]$, $[T]$ exponents explicitly; remember the method's limits. |
 
 <learning-block type="recap" title="After the paper">
 
