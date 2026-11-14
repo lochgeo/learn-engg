@@ -1,9 +1,9 @@
 ## Graphs as the motion's biography
 
-A position–time or velocity–time graph is not an illustration of a solved problem; it is often the fastest way to **read off** the whole story. Two facts make the graphs work, and they follow directly from the definitions in the opening module:
+Instead of computing every position and velocity by hand, we can draw the whole journey once and then simply *read* the interesting numbers off it — that is the promise of this module. A position–time or velocity–time graph is not an illustration of a solved problem; it is often the fastest way to **read off** the whole story. Two facts make the graphs work, and they follow directly from the definitions in the opening module:
 
-- On an $x$–$t$ graph, the **slope is velocity** (steepness = speed, sign = direction).
-- On a $v$–$t$ graph, the **slope is acceleration** and the **signed area is displacement**.
+- On an $x$–$t$ graph (position plotted against time), the **slope is velocity** (steepness = speed, sign = direction).
+- On a $v$–$t$ graph (velocity plotted against time), the **slope is acceleration** and the **signed area is displacement**.
 
 When you solve from graphs, you are computing derivatives and integrals without ever writing a derivative or an integral sign.
 
@@ -22,6 +22,8 @@ Look at three things, in order:
 A curve that reaches a smooth **peak or trough** deserves special attention: the slope there is zero, so the instantaneous velocity is zero, while the object is still accelerating — exactly the situation at the top of a thrown ball, developed in Free fall and motion under gravity.
 
 ## Reading a velocity–time graph
+
+The position graph told us *where*; the velocity graph tells us *how the speed itself behaves*, and it hands us one bonus quantity — displacement — for free.
 
 - **Slope** gives acceleration: $a = \Delta v/\Delta t$ between two points on a straight segment.
 - **Signed area** between the curve and the time axis gives displacement. Area above the axis counts positive; area below counts negative.

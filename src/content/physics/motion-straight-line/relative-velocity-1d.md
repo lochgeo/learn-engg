@@ -1,6 +1,6 @@
 ## The same chase viewed from two seats
 
-Two cars run side by side. From the roadside, both move; from one car’s driver seat, the other seems to creep or slide backwards. Both observations are correct, and the machinery connecting them is one subtraction:
+Motion looks different depending on where you sit and watch from — and choosing the vantage point well is often the shortcut that turns a hard problem into an easy one. Two cars run side by side. From the roadside, both move; from one car’s driver seat, the other seems to creep or slide backwards. Both observations are correct, and the machinery connecting them is one subtraction:
 
 $$
 v_{AB}=v_A-v_B,
@@ -15,7 +15,7 @@ Properties worth internalising:
 
 ## Closing a gap at constant speed
 
-If A chases B, the rate at which the **gap** closes is the magnitude of the relative velocity along the line. So:
+The first application is the classic chase. If A chases B, the rate at which the **gap** closes is the magnitude of the relative velocity along the line. So:
 
 $$
 \text{time to catch up}=\frac{\text{initial head start}}{|v_{AB}|}\quad\text{(same direction, no acceleration)}.

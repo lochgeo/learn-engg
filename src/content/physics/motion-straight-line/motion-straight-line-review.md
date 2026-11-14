@@ -16,6 +16,8 @@ When the tools feel automatic, sit the chapter’s **JEE Main timed practice** p
 
 ## First choose the tool
 
+Half the difficulty in this chapter is knowing *which* method a question is quietly asking for. The table below turns that judgement into a lookup habit.
+
 | Clue in the question | Reach for |
 | --- | --- |
 | A journey that doubles back; “average” is asked | Definitions: velocity $=\Delta x/\Delta t$, speed $=$ path length$/\Delta t$ |

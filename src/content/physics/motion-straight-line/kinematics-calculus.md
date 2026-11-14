@@ -10,7 +10,7 @@ Velocities come from differentiating position; accelerations from differentiatin
 
 ## Downhill: differentiate
 
-Given a position as an explicit function of time, $x(t)$, everything else follows mechanically.
+Start with the easy direction. Given a position as an explicit function of time, $x(t)$, everything else follows mechanically.
 
 ### Worked example 1: read the motion from $x(t)$
 
@@ -35,7 +35,7 @@ Note three things:
 
 ## Uphill: integrate with initial conditions
 
-Given $a(t)$, integrate to get $v(t)$, integrate again for $x(t)$. Each integration introduces a **constant of integration, fixed by an initial condition** — skipping that step is the classic error.
+Now the reverse direction, which needs one extra habit. Given $a(t)$, integrate to get $v(t)$, integrate again for $x(t)$. Each integration introduces a **constant of integration, fixed by an initial condition** — skipping that step is the classic error.
 
 ### Worked example 2: rebuild motion from $a(t)$
 

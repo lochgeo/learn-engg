@@ -1,6 +1,6 @@
 ## Gravity as a built-in problem generator
 
-Drop any object near Earth’s surface, ignoring air resistance, and its acceleration is the same roughly $9.8\ \text{m/s}^2$ downward — written $g$ — whether you drop it, throw it down, or toss it up. Nothing else about the motion is prescribed: gravity supplies the acceleration, and the constant-acceleration equations of the last module do the rest with $a=\pm g$.
+Falling things seem like a new topic, but they are really a gift: nature fixes the acceleration for us, so the constant-acceleration equations from the last module apply unchanged. Drop any object near Earth’s surface, ignoring air resistance, and its acceleration is the same roughly $9.8\ \text{m/s}^2$ downward — written $g$ — whether you drop it, throw it down, or toss it up. Nothing else about the motion is prescribed: gravity supplies the acceleration, and the constant-acceleration equations of the last module do the rest with $a=\pm g$.
 
 Since $a$ is constant, your sign convention decides the *sign* of $g$. Two conventions work; pick one and never mix:
 
@@ -40,7 +40,7 @@ $$
 
 ## Thrown upward: one acceleration, two directions
 
-A ball launched upward with speed $u$ is *still* under $a=-g$ (upward positive). Three milestones follow from the equations:
+Now for the case that feels harder but is not: a ball launched upward with speed $u$ is *still* under $a=-g$ (upward positive). Three milestones follow from the equations:
 
 - **Velocity zero at the top.** Setting $v=0$ in $v=u-gt$ gives time up $t_\text{up}=u/g$.
 - **Maximum height** $H$ from $0=u^2-2gH$:

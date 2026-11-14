@@ -1,5 +1,7 @@
 ## What constant acceleration buys you
 
+The question this module answers is a practical one: if the acceleration stays steady, can we predict position and speed without doing any calculus? The answer is yes — one short list of symbols and three equations cover nearly every textbook journey.
+
 Most textbook problems — and a surprising share of real ones, from braking cars to accelerating lifts — involve acceleration that holds steady for the interval of interest. That single restriction, $a=\text{constant}$, is powerful enough to compress all kinematics into three short equations, because two of the defining relations become exactly solvable.
 
 The cast of symbols, used throughout:
@@ -24,7 +26,7 @@ It says the velocity grows linearly. It contains all five quantities except $s$;
 
 ## Equation 2: displacement from time
 
-Under constant acceleration the velocity changes uniformly, so its *average* over the interval is the midpoint of its endpoints:
+Velocity changing linearly has a neat consequence for *distance covered* too. Under constant acceleration the velocity changes uniformly, so its *average* over the interval is the midpoint of its endpoints:
 
 $$
 \bar v=\frac{u+v}{2},\qquad s=\bar v\,t=\frac{u+v}{2}\,t.
@@ -40,7 +42,7 @@ It contains everything except $v$. The special case $u=0$ (starting from rest) g
 
 ## Equation 3: displacement without time
 
-Eliminating $t$ between equations 1 and 2 gives
+One rearrangement remains: what if the question asks for speed but never mentions time? Eliminating $t$ between equations 1 and 2 gives
 
 $$
 v^2=u^2+2as.

@@ -178,6 +178,8 @@ A car braking at its maximum deceleration stops in $20\ \text{m}$ from $50\ \tex
 
 ## Section B — 5 numerical-value questions
 
+Next, the format changes: instead of choosing among options, you produce the answer yourself — there is nothing to eliminate, so the reasoning has to carry the whole weight.
+
 Give a numerical answer (with units) in the space of the question. No options are provided, as in the exam’s numerical-value section.
 
 ### 11. Uniform speed-up over a known time

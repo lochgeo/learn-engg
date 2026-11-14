@@ -1,5 +1,7 @@
 ## Why motion needs a reference frame
 
+Before any formula can help, we need a way to say *where* something is and *how fast* it moves — and it turns out neither question has an absolute answer. This module builds that groundwork in three small decisions.
+
 A train passenger who says “I am sitting still” and a person on the platform who says “you are rushing past at 25 m/s” are both right. Position is always reported **relative to some chosen observation point**, called a *frame of reference*. In kinematics we describe where an object is, not why it moves — forces come later, in Laws of Motion.
 
 To describe motion along a straight line we only need three decisions:
@@ -11,6 +13,8 @@ To describe motion along a straight line we only need three decisions:
 Once that is done, every position is a signed number, and signs carry the direction automatically. Eastward $+6\ \text{m}$ followed by eastward $+6\ \text{m}$ is written $x=12\ \text{m}$ at the end — no vectors, no angles.
 
 ## Displacement and path length are different
+
+With every position reduced to a signed number, the first useful quantity is the *change* in position — but that change needs careful bookkeeping, because two natural measures of "how much ground was covered" disagree as soon as the motion reverses.
 
 An object that moves from $x_1$ to $x_2$ along the line has
 
@@ -30,7 +34,7 @@ For example, walking $60\ \text{m}$ in the $+x$ direction and then $40\ \text{m}
 
 ## Average velocity vs average speed
 
-Over a time interval $\Delta t = t_2-t_1$:
+So far we have recorded *where* the object ended up; now we ask *how fast* it got there. Over a time interval $\Delta t = t_2-t_1$:
 
 $$
 \text{average velocity}=\frac{\Delta x}{\Delta t},\qquad
@@ -56,7 +60,7 @@ A delivery cyclist rides $300\ \text{m}$ east in $120\ \text{s}$, realises the c
 
 ## From average to instantaneous
 
-Average velocity blurs the whole interval into one number. What we usually mean by “the cyclist’s speed right now” is the **instantaneous velocity**: the average velocity taken over a vanishingly small interval around the instant of interest,
+Average velocity blurs the whole interval into one number, which is often exactly what a question wants — but not always. What we usually mean by “the cyclist’s speed right now” is the **instantaneous velocity**: the average velocity taken over a vanishingly small interval around the instant of interest,
 
 $$
 v = \lim_{\Delta t\to 0}\frac{\Delta x}{\Delta t} = \frac{dx}{dt}.
