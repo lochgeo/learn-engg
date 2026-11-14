@@ -122,7 +122,7 @@ This choice of $\alpha$ is not accidental: $45^\circ - \beta/2 = 30^\circ$ is ex
 
 <details><summary>Show the reasoning</summary>
 
-$t_f = \sqrt{2(20)/10} = 2\ \text{s}$. Range $x = 10 \times 2 = 20\ \text{m}$. Landing: $v_x = 10\ \text{m/s}$, $v_y = 20\ \text{m/s}$, so speed $= \sqrt{100+400} = \sqrt{500} \approx 22.4\ \text{m/s}$ at $\arctan(2) \approx 63.4^\circ$ below the horizontal. Check: it must land further from the wall but land *softer in time* than any slower roll from the same roof — the time is set by height alone.
+$t_f = \sqrt{2(20)/10} = 2\ \text{s}$. Range $x = 10 \times 2 = 20\ \text{m}$. Landing: $v_x = 10\ \text{m/s}$, $v_y = 20\ \text{m/s}$, so speed $= \sqrt{100+400} = \sqrt{500} \approx 22.4\ \text{m/s}$ at $\arctan(2) \approx 63.4^\circ$ below the horizontal. Check: the launch speed sets how far from the wall it lands, but not when it lands — a slower roll from the same roof takes exactly this same 2 s, because the time is set by the height alone.
 </details>
 
 **2.** Show that the incline formulas reduce to the level-ground results when $\beta = 0$.
@@ -155,7 +155,7 @@ Compare with the uphill maximum of $26.7\ \text{m}$ for the same speed: downhill
 
 ## Remember
 
-- a horizontal launch is free fall riding on constant horizontal speed; the fall time depends only on $h$.
+- A horizontal launch is free fall riding on constant horizontal speed; the fall time depends only on $h$.
 - For a launch from a height, solve the vertical quadratic first: $t_f = (u_y + \sqrt{u_y^2+2gh})/g$.
 - On an incline, work in the incline frame: gravity splits into $g\sin\beta$ along and $g\cos\beta$ perpendicular, and both motions are accelerated.
 - Uphill best angle is $45^\circ - \beta/2$; downhill is $45^\circ + \beta/2$; downhill range always exceeds uphill for the same speed.

@@ -83,7 +83,7 @@ The centripetal acceleration is perpendicular to the velocity at every instant (
 
 ## 4. What provides the centripetal force
 
-"Centripetal force" is a job description, not a new kind of force: whatever agent points the net force inward plays the role. Friction does it for a car on a flat road, where the utmost curvature acceptable needs friction up to $\mu m g$ to supply $mv^2/r$, capping the speed at
+"Centripetal force" is a job description, not a new kind of force: whatever agent points the net force inward plays the role. Friction does it for a car on a flat road: the available grip is at most $\mu m g$, so the sharpest affordable turn caps the speed at
 
 $$
 v_{\max} = \sqrt{\mu g r}

@@ -48,7 +48,7 @@ The one-dimensional version from Motion in a Straight Line is the special case w
 
 ## 5. River–boat problems
 
-A boat that can move at speed $v_b$ relative to still water crosses a river of width $d$ whose current runs at $v_r$. The velocity relative to the ground is the vector sum
+Now the same discipline meets its classic exam application — the river crossing. A boat that can move at speed $v_b$ relative to still water crosses a river of width $d$ whose current runs at $v_r$. The velocity relative to the ground is the vector sum
 
 $$
 \vec v_{\text{ground}} = \vec v_{\text{boat}} + \vec v_{\text{water}},

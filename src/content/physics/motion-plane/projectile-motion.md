@@ -1,6 +1,6 @@
 ## Gravity only acts one way
 
-A ball kicked at an angle rises, slows, hesitates at the top of its arc, and falls — yet the whole time it drifts forward at an apparently unchanging pace. The reason is simple and powerful: with air resistance neglected, **gravity is the only force**, and it points straight down. Nothing pushes or pulls horizontally, so the horizontal velocity never changes; the vertical motion is just an ordinary free-fall problem occurred simultaneously with uniform horizontal motion. The curved path — a **projectile's trajectory** — is the sum of one constant-speed drift and one accelerated drop.
+A ball kicked at an angle rises, slows, hesitates at the top of its arc, and falls — yet the whole time it drifts forward at an apparently unchanging pace. The reason is simple and powerful: with air resistance neglected, **gravity is the only force**, and it points straight down. Nothing pushes or pulls horizontally, so the horizontal velocity never changes; the vertical motion is just an ordinary free-fall problem running simultaneously with uniform horizontal motion. The curved path — a **projectile's trajectory** — is the sum of one constant-speed drift and one accelerated drop.
 
 This decomposition into two independent one-dimensional motions is the entire strategy of projectile analysis. Everything else is bookkeeping.
 
@@ -133,7 +133,7 @@ $u_y = 10\sin30^\circ = 5\ \text{m/s}$. Time to the top: $t = u_y/g = 0.5\ \text
 
 ## Remember
 
-- projectiles are two independent motions sharing one clock: constant $v_x$ plus vertical free fall.
+- Projectiles are two independent motions sharing one clock: constant $v_x$ plus vertical free fall.
 - Only the vertical column controls the clock: $T = 2u\sin\theta/g$ for level launch and landing.
 - $R = u^2\sin2\theta/g$ is a level-ground result, maximum at $45^\circ$, and shared by complementary launch angles.
 - The trajectory $y = x\tan\theta - gx^2/(2u^2\cos^2\theta)$ is a parabola; the acceleration never leaves the vertical axis.

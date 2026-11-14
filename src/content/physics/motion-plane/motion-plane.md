@@ -47,7 +47,7 @@ with the extremes reached at $180^\circ$ and $0^\circ$ respectively.
 
 A hiker walks $30\ \text{m}$ due east, then $40\ \text{m}$ due north. What is the net displacement?
 
-Place the east leg along $\hat i$ and the north leg along $\hat j$:
+Place the east leg along $\hat i$ and the north leg along $\hat j$ — unit vectors (arrows of length 1) pointing along those directions, introduced formally in the next section:
 
 $$
 \vec s_1 = 30\ \text{m}\ \hat i, \qquad \vec s_2 = 40\ \text{m}\ \hat j.

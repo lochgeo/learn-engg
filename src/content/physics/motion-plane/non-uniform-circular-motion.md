@@ -37,7 +37,7 @@ $$
 a_t = \alpha r.
 $$
 
-Careful: with $\alpha$ constant only for *angular* motion, the rotational kinematics mirror the constant-acceleration equations of Motion in a Straight Line, with $x \to \theta$, $v \to \omega$, $a \to \alpha$:
+Careful: this parallel works only in *angular* quantities. When $\alpha$ is constant, the rotational kinematics mirror the constant-acceleration equations of Motion in a Straight Line, with $x \to \theta$, $v \to \omega$, $a \to \alpha$:
 
 $$
 \omega = \omega_0 + \alpha t, \qquad
