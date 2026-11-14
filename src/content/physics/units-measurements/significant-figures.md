@@ -6,7 +6,7 @@ When you write down a measurement, the digits do two jobs at once: they give the
 
 ## 1. Counting significant figures
 
-A quoted value's significant figures are the digits that carry certainty or one judged digit beyond it. The rules:
+Start with counting — the rules are short, and everything else in this lesson builds on them. A quoted value's significant figures are the digits that carry certainty or one judged digit beyond it. The rules:
 
 - All **non-zero digits** count.
 - **Zeros between non-zero digits** count: in $2.308$, the zero is trapped and counts, giving 4 significant figures.

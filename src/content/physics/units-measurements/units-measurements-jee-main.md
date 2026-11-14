@@ -24,6 +24,8 @@ Stop and re-examine your setup if: taking a square root made a percentage error 
 
 ## Section A — 10 rapid MCQs
 
+Warm up with these single-mark questions: they test recognition rather than stamina, so keep each one to well under a minute.
+
 ### 1. Counting digits
 
 The number of significant figures in $0.00685$ is:
@@ -138,13 +140,13 @@ Two lengths are measured as $a = (10.0 \pm 0.1)\ \text{cm}$ and $b = (4.0 \pm 0.
 The thickness of a sheet is about $0.3\ \text{mm}$. Which instrument is appropriate for a sensible measurement?
 
 - A. metre rule (least count $1\ \text{mm}$)
-- B. vernier calipers (least count $0.1\ \text{mm}$)
+- B. vernier callipers (least count $0.1\ \text{mm}$)
 - C. screw gauge (least count $0.01\ \text{mm}$)
 - D. any of these work equally well
 
 <details><summary>Answer</summary>
 
-**C.** With a millimetre rule the reading would be almost all uncertainty; the calipers' $0.1\ \text{mm}$ least count is already about a third of the $0.3\ \text{mm}$ sheet. The screw gauge's $0.01\ \text{mm}$ least count makes the uncertainty a few per cent.
+**C.** With a millimetre rule the reading would be almost all uncertainty; the callipers' $0.1\ \text{mm}$ least count is already about a third of the $0.3\ \text{mm}$ sheet. The screw gauge's $0.01\ \text{mm}$ least count makes the uncertainty a few per cent.
 
 </details>
 

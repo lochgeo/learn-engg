@@ -16,6 +16,8 @@ Uncertainty is part of the measurement, not a mistake to hide. When adding or su
 
 ## Combining errors in a calculation
 
+Suppose a result is built from measured quantities, each carrying its own uncertainty — how uncertain must the result be? The rules below answer exactly that, one operation at a time.
+
 When two measured quantities are added or subtracted, their **absolute** uncertainties add:
 
 $$

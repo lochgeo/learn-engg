@@ -18,7 +18,7 @@ Measurements are useful when different people can repeat them and understand the
 
 ### Base and derived quantities
 
-Some quantities are chosen as foundations. Length, mass, and time are familiar examples. Other quantities are built from them: speed is distance divided by time, so its unit is metres per second.
+So where do units come from? Some quantities are chosen as foundations, and everything else is built on top of them. Length, mass, and time are familiar examples. Other quantities are built from them: speed is distance divided by time, so its unit is metres per second.
 
 | Quantity | Example unit | How it is described |
 | --- | --- | --- |

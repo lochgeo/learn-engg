@@ -20,7 +20,7 @@ Other units are derived from these. Force, for instance, is mass multiplied by a
 
 ### Scale with prefixes
 
-Prefixes let us describe very large and very small measurements without long strings of zeroes. A kilometre is $10^3$ metres; a millimetre is $10^{-3}$ metres. The prefix is a power-of-ten multiplier, so convert by tracking that factor.
+Prefixes let us describe very large and very small measurements without long strings of zeroes. A kilometre is $10^3$ metres; a millimetre is $10^{-3}$ metres — writing a wire's thickness as $0.5\ \text{mm}$ is far friendlier than $0.0005\ \text{m}$. The prefix is a power-of-ten multiplier, so convert by tracking that factor.
 
 ## Worked example
 

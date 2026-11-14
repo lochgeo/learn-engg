@@ -12,6 +12,8 @@ Close each lesson's reveals and redo its questions from a blank page before movi
 
 ## First choose the tool
 
+Before the questions, here is the whole chapter compressed into one decision table: when a question stumps you, match its wording to a row below and reach for the matching tool.
+
 | Clue in the question | Reach for |
 | --- | --- |
 | "How many significant figures…" | Non-zeros count; sandwiched zeros count; leading zeros never; trailing zeros only after a decimal point |

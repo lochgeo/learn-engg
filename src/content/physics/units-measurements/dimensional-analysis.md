@@ -4,7 +4,7 @@ Dimensions describe the kind of quantity in an equation, independent of the part
 
 ## Start here
 
-Speed is distance divided by time, so its dimension is $[L][T]^{-1}$. Acceleration is change in speed divided by time, giving $[L][T]^{-2}$. A force has the dimensions of mass multiplied by acceleration: $[M][L][T]^{-2}$.
+The bracket notation looks abstract, but you already think this way: calling a speed "metres per second" is really naming it by length and time. Speed is distance divided by time, so its dimension is $[L][T]^{-1}$. Acceleration is change in speed divided by time, giving $[L][T]^{-2}$. A force has the dimensions of mass multiplied by acceleration: $[M][L][T]^{-2}$.
 
 For an equation to be dimensionally consistent, the dimensions on its left and right sides must match. Quantities added together must also have the same dimensions. This is a quick check, not a proof: an equation can pass the check and still have the wrong numerical constant.
 
