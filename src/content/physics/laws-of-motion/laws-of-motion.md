@@ -23,7 +23,7 @@ A **force** is a push or a pull: an interaction between two bodies that can chan
 | direction | the line along which it acts |
 | point of application | where on the body it acts |
 
-Forces are vectors, with SI unit the newton: $1\ \text{N}=1\ \text{kg·m/s}^2$. A force that changes only the *direction* of the velocity (not its size) is still doing real work as a force — steering a bicycle round a corner requires a sideways force from the ground. This matters later for circular motion.
+Forces are vectors, with SI unit the newton: $1\ \text{N}=1\ \text{kg·m/s}^2$. A force that changes only the *direction* of the velocity (not its size) still counts as a genuine force — steering a bicycle round a corner requires a sideways force from the ground. This matters later for circular motion.
 
 Two cautions about the word "force":
 

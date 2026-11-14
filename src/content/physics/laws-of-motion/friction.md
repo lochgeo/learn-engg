@@ -14,7 +14,7 @@ $$
 
 with equality only at the verge of slipping. If a $15.0\ \text{N}$ push leaves a crate motionless, static friction is exactly $15.0\ \text{N}$ — not a fixed formula's output.
 
-**Kinetic friction** acts once sliding *has* begun. It is (approximately) independent of speed and contact area:
+**Kinetic friction** acts once sliding *has* begun. It is (approximately) independent of speed and contact area, depending only on how hard the surfaces press together:
 
 $$
 f_k = \mu_k N, \qquad \mu_k < \mu_s \text{ typically}.

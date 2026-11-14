@@ -17,7 +17,7 @@ The key practical rule: if your frame has acceleration $a$ relative to a good in
 
 ## 2. The pseudo force: a patch, not a push
 
-Work in a frame accelerating with acceleration $\vec a_{\text{frame}}$ relative to an inertial frame, and the second law written naively goes wrong. The fix: pretend that *every* mass experiences an extra force
+Work in a frame whose acceleration relative to an inertial frame is $\vec a_{\text{frame}}$, and the second law written naively goes wrong. The fix: pretend that *every* mass experiences an extra force
 
 $$
 \vec F_{\text{pseudo}} = -m\,\vec a_{\text{frame}},

@@ -4,7 +4,7 @@ A block on a table drags a hanging mass over a pulley; a lift carries a counterw
 
 ## 1. Constraint relations: what the string demands
 
-An ideal string is inextensible, light, and passes over a frictionless, massless pulley. Two consequences:
+An ideal string is inextensible and light, and any pulley it passes over is frictionless and massless. Two consequences:
 
 1. **Same tension throughout** — each straight segment carries one tension $T$; a massless pulley merely redirects it, without changing its size.
 2. **Same speed and acceleration magnitude at both ends.** The string's total length is fixed, so if one end moves a distance, the other end must give up the same distance along the string. Speeds change at identical rates: if block $A$ on the table accelerates toward the pulley, the hanging block $B$ accelerates downward with the *same* $a$.

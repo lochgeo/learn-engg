@@ -20,7 +20,7 @@ For an object at rest or at constant velocity, the right-hand sides are zero: th
 
 ## 2. The normal force: not always $mg$
 
-A surface, pushed on, pushes back perpendicular to itself. That contact response is the **normal force** $N$ ($normalis$: perpendicular). Writing $N = mg$ is a habit to break: $N$ adjusts itself to whatever is needed to keep the surfaces from interpenetrating, *up to the limit of breaking contact*.
+A surface, pushed on, pushes back perpendicular to itself. That contact response is the **normal force** $N$ — *normal* here simply means perpendicular, from the Latin *normalis*. Writing $N = mg$ is a habit to break: $N$ adjusts itself to whatever is needed to keep the surfaces from interpenetrating, *up to the limit of breaking contact*.
 
 | Situation | Normal force on a block of mass $m$ |
 | --- | --- |
