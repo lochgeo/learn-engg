@@ -103,7 +103,7 @@ Read the parallel with translation: force accelerates mass, torque accelerates r
 
 ## 5. Worked example: a flywheel spun by a rope
 
-A light rope is wrapped around the rim of a flywheel whose moment of inertia about its axle is $I=4\ \text{kg·m}^2$ and whose radius is $R=0.25\ \text{m}$. The rope is pulled with a steady $20\ \text{N}$ force, tangent to the rim.
+With torque and $I\alpha$ in hand, put the machinery to work. A light rope is wrapped around the rim of a flywheel whose moment of inertia about its axle is $I=4\ \text{kg·m}^2$ and whose radius is $R=0.25\ \text{m}$. The rope is pulled with a steady $20\ \text{N}$ force, tangent to the rim.
 
 **Torque.** The force is perpendicular to the radius, so $\sin\theta=1$:
 

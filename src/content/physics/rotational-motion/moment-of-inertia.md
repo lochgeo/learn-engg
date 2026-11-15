@@ -47,7 +47,7 @@ Two sanity habits: (i) hollow bodies outrank solid ones because their mass is di
 
 ## 4. The parallel-axis theorem
 
-If you know $I_{cm}$ about an axis through the centre of mass, the value about any **parallel** axis a distance $d$ away is
+Table values are about "natural" axes through the centre; real problems often pick other axes. Fortunately one short theorem converts between them. If you know $I_{cm}$ about an axis through the centre of mass, the value about any **parallel** axis a distance $d$ away is
 
 $$
 I = I_{cm} + Md^2.

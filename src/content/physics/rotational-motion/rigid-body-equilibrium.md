@@ -44,7 +44,7 @@ Balance test: an object hangs, when freely pivoted, with its centre of gravity v
 
 ## 4. Worked example: the hinged beam
 
-A uniform rod of mass $m=4.0\ \text{kg}$ and length $L=1.0\ \text{m}$ is hinged to a wall at one end and held horizontal by a light wire attached to its far end, the wire making $30^\circ$ with the rod. Find the wire tension and both hinge components. Take $g=10\ \text{m/s}^2$.
+Here are the two conditions working together on the classic exam machine. A uniform rod of mass $m=4.0\ \text{kg}$ and length $L=1.0\ \text{m}$ is hinged to a wall at one end and held horizontal by a light wire attached to its far end, the wire making $30^\circ$ with the rod. Find the wire tension and both hinge components. Take $g=10\ \text{m/s}^2$.
 
 **Torque about the hinge** (the strategic pivot — the hinge reaction drops out of the equation). The weight acts at the midpoint, $L/2$ along; the wire acts at the far end with moment arm $L\sin30^\circ$:
 

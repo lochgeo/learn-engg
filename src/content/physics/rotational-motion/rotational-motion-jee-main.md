@@ -26,6 +26,8 @@ Stop and re-inspect the setup if an answer shows: a negative moment of inertia o
 
 ## Section A — 10 rapid MCQs
 
+Work briskly; each has one clean answer. Name the tool first, then commit.
+
 ### 1. Where the mass balances
 
 A $2\ \text{kg}$ mass sits at $x=0$ and a $4\ \text{kg}$ mass at $x=3\ \text{m}$. The centre of mass is at:

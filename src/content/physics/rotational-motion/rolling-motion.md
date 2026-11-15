@@ -102,7 +102,7 @@ For the $30^\circ$ ramp above, $\mu_s\ge(2/7)(\tan30^\circ)\approx0.17$. A slick
 
 ## 4. The race down the slope
 
-From $a=\dfrac{g\sin\theta}{1+I/MR^2}$: **only the shape factor matters**. Mass and radius are absent; the models agree that a marble and a cannonball roll at the same rate.
+The acceleration formula settles an exam favourite. From $a=\dfrac{g\sin\theta}{1+I/MR^2}$: **only the shape factor matters**. Mass and radius are absent; the models agree that a marble and a cannonball roll at the same rate.
 
 | Object down the incline | $I/MR^2$ | $a/(g\sin\theta)$ | $v^2$ at bottom (height $h$) |
 | --- | --- | --- | --- |

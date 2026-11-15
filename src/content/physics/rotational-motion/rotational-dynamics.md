@@ -59,7 +59,7 @@ $\tau=I\alpha$ is licensed for (a) an axis fixed in an inertial frame, or (b) an
 
 ## 4. Worked example: a pulley you cannot ignore
 
-A $1\ \text{kg}$ block rests on a frictionless table, connected by a light string over a pulley to a $2\ \text{kg}$ hanging block. The pulley is a uniform disc of mass $M=2\ \text{kg}$ and radius $R=0.20\ \text{m}$; the string does not slip on it, and friction at the axle is negligible. Take $g=10\ \text{m/s}^2$.
+So far the pulley has been a piece of scaffolding we pretended was massless. Here is the classic problem where its own mass matters. A $1\ \text{kg}$ block rests on a frictionless table, connected by a light string over a pulley to a $2\ \text{kg}$ hanging block. The pulley is a uniform disc of mass $M=2\ \text{kg}$ and radius $R=0.20\ \text{m}$; the string does not slip on it, and friction at the axle is negligible. Take $g=10\ \text{m/s}^2$.
 
 Treat the three bodies separately. The string's tension differs on the two sides of the pulley — otherwise the pulley would feel no torque and would not accelerate.
 

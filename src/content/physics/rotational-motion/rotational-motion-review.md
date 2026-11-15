@@ -34,7 +34,7 @@ When the lessons feel comfortable, move on to the timed **JEE Main practice set*
 
 ## Mastery check
 
-Attempt each fully before opening the answer. Use $g=10\ \text{m/s}^2$ unless stated otherwise.
+The table above is your map; the ten questions below test whether you can read it under no prompting. Attempt each fully before opening the answer. Use $g=10\ \text{m/s}^2$ unless stated otherwise.
 
 ### 1. Three masses on a rail
 

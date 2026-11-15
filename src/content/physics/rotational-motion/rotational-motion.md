@@ -61,7 +61,7 @@ Removing material pushes the centre of mass **away** from the hole by $R/3$. San
 
 ## 4. Motion of the centre of mass
 
-Differentiate the definition twice. Because $\sum m_i\vec r_i = M\vec r_{cm}$ is constant in structure, the second derivative gives
+So far the centre of mass has been a static address. Now let the system move. Differentiate the definition twice with respect to time. Because $\sum m_i\vec r_i = M\vec r_{cm}$ is constant in structure, the second derivative gives
 
 $$
 M\vec a_{cm}=\sum \vec F_{ext}.
