@@ -74,7 +74,7 @@ The words matter: gravity is **not** absent — the field strength in low orbit 
 
 ## Worked example: reading a full ledger
 
-A $1000\ \text{kg}$ weather satellite sits in a circular orbit of radius $r=2R_E$ (height $6400\ \text{km}$). With $GM_E=gR_E^2$:
+A $1000\ \text{kg}$ weather satellite sits in a circular orbit of radius $r=2R_E$ — twice Earth's radius, i.e. height $6400\ \text{km}$. With $GM_E=gR_E^2$:
 
 **Speed:** $v=\sqrt{GM_E/r}=\sqrt{gR_E^2/2R_E}=\sqrt{gR_E/2}=\sqrt{3.2\times10^7}\approx5.7\ \text{km/s}$ — slower than $7.9$ km/s at the surface limit, as it must be.
 

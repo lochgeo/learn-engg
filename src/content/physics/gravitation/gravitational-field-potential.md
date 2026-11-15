@@ -47,7 +47,7 @@ The minus sign says the field points **down the potential slope**, toward where 
 
 ## 4. Worked example: climbing out of the potential pit
 
-A $1\ \text{kg}$ probe is lifted from Earth's surface ($r=R$) to orbital radius $r=3R$, engines firing gently so no kinetic energy builds up. Take $GM=R^2g$.
+A $1\ \text{kg}$ probe is lifted from Earth's surface ($r=R$, with $R$ Earth's radius) to orbital radius $r=3R$, engines firing gently so no kinetic energy builds up. Take $GM=R^2g$, which is just $g=GM/R^2$ rearranged.
 
 **Potential at each stop.** Since $GM/R=gR$:
 

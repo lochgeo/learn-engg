@@ -46,7 +46,7 @@ One refinement: if the orbiting mass $m$ is not negligible (binary stars), the c
 
 ## 4. Speeds at the two ends of an orbit
 
-At perihelion and aphelion the velocity is perpendicular to the radius, so the swept-area rate is $\tfrac12rv$ there. The area law then reads $v_pr_p=v_ar_a$:
+At perihelion and aphelion the velocity is perpendicular to the radius, so the swept-area rate is $\tfrac12rv$ there (subscripts $p$ and $a$ below stand for perihelion and aphelion). The area law then reads $v_pr_p=v_ar_a$:
 
 $$
 \frac{v_p}{v_a}=\frac{r_a}{r_p}=\frac{1+e}{1-e}.

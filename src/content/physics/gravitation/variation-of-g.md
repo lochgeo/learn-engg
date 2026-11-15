@@ -42,7 +42,7 @@ The uniform assumption is the caveat: the real Earth has a dense iron core, so m
 
 ## 3. Sideways on the globe: rotation and latitude
 
-A body sitting on the rotating Earth is not in an inertial frame: it needs a centripetal force $m\omega^2R\cos\lambda$ toward the rotation axis, where $\lambda$ is latitude. Subtracting this demand from the true pull gives the **effective** gravity that scales and plumb lines record:
+A body sitting on the rotating Earth is not in an inertial frame: it needs a centripetal force $m\omega^2R\cos\lambda$ toward the rotation axis, where $\lambda$ is latitude and $\omega$ the Earth's angular speed of rotation. Subtracting this demand from the true pull gives the **effective** gravity that scales and plumb lines record:
 
 $$
 g_{\text{eff}}=g-\omega^2R\cos^2\lambda.

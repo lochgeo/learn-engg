@@ -1,6 +1,6 @@
 ## The apple and the Moon fall together
 
-Drop an apple and it gains speed at $9.8\ \text{m/s}^2$. The Moon, about $60$ Earth radii away, accelerates toward Earth at roughly $2.7\times10^{-3}\ \text{m/s}^2$ — and $9.8/3600\approx2.7\times10^{-3}$, exactly what an inverse-square law predicts at $r=60R_E$. Newton's leap was that one attraction rules both cases. The Moon keeps missing the Earth only because it also carries a large sideways velocity.
+Drop an apple and it gains speed at $9.8\ \text{m/s}^2$. The Moon, about $60$ Earth radii away, accelerates toward Earth at roughly $2.7\times10^{-3}\ \text{m/s}^2$ — and $9.8/3600\approx2.7\times10^{-3}$, exactly what an inverse-square law predicts at $r=60R_E$, where $R_E$ is Earth's radius. Newton's leap was that one attraction rules both cases. The Moon keeps missing the Earth only because it also carries a large sideways velocity.
 
 ## 1. The inverse-square law
 
@@ -67,7 +67,7 @@ $$
 
 About a hundred-thousandth of the weight of a grain of sand: real, but far too small to notice.
 
-**(b)** Find the Earth's pull on the Moon: $M_E\approx6.0\times10^{24}\ \text{kg}$, $M_M\approx7.35\times10^{22}\ \text{kg}$, centre-to-centre distance $3.84\times10^8\ \text{m}$.
+**(b)** Find the Earth's pull on the Moon: $M_E\approx6.0\times10^{24}\ \text{kg}$, $M_M\approx7.35\times10^{22}\ \text{kg}$, centre-to-centre distance $3.84\times10^8\ \text{m}$, and $GM_E\approx4.0\times10^{14}\ \text{m}^3/\text{s}^2$ (so the substitution below need not name $G$ separately).
 
 $$
 F=\frac{GM_EM_M}{r^2}=\frac{(4.0\times10^{14})(7.35\times10^{22})}{1.47\times10^{17}}\approx2.0\times10^{20}\ \text{N}.

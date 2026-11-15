@@ -4,7 +4,7 @@ Throw a stone skyward and it comes back. Every kilogram-per-second you add to th
 
 ## 1. Deriving escape speed
 
-Escape means reaching infinity with speed at rest to spare; the cheapest escape starts with that exact budget. Energy conservation between launch and infinity:
+Escape means arriving at infinity with no speed to spare; the cheapest escape starts with exactly that budget. Energy conservation between launch and infinity:
 
 $$
 \frac12mv^2=\frac{GMm}{R}
