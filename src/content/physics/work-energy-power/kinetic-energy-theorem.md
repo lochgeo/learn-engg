@@ -16,7 +16,7 @@ Kinetic energy depends on the reference frame because speed does. A passenger at
 
 ## 2. Deriving the theorem for constant net force
 
-For motion along one line, Newton’s second law gives $F_{net}=ma$. The constant-acceleration relation
+For motion along one line, Newton’s second law gives $F_{net}=ma$. Using the initial speed $u$, the final speed $v$, and the displacement $\Delta x$, the constant-acceleration relation
 
 $$
 v^2-u^2=2a\Delta x

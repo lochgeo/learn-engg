@@ -9,7 +9,7 @@ During a short collision, objects exert large forces on each other. If the net e
 
 ## 1. Two conservation rules, two different jobs
 
-For two bodies in one dimension,
+For two bodies in one dimension, let the masses be $m_1$ and $m_2$, with velocities $u_1,u_2$ just before the collision and $v_1,v_2$ just after:
 
 $$
 m_1u_1+m_2u_2=m_1v_1+m_2v_2.

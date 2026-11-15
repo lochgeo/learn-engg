@@ -61,7 +61,7 @@ For a box sliding $5\ \text{m}$ across a floor, suppose a pull does $40\ \text{J
 
 ## 4. When the force changes
 
-If a one-dimensional force varies with position, divide the motion into tiny displacements. Each small piece contributes $dW=F_x\,dx$, so
+So far the force has been constant. If a one-dimensional force varies with position, divide the motion into tiny displacements instead. Each small piece contributes $dW=F_x\,dx$, so
 
 $$
 W_{a\to b}=\int_a^b F_x(x)\,dx.
@@ -82,8 +82,10 @@ Only the component of force along each small displacement contributes.
 For a variable net force, split the path into tiny displacements. On each piece, $dW_{net}=F_{net,x}\,dx$. Adding every piece gives
 
 $$
-W_{net}=\int \vec F_{net}\cdot d\vec r=K_f-K_i.
+W_{net}=\int \vec F_{net}\cdot d\vec r=K_f-K_i,
 $$
+
+where $K_f$ and $K_i$ are the final and initial kinetic energies (the subject of the next lesson).
 
 So $W_{net}=\Delta K$ is not limited to constant forces or straight-line, constant-acceleration motion. It applies to the **net** work; individual forces may add or remove energy while their sum determines the change in kinetic energy.
 

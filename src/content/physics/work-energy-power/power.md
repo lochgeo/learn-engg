@@ -75,7 +75,7 @@ $$
 \eta=\frac{\text{useful output energy}}{\text{input energy}}=\frac{\text{useful output power}}{\text{input power}}.
 $$
 
-It is often reported as a percentage. For an ordinary device, $0\leq\eta\leq1$; the rest of the input is transferred to unwanted forms such as heat or sound.
+It is often reported as a percentage. For an ordinary device, $0\leq\eta\leq1$; the rest of the input is transferred to unwanted forms such as thermal energy or sound.
 
 ## Practice
 
