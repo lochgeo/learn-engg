@@ -122,7 +122,7 @@ Energy per cycle: $(2.0\times10^4)(1.0\times10^{-4})=2.0\ \text{J}$. At $10$ cyc
 ## Remember
 
 - Work done stretching a Hookean wire is $W=\frac12F\Delta L$; the stored energy equals it for slow loading within the elastic region.
-- Stress it as $u=\frac12\sigma\varepsilon=\frac12Y\varepsilon^2=\sigma^2/2Y$, in $\text{J/m}^3$; triple check which of stress or strain you have been given.
+- Express it as $u=\frac12\sigma\varepsilon=\frac12Y\varepsilon^2=\sigma^2/2Y$, in $\text{J/m}^3$; triple check which of stress or strain you have been given.
 - A wire of material $Y$, area $A$, length $L$ is a spring of constant $k=YA/L$.
 - The hysteresis loop area times volume is energy lost per cycle — the basis of every vibration damper.
 - Next module: temperature is another way to change a solid's dimensions — and when expansion is blocked, *stress* replaces *motion*.

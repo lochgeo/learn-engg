@@ -58,7 +58,7 @@ Shear moduli are smaller than Young's moduli (for steel, $G\approx7.7\times10^{1
 
 ## 4. Poisson's ratio: the sideways consequence
 
-Stretch a rubber cord and it becomes visibly thinner; stretch a steel wire and the thinning is microscopic but real. The **Poisson's ratio** compares the lateral squeeze-back with the longitudinal stretch:
+Stretch a rubber cord and it becomes visibly thinner; stretch a steel wire and the thinning is microscopic but real. This sideways squeeze-back is measured by **Poisson's ratio**, which compares the lateral strain with the longitudinal stretch:
 
 $$
 \nu=-\ \frac{\text{lateral strain}}{\text{longitudinal strain}}

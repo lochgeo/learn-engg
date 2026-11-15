@@ -49,7 +49,7 @@ $$
 \text{area of loop}=\text{energy dissipated as heat, per unit volume, per cycle}.
 $$
 
-During loading you do slightly more work than the elastic energy condition store — the surplus is dissipated in internal friction. This is why:
+During loading you do slightly more work than comes back as recoverable elastic energy — the surplus is dissipated in internal friction. This is why:
 
 - a rubber ball loses a measurable fraction of its mechanical energy with every bounce and lands a little lower each time;
 - vibration mounts, shoe soles and car tyres get warm — rubber compounds are chosen precisely to dissipate mechanical energy;
@@ -80,7 +80,7 @@ A metal specimen in its proportional region records $(\varepsilon,\sigma)=(5\tim
 The full curve is not a constant of nature: it belongs to a material **at a stated temperature and loading rate**. Two practical consequences matter:
 
 - **Metals can turn brittle.** Many steels that stretch to large plastic strains at room temperature fracture near the proportional limit when cold. Low-carbon steel shifts to brittle behaviour as temperature drops — a fact learned tragically through hull fractures in cold waters — which is why low-temperature service steels are chosen from impact-test data, not room-temperature curves.
-- **Polymers soften.** Rubber's compliance grows with temperature; creeps under steady load; and, unloaded, it relaxes over time. An elastomer's curve is a family of curves, one per temperature.
+- **Polymers soften.** Rubber's compliance grows with temperature; it creeps under steady load; and, unloaded, it relaxes over time. An elastomer's curve is a family of curves, one per temperature.
 
 So when a quantity in this chapter is quoted — a yield stress, a modulus, a fracture strain — the honest answer specifies the condition under which it was measured.
 

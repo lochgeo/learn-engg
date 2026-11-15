@@ -48,7 +48,7 @@ $$
 
 Read the physics in these formulas:
 
-- **Sign.** Heating a rod with both ends fixed puts it in **compression** (it pushes outwards on the clamps); cooling it produces **tension** (it tugs the claps inward). Where a long concrete wall is restrained and cools overnight, that tension is exactly how restraint shrinkage cracks begin.
+- **Sign.** Heating a rod with both ends fixed puts it in **compression** (it pushes outwards on the clamps); cooling it produces **tension** (it tugs the clamps inward). Where a long concrete wall is restrained and cools overnight, that tension is exactly how restraint shrinkage cracks begin.
 - **Length does not appear.** The developed stress is independent of the rod's length altogether — a short stub and a long beam in the same clamp arrangement carry the same stress for the same $\Delta T$. The force *does* scale with cross-sectional area $A$: the whole force is what the anchors feel.
 - **Magnitudes are serious.** For steel with $\alpha=1.2\times10^{-5}$, $Y=2.0\times10^{11}\ \text{Pa}$ and a $50\ ^\circ\text{C}$ swing:
 

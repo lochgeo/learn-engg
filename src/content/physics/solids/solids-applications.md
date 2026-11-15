@@ -79,7 +79,7 @@ Evidently: stocky columns are crushing-limited; slender ones are buckling-limite
 
 ## 4. Worked example: testing a steel column
 
-A solid square steel column of side $a=0.10\ \text{m}$ stands $3.0\ \text{m}$ between pinned ends. Take $Y=2.0\times10^{11}\ \text{Pa}$ and elastic limit $\sigma_c=2.0\times10^8\ \text{Pa}$.
+Let us weigh both failure modes against each other on one column. A solid square steel column of side $a=0.10\ \text{m}$ stands $3.0\ \text{m}$ between pinned ends. Take $Y=2.0\times10^{11}\ \text{Pa}$ and elastic limit $\sigma_c=2.0\times10^8\ \text{Pa}$.
 
 **Section properties.** $A=a^2=1.0\times10^{-2}\ \text{m}^2$, and for a solid square about its central axis $I=a^4/12=(0.10)^4/12=8.3\times10^{-6}\ \text{m}^4$.
 

@@ -43,7 +43,7 @@ That number is worth remembering: elastic strains in metals are typically only a
 
 ## 3. Hooke's law: the linear regime
 
-For loads small enough that the atomic springs are hardly disturbed, stress grows in proportion to strain:
+So far we have measured the cause (stress) and the effect (strain) separately; the next step is to link them. For loads small enough that the atomic springs are hardly disturbed, stress grows in proportion to strain:
 
 $$
 \sigma=Y\,\varepsilon.
@@ -82,7 +82,7 @@ A rubber band stretches enormously yet has a tiny modulus; a steel rod barely mo
 
 ## 5. Worked example: from load to extension
 
-A steel wire of length $2.0\ \text{m}$ and cross-sectional area $1.0\times10^{-6}\ \text{m}^2$ carries a $10\ \text{kg}$ hanging mass. Take $g=10\ \text{m/s}^2$ and $Y=2.0\times10^{11}\ \text{Pa}$.
+Let us put the three definitions to work on a single specimen, end to end. A steel wire of length $2.0\ \text{m}$ and cross-sectional area $1.0\times10^{-6}\ \text{m}^2$ carries a $10\ \text{kg}$ hanging mass. Take $g=10\ \text{m/s}^2$ and $Y=2.0\times10^{11}\ \text{Pa}$.
 
 **Stress.** $\sigma=F/A=\dfrac{(10)(10)}{1.0\times10^{-6}}=1.0\times10^8\ \text{Pa}$, i.e. $100\ \text{MPa}$.
 
