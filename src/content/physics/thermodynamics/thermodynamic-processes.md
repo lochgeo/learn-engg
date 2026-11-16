@@ -38,7 +38,7 @@ $$
 W=nRT\ln2=1\times8.31\times300\times0.693=1728\ \text{J}\approx1.73\ \text{kJ}.
 $$
 
-Since $\Delta U=0$, the gas must absorb $Q=+1.73\ \text{kJ}$ from the reservoir. **Sanity checks:** doubling the volume halves the pressure ($PV$ fixed), an ordinary quasistatic requirement; the heat absorbed in isothermal expansion is *finite and modest* because the pressure falls as the volume grows — near the end of the expansion the gas is pushing against a much weaker opposing pressure.
+Since $\Delta U=0$, the gas must absorb $Q=+1.73\ \text{kJ}$ from the reservoir. **Sanity checks:** doubling the volume halves the pressure ($PV$ fixed), an ordinary quasi-static requirement; the heat absorbed in isothermal expansion is *finite and modest* because the pressure falls as the volume grows — near the end of the expansion the gas is pushing against a much weaker opposing pressure.
 
 </learning-block>
 
@@ -76,7 +76,7 @@ The internal energy change is $\Delta U=nC_V\,\Delta T=1\times12.465\times900=11
 
 ## 5. Comparing the curves
 
-On a $P$–$V$ diagram, both isothermal and adiabatic paths fall from upper left to lower right, but not at the same rate. Slopes at a shared point: isothermal $dP/dV=-P/V$ (from $PV=\text{constant}$), adiabatic $dP/dV=-\gamma P/V$ (from $PV^\gamma=\text{constant}$). Since $\gamma>1$, **the adiabatic curve is steeper through any shared state**. Physically: an expanding adiabatic gas loses pressure for two reasons at once — more volume, and a falling temperature — while an expanding isothermal gas keeps its temperature and loses pressure for one reason only.
+With all four processes priced, the useful skill is telling their curves apart at a glance. On a $P$–$V$ diagram, both isothermal and adiabatic paths fall from upper left to lower right, but not at the same rate. Slopes at a shared point: isothermal $dP/dV=-P/V$ (from $PV=\text{constant}$), adiabatic $dP/dV=-\gamma P/V$ (from $PV^\gamma=\text{constant}$). Since $\gamma>1$, **the adiabatic curve is steeper through any shared state**. Physically: an expanding adiabatic gas loses pressure for two reasons at once — more volume, and a falling temperature — while an expanding isothermal gas keeps its temperature and loses pressure for one reason only.
 
 | Process | Holds fixed | Work by gas | Heat | $\Delta U$ |
 | --- | --- | --- | --- | --- |

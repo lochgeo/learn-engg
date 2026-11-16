@@ -42,7 +42,7 @@ This distinction is not pedantry. It is why engines can be designed at all: the 
 
 ## 4. Internal energy
 
-A gas stores energy microscopically: kinetic energy of moving, rotating and vibrating molecules, plus potential energy of their mutual attractions. The total, measured in the frame in which the gas as a whole is at rest, is the **internal energy** $U$.
+So where does a system actually *keep* its energy? A gas stores it microscopically: kinetic energy of moving, rotating and vibrating molecules, plus potential energy of their mutual attractions. The total, measured in the frame in which the gas as a whole is at rest, is the **internal energy** $U$.
 
 For an ideal gas there are no intermolecular attractions, so $U$ is purely kinetic and depends **only on temperature**:
 

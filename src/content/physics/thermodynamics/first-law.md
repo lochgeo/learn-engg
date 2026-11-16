@@ -32,7 +32,7 @@ Rearranging the first law, $Q=\Delta U+W$. Since $\Delta U$ is fixed while $W$ v
 
 ## 3. One $\Delta U$, many paths — a worked comparison
 
-A gas goes from state A ($P=2\times10^{5}\ \text{Pa}$, $V=2.0\ \text{L}$) to state B ($P=2\times10^{5}\ \text{Pa}$, $V=6.0\ \text{L}$); suppose its internal energy rises by $450\ \text{J}$ between these states. Because A and B fix the states, $\Delta U=+450\ \text{J}$ along *every* route.
+Let's watch the difference appear in real numbers. A gas goes from state A ($P=2\times10^{5}\ \text{Pa}$, $V=2.0\ \text{L}$) to state B ($P=2\times10^{5}\ \text{Pa}$, $V=6.0\ \text{L}$); suppose its internal energy rises by $450\ \text{J}$ between these states. Because A and B fix the states, $\Delta U=+450\ \text{J}$ along *every* route.
 
 **Route 1 — direct expansion at constant pressure.**
 

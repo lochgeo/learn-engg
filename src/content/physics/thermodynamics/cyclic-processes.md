@@ -27,6 +27,8 @@ Direction decides the sign. On a standard $P$–$V$ diagram ($V$ rightward, $P$ 
 
 ## 3. A complete cycle, computed
 
+One loop, worked leg by leg, is worth a page of rules.
+
 <learning-block type="example" title="Worked example — a rectangular cycle">
 
 $0.1\ \text{mol}$ of monatomic ideal gas follows $A\to B\to C\to D\to A$:

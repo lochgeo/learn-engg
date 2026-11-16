@@ -1,6 +1,6 @@
 ## How to use this set
 
-This is a **50-minute, no-notes** paper in JEE Main style, for after the seven concept lessons and the practice module. Work with the constants $R=8.31\ \text{J}\ \text{mol}^{-1}\ \text{K}^{-1}$; no $g$ is needed — this chapter is thermal. Suggested split: Section A (12 minutes), Section B (15), Section C (12), Section D (11). If a question passes $90$ seconds without a path forward, mark it and move on; the numerical answers are chosen so that clean setups earn clean numbers.
+This is a **50-minute, no-notes** paper in JEE Main style, for after the seven concept lessons and the practice module. Work with the constant $R=8.31\ \text{J}\ \text{mol}^{-1}\ \text{K}^{-1}$; no $g$ is needed — this chapter is thermal. Suggested split: Section A (12 minutes), Section B (15), Section C (12), Section D (11). If a question passes $90$ seconds without a path forward, mark it and move on; the numerical answers are chosen so that clean setups earn clean numbers.
 
 Name the constraint *before* computing: what is held fixed, and what does the question rule out? Most slips in this chapter are process-identification slips, not arithmetic ones.
 

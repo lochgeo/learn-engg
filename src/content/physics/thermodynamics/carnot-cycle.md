@@ -17,7 +17,7 @@ The loop closes on the $P$–$V$ diagram as a rounded, clockwise cycle. Every st
 
 ## 2. Deriving $\eta=1-T_c/T_h$
 
-Along stroke 1 the ideal gas absorbs (first law, isothermal ideal gas: $\Delta U=0$, $Q=W$)
+Label the four corners of the loop $A\to B\to C\to D\to A$: stroke 1 runs $A\to B$, stroke 2 $B\to C$, stroke 3 $C\to D$ and stroke 4 $D\to A$. Along stroke 1 the ideal gas absorbs (first law, isothermal ideal gas: $\Delta U=0$, $Q=W$)
 
 $$
 Q_1=nRT_h\ln\frac{V_B}{V_A}.
@@ -106,7 +106,7 @@ $\beta=\frac{T_c}{T_h-T_c}=\frac{300}{400-300}=3$. Then $W=\frac{Q_c}{\beta}=\fr
 
 ## Remember
 
-- The Carnot cycle is two isotherms (at $T_h$, $T_c$) closed by two adiabats — every stroke quasistatic and reversible.
+- The Carnot cycle is two isotherms (at $T_h$, $T_c$) closed by two adiabats — every stroke quasi-static and reversible.
 - $Q_2/Q_1=T_c/T_h$ falls out of the adiabatic links (equal volume ratios), giving $\eta=1-T_c/T_h$.
 - Temperatures in kelvin, always; the efficiency is a ratio, not a difference.
 - The ceiling binds every engine between the same reservoirs, reversible or not; only reversible ones touch it.

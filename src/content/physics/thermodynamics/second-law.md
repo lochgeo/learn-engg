@@ -16,7 +16,7 @@ The two statements are logically **equivalent**: violate one and you can build a
 
 ## 3. Heat engines and efficiency
 
-An engine between a hot reservoir at $T_h$ and a cold reservoir at $T_c$ absorbs $Q_h$ per cycle, delivers work $W$ and rejects $Q_c$:
+An engine between a hot reservoir at $T_h$ and a cold reservoir at $T_c$ (subscripts $h$ and $c$ for hot and cold; temperatures in kelvin) absorbs $Q_h$ per cycle, delivers work $W$ and rejects $Q_c$:
 
 $$
 W=Q_h-Q_c \qquad\text{(first law, since }\Delta U_{cycle}=0),

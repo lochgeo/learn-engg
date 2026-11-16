@@ -40,7 +40,7 @@ The result holds for any ideal gas, monatomic or not: molar $C_P$ always exceeds
 
 ## 4. Degrees of freedom fix the values
 
-Kinetic theory's equipartition result says each molecular degree of freedom holds $\frac{1}{2}RT$ of energy per mole, giving $C_V=\frac{f}{2}R$, $C_P=(\frac{f}{2}+1)R$ and
+What fixes $f$ — and with it the actual numbers in the table? Kinetic theory's equipartition result says each molecular degree of freedom holds $\frac{1}{2}RT$ of energy per mole, giving $C_V=\frac{f}{2}R$, $C_P=(\frac{f}{2}+1)R$ and
 
 $$
 \gamma=\frac{C_P}{C_V}=1+\frac{2}{f}.

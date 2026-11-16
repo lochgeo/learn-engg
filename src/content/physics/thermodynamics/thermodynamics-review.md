@@ -15,6 +15,8 @@ After each, close the lesson and redo its questions on a blank page. Then attemp
 
 ## First choose the tool
 
+Before the problems, here is the whole chapter compressed into one table.
+
 | Clue in the question | Start with |
 | --- | --- |
 | Rigid, sealed, welded container | Isochoric: $W=0$; $Q=\Delta U=nC_V\,\Delta T$ |
