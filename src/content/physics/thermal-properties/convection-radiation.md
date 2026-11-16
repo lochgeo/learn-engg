@@ -35,7 +35,7 @@ The single most frequent radiation error is inserting a Celsius temperature into
 
 ## 3. What radiates out also streams in
 
-A body in any surroundings receives them (at the walls' temperature $T_0$) as well as emitting its own. The **net** energy loss is
+A body in any surroundings also *receives* radiation from those surroundings (at the walls' temperature $T_0$) while emitting its own. The **net** energy loss is
 
 $$P_{net} = e\,\sigma A\,(T^{4} - T_{0}^{4}),$$
 

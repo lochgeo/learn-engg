@@ -22,7 +22,7 @@ The kelvin exists for a physical reason, not a bureaucratic one. The Celsius zer
 
 ## 2. Thermometers and how calibrations work
 
-A liquid-in-glass thermometer compares the expansion of a liquid (mercury stays liquid from $-39^\circ\text{C}$ to $357^\circ\text{C}$ and expands evenly; alcohol reaches down to $-112^\circ\text{C}$) against that of the glass. A **constant-volume gas thermometer**, where the pressure of a fixed volume of gas rises in direct proportion to temperature, is the laboratory standard and is what defines the ideal-gas temperature scale.
+Turning that definition into a usable measurement takes a scale, and scales are built by calibration. A liquid-in-glass thermometer compares the expansion of a liquid (mercury stays liquid from $-39^\circ\text{C}$ to $357^\circ\text{C}$ and expands evenly; alcohol reaches down to $-112^\circ\text{C}$) against that of the glass. A **constant-volume gas thermometer**, where the pressure of a fixed volume of gas rises in direct proportion to temperature, is the laboratory standard and is what defines the ideal-gas temperature scale.
 
 Any new scale can be mapped onto Celsius through its two fixed points. If a scale reads $x_{ice}$ at the ice point and $x_{steam}$ at the steam point, a reading $x$ corresponds to
 
@@ -58,7 +58,7 @@ A longer period means the clock runs **slow** on a hot day. This fractional rule
 
 ## 4. Area expansion — and the hole that grew
 
-For a flat sheet, both dimensions expand:
+For a flat sheet of length $L$ and width $W$, both dimensions expand:
 
 $$A' = L(1+\alpha\Delta T)\times W(1+\alpha\Delta T) \approx A(1 + 2\alpha\Delta T),$$
 

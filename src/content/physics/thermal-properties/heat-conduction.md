@@ -78,7 +78,7 @@ The chapter review works a full double-glazing number if you want the arithmetic
 
 ## 7. Ice grows on a lake — and slows down
 
-End this module where the last one ended: water at $0^\circ\text{C}$ under a cold atmosphere at $-10^\circ\text{C}$. Newly formed ice of thickness $y$ must conduct away the latent heat released as it thickens. Writing the balance for a thin growth $dy$.
+End this module where the last one ended: water at $0^\circ\text{C}$ under a cold atmosphere at $-10^\circ\text{C}$. Newly formed ice of thickness $y$ must conduct away the latent heat released as it thickens. Write the energy balance for a thin growth $dy$ of the sheet:
 
 $$\rho L\,dy = \frac{k\,\theta}{y}\,dt \quad\Rightarrow\quad t = \frac{\rho L\,y^2}{2k\,\theta},$$
 

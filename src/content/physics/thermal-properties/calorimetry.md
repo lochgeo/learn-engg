@@ -32,7 +32,7 @@ The consequences run through daily weather and engineering: oceans buffer coasta
 
 ## 3. The principle of calorimetry
 
-Seal a hot object with a cold one in an insulated container. Since nothing escapes, energy is only redistributed:
+Seal a hot object with a cold one in an insulated container, and the accounting becomes a single rule. Since nothing escapes, energy is only redistributed:
 
 $$\sum Q = 0 \quad\Longleftrightarrow\quad \text{heat lost by hot parts} = \text{heat gained by cold parts},$$
 

@@ -64,6 +64,8 @@ Newton's law speaks only of the **difference** $\theta - \theta_0$; the constant
 
 ## 4. Three laws in harness: applications
 
+The three laws are not rivals; each answers a different question, and together they earn their keep across astronomy, medicine and engineering.
+
 - **Stellar thermometry**: from a star's colour, Wien gives its surface temperature; Stefan with its luminosity gives its size. Colour, temperature and radius close the triangle.
 - **Thermal imaging and IR thermometry**: skin, machinery and electrical contacts radiate mid-infrared near $10\ \mu\text{m}$ (Wien, $T\approx300\ \text{K}$); detector arrays read it out as a temperature.
 - **Calorimetry corrections**: no calorimeter is perfectly insulated, so real experiments extract the true mixing temperature by extrapolating the cooling tail backwards using Newton's law — this is why the law belongs in this chapter at all.

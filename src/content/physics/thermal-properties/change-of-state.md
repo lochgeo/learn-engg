@@ -31,7 +31,7 @@ Two everyday consequences deserve attention. A scald from steam at $100^\circ\te
 
 ## 3. Reading a heating curve
 
-Plot temperature against heating time (input energy) for ice starting at $-20^\circ\text{C}$ and you get a staircase: risers and treads.
+Plot temperature against heating time (input energy) for ice starting at $-20^\circ\text{C}$ and you get a staircase: risers (the steep climbs, where temperature rises) and treads (the flat stretches, where a phase change is under way).
 
 | Stage | Behaviour | Governing quantity |
 | --- | --- | --- |
