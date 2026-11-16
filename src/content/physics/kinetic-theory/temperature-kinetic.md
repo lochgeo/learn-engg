@@ -1,6 +1,6 @@
 ## Temperature is an energy measurement
 
-Weigh a molecule and clock its speed and you can predict how hot the gas is. The linking statement is the most important sentence in kinetic theory: **the average translational kinetic energy of a molecule is proportional to the absolute temperature**, and the proportionality is the same for every gas. Temperature is not "heatstuff"; it is a reading off the distribution of molecular energies. This lesson makes that precise, works out the characteristic speeds that follow, and sketches how the speeds are distributed.
+Weigh a molecule and clock its speed and you can predict how hot the gas is. The linking statement is the most important sentence in kinetic theory: **the average translational kinetic energy of a molecule is proportional to the absolute temperature**, and the proportionality is the same for every gas. Temperature is not "heatstuff"; it is a reading off the distribution of molecular energies. This lesson makes that precise, works out the characteristic speeds (most probable, mean and rms) that follow, and sketches how the speeds are distributed.
 
 ## 1. From the pressure formula to temperature
 

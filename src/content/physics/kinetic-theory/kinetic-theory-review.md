@@ -21,7 +21,7 @@ Afterwards, the **JEE Main timed practice** module gives a 50-minute, no-notes m
 | A gas's state changes; two of $p,V,T,n$ held or asked | $pV=nRT$ in kelvin, applied to two states |
 | Pressure or density with speeds mentioned | Kinetic formula: $p=\frac13\rho v_{rms}^2$, hence $v_{rms}=\sqrt{3p/\rho}$ |
 | "Average kinetic energy per molecule" or temperature meaning | $\langle K\rangle=\tfrac32k_BT=\tfrac32RT$ per mole |
-| Highest/fasting/compare speeds | $v\propto\sqrt{T/M}$; ratio table $v_{mp}:\langle v\rangle:v_{rms}=1:1.128:1.225$ |
+| Fastest/compare speeds | $v\propto\sqrt{T/M}$; ratio table $v_{mp}:\langle v\rangle:v_{rms}=1:1.128:1.225$ |
 | Specific heat, $C_p$, $C_V$, $\gamma$ | Count degrees of freedom: $C_V=\frac f2R$, $\gamma=1+2/f$ |
 | Collisions, how far, vacuum | $\lambda=1/(\sqrt2\pi d^2n)=k_BT/(\sqrt2\pi d^2p)$; $z=\langle v\rangle/\lambda$ |
 | Real gas, measured $p$ off the ideal value | $Z=pV/nRT$; van der Waals $(p+an^2/V^2)(V-nb)=nRT$ |

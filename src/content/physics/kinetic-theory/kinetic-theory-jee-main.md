@@ -112,7 +112,7 @@ Which gas has the largest $\gamma=C_p/C_V$ at room temperature?
 **A.** $\gamma=1+2/f$ is largest when $f$ is smallest. Helium is monatomic ($f=3$, $\gamma=5/3$); nitrogen $f=5$ ($1.4$); methane and carbon dioxide, being rigid multi-atom molecules, store still more rotationally ($\gamma\approx1.3$).
 </details>
 
-### 7. isothermal doubling
+### 7. Isothermal doubling
 
 An ideal gas expands isothermally to twice its volume. Its pressure:
 

@@ -14,7 +14,7 @@ By Newton's third law the molecule gives the wall $+2mv_x$ of momentum. Momentum
 
 ## 2. Adding up the whole gas
 
-Take a cube of side $l$ containing $N$ molecules. Track one molecule with velocity components $(v_x,v_y,v_z)$:
+So far, one molecule against one wall. Now add up every molecule in the gas. Take a cube of side $l$ containing $N$ molecules and track one molecule with velocity components $(v_x,v_y,v_z)$:
 
 - Time to cross the box and return to the same wall: $\Delta t=2l/v_x$.
 - Momentum given per bounce: $2mv_x$.

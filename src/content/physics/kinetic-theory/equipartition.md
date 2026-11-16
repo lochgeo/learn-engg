@@ -12,12 +12,13 @@ A **degree of freedom** is an independent mode for storing energy that comes in 
 | diatomic, rigid bond (O₂, N₂, air) | 3 | 2 | 5 |
 | diatomic with vibration (high $T$) | 3 | 2 | 7 |
 | non-linear polyatomic, rigid (H₂O, CH₄) | 3 | 3 | 6 |
-| linear polyatomic, rigid (CO₂) | 3 | 2 | 7 |
+| linear polyatomic, bending partly active (CO₂) | 3 | 2 | 7 |
 
-Two fine points hide in the table:
+Three fine points hide in the table:
 
 - **Why only 2 rotational modes for a diatomic molecule?** A diatomic molecule is a rod; spinning about the line joining the atoms moves almost no mass (the moment of inertia about that axis is negligible), so that rotation stores essentially zero energy. Rotation about each of the two perpendicular axes is what counts.
 - **Why vibration adds 2, not 1?** A vibrating bond stores energy half in kinetic form (½μ v_rel²) and half in potential form (½k x²). Each quadratic form is a separate degree of freedom, so one vibrational mode contributes two.
+- **Why is linear CO₂ listed with 7, not 5?** A truly rigid linear molecule counts $3+2=5$; carbon dioxide's low-frequency bending vibration wakes partly even at room temperature, adding two more slots. The first "Try it yourself" question below puts this to work.
 
 ## 2. Equipartition: energy shared equally
 
@@ -82,7 +83,7 @@ $\Delta U=nC_V\Delta T$ is an internal-energy bookkeeping fact for an ideal gas 
 
 ## Try it yourself
 
-**1.** Predict γ for carbon dioxide (linear, rigid at room temperature, so $f=7$).
+**1.** Predict γ for carbon dioxide (linear, with its bending mode partly awake at room temperature, so $f=7$).
 
 <details><summary>Show the reasoning</summary>
 

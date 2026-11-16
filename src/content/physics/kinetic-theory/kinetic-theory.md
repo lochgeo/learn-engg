@@ -18,7 +18,7 @@ Each assumption can fail. Section 4 says where, and later lessons in this chapte
 
 ## 2. The equation of state
 
-The model's central prediction is that pressure $p$, volume $V$, number of moles $n$ and absolute temperature $T$ of a dilute gas obey
+The model's central prediction is its **equation of state**: a single relation tying together the measurable quantities — pressure $p$, volume $V$, number of moles $n$ and absolute temperature $T$ — that describe a dilute gas. In symbols, they obey
 
 $$
 pV=nRT=Nk_BT,

@@ -54,7 +54,7 @@ The $an^2/V^2$ term deserves attention. Attractions are pair corrections, so the
 
 ## 3. What the equation predicts: the critical point
 
-Push the van der Waals isotherms onto a $p$–$V$ diagram and a shape emerges that matches experiment:
+Push the van der Waals isotherms — curves of pressure against volume at a single fixed temperature — onto a $p$–$V$ diagram and a shape emerges that matches experiment:
 
 - High above a characteristic temperature, every isotherm resembles the hyperbola of an ideal gas.
 - Below a characteristic temperature, there exists a small pocket of volumes where **liquid** and **vapour coexist**: isothermal compression at constant pressure condenses some of the gas to liquid.
