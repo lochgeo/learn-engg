@@ -99,6 +99,8 @@
 
 .subject-dot.purple { color: var(--purple); background: var(--purple-soft) }
 
+.subject-dot.teal { color: var(--teal); background: var(--teal-soft) }
+
 .subject-count {
   margin-left: auto;
   font-size: 10px;

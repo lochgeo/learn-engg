@@ -26,6 +26,8 @@
 
 .subject-page-icon.purple { background: #f0edf6; color: #78669a }
 
+.subject-page-icon.teal { background: #e8f2f0; color: #3f7d78 }
+
 .subject-page-heading h1 {
   font: 600 34px/1.15 var(--serif);
   letter-spacing: -1.3px;

@@ -35,6 +35,8 @@
   --orange-soft: #f8eee5;
   --purple: #78669a;
   --purple-soft: #f0edf6;
+  --teal: #3f7d78;
+  --teal-soft: #e8f2f0;
 
   /* Progress + completion */
   --progress-track: #eff0eb;
@@ -109,6 +111,8 @@
   --orange-soft: #3b3027;
   --purple: #c0b1e0;
   --purple-soft: #322d3e;
+  --teal: #8fc9c1;
+  --teal-soft: #213734;
   --progress-track: #303d3e;
   --progress-fill: #83a98b;
   --complete-bg: #202d2b;

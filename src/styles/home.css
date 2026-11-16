@@ -183,6 +183,8 @@
 
 .card-purple .course-icon { background: #f1eff6; color: #80719b }
 
+.card-teal .course-icon { background: #eaf3f1; color: #4e8b85 }
+
 .course-arrow { color: #adb2aa; font-size: 13px }
 
 .course-name {
@@ -328,6 +330,8 @@
 .mini-dot.chemistry { background: #cc9468 }
 
 .mini-dot.mathematics { background: #9382af }
+
+.mini-dot.ccdv-f { background: #4e8b85 }
 
 .meta-divider { color: #c2c6bd }
 

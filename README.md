@@ -1,8 +1,10 @@
 # Studyroom — Class 11 Learning Hub
 
-A static, self-paced learning platform for Class 11 Physics, Chemistry, and Mathematics. The Physics library follows the current NCERT Class XI textbook sequence: 14 chapters across Mechanics, Properties of Matter, Heat, and Waves. Chapter 1 has four focused modules; each remaining chapter has an original lesson with objectives, explanations, a worked example, and a practice question with its answer.
+A static, self-paced learning platform for Class 11 Physics, Chemistry, and Mathematics, plus a Claude certification track. The Physics library follows the current NCERT Class XI textbook sequence: 14 chapters across Mechanics, Properties of Matter, Heat, and Waves. Chapter 1 has four focused modules; each remaining chapter has an original lesson with objectives, explanations, a worked example, and a practice question with its answer.
 
 The Chemistry library begins with the two organic-chemistry units of the current CBSE/NCERT Class XI syllabus: **Unit 8, Organic Chemistry: Some Basic Principles and Techniques**, and **Unit 9, Hydrocarbons**. Unit 8 has six concept lessons, a mastery check and a timed JEE Main set; Unit 9 has four concept lessons, a mastery check and its own timed set.
+
+The **CCDV-F** track prepares developers for the Claude Certified Developer – Foundations exam. Its nine chapters follow the eight official exam domains — Agents and Workflows, Applications and Integration, Claude Code, Evaluation/Testing/Debugging, Model Selection and Optimisation, Prompt and Context Engineering, Security and Safety, and Tools and MCPs — plus an exam-readiness chapter. The 35 lessons include concept modules, worked API and SDK examples, a mastery check per domain, a study plan and a mock-exam strategy. Exam weights, format and policies are summarised for study; this is an independent, unofficial guide and the official Anthropic exam guide remains the source of truth.
 
 The Work, Energy and Power chapter is expanded into seven core modules with a same-day study plan and a mastery check, plus a timed JEE Main practice set. These notes are independently written learning material, not a reproduction of textbook chapters. Chapter titles and ordering are used to organise the study path. The NCERT textbook portal states that its books are copyrighted and may not be republished or included in digital content packages without permission. Do not add textbook PDFs or substantial copied passages to the public site.
 
@@ -41,7 +43,7 @@ To add or revise a lesson:
 2. Add or update its metadata in the `lessons` array in `src/content/manifest.ts`, keeping the `file` path relative to `src/content/`.
 3. Keep lessons grouped and ordered by chapter; navigation, search, and previous/next links use manifest order.
 
-Mathematics remains a placeholder for future work; the Chemistry cards now open the two organic units. Progress is stored in browser local storage and does not sync between devices. There is no backend, account, analytics, or API call.
+Mathematics remains a placeholder for future work; the Chemistry cards open the two organic units, and the CCDV-F card opens the certification track. Progress is stored in browser local storage and does not sync between devices. There is no backend, account, analytics, or API call.
 
 ## GitHub Pages deployment
 
@@ -61,6 +63,10 @@ src/
     chemistry/
       organic-chemistry-basics/*.md
       hydrocarbons/*.md
+    ccdv-f/
+      agents-and-workflows/*.md
+      ...
+      exam-readiness/*.md
   App.tsx
   main.tsx
   styles.css
