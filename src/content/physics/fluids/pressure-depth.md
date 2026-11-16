@@ -4,7 +4,7 @@ Dive $2\ \text{m}$ under water and your ears feel it. Dive $10\ \text{m}$ and it
 
 ## 1. Where $p=p_0+\rho gh$ comes from
 
-Imagine a widespread horizontal slab of liquid, area $A$, thickness small, with its top at depth $h$ below a free surface where the pressure is $p_0$ (usually atmospheric). The slab is in equilibrium, so three vertical forces balance:
+Imagine a widespread horizontal slab of liquid of density $\rho$, area $A$, thickness small, with its top at depth $h$ below a free surface where the pressure is $p_0$ (usually atmospheric). The slab is in equilibrium, so three vertical forces balance:
 
 - downward force from the fluid above: $p\,A$, on the top face;
 - downward weight of the slab: mass $\rho A\,\mathrm{d}h$, so weight $\rho g A\,\mathrm{d}h$;
@@ -18,7 +18,7 @@ $$
 
 for a fluid of constant density $\rho$. The assumptions to state: the density is uniform (true for most liquids to very good accuracy) and the fluid is static. For gases the density itself varies with height, and $p_0+\rho gh$ still works over small height changes such as a few metres of air, because air's density changes very little over them.
 
-The pressure increment depends only on $\rho$, $g$ and $h$ — not on the size or shape of the vessel. Ten litres of water in a slim column and ten litres in a wide bowl give the *same* pressure at the same depth. This shape-independence is called the **hydrostatic paradox** and it is no paradox at all: the fluid below carries whatever is above, and thin columns answer with taller heights (a strategy used inammedieval water towers).
+The pressure increment depends only on $\rho$, $g$ and $h$ — not on the size or shape of the vessel. Ten litres of water in a slim column and ten litres in a wide bowl give the *same* pressure at the same depth. This shape-independence is called the **hydrostatic paradox** and it is no paradox at all: the fluid below carries whatever is above, and thin columns answer with taller heights (a strategy used in medieval water towers).
 
 ## 2. Gauge and absolute pressure
 

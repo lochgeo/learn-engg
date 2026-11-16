@@ -27,11 +27,11 @@ $$
 Q=\frac{\pi\,\Delta p\,r^4}{8\eta L},
 $$
 
-Poiseuille's result — the "idea" behind sizing pipelines and understanding narrowed arteries. Note the cruel fourth power: halving the radius cuts the flow **sixteen-fold** at the same pressure drop. It is the basis of a classic exam scaling question, and the reason an arteriosclerotic artery forces the heart to work so much harder.
+This is Poiseuille's result — the idea behind sizing pipelines and understanding narrowed arteries. Note the cruel fourth power: halving the radius cuts the flow **sixteen-fold** at the same pressure drop. It is the basis of a classic exam scaling question, and the reason an arteriosclerotic artery forces the heart to work so much harder.
 
 ## 2. Stokes' law: drag on a slow sphere
 
-Slowly moving sphere of radius $r$ in a fluid of viscosity $\eta$, speed $v$: dimensional analysis plus experiment give a drag force proportional to $v$, to $r$, and to $\eta$:
+Consider a sphere of radius $r$ moving slowly at speed $v$ through a fluid of viscosity $\eta$: dimensional analysis plus experiment give a drag force proportional to $v$, to $r$, and to $\eta$:
 
 $$
 F_{\text{drag}}=6\pi\eta rv.

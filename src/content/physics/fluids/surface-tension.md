@@ -1,10 +1,10 @@
 ## The skin of the liquid
 
-Insects walk on water. A razor blade, denser than steel is dense — denser than water, anyway — rests on the surface without sinking. A drop of mercury on glass stays stubbornly round, while a drop of water spreads into a film. All three are the work of **surface tension**: an inward-pulling, elastic-skin behaviour concentrated at the free surface. This module explains where it comes from, how to price it in energy, what pressure it generates inside drops and bubbles, and how thin tubes lift liquid uphill.
+Insects walk on water. A razor blade — far denser than water — rests on the surface without sinking. A drop of mercury on glass stays stubbornly round, while a drop of water spreads into a film. All three are the work of **surface tension**: an inward-pulling, elastic-skin behaviour concentrated at the free surface. This module explains where it comes from, how to price it in energy, what pressure it generates inside drops and bubbles, and how thin tubes lift liquid uphill.
 
 ## 1. Where the "skin" comes from
 
-Inside a liquid, one molecule is pulled equally in every direction by its neighbours; the pulls cancel. At the free surface, though, the *sides* pull are unbalanced: neighbours exist only below, so a surface molecule feels a net pull **into** the liquid. To add molecules to the surface — that is, to create surface area — you must haul molecules up against this net pull; that takes work, and the work is stored as extra energy of the surface molecules.
+Inside a liquid, one molecule is pulled equally in every direction by its neighbours; the pulls cancel. At the free surface, though, the pulls from the *sides* are missing: neighbours exist only below, so a surface molecule feels a net pull **into** the liquid. To add molecules to the surface — that is, to create surface area — you must haul molecules up against this net pull; that takes work, and the work is stored as extra energy of the surface molecules.
 
 The result: a free surface behaves as though it were under tension and tries to minimise its area. **Surface tension** measures the tightness, defined in two equivalent ways:
 
@@ -67,7 +67,7 @@ $$
 W=4\pi R^2S.
 $$
 
-With $R=1.0\ \mathrm{mm}$, $S=0.072\ \mathrm{N/m}$: $W=4\pi\times10^{-6}\times0.072\approx9.1\times10^{-7}\ \mathrm{J}$ — sub-microjoule, as expected for millimetre-scale water; surface effects are small in absolute terms but dominant *curved-surface phenomena* like capillarity, atomisation and emulsification.
+With $R=1.0\ \mathrm{mm}$, $S=0.072\ \mathrm{N/m}$: $W=4\pi\times10^{-6}\times0.072\approx9.1\times10^{-7}\ \mathrm{J}$ — sub-microjoule, as expected for millimetre-scale water; surface effects are small in absolute terms but dominant in *curved-surface phenomena* like capillarity, atomisation and emulsification.
 
 ## 4. Angle of contact
 

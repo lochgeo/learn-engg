@@ -1,6 +1,6 @@
 ## One equation, many machines
 
-Why does water sitting still in a four-metre burst from a hole in the tank's side? Why does a spray gun draw liquid *upward* into a stream of fast air? Both are the same trade-off — in steady flowing fluid, gaining speed costs pressure, and gaining height costs pressure too. This module derives that statement rigorously as energy conservation written in pressure units, then puts it to work on meters, jets and wings.
+Why does water sitting still in a four-metre-deep tank burst from a hole in its side? Why does a spray gun draw liquid *upward* into a stream of fast air? Both are the same trade-off — in steady flowing fluid, gaining speed costs pressure, and gaining height costs pressure too. This module derives that statement rigorously as energy conservation written in pressure units, then puts it to work on meters, jets and wings.
 
 ## 1. Deriving Bernoulli's equation
 
@@ -62,7 +62,7 @@ p_1-p_2=\tfrac12\rho\left(v_2^2-v_1^2\right)
 =\tfrac12\times1000\times(16-1)=7.5\times10^3\ \text{Pa}.
 $$
 
-That is enough to hold up a mercury column of only $\ (7.5\times10^3)/(13600\times9.8)=5.6\ \text{cm}$ — a conveniently small manometer deflection. Rearranged generally, the meter returns the wide-section speed
+That is enough to hold up a mercury column of only $(7.5\times10^3)/(13600\times9.8)=5.6\ \text{cm}$ — a conveniently small manometer deflection. Rearranged generally, the meter returns the wide-section speed
 
 $$
 v_1=A_2\sqrt{\frac{2\,(p_1-p_2)}{\rho\,(A_1^2-A_2^2)}},

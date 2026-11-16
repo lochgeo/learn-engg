@@ -10,7 +10,7 @@ Real fluids have a long list of behaviours. To get usable equations, physics ide
 
 In **steady flow**, the velocity at each fixed point of space does not change with time: if you stand at a bend of a canal, every parcel passing you takes the speed the bend dictates, though individual parcels change speed as they travel. The curves traced by these parcels are the **streamlines**; in steady flow they are fixed in space, and fluid flows *along* them — never across one. Two adjacent streamlines never cross: that would mean two different directions for the flow at the same point and instant.
 
-Break the conditions and the motion **turbulent**: streamlines tangle, eddies and whirls appear, and properties fluctuate randomly at every point. Past blunt objects, after sudden widenings of a pipe, and at high speeds, turbulence sets in. An old demonstration returns here: near the incense tip the speed is low and the rise is a smooth thread (streamline flow); higher up, having accelerated and spread, the flow is faster and wider — and turbulent.
+Break the conditions and the motion turns **turbulent**: streamlines tangle, eddies and whirls appear, and properties fluctuate randomly at every point. Past blunt objects, after sudden widenings of a pipe, and at high speeds, turbulence sets in. An old demonstration returns here: near the incense tip the speed is low and the rise is a smooth thread (streamline flow); higher up, having accelerated and spread, the flow is faster and wider — and turbulent.
 
 A fluid element flowing along a streamline in steady flow keeps a bounded, smooth existence; that is what makes energy bookkeeping (module 5) possible at all.
 
@@ -22,7 +22,7 @@ $$
 Q=Av.
 $$
 
-Units check: $\text{m}^2\times\text{m/s}=\text{m}^3/\text{s}$. Q is sometimes written as a *Q* for quantity of flow; irrigators and paramedics both quote it as litres per second, where $1\ \mathrm{m^3/s}=1000\ \mathrm{L/s}$.
+Units check: $\text{m}^2\times\text{m/s}=\text{m}^3/\text{s}$. The letter $Q$ is shorthand for the *quantity* of flow; irrigators and paramedics both quote it as litres per second, where $1\ \mathrm{m^3/s}=1000\ \mathrm{L/s}$.
 
 Now the key claim: for incompressible steady flow through a tube made of streamlines (from one cross-section to another), no fluid is created, destroyed, or stored in between. What enters per second must leave per second:
 
