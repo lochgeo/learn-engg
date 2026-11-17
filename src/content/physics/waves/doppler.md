@@ -27,7 +27,7 @@ Also note the asymmetry that will matter below: numerator changes (observer, $+v
 
 ## 2. Source moving, observer at rest
 
-A source chasing its own wavefronts compresses the spacing ahead of it. In one period $T=1/f$ the source advances $v_sT$, so the wavelength ahead shrinks to
+A source chasing its own wavefronts — the crests, imagined as spreading surfaces — compresses the spacing ahead of it. In one period $T=1/f$ the source advances $v_sT$, so the wavelength ahead shrinks to
 
 $$
 \lambda' = \lambda - v_sT = \frac{v-v_s}{f},

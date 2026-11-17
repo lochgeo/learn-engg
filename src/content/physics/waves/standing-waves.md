@@ -4,7 +4,7 @@ Pluck a guitar string: the note holds one pitch, steady, as if the wave had stop
 
 ## 1. How a standing wave forms
 
-Superpose two identical waves travelling in opposite directions:
+Superpose two identical waves travelling in opposite directions — exactly the situation the reflection rules of the last lesson set up:
 
 $$
 y_1=A\sin(kx-\omega t),\qquad

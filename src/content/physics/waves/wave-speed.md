@@ -4,7 +4,7 @@ Hand the same disturbance to a plucked bass string, a lungful of air and a steel
 
 ## 1. Transverse waves on a stretched string
 
-For a string pulled taut with tension $T$ and having mass per unit length $\mu$, a transverse pulse travels at
+For a string pulled taut with tension $T$ (here $T$ is the *force* in the string — not the period of earlier lessons) and having mass per unit length $\mu$ ("mu", the string's mass per metre), a transverse pulse travels at
 
 $$
 v=\sqrt{\frac{T}{\mu}}.
@@ -39,7 +39,7 @@ Sanity check: $64/81=0.79$, whose square root is $0.889\approx9/8$. A tuning peg
 
 ## 2. Sound in gases: Newton's guess and Laplace's correction
 
-For a fluid, the same Newton's-law argument with pressure replacing tension gives, for a longitudinal wave,
+From strings we move to fluids. For a fluid, the same Newton's-law argument with pressure replacing tension gives, for a longitudinal wave,
 
 $$
 v=\sqrt{\frac{B}{\rho}},

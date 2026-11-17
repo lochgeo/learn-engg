@@ -13,7 +13,7 @@ These two properties together fix how fast the pattern travels. They also explai
 
 ## 2. Transverse and longitudinal waves
 
-Classify any wave by the direction in which the medium oscillates compared with the direction of propagation.
+Classify any wave by the direction in which the medium oscillates compared with the direction of *propagation* — that is, the direction the wave itself travels.
 
 - **Transverse wave:** particles oscillate *perpendicular* to the direction of travel. Flick one end of a stretched rope: the pulse runs along the rope while each piece of rope moves up and down. Electromagnetic waves (light) are transverse, and they need no material medium at all.
 - **Longitudinal wave:** particles oscillate *parallel* to the direction of travel, so the disturbance consists of **compressions** (where the medium is squeezed) alternating with **rarefactions** (where it is stretched thin). Sound in air is longitudinal.
@@ -22,7 +22,7 @@ A mechanical transverse wave needs a medium that can sustain shear (a sideways r
 
 ## 3. Amplitude, wavelength, frequency, period
 
-Four numbers describe a simple sinusoidal wave.
+Four numbers describe a simple sinusoidal wave. Meet them once here, in SI units, and the whole chapter reuses them.
 
 | Quantity | Symbol | Meaning | SI unit |
 | --- | --- | --- | --- |

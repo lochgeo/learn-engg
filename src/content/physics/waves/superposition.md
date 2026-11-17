@@ -10,7 +10,7 @@ $$
 y=y_1+y_2 .
 $$
 
-The displacements add *with sign*: a positive crest and a negative trough arriving together cancel momentarily. The principle is exact for small-amplitude disturbances, because the medium's response is linear; violently loud blasts and shallow-water breakers exceed the linear regime and break the rule. JEE-level work stays inside the linear regime, so superposition may be applied without ceremony.
+The displacements add *with sign*: a positive crest and a negative trough arriving together cancel momentarily. The principle is exact for small-amplitude disturbances, because the medium's response is *linear* — roughly, double the push and you double the response; violently loud blasts and shallow-water breakers exceed the linear regime and break the rule. JEE-level work stays inside the linear regime, so superposition may be applied without ceremony.
 
 ## 2. Reflection: what a boundary does
 

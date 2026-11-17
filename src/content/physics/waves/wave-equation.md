@@ -4,7 +4,7 @@ In the Oscillations chapter, a single oscillator had $x=A\cos(\omega t+\phi)$. A
 
 ## 1. The wave function
 
-For a harmonic wave moving in the $+x$ direction,
+For a harmonic wave — one whose shape is a pure sine — moving in the $+x$ direction,
 
 $$
 y(x,t)=A\sin(kx-\omega t+\phi),
@@ -88,7 +88,7 @@ the differential equation every one-dimensional wave satisfies — this is what 
 
 ## 5. Which way is the wave going?
 
-Watch the sign between the $x$ and $t$ terms:
+One more reading skill, and a favourite of examiners: which way is the wave going? Watch the sign between the $x$ and $t$ terms:
 
 - $y=A\sin(kx-\omega t+\phi)$: **travels toward $+x$** (a fixed phase needs larger $x$ as $t$ grows).
 - $y=A\sin(kx+\omega t+\phi)$ or equivalently $A\sin(\omega t+kx+\phi)$: **travels toward $-x$**.
