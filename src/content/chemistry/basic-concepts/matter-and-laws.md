@@ -24,7 +24,7 @@ The distinction matters practically, because the laws below hold for **pure subs
 
 ## 2. Mass is conserved
 
-Weighing tin as it calcined in sealed vessels led Antoine Lavoisier to a law that still underwrites every calculation in this chapter:
+Weighing tin as it calcined — that is, heated strongly until it turned into a white powder — in sealed vessels led Antoine Lavoisier to a law that still underwrites every calculation in this chapter:
 
 *In any chemical reaction, the total mass of the reactants equals the total mass of the products.*
 
@@ -64,7 +64,7 @@ Nitrogen does it five ways. Combining with a fixed $14\ \text{g}$ of nitrogen, o
 
 ## 5. Dalton's atomic theory — and where it cracks
 
-Dalton proposed that the laws of combination follow if matter is particulate:
+These stubborn whole-number patterns suggested a deeper explanation. John Dalton proposed that the laws of combination follow if matter is particulate:
 
 - All matter is built from **atoms**, which cannot be created or destroyed in a chemical change.
 - All atoms of a given element are identical in mass and in properties.
@@ -77,7 +77,7 @@ The theory explains the laws mechanically: conservation of mass holds because at
 Known cracks, discovered later:
 
 - Atoms are **divisible**: electrons, protons and neutrons exist inside them.
-- Atoms of one element are not always identical: **isotopes** of chlorine weigh $35$ or $37$.
+- Atoms of one element are not always identical: **isotopes** — atoms of the same element carrying different masses — mean chlorine atoms weigh $35$ or $37$.
 - The same element may behave differently in different forms, such as diamond and graphite.
 
 Nothing in these cracks devalues the bookkeeping; the mole concept in the next module keeps Dalton's *counting* logic and simply attaches reliable, average masses to each element.

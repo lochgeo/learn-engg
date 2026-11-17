@@ -58,7 +58,7 @@ The oxygen prescribes $2\times2=4\ \text{mol}$ of water $=72\ \text{g}$. Hydroge
 
 </learning-block>
 
-Why the division by coefficients? Because reacting "piles" are consumed in recipe-sized chunks. Two moles of H2 leave per chunk; one mole of O2 leaves per chunk. The species with the fewest complete chunks available runs out while others still have material in hand. A useful visual is a two-slot table: write $n$ and $n/\text{coeff}$ for each reactant, then read the winner straight off.
+Why divide by the coefficients? Because reacting "piles" are consumed in recipe-sized chunks. Two moles of H2 leave per chunk; one mole of O2 leaves per chunk. The species with the fewest complete chunks available runs out while others still have material in hand. A useful visual is a two-slot table: write $n$ and $n/\text{coeff}$ for each reactant, then read the winner straight off.
 
 ## 4. Theoretical and percentage yield
 

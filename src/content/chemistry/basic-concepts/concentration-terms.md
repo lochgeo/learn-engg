@@ -1,6 +1,6 @@
 ## How strong is this solution?
 
-A reaction needs a certain *amount* of each species, but in the lab you often add substances as solutions, by volume. Every concentration term is a different ratio for the same underlying idea: how much solute per how much solvent or solution. Choosing the right ratio for the task — and converting between them safely — is a large share of quantitative chemistry.
+A reaction needs a certain *amount* of each species, but in the lab you often add substances as solutions, by volume. (Throughout, the **solute** is the substance dissolved and the **solvent** is the liquid doing the dissolving.) Every concentration term is a different ratio for the same underlying idea: how much solute per how much solvent or solution. Choosing the right ratio for the task — and converting between them safely — is a large share of quantitative chemistry.
 
 This module keeps one running example: a solution made with $20\ \text{g}$ of NaOH ($M=40\ \text{g/mol}$) dissolved in $80\ \text{g}$ of water, total solution mass $100\ \text{g}$, density $1.1\ \text{g/mL}$.
 

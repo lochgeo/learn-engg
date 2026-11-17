@@ -65,7 +65,7 @@ When the only measurement is the **vapour density** (VD, relative to hydrogen) o
 
 ## 4. Another full pass: an oxide of iron
 
-An oxide contains $69.9\%$ Fe and $30.1\%$ O. Per $100\ \text{g}$: moles of Fe $=69.9/56=1.25$; moles of O $=30.1/16=1.88$. Dividing by the smaller:
+Let us run the same three moves on data with a fraction in the ratio. An oxide contains $69.9\%$ Fe and $30.1\%$ O. Per $100\ \text{g}$: moles of Fe $=69.9/56=1.25$; moles of O $=30.1/16=1.88$. Dividing by the smaller:
 
 $$
 \mathrm{Fe:O}=1.25:1.88=1:1.5.

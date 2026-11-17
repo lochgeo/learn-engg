@@ -14,7 +14,7 @@ The unit attached is the unified mass, $1\ \text{u}=\dfrac{1}{12}$ of a C-12 ato
 
 ## 2. Average atomic mass: what the table of atomic masses really lists
 
-Most elements are mixtures of isotopes, so the quoted atomic mass is the **weighted average** over the natural isotope mixture.
+Most elements are mixtures of isotopes — atoms of the same element that differ slightly in mass — so the quoted atomic mass is the **weighted average** over the natural isotope mixture.
 
 <learning-block type="example" title="Chlorine, the classic case">
 
@@ -81,7 +81,7 @@ For gases only, one extra bridge exists: at standard temperature and pressure (S
 
 ## 5. Choosing the right bridge in a question
 
-Most mole-concept questions are one or two bridge applications:
+With all four bridges in hand, most mole-concept questions reduce to one or two bridge applications:
 
 1. Name what is given (grams, litres at STP, or a particle count) and what is asked.
 2. Convert the given quantity to moles first — moles are the currency every other quantity is priced in.
