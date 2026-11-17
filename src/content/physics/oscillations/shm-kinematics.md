@@ -36,7 +36,7 @@ $$
 v=\pm\omega\sqrt{A^2-x^2},
 $$
 
-because $\sin^2=1-\cos^2$. This "speed as a function of position" is derived again from energy in the next lesson and is worth memorising as a formula: it answers "how fast at $x=\,?$" with no need to find $t$ first.
+because $\sin^2=1-\cos^2$ (the Pythagorean identity). This "speed as a function of position" is derived again from energy in the next lesson and is worth memorising as a formula: it answers "how fast at $x=\,?$" with no need to find $t$ first.
 
 ## 3. One cycle, quarter by quarter
 

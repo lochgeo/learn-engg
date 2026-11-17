@@ -20,7 +20,7 @@ T=2\pi\sqrt{\frac{m}{k}},\qquad
 f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}.
 $$
 
-Mass-reading: a stiffer spring (larger $k$) or a lighter mass (smaller $m$) makes faster oscillation. And as established earlier, the period is independent of amplitude — the whole point of the harmonic regime.
+Read the formula in terms of mass and stiffness: a stiffer spring (larger $k$) or a lighter mass (smaller $m$) makes faster oscillation. And as established earlier, the period is independent of amplitude — the whole point of the harmonic regime.
 
 <learning-block type="example" title="Worked example: the desk oscillator">
 
@@ -30,7 +30,7 @@ A block of $m=0.25\ \text{kg}$ sits on a frictionless surface attached to a spri
 
 ## 2. Springs in series and in parallel
 
-Combos of identical-looking question but different physics:
+Two combinations that look similar in exam questions but behave quite differently:
 
 - **Parallel** (both springs stretch by the same extension $x$; forces add): $k_{\text{eff}}=k_1+k_2$.
 - **Series** (both springs carry the same force; extensions add): $\dfrac{1}{k_{\text{eff}}}=\dfrac{1}{k_1}+\dfrac{1}{k_2}$.
@@ -77,7 +77,7 @@ With $g=10\ \text{m/s}^2$, find the length of a pendulum with $T=2.0\ \text{s}$.
 
 ## 5. The physical pendulum
 
-A rigid body pivoted about a horizontal axis — a bar, a door, a swinging plate — behaves similarly: displaced by angle $\theta$, the restoring **torque** is $\tau=-mgd\sin\theta$ with $d$ the distance from pivot to centre of mass. Small-angle approximation, $\tau=I(d^2\theta/dt^2)$ with $I$ the moment of inertia about the pivot, gives
+A rigid body pivoted about a horizontal axis — a bar, a door, a swinging plate — behaves similarly: displaced by angle $\theta$, the restoring **torque** is $\tau=-mgd\sin\theta$, where $d$ is the distance from the pivot to the centre of mass. Newton's second law for rotation, $\tau=I(d^2\theta/dt^2)$ with $I$ the moment of inertia about the pivot, combined with the small-angle approximation, gives
 
 $$
 \omega=\sqrt{\frac{mgd}{I}},\qquad

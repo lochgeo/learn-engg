@@ -30,7 +30,7 @@ $$
 
 so the oscillation is wrapped in an **exponential envelope** $A(t)=A_0\,e^{-bt/2m}$: equal *time* intervals chop equal *fractions* off the amplitude. Two consequences to carry around:
 
-- The frequency shifts slightly down: $\omega^2=\omega_0^2-(b/2m)^2$, where $\omega_0=\sqrt{k/m}$ is the undamped natural frequency. For weak damping the shift is tiny, and exam problems rarely resolve it.
+- The frequency shifts slightly down: $\omega'^2=\omega_0^2-(b/2m)^2$, where $\omega'=\sqrt{\omega_0^2-(b/2m)^2}$ is the damped frequency appearing in the solution above and $\omega_0=\sqrt{k/m}$ is the undamped natural frequency. For weak damping the shift is tiny, and exam problems rarely resolve it.
 - The energy, proportional to $A^2$, decays as $e^{-bt/m}$ — twice as fast in the exponent as the amplitude.
 
 Because the envelope is exponential, it has a clean half-life analogue: the amplitude halves in time
@@ -53,7 +53,7 @@ So the amplitude falls to an eighth after three halvings, about $21\ \text{s}$ �
 
 ## 3. Light, critical, heavy
 
-The damping constant relative to $2\sqrt{mk}$ sorts all damped systems into three regimes:
+The damping constant relative to the critical value $2\sqrt{mk}$ sorts all damped systems into three regimes:
 
 - **Light (underdamped):** oscillates while decaying — the regime above.
 - **Critical damping:** the damping just strong enough to remove oscillation entirely; the system returns to equilibrium in the *shortest possible time without overshooting*. Deliberately engineered: door closers, galvanometer and balance needles, vehicle suspension.
@@ -82,7 +82,9 @@ One caution against folklore: a microwave oven does **not** cook by resonating w
 
 <learning-block type="mistake" title="Resonance is not “more frequency” — and damping does not speed things up">
 
-Two durable confusions. First, resonance is not the driving growing *stronger over time* nor the frequency increasing; it is the *match* $\omega_d\approx\omega_0$ producing a large steady amplitude at that same driving frequency. Second, learners assert adding damping "makes the oscillator faster". The opposite: damping shifts the frequency slightly **down** ($\omega^2=\omega_0^2-(b/2m)^2$) and, in the overdamped limit, makes the return sluggish rather than brisk — only *critical* damping gives the quickest recovery, and it does so precisely by shutting oscillation off.
+Two durable confusions. First, resonance is not the driving growing *stronger over time* nor the frequency increasing; it is the *match* $\omega_d\approx\omega_0$ producing a large steady amplitude at that same driving frequency.
+
+Second, learners assert adding damping "makes the oscillator faster". The opposite: damping shifts the frequency slightly **down** ($\omega'^2=\omega_0^2-(b/2m)^2$) and, in the overdamped limit, makes the return sluggish rather than brisk — only *critical* damping gives the quickest recovery, and it does so precisely by shutting oscillation off.
 
 </learning-block>
 

@@ -177,7 +177,7 @@ A block of mass $0.80\ \text{kg}$ rides on a spring of constant $125\ \text{N/m}
 
 <details><summary>Answer</summary>
 
-$\omega=\sqrt{k/m}=\sqrt{125/0.80}=\sqrt{156.25}=12.5\ \text{rad/s}$, so $T=2\pi/\omega=2\pi/12.5\approx0.50\ \text{s}$. (Cheap check: $k/m=156.25=\ 12.5^2$ — the numbers were hung so that the square root is exact.)
+$\omega=\sqrt{k/m}=\sqrt{125/0.80}=\sqrt{156.25}=12.5\ \text{rad/s}$, so $T=2\pi/\omega=2\pi/12.5\approx0.50\ \text{s}$. (Cheap check: $k/m=156.25=\ 12.5^2$ — the numbers were chosen so that the square root is exact.)
 </details>
 
 ### 12. Peak speed from A and T

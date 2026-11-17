@@ -1,6 +1,6 @@
 ## Your study plan for this chapter
 
-The chapter is one model plus its measurements, energies, vehicles, geometry and real-world frictions. A focused pass takes about **2 hours** plus a break:
+The chapter is one model plus its measurements, its energy bookkeeping, its workhorse systems, its circular-motion geometry and its real-world frictions. A focused pass takes about **2 hours** plus a break:
 
 1. **Periodic motion and SHM** — 20 min (the vocabulary and $a=-\omega^2x$)
 2. **Displacement, velocity and acceleration** — 22 min ($x$, $v$, $a$ in time and against position)

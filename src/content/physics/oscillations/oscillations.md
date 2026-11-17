@@ -6,7 +6,7 @@ Because the same mechanism — restore, overshoot, restore — appears everywher
 
 ## 1. The vocabulary of repetition
 
-Any motion that repeats itself at regular intervals is **periodic**. If the repetition is a back-and-forth movement about a fixed equilibrium position, it is **oscillatory** (or *vibrational*). So every oscillatory motion is periodic, but not every periodic motion is oscillatory — a planet orbiting the Sun is periodic, but it never reverses direction, so it is not oscillatory.
+Any motion that repeats itself at regular intervals is **periodic**. If the repetition is a back-and-forth movement about a fixed equilibrium position — the place where the system can rest undisturbed — it is **oscillatory** (or *vibrational*). So every oscillatory motion is periodic, but not every periodic motion is oscillatory — a planet orbiting the Sun is periodic, but it never reverses direction, so it is not oscillatory.
 
 To describe any such motion completely you need a small set of words:
 
@@ -18,7 +18,7 @@ To describe any such motion completely you need a small set of words:
 | Amplitude | $A$ | Maximum displacement from the equilibrium position | m |
 | Phase | $\omega t+\phi$ | Which point of the cycle the oscillator is in | rad |
 
-Two remarks on phase, because it trips people up. First, for an oscillator described by $x=A\cos(\omega t+\phi)$, the whole expression $\omega t+\phi$ is the **phase** — a clock hand inside the formula that sweeps through $2\pi$ radians each cycle. Second, $\phi$ is the **initial phase** (also called the phase constant or epoch): it fixes where in the cycle the motion started. Two identical pendulums released at different moments differ only in $\phi$; they keep step forever, separated by a constant phase difference.
+Two remarks on phase, because it trips people up. First, for an oscillator described by $x=A\cos(\omega t+\phi)$, where $x$ is the displacement from equilibrium, the whole expression $\omega t+\phi$ is the **phase** — a clock hand inside the formula that sweeps through $2\pi$ radians each cycle. Second, $\phi$ is the **initial phase** (also called the phase constant or epoch): it fixes where in the cycle the motion started. Two identical pendulums released at different moments differ only in $\phi$; they keep step forever, separated by a constant phase difference.
 
 <learning-block type="check" title="Micro-check">
 
@@ -56,7 +56,9 @@ U(x)\approx U_0+\frac12\,k_{\text{eff}}(x-x_0)^2,
 k_{\text{eff}}=\left.\frac{d^2U}{dx^2}\right|_{x_0}>0.
 $$
 
-Because force is $F=-dU/dx$, this parabolic potential produces a restoring force $F=-k_{\text{eff}}(x-x_0)$ — Hooke's law again. So **small oscillations about any stable equilibrium are approximately SHM**. The pendulum is harmonic only for small angles because its potential, $mgL(1-\cos\theta)$, is parabolic in $\theta$ only to leading order. A vibrating molecule, a wobbling table leg, a bowed building: shift the origin, read off $k_{\text{eff}}$, and the machinery of SHM applies — until the amplitude grows so large that the curvature of $U$ changes appreciably, at which point the motion is still periodic but no longer simple harmonic.
+Because force is $F=-dU/dx$, this parabolic potential produces a restoring force $F=-k_{\text{eff}}(x-x_0)$ — Hooke's law again. So **small oscillations about any stable equilibrium are approximately SHM**.
+
+The pendulum is harmonic only for small angles because its potential, $mgL(1-\cos\theta)$, is parabolic in $\theta$ only to leading order. A vibrating molecule, a wobbling table leg, a bowed building: shift the origin, read off $k_{\text{eff}}$, and the machinery of SHM applies — until the amplitude grows so large that the curvature of $U$ changes appreciably, at which point the motion is still periodic but no longer simple harmonic.
 
 ## 4. The projection picture
 

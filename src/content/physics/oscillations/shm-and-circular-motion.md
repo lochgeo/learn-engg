@@ -1,6 +1,6 @@
 ## The circle completes the story
 
-Lesson 1 promised that SHM is the shadow of uniform circular motion, and every formula since has quietly agreed. This lesson cashes that in. The reference circle gives you a picture on which the phase is literally an angle, an almost mechanical procedure for finding the initial phase $\phi$ from where the oscillator *is* and *which way it moves*, and a geometric shortcut for adding two simple harmonic motions along the same line. It is the chapter's most reusable jig — $18$ minutes here saves an exam-length struggle later.
+Lesson 1 promised that SHM is the shadow of uniform circular motion, and every formula since has quietly agreed. This lesson cashes that in. The reference circle gives you a picture on which the phase is literally an angle, an almost mechanical procedure for finding the initial phase $\phi$ from where the oscillator *is* and *which way it moves*, and a geometric shortcut for adding two simple harmonic motions along the same line. It is the chapter's most reusable tool — spending $18$ minutes here saves an exam-length struggle later.
 
 ## 1. The reference circle, laid out
 
