@@ -32,7 +32,9 @@ Sanity check: $\sqrt{2mK}$ is the momentum; for the electron that momentum is $5
 
 ## 2. Electron diffraction: the verdict of experiment
 
-If electrons are waves, they should diffract from a grating with spacing comparable to their wavelength. Crystals provide exactly that: atomic planes separated by about $10^{-10}\ \text{m}$ — the scale found above. Davisson and Germer (1927) fired low-energy electrons at a nickel crystal and observed diffraction maxima at precisely the angles de Broglie's formula predicted. G. P. Thomson obtained the same conclusion with thin metal films: diffraction rings of transmitted electrons, the unmistakable signature of waves. An electron deflected by a field is a particle; the same electron patterned by a crystal is a wave — the **dual nature** is not a metaphor but two repeatable experiments on one object.
+If electrons are waves, they should diffract from a grating with spacing comparable to their wavelength. Crystals provide exactly that: atomic planes separated by about $10^{-10}\ \text{m}$ — the scale found above. Davisson and Germer (1927) fired low-energy electrons at a nickel crystal and observed diffraction maxima at precisely the angles de Broglie's formula predicted. G. P. Thomson obtained the same conclusion with thin metal films: diffraction rings of transmitted electrons, the unmistakable signature of waves.
+
+An electron deflected by a field is a particle; the same electron patterned by a crystal is a wave — the **dual nature** is not a metaphor but two repeatable experiments on one object.
 
 ## 3. Redemption for Bohr's orbits
 

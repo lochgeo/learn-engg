@@ -1,6 +1,8 @@
 ## From waves to addresses
 
-De Broglie's waves found their proper mathematics in Erwin Schrödinger's equation (1926). Solved for a hydrogen atom, it delivers a family of allowed standing waves — wave functions $\psi$ — each labelled by whole numbers. The Bohr energies survive in the solutions, but so does something new: for each energy, several distinct waves exist, differing in shape and in how their amplitude is spread about the nucleus. Since $|\psi|^2$ is a probability density — the chance per unit volume of finding the electron there — the atom becomes a geometric object, not a track. The labels of the waves are the **quantum numbers**, and every electron address in every atom is written with four of them.
+De Broglie's waves found their proper mathematics in Erwin Schrödinger's equation (1926). Solved for a hydrogen atom, it delivers a family of allowed standing waves — wave functions $\psi$ — each labelled by whole numbers. The Bohr energies survive in the solutions, but so does something new: for each energy, several distinct waves exist, differing in shape and in how their amplitude is spread about the nucleus.
+
+Since $|\psi|^2$ is a probability density — the chance per unit volume of finding the electron there — the atom becomes a geometric object, not a track. The labels of the waves are the **quantum numbers**, and every electron address in every atom is written with four of them.
 
 ## 1. The principal quantum number $n$
 
@@ -34,7 +36,9 @@ The letters s, p, d, f come from the old spectroscopic labels *sharp*, *principa
 
 ## 3. The magnetic quantum number $m_l$
 
-For each $l$, $m_l$ runs through $-l,-l+1,\ldots,l-1,l$ — that is, $2l+1$ values. It fixes the **orientation** of the angular momentum (hence the name: it decides how sublevels split in a magnetic field). Each value of $m_l$ marks one distinct **orbital** — a distinct shape-orientation in space. The count of orbitals in a subshell is exactly $2l+1$: one s orbital, three p orbitals pointing along $x$, $y$, $z$, five d orbitals, seven f orbitals. Orbitals of the same subshell differ only in orientation and, in the absence of external fields, all have **the same energy**: they are *degenerate*.
+For each $l$, $m_l$ runs through $-l,-l+1,\ldots,l-1,l$ — that is, $2l+1$ values. It fixes the **orientation** of the angular momentum (hence the name: it decides how sublevels split in a magnetic field). Each value of $m_l$ marks one distinct **orbital** — a distinct shape-orientation in space. The count of orbitals in a subshell is exactly $2l+1$: one s orbital, three p orbitals pointing along $x$, $y$, $z$, five d orbitals, seven f orbitals.
+
+Orbitals of the same subshell differ only in orientation and, in the absence of external fields, all have **the same energy**: they are *degenerate*.
 
 In hydrogen, even whole shells are degenerate — $E$ depends only on $n$, so 2s and all 2p orbitals share energy. In atoms with many electrons, inter-electron repulsion and shielding split this degeneracy, and 2s sinks beneath 2p; that lifting is why the filling order of the next module is not a simple march along $n$.
 

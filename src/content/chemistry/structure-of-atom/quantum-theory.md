@@ -4,7 +4,7 @@ By the end of the nineteenth century, classical physics had a serious embarrassm
 
 ## 1. Planck's quantum hypothesis
 
-Planck proposed that the energy of atomic oscillators in matter is quantised:
+Planck proposed that the energy of atomic oscillators in matter — the tiny charged particles vibrating in the walls of the hot body — is quantised:
 
 $$
 E_n=nh\nu,\qquad n=1,2,3,\ldots
@@ -32,7 +32,7 @@ A classical wave picture gets all three wrong. A wave spreads its energy over th
 
 ## 3. Einstein's photon explanation
 
-Einstein (1905) took Planck's packets seriously and applied them to light itself. Light of frequency $\nu$ consists of particles — **photons** — each carrying
+The repair takes Planck's packets seriously. Einstein (1905) applied them to light itself, not just to the vibrating charges inside matter: light of frequency $\nu$ consists of particles — **photons** — each carrying
 
 $$
 E=h\nu.

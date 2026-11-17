@@ -50,11 +50,15 @@ Two complementary experiments reveal the same information:
 - In **emission spectroscopy**, you excite atoms — in a flame, a discharge tube or a spark — and analyse the light they give out. The spectrum is a set of bright lines separated by darkness.
 - In **absorption spectroscopy**, you pass white light through a cool gas and look at what is missing. Atoms remove exactly those wavelengths they can later emit, so the spectrum shows dark lines on a continuous background.
 
-The key observation, first stated clearly for elements by Bunsen and Kirchhoff, is that **each element produces its own characteristic set of lines**. Sodium always gives a yellow pair, hydrogen gives a specific sequence of red, blue-green, violet and deep-violet lines. A line spectrum is therefore an atomic fingerprint: it identifies the element even at astronomical distances, and it shows that the atom can exchange energy only in definite amounts. No classical oscillator could produce such a thing — a stretched string, for example, vibrates at all frequencies, not just a few.
+The key observation, first stated clearly for elements by Bunsen and Kirchhoff, is that **each element produces its own characteristic set of lines**. Sodium always gives a yellow pair, hydrogen gives a specific sequence of red, blue-green, violet and deep-violet lines.
+
+A line spectrum is therefore an atomic fingerprint: it identifies the element even at astronomical distances, and it shows that the atom can exchange energy only in definite amounts. No classical oscillator could produce such a thing — a stretched string, for example, vibrates at all frequencies, not just a few.
 
 ## 4. Hydrogen's lines
 
 Hydrogen is the simplest atom — one electron — and its spectrum is correspondingly the cleanest. In the visible region (the part Balmer analysed first, from data collated around 1885) the lines squeeze closer together as the wavelength decreases, converging towards a limit near $364.6\ \text{nm}$.
+
+![The visible emission spectrum of hydrogen: four coloured lines with their wavelengths labelled, crowding together towards the violet](https://upload.wikimedia.org/wikipedia/commons/f/fb/Emission_spectrum-H_labeled.svg)
 
 Johannes Balmer found, purely by pattern-hunting, that the wavelengths fit
 

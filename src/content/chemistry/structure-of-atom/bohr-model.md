@@ -46,7 +46,7 @@ $$
 v_{n}=\frac{Z}{n}\times2.18\times10^{6}\ \text{m s}^{-1}.
 $$
 
-Electrons are fast: in hydrogen's ground state about 1% of the speed of light. Notice this is where the model must eventually fail — speed and position together would pin the electron down completely, which the uncertainty principle (later in this chapter) forbids. Bohr's model pre-dates that principle and ignores it.
+Electrons are fast: in hydrogen's ground state (the lowest orbit, $n=1$) about 1% of the speed of light. Notice this is where the model must eventually fail — speed and position together would pin the electron down completely, which the uncertainty principle (later in this chapter) forbids. Bohr's model pre-dates that principle and ignores it.
 
 ## 4. The orbit energy
 
@@ -86,7 +86,7 @@ $$
 
 Dividing the fundamental constants out gives $R_H=1.097\times10^{7}\ \text{m}^{-1}$ — the same number spectroscopists had measured, now derived from $m$, $e$, $h$ and $c$ alone. The Lyman, Balmer, Paschen series of the earlier module drop out automatically, each corresponding to a ladder of arrivals at $n_1=1,2,3\ldots$
 
-Bohr did even better than fit: the formula predicts correctly for **hydrogen-like ions** when $Z$ is inserted. Helium ion He⁺ ($Z=2$) has orbit radii four times smaller and energies four times deeper than hydrogen's; its spectral lines should appear at four times the frequency of hydrogen's — telescopes found exactly such lines in the stars.
+Bohr did even better than fit: the formula predicts correctly for **hydrogen-like ions** — one-electron systems at any nuclear charge — when $Z$ is inserted. Helium ion He⁺ ($Z=2$) has orbit radii four times smaller and energies four times deeper than hydrogen's; its spectral lines should appear at four times the frequency of hydrogen's — telescopes found exactly such lines in the stars.
 
 ### Worked example: the red line of hydrogen
 

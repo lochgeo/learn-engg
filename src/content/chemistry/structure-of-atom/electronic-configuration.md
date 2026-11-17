@@ -30,7 +30,7 @@ One tie in the table deserves a glance: $2p$ and $3s$ both have $n+l=3$, and the
 
 ### Worked example 1: sodium
 
-Sodium has $Z=11$. Pour electrons along the table: 1s takes 2, 2s takes 2, 2p takes 6, and the last electron goes to 3s:
+Sodium has $Z=11$ — the atomic number, which for a neutral atom is also the number of electrons to place. Pour electrons along the table: 1s takes 2, 2s takes 2, 2p takes 6, and the last electron goes to 3s:
 
 $$
 \mathrm{Na}:\ 1s^{2}\,2s^{2}\,2p^{6}\,3s^{1}=\ [\mathrm{Ne}]\,3s^{1}.

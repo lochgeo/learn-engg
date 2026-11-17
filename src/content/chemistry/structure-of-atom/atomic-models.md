@@ -61,11 +61,13 @@ Note that the mass numbers balance: $4+9=12+1$, and the charges balance: $2+4=6+
 
 ## 4. Thomson's model
 
-The first model consistent with these discoveries was Thomson's **plum pudding** (1904, sometimes told as a watermelon): a sphere of positive charge about the size of an atom with electrons embedded in it like seeds, so that the positive and negative charges balance. It predicted a fairly uniform distribution of matter and charge, and it made a clear, testable forecast: fast, heavy, positively charged particles shot through an atom should all pass through with at most small deflections.
+With the three particles identified, attention turned to how they are arranged inside the atom. The first model consistent with these discoveries was Thomson's **plum pudding** (1904, sometimes told as a watermelon): a sphere of positive charge about the size of an atom with electrons embedded in it like seeds, so that the positive and negative charges balance. It predicted a fairly uniform distribution of matter and charge, and it made a clear, testable forecast: fast, heavy, positively charged particles shot through an atom should all pass through with at most small deflections.
 
 ## 5. Rutherford's alpha-scattering experiment
 
 Hans Geiger and Ernest Marsden, directed by Ernest Rutherford (1909–1911), fired alpha particles (helium nuclei, positively charged) at an extremely thin gold foil and counted the angles at which they emerged on a movable zinc sulphide screen, which flashes where an alpha particle strikes.
+
+![Diagram of the gold-foil experiment: the uniform small deflections predicted by Thomson's model, against the observed small number of large-angle rebounds](https://upload.wikimedia.org/wikipedia/commons/f/f9/Geiger-Marsden_experiment_expectation_and_result.svg)
 
 | Observation | What it forces us to conclude |
 | --- | --- |
