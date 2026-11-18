@@ -12,7 +12,7 @@ $$
 
 For most atoms the nucleus attracts the incoming electron, energy is released, and $\Delta_{eg}H$ is **negative** in the usual chemistry sign convention (energy released by the system is negative; absorbed is positive). The more negative the value, the more willingly the atom accepts an electron.
 
-**The pattern.** Across a period the value grows more negative — radius shrinks and $Z_{eff}$ rises, so the incoming electron is drawn closer and bound more tightly. Down a group the value becomes less negative — the electron lands in a larger, more heavily shielded shell. Halogens, one electron short of a closed shell, top the chart:
+**The pattern.** Across a period the value grows more negative — radius shrinks and $Z_{eff}$ (the effective nuclear charge) rises, so the incoming electron is drawn closer and bound more tightly. Down a group the value becomes less negative — the electron lands in a larger, more heavily shielded shell. Halogens, one electron short of a closed shell, top the chart:
 
 | Element | F | Cl | Br | I |
 | --- | --- | --- | --- | --- |

@@ -4,7 +4,7 @@ Every qualitative trend so far — radius, ionisation, electron pull — pointed
 
 ## 1. Metallic character
 
-An atom behaves as a metal when it lets electrons go cheaply: big radius, low ionisation enthalpy, low electronegativity. Since size grows and ionisation falls down a group and the reverse along a period:
+An atom behaves as a metal when it lets electrons go cheaply: big radius, low ionisation enthalpy, low electronegativity. Since size grows and ionisation enthalpy falls down a group — and the reverse happens along a period:
 
 - metallic character **decreases across a period** from the alkali metal to the halogen/noble-gas end;
 - metallic character **increases down a group**, which is why the light p-block can hold non-metals while the heavy p-block holds metals: nitrogen is a gas, bismuth is a metal.

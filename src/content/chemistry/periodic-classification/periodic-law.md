@@ -50,7 +50,7 @@ With $Z$ as the organiser, the modern periodic law can be stated cleanly:
 
 ## 4. Periods and groups, numbered
 
-IUPAC settled the notation that modern tables use: **18 groups**, numbered 1 to 18 from the alkali metals to the noble gases, and **7 periods**, numbered by row. Period number and group number are not just labels; they can be read off an element's electronic configuration, which is what the next module shows. The old A/B notations (IA, VIIA, IB…) still circulate in books and exams, but every unambiguous reference — group 13, period 4, block p — uses the IUPAC numbers.
+With the law in place, one job remained: fixing the numbering everyone would use. IUPAC settled the notation that modern tables use: **18 groups**, numbered 1 to 18 from the alkali metals to the noble gases, and **7 periods**, numbered by row. Period number and group number are not just labels; they can be read off an element's electronic configuration, which is what the next module shows. The old A/B notations (IA, VIIA, IB…) still circulate in books and exams, but every unambiguous reference — group 13, period 4, block p — uses the IUPAC numbers.
 
 <learning-block type="mistake" title="Order is not mass">
 

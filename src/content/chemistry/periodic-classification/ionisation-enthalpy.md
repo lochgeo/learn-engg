@@ -10,7 +10,7 @@ Breaking an attraction always costs energy, so $\Delta_i H_1$ is **positive** �
 
 ## 1. Why every removal after the first costs more
 
-Once one electron is gone, every remaining electron feels a larger net positive charge, and the ion is smaller than the atom — so successive ionisation enthalpies therefore **always increase**:
+Once one electron is gone, every remaining electron feels a larger net positive charge, and the ion is smaller than the atom — so successive ionisation enthalpies **always increase**:
 
 $$
 \Delta_i H_1 < \Delta_i H_2 < \Delta_i H_3 < \cdots
@@ -41,7 +41,7 @@ The noble gases cap the other extreme: helium's $\Delta_i H_1$ is $2372\ \text{k
 
 ## 4. Across a period: harder, with two famous dips
 
-Across a period the outer shell fills while $Z_{eff}$ rises, so ionisation generally climbs. Period 2 shows the shape, including the two celebrated dips:
+Across a period the outer shell fills while $Z_{eff}$ — the effective nuclear charge an outer electron actually feels — rises, so ionisation generally climbs. Period 2 shows the shape, including the two celebrated dips:
 
 | Element | Li | Be | B | C | N | O | F | Ne |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
