@@ -29,7 +29,7 @@ $$
 \mathrm{pH} = \mathrm{p}K_a + \log\frac{[\mathrm{A^-}]}{[\mathrm{HA}]}
 $$
 
-In words: **pH = pKa + log (moles of salt form ÷ moles of acid form)** — the total volume cancels, so you can feed the equation moles instead of concentrations. For a weak-base buffer, the matching form $\mathrm{pOH} = \mathrm{p}K_b + \log\frac{[\text{salt}]}{[\text{base}]}$ handles ammonia/ammonium directly.
+In words: **pH $=$ p$K_a$ + log (moles of salt form $\div$ moles of acid form)** — the total volume cancels, so you can feed the equation moles instead of concentrations. For a weak-base buffer, the matching form $\mathrm{pOH} = \mathrm{p}K_b + \log\frac{[\text{salt}]}{[\text{base}]}$ handles ammonia/ammonium directly.
 
 | Salt : acid | pH relative to $\mathrm{p}K_a$ |
 | --- | --- |
@@ -56,7 +56,9 @@ $$
 
 Compare: $0.020\ \text{mol}$ of $\mathrm{HCl}$ dumped in a litre of unbuffered water gives $[\mathrm{H^+}] = 0.020\ \text{M}$ and pH $\approx 1.7$. The buffer absorbed what would have been a three-unit pH swing at the cost of $0.18$ units.
 
-**Buffer capacity** is the amount of acid or base the solution can absorb before the pH slides out of range; it grows with the **total** concentration of the pair (a $0.2/0.2$ mix resists about four times as much as $0.05/0.05$ of the same ratio). Highest capacity sits exactly at equality, when the ratio is $1$.
+**Buffer capacity** is the amount of acid or base the solution can absorb before the pH slides out of range; it grows with the **total** concentration of the pair (a $0.2/0.2$ mix resists about four times as much as $0.05/0.05$ of the same ratio).
+
+Highest capacity sits exactly at equality, when the ratio is $1$.
 
 ## Salt hydrolysis: the reverse pathway
 
@@ -77,7 +79,9 @@ A conjugate base is *always* a base, so salt solutions are not automatically neu
 | weak acid + strong base | $\mathrm{CH_3COONa}$ | basic | $>7$ — $\mathrm{CH_3COO^-}$ grabs a proton |
 | weak acid + weak base | $\mathrm{NH_4CN}$ | depends | compare $K_a$ and $K_b$ of the two ions |
 
-For the doubly-weak case, $\mathrm{NH_4CN}$: the cation is acidic with $K_a(\mathrm{NH_4^+}) = K_w/K_b(\mathrm{NH_3}) \approx 5.6\times10^{-10}$; the anion is basic with $K_b(\mathrm{CN^-}) = K_w/K_a(\mathrm{HCN}) \approx 1.6\times10^{-5}$. The anion is by far the stronger player, so the solution is **basic** (pH $\approx 9.2$ at tenth-molar level) — not the naive $\sqrt{K_b\,C} \approx 11$ estimate, because the cation's acidity cancels much of the anion's basicity. Score the two constants; do not guess.
+For the doubly-weak case, $\mathrm{NH_4CN}$: the cation is acidic with $K_a(\mathrm{NH_4^+}) = K_w/K_b(\mathrm{NH_3}) \approx 5.6\times10^{-10}$; the anion is basic with $K_b(\mathrm{CN^-}) = K_w/K_a(\mathrm{HCN}) \approx 1.6\times10^{-5}$.
+
+The anion is by far the stronger player, so the solution is **basic** (pH $\approx 9.2$ at tenth-molar level) — not the naive $\sqrt{K_b\,C} \approx 11$ estimate, because the cation's acidity cancels much of the anion's basicity. Score the two constants; do not guess.
 
 ## Worked example 2: pH of a hydrolysing salt
 

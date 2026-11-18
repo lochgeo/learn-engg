@@ -2,6 +2,8 @@
 
 Acids taste sour and metals dissolve in them; bases feel slippery and neutralise acids. To a chemist, both are special cases of the same equilibrium machinery — and water itself turns out to be a weak acid and a weak base at the same time.
 
+This module builds the tool kit in order: three ways to define an acid, the tiny equilibrium that water sets up on its own, and the pH scale that turns awkwardly small concentrations into friendly numbers.
+
 ## Three definitions, from narrowest to broadest
 
 | Definition | Acid is… | Base is… | Where it works | Where it fails |
@@ -31,7 +33,7 @@ $$
 Acetic acid/acetate and ammonia/ammonium are conjugate pairs. Two rules tie strengths together:
 
 1. **Strong acid → weak conjugate base, and vice versa.** $\mathrm{HCl}$ loses its proton so readily that $\mathrm{Cl^-}$ is an extremely feeble base.
-2. **Strengths of a pair are linked through $K_w$:** $K_a(K_b) = K_w$ for any conjugate pair in water. A stronger acid therefore means a weaker conjugate base, in numbers, not just words.
+2. **Strengths of a pair are linked through $K_w$:** $K_a K_b = K_w$ for any conjugate pair in water, where $K_a$ and $K_b$ are the acid- and base-dissociation constants. A stronger acid therefore means a weaker conjugate base, in numbers, not just words.
 
 ## Water ionises — very slightly
 
@@ -104,7 +106,9 @@ $$
 \mathrm{pH} = -\log(1.34\times10^{-3}) = 3 - \log 1.34 \approx 3 - 0.13 = 2.87
 $$
 
-**Sanity check.** Compare with $0.10\ \text{M}$ of $\mathrm{HCl}$ (pH $1.0$): the weak acid's pH is $2.87$, so its $[\mathrm{H^+}]$ is about $75$-fold smaller. The acid is $0.10\ \text{M}$ in formula present yet dissociates only $x/C = 1.34\times10^{-3}/0.10 \approx 1.3\%$ — the "weak" tag in numbers (under $5\%$, so the small-$x$ approximation was justified).
+**Sanity check.** Compare with $0.10\ \text{M}$ of $\mathrm{HCl}$ (pH $1.0$): the weak acid's pH is $2.87$, so its $[\mathrm{H^+}]$ is about $75$-fold smaller.
+
+The acid is $0.10\ \text{M}$ in formula present yet dissociates only $x/C = 1.34\times10^{-3}/0.10 \approx 1.3\%$ — the "weak" tag in numbers (under $5\%$, so the small-$x$ approximation was justified).
 
 ## Polyprotic acids in one line
 

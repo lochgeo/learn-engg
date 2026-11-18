@@ -18,7 +18,7 @@ The systematic reason is the reaction quotient: adding a reactant makes $Q$ fall
 
 ## Change the pressure (of a gas equilibrium)
 
-Compressing a gaseous mixture *increases every concentration*, so it is not the same as "adding one gas". The rule: compression favours the side with the **smaller total gaseous moles**.
+Compressing a gaseous mixture *increases every concentration*, so it is not the same as "adding one gas". The rule: compression favours the side with the **smaller total gaseous moles**. (Throughout, $\Delta n$ means moles of gaseous products minus moles of gaseous reactants.)
 
 $$
 \mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}

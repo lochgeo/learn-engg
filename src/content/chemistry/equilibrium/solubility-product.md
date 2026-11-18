@@ -4,7 +4,7 @@ Mix silver nitrate and table salt, and a white cloud appears; every ion pair tha
 
 ## Dissolution as an equilibrium
 
-An "insoluble" salt is not really insoluble — a tiny amount always dissolves until the solution is **saturated**:
+The trick is to treat dissolving as a reversible reaction: solid on the left, ions on the right. An "insoluble" salt is not really insoluble — a tiny amount always dissolves until the solution is **saturated**:
 
 $$
 \mathrm{AgCl(s) \rightleftharpoons Ag^+(aq) + Cl^-(aq)}
@@ -72,7 +72,9 @@ Define the ionic product $Q_{sp}$ exactly as $K_{sp}$ but with whatever concentr
 | $Q_{sp} = K_{sp}$ | just saturated: the balance line |
 | $Q_{sp} > K_{sp}$ | supersaturated: precipitation occurs until $Q_{sp}$ falls back to $K_{sp}$ |
 
-Here is the catch in dilutions: when two solutions are mixed, each ion's **concentration is diluted**; compute both post-mixing concentrations before comparing. Also note that beyond the tiny solubility, the reaction between any excess ions stops at the moment $Q_{sp} = K_{sp}$; arriving ions are "wasted" in pushing toward saturation, and the leftover precipitates or stays dissolved depending on the exact amounts.
+Here is the catch in dilutions: when two solutions are mixed, each ion's **concentration is diluted**; compute both post-mixing concentrations before comparing.
+
+Also note that beyond the tiny solubility, the reaction between any excess ions stops at the moment $Q_{sp} = K_{sp}$; arriving ions are "wasted" in pushing toward saturation, and the leftover precipitates or stays dissolved depending on the exact amounts.
 
 ## Worked example: will a precipitate form?
 

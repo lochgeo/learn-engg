@@ -20,7 +20,7 @@ $Q$ has exactly the form of $K_c$, but it is a running value that changes as the
 | $Q = K$ | already balanced | no net change (rates equal) |
 | $Q > K$ | too much product for balance | reverse reaction dominates: product decomposes |
 
-The reasoning is pure logic. $Q$ is too *small* means the numerator (product side) must grow to reach $K$'s value, so the forward reaction must run. The reaction always drives $Q$ toward $K$, and $Q$ can cross or overshoot $K$ only if the conditions change.
+The reasoning is pure logic. A $Q$ that is too *small* means the numerator (product side) must grow to reach $K$'s value, so the forward reaction must run. The reaction always drives $Q$ toward $K$, and $Q$ can cross or overshoot $K$ only if the conditions change.
 
 ## Worked example: which way does this flask go?
 
@@ -102,7 +102,7 @@ Many exam problems are set up so the algebra collapses:
 
 - **Writing the Change row with wrong signs.** Product terms gain when the forward reaction runs and lose when the reverse runs; sign every row before solving.
 - **Keeping an impossible root.** Always test both quadratic roots against the Initial row; the larger root is usually fictitious.
-- **Forgetting the volume.** Moles divided by moles give nonsense in $K_c$; convert to molarity first.
+- **Forgetting the volume.** Moles plugged straight into $K_c$ are meaningless; divide by the volume to get molarity first.
 - **Reading $Q < K$ as "the reaction stops".** $Q < K$ means the forward rate is *currently the larger one*; the change continues until they equalise.
 
 </learning-block>

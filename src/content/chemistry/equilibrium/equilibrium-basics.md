@@ -57,7 +57,9 @@ Equilibrium is not owned by chemistry — it governs every balance between two o
 | solid $\rightleftharpoons$ solution | undissolved salt in a saturated solution | solubility (dissolved amount) | temperature |
 | gas $\rightleftharpoons$ solution | carbonated water in a sealed bottle | dissolved gas at a given pressure | pressure, temperature |
 
-The liquid–vapour case rewards attention. In a closed flask, evaporation builds up vapour until molecules return to the liquid as fast as they leave it; the pressure then reads a fixed value, the **vapour pressure**, which depends only on temperature. Raise the temperature and the balance shifts toward vapour. This is Le Chatelier's principle in its clearest form — the quantitative version arrives in module 4.
+The liquid–vapour case rewards attention. In a closed flask, evaporation builds up vapour until molecules return to the liquid as fast as they leave it; the pressure then reads a fixed value, the **vapour pressure**, which depends only on temperature. Raise the temperature and the balance shifts toward vapour.
+
+This is Le Chatelier's principle in its clearest form — the quantitative version arrives in module 4.
 
 Gas dissolving in liquid behaves the same way: more pressure forces more gas to dissolve, which is exactly how a soda bottle keeps its fizz, and exactly why an opened bottle goes flat.
 
@@ -70,7 +72,9 @@ At a fixed temperature, two sealed $10.0\ \text{L}$ flasks are filled:
 | A | $2.0\ \text{mol}$ of $\mathrm{H_2}$ and $2.0\ \text{mol}$ of $\mathrm{I_2}$ | $3.0\ \text{mol}$ of $\mathrm{HI}$, $0.5\ \text{mol}$ each of $\mathrm{H_2}$ and $\mathrm{I_2}$ |
 | B | $4.0\ \text{mol}$ of pure $\mathrm{HI}$ | the same mixture: $3.0\ \text{mol}$ of $\mathrm{HI}$, $0.5\ \text{mol}$ each of $\mathrm{H_2}$ and $\mathrm{I_2}$ |
 
-Experiment A starts with no product; experiment B starts with no reactant. Both settle into **identical** compositions. The check: the concentration sets are the same, since moles are compared inside equal volumes. This is the strongest single piece of evidence that the final state is an equilibrium — a fixed, reproducible mixture — rather than exhaustion of any reagent.
+Experiment A starts with no product; experiment B starts with no reactant. Both settle into **identical** compositions. The check: the concentration sets are the same, since moles are compared inside equal volumes.
+
+This is the strongest single piece of evidence that the final state is an equilibrium — a fixed, reproducible mixture — rather than exhaustion of any reagent.
 
 From B you can also see the reaction running in the direction opposite to A: $1.0\ \text{mol}$ of $\mathrm{HI}$ decomposed. Equilibrium truly has two faces, and the next module gives you a single constant that describes both of them.
 

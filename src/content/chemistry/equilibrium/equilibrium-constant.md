@@ -26,7 +26,7 @@ k_f[\mathrm{A}][\mathrm{B}] = k_r[\mathrm{C}][\mathrm{D}]
 \frac{[\mathrm{C}][\mathrm{D}]}{[\mathrm{A}][\mathrm{B}]} = \frac{k_f}{k_r} = K_c
 $$
 
-The ratio $K_c$ depends **only on temperature**. For coefficients other than one, each concentration is raised to its coefficient. Two consequences worth memorising early:
+The ratio $K_c$ — the subscript $c$ marks concentrations in $\text{mol/L}$ — depends **only on temperature**. For coefficients other than one, each concentration is raised to its coefficient. Two consequences worth memorising early:
 
 - **Reverse reaction:** $K_{\text{reverse}} = 1/K_{\text{forward}}$.
 - **Scaling the equation by $n$:** the new constant is $K^n$. Doubling an equation squares its $K$.
@@ -52,7 +52,9 @@ K_c = \frac{[\mathrm{HI}]^2}{[\mathrm{H_2}][\mathrm{I_2}]}
 = \frac{(0.30)^2}{(0.050)(0.050)} = \frac{0.090}{2.5\times10^{-3}} = 36
 $$
 
-**Sanity checks.** The constant is dimensionless in the modern (activity-based) convention, because the units of numerator and denominator cancel here — count the exponents: $2$ versus $1+1$. And it is large but not huge, as fits a reaction with a favourable but reversible balance. The same constant describes the flask that started from pure $\mathrm{HI}$: if $x\ \text{mol}$ of $\mathrm{HI}$ had decomposed, you would solve $\frac{(x/2)^2}{(4.0-x)^2} = \frac{1}{36}$, which gives $x = 1.0\ \text{mol}$ — exactly the composition tabulated in module 1.
+**Sanity checks.** The constant is dimensionless in the modern (activity-based) convention, because the units of numerator and denominator cancel here — count the exponents: $2$ versus $1+1$. And it is large but not huge, as fits a reaction with a favourable but reversible balance.
+
+The same constant describes the flask that started from pure $\mathrm{HI}$: if $x\ \text{mol}$ of $\mathrm{HI}$ had decomposed, you would solve $\frac{(x/2)^2}{(4.0-x)^2} = \frac{1}{36}$, which gives $x = 1.0\ \text{mol}$ — exactly the composition tabulated in module 1.
 
 ## From concentrations to pressures: $K_p$
 
