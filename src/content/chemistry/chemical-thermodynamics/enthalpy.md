@@ -4,7 +4,7 @@ The previous module ended with the rigid-vessel case: at constant volume, the he
 
 ## 1. Defining enthalpy
 
-Introduce
+We define a new state function:
 
 $$
 H = U + PV.
@@ -38,7 +38,7 @@ $$
 Every part of that line carries information:
 
 - The **physical states** decide the number. If the water is written $\mathrm{H_2O(g)}$ instead of $\mathrm{H_2O(l)}$, the reaction is less exothermic by the condensation enthalpy of two moles of steam — the same fuel gives about $-802\ \text{kJ}$ with gaseous water.
-- The **coefficients count moles**, not molecules as a scale. Doubling the equation doubles $\Delta H$; burning two moles of methane releases twice the energy.
+- The **coefficients count moles**, not single molecules. Doubling the equation doubles $\Delta H$; burning two moles of methane releases twice the energy.
 - **Reversing** the equation flips the sign of $\Delta H$, because enthalpy is a state function: what you paid out coming, you must put in going back.
 - Fractional coefficients are allowed and common: $\mathrm{H_2(g) + \tfrac12 O_2(g) \rightarrow H_2O(l)}$ carries $\Delta H^\circ = -285.8\ \text{kJ}$ per mole of water.
 
@@ -99,7 +99,7 @@ Reverse and halve. Reversing flips the sign to $+571.6\ \text{kJ}$; halving divi
 
 <details><summary>Show the reasoning</summary>
 
-$\Delta H = \Delta U + \Delta n_g RT = -87.2 + (-2)(8.314\times10^{-3})(298) = -87.2 - 4.96 = -92.2\ \text{kJ\,mol}^{-1}$. (This is the real numbers for ammonia synthesis.)
+$\Delta H = \Delta U + \Delta n_g RT = -87.2 + (-2)(8.314\times10^{-3})(298) = -87.2 - 4.96 = -92.2\ \text{kJ\,mol}^{-1}$. (These are the real numbers for ammonia synthesis.)
 </details>
 
 **C.** Why does $\mathrm{H_2(g) + I_2(g) \rightarrow 2HI(g)}$ have $\Delta H \approx \Delta U$?

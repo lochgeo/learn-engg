@@ -1,6 +1,6 @@
 ## JEE Main sprint: how to use this set
 
-This is a **50-minute, no-notes** paper covering the whole Chemical Thermodynamics chapter: first law, enthalpy, Hess's law, entropy, Gibbs energy and the equilibrium bridge. Spend roughly 15 minutes on Section A, 15 on Section B, 10 on Section C and 10 on Section D. Flag any question after 90 seconds and move on; a stuck exotherm costs the whole paper.
+This is a **50-minute, no-notes** paper covering the whole Chemical Thermodynamics chapter: first law, enthalpy, Hess's law, entropy, Gibbs energy and the equilibrium bridge. Spend roughly 15 minutes on Section A, 15 on Section B, 10 on Section C and 10 on Section D. Flag any question after 90 seconds and move on; one stubborn question can cost you the whole paper.
 
 The habit that earns marks is naming the tool before writing numbers: is this a $\Delta U$ ledger, a Hess construction, a $\Delta G$ sign analysis, or a $K$ conversion? Every question below is one of those four.
 
@@ -269,7 +269,7 @@ Match each relation in List I with its correct meaning in List II.
 
 ### 20. Statements about burning graphite
 
-For $\mathrm{C(graphite) + O_2(g) \rightarrow CO_2(g)}$ at $298\ \text{K}$, with $\Delta_\text{f}H^\circ(\mathrm{CO_2}) = -393.5\ \text{kJ\,mol}^{-1}$ and $S^\circ_m$: C 5.7, O₂ 205.0, CO₂ 213.7 J K⁻¹mol⁻¹, consider:
+For $\mathrm{C(graphite) + O_2(g) \rightarrow CO_2(g)}$ at $298\ \text{K}$, with $\Delta_\text{f}H^\circ(\mathrm{CO_2}) = -393.5\ \text{kJ\,mol}^{-1}$ and $S^\circ_m$: C $5.7$, $\mathrm{O_2}$ $205.0$, $\mathrm{CO_2}$ $213.7\ \text{J\,K}^{-1}\text{mol}^{-1}$, consider:
 
 - (i) $\Delta H^\circ < 0$.
 - (ii) $\Delta S^\circ$ is large and positive.

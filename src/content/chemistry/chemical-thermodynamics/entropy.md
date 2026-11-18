@@ -20,20 +20,24 @@ $$
 S = k\ln W,
 $$
 
-where $W$ counts the microstates — the distinct ways molecules can be arranged and moving — compatible with the observed macrostate, and $k = 1.381\times10^{-23}\ \text{J\,K}^{-1}$. More room to spread means more arrangements, hence higher entropy. The classical, laboratory-scale definition ties entropy change to reversible heat flow:
+where $W$ counts the microstates — the distinct ways molecules can be arranged and moving — compatible with the observed macrostate, and $k = 1.381\times10^{-23}\ \text{J\,K}^{-1}$. More room to spread means more arrangements, hence higher entropy.
+
+The classical, laboratory-scale definition ties entropy change to reversible heat flow:
 
 $$
 \Delta S = \frac{q_{\text{rev}}}{T}.
 $$
 
-Entropy has units $\text{J\,K}^{-1}$ (tabulated molar entropies use $\text{J\,K}^{-1}\text{mol}^{-1}$). It is a state function, an extensive one: twice the sample, twice the entropy. The division by $T$ has a feel to it — adding $100\ \text{J}$ to an already hot body disperses into a crowd of busy microstates and matters less than the same joules dropped into a cold, ordered system.
+Entropy has units $\text{J\,K}^{-1}$ (tabulated molar entropies use $\text{J\,K}^{-1}\text{mol}^{-1}$). It is a state function, an extensive one: twice the sample, twice the entropy.
+
+The division by $T$ has a feel to it — adding $100\ \text{J}$ to an already hot body disperses into a crowd of busy microstates and matters less than the same joules dropped into a cold, ordered system.
 
 Useful ordering rules, all consequences of "more ways to be arranged":
 
 - gas $\gg$ liquid $>$ solid for the same substance;
 - entropy rises with temperature (thermal motion opens more arrangements);
 - more moles of gas in the formula means more entropy — one extra gas molecule is worth tens of $\text{J\,K}^{-1}\text{mol}^{-1}$;
-- dissolving a gas into solution *lowers* its entropy; dissolving most ionic solids in water raises the solution's disorder but the sign for the system as a whole must be computed, not assumed.
+- dissolving a gas into solution *lowers* its entropy, whereas dissolving most ionic solids in water raises the solution's disorder — but the sign for the system as a whole must be computed, not assumed.
 
 ## 3. The second law
 

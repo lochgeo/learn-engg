@@ -30,7 +30,9 @@ $G$ is a state function, extensive, usually quoted in kJ. The equation is a stat
 | $= 0$ | the system is at equilibrium; neither direction is favoured |
 | $> 0$ | not spontaneous; the reverse process has $\Delta G<0$ |
 
-This is exactly the second law, renamed. A negative $\Delta G$ *is* a positive $\Delta S_{\text{total}}$ under constant $T$ and $P$; the price $-T\Delta S_{\text{total}}$ for that translation is that the test applies only under those conditions. And as with spontaneity in general: $\Delta G$ says nothing about rate. Hydrogen peroxide solution has a large negative $\Delta G$ for decomposition, and a sealed bottle sits for months.
+This is exactly the second law, renamed. A negative $\Delta G$ *is* a positive $\Delta S_{\text{total}}$ under constant $T$ and $P$; the price $-T\Delta S_{\text{total}}$ for that translation is that the test applies only under those conditions.
+
+And as with spontaneity in general: $\Delta G$ says nothing about rate. Hydrogen peroxide solution has a large negative $\Delta G$ for decomposition, and a sealed bottle sits for months.
 
 ## 3. Reading the signs: which term wins?
 
@@ -39,7 +41,7 @@ Because $\Delta G = \Delta H - T\Delta S$, four sign combinations exhaust the po
 | $\Delta H$ | $\Delta S$ | $\Delta G$ | Spontaneous when | Example |
 | --- | --- | --- | --- | --- |
 | $-$ | $+$ | always $-$ | all temperatures | combustion of carbon: $\Delta H^\circ = -393.5\ \text{kJ\,mol}^{-1}$, $\Delta S^\circ$ slightly positive |
-| $-$ | $-$ | $-$ at low $T$ | below $T = \Delta H/\Delta S$ | freezing water; rusting in the sense of gas-consuming combination reactions |
+| $-$ | $-$ | $-$ at low $T$ | below $T = \Delta H/\Delta S$ | freezing water; rusting, a gas-consuming combination reaction |
 | $+$ | $+$ | $-$ at high $T$ | above $T = \Delta H/\Delta S$ | thermal decomposition of carbonates; evaporation above the boiling point |
 | $+$ | $-$ | always $+$ | never | $\mathrm{3O_2(g) \rightarrow 2O_3(g)}$: endothermic *and* fewer gas moles |
 
@@ -91,7 +93,7 @@ $$
 \mathrm{Fe_2O_3(s) + 2Al(l) \rightarrow Al_2O_3(s) + 2Fe(l)}
 $$
 
-Iron oxide does not give up its oxygen to anything that can afford it — but with $\Delta_\text{f}G^\circ(\mathrm{Al_2O_3}) = -1582\ \text{kJ\,mol}^{-1}$ versus $\Delta_\text{f}G^\circ(\mathrm{Fe_2O_3}) = -742\ \text{kJ\,mol}^{-1}$, aluminium's appetite for oxygen contributes
+Iron oxide will not surrender its oxygen cheaply, but aluminium can more than afford it. With $\Delta_\text{f}G^\circ(\mathrm{Al_2O_3}) = -1582\ \text{kJ\,mol}^{-1}$ versus $\Delta_\text{f}G^\circ(\mathrm{Fe_2O_3}) = -742\ \text{kJ\,mol}^{-1}$, aluminium's far greater appetite for oxygen contributes
 
 $$
 \Delta G^\circ = -1582 - (-742) = -840\ \text{kJ\,mol}^{-1},

@@ -1,6 +1,6 @@
 ## Your study plan for this chapter
 
-Chemical thermodynamics is one chain, not eight formulas: energy accounting → constant-pressure heat → enthalpy construction → direction → the system-only test → the equilibrium bridge. A focused pass takes about **three hours**:
+Chemical thermodynamics is one chain of reasoning, not a bag of formulas: energy accounting → constant-pressure heat → enthalpy construction → direction → the system-only test → the equilibrium bridge. A focused pass takes about **three hours**:
 
 | Step | Revisit | Minutes |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ $w = -P_{\text{ex}}\Delta V = -(1.0)(5.0) = -5.0\ \text{L·atm} = -507\ \text{J}
 
 ### 2. Which list is which?
 
-Classify: $U$, $q$, $T$, $w$, $H$, and state which four rows of the first-law special cases force $\Delta U$ to equal $q$, or to vanish.
+Classify: $U$, $q$, $T$, $w$, $H$, and state which first-law special cases make $\Delta U$ equal $q$ or equal zero.
 
 <details><summary>Answer and reasoning</summary>
 

@@ -10,7 +10,9 @@ $$
 \Delta G = \Delta G^\circ + RT \ln Q,
 $$
 
-where $Q$ is the reaction quotient — products over reactants, each raised to its coefficient, evaluated at the *current* mixture. At the start of a synthesis from pure reactants, $Q = 0$ and $\ln Q \to -\infty$: $\Delta G$ is hugely negative, and the reaction sprints forward. As products accumulate, $Q$ climbs, $\Delta G$ rises toward zero, and the drive fades. **This** is why reactions slow down and stop rather than running to completion: the composition itself erases the motivation.
+where $Q$ is the reaction quotient — products over reactants, each raised to its coefficient, evaluated at the *current* mixture.
+
+At the start of a synthesis from pure reactants, $Q = 0$ and $\ln Q \to -\infty$: $\Delta G$ is hugely negative, and the reaction sprints forward. As products accumulate, $Q$ climbs, $\Delta G$ rises toward zero, and the drive fades. **This** is why reactions slow down and stop rather than running to completion: the composition itself erases the motivation.
 
 The sign rule follows immediately: $\Delta G<0$ while $Q<K$, $\Delta G=0$ at $Q=K$, $\Delta G>0$ beyond it. A reaction never "goes backwards because $\Delta G^\circ$ is positive"; it goes whichever way pushes $Q$ toward $K$.
 
@@ -72,7 +74,9 @@ $$
 K_2 = 6.3\times10^{5} \times e^{-15.0} \approx 6.3\times10^{5} \times 3.1\times10^{-7} \approx 0.2.
 $$
 
-**Sanity check.** The reaction is exothermic, so $K$ must fall with heating — and it falls six orders of magnitude, flipping the equilibrium from product-dominated to reactant-leaning. Real plants run hot anyway, because a $K$ of $10^{6}$ reached over a century is worthless against a $K$ of $0.2$ reached in seconds over a catalyst. Thermodynamics sets the destination; kinetics sets the schedule; the operating temperature is their negotiated settlement.
+**Sanity check.** The reaction is exothermic, so $K$ must fall with heating — and it falls six orders of magnitude, flipping the equilibrium from product-dominated to reactant-leaning.
+
+Real plants run hot anyway, because a $K$ of $10^{6}$ reached over a century is worthless against a $K$ of $0.2$ reached in seconds over a catalyst. Thermodynamics sets the destination; kinetics sets the schedule; the operating temperature is their negotiated settlement.
 
 <learning-block type="mistake" title="ΔG against ΔG°: the distinction that decides direction">
 

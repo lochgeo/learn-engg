@@ -6,7 +6,9 @@ Burn carbon in a limited air supply and you want the enthalpy of $\mathrm{C(s) +
 
 > The total enthalpy change of a reaction is the sum of the enthalpy changes of the individual steps into which it can be divided, provided the starting and ending states are the same.
 
-This is not a separate discovery — it is a direct consequence of $\Delta H$ being a state function (and of constant-pressure heat being heat at all). You may add thermochemical equations like algebra: multiply an equation by a number and its $\Delta H$ scales the same way; reverse an equation and flip the sign; add equations and any species that appears on both sides cancels, taking its enthalpy contribution with it. If the summed equations give the target reaction, the summed enthalpies give the target enthalpy, exactly.
+This is not a separate discovery — it is a direct consequence of $\Delta H$ being a state function (and of constant-pressure heat being heat at all).
+
+You may add thermochemical equations like algebra: multiply an equation by a number and its $\Delta H$ scales the same way; reverse an equation and flip the sign; add equations and any species that appears on both sides cancels, taking its enthalpy contribution with it. If the summed equations give the target reaction, the summed enthalpies give the target enthalpy, exactly.
 
 ## 2. Standard enthalpy of formation
 
@@ -66,7 +68,9 @@ The same bookkeeping, run in reverse, is how you would *measure* the enthalpy of
 
 ## 4. Combustion and other named enthalpies
 
-The **standard enthalpy of combustion** $\Delta_\text{c}H^\circ$ is the enthalpy change when one mole of a substance burns completely in oxygen, with everything in its standard state — for organic compounds that means $\mathrm{CO_2(g)}$ and $\mathrm{H_2O(l)}$. It is always negative. Methane's $-890.3\ \text{kJ\,mol}^{-1}$ from the worked example is $\Delta_\text{c}H^\circ$ for methane. Combustion data rank fuels (per mole or, more fairly for transport, per gram), and — as the CO construction shows — they can be recycled to build formation enthalpies of any compound made of C, H or both.
+The **standard enthalpy of combustion** $\Delta_\text{c}H^\circ$ is the enthalpy change when one mole of a substance burns completely in oxygen, with everything in its standard state — for organic compounds that means $\mathrm{CO_2(g)}$ and $\mathrm{H_2O(l)}$. It is always negative. Methane's $-890.3\ \text{kJ\,mol}^{-1}$ from the worked example is $\Delta_\text{c}H^\circ$ for methane.
+
+Combustion data rank fuels (per mole or, more fairly for transport, per gram), and — as the CO construction shows — they can be recycled to build formation enthalpies of any compound made of C, H or both.
 
 Other named enthalpies you will meet: atomisation (forming one mole of gaseous atoms), solution, neutralisation (about $-57\ \text{kJ\,mol}^{-1}$ for any strong acid with any strong base — because the net reaction is always $\mathrm{H^+ + OH^- \rightarrow H_2O}$). All obey Hess's law equally, because none of them escapes being a state function.
 

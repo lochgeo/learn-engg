@@ -31,7 +31,7 @@ A **state function** depends only on the current state (given by $P$, $V$, $T$ a
 
 ## 4. Internal energy and the first law
 
-The **internal energy** $U$ is the total microscopic energy of the system: translational, rotational and vibrational molecular motion, electronic and nuclear energy, and intermolecular potential energy. Its absolute value is unknowable and unnecessary; changes $\Delta U$ are what we measure.
+The quantity the first law actually balances is the system's **internal energy** $U$: the total microscopic energy of the system — translational, rotational and vibrational molecular motion, electronic and nuclear energy, and intermolecular potential energy. Its absolute value is unknowable and unnecessary; changes $\Delta U$ are what we measure.
 
 The **first law of thermodynamics** is energy conservation applied to a system:
 
@@ -44,12 +44,16 @@ using the chemistry sign convention: $q>0$ when heat flows **into** the system, 
 For expansion against a constant external pressure, the work term is
 
 $$
-w = -P_{\text{ex}}\,\Delta V.
+w = -P_{\text{ex}}\,\Delta V,
 $$
 
-A gas that expands ($\Delta V>0$) pushes back against its surroundings, so it does work **on** them and $w<0$. Compression gives $w>0$. If the external pressure varies along the way, the general result is $w=-\int P_{\text{ex}}\,dV$; and against a vacuum ($P_{\text{ex}}=0$, free expansion) the work is exactly zero even though the volume changes. For one mole of an ideal gas held at constant temperature, $\Delta U=0$ because ideal-gas internal energy depends only on temperature.
+where $P_{\text{ex}}$ is the external pressure the surroundings exert.
 
-Four special cases are worth memorising as a table, not as sentences:
+A gas that expands ($\Delta V>0$) pushes back against its surroundings, so it does work **on** them and $w<0$. Compression gives $w>0$.
+
+If the external pressure varies along the way, the general result is $w=-\int P_{\text{ex}}\,dV$; and against a vacuum ($P_{\text{ex}}=0$, free expansion) the work is exactly zero even though the volume changes. For one mole of an ideal gas held at constant temperature, $\Delta U=0$ because ideal-gas internal energy depends only on temperature.
+
+Because $\Delta U$ depends only on the endpoints, many standard conditions collapse into a one-line result. The four worth memorising are:
 
 | Condition | Consequence |
 | --- | --- |
