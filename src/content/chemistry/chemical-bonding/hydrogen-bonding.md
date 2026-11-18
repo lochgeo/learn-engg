@@ -1,6 +1,6 @@
 ## Start with thermometer evidence
 
-Compare the boiling points of the group-16 hydrides: $\mathrm{H_2O}$ boils at 373 K while $\mathrm{H_2S}$ boils at 212 K. On every intramolecular measure — bond lengths, bond enthalpies — $\mathrm{H_2S}$ is the heavier molecule and should need more heat to separate. Yet water's boiling point towers above every trend line. The culprit is not the covalent bond at all, but the forces **between** molecules: hydrogen bonds. This module covers the intermolecular family in order of strength and what each one does to matter.
+Compare the boiling points of the group-16 hydrides: $\mathrm{H_2O}$ boils at 373 K while $\mathrm{H_2S}$ boils at 212 K. On every intramolecular measure — bond lengths, bond enthalpies — $\mathrm{H_2S}$ is the heavier molecule and should need more heat to separate. Yet water's boiling point towers above every trend line. The culprit is not the covalent bond at all, but the forces **between** molecules: hydrogen bonds. This module covers the intermolecular family in order of strength, and what each one explains in everyday behaviour.
 
 ## 1. Dipole moment: measuring bond polarity
 

@@ -4,7 +4,7 @@ Draw methane four ways and all are the same; draw water with its two lone pairs 
 
 ## 1. Counting regions of electron density
 
-Work only with the Lewis structure and treat everything attached to the central atom — single bond, double bond, triple bond, lone pair — as one **electron domain** (also called a bond pair/lone pair or a "region of electron density"). A double bond counts as one domain because its two electron pairs must stay on the same side of the atom anyway, packed between the same two nuclei.
+Work only with the Lewis structure and treat everything attached to the central atom — single bond, double bond, triple bond, lone pair — as one **electron domain** (also called a *region of electron density*). A double bond counts as one domain because its two electron pairs must stay on the same side of the atom anyway, packed between the same two nuclei.
 
 Then name the arrangement of the domains:
 

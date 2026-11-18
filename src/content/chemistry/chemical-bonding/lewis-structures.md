@@ -86,9 +86,9 @@ The molecule is not switching between structures. Each structure is an incomplet
 
 <details><summary>Show the reasoning</summary>
 
-$6 + 12 = 18$ valence electrons, skeleton O–S–O. After completing octets sulfur falls short, so convert one oxygen lone pair into an S=O bond. The accounting is then: one S=O (4) + one S–O (2) + two lone pairs on the double-bonded oxygen (4) + three lone pairs on the single-bonded oxygen (6) + one lone pair on sulfur (2) $= 18$. ✓
+$6 + 12 = 18$ valence electrons, skeleton O–S–O. After completing octets sulphur falls short, so convert one oxygen lone pair into an S=O bond. The accounting is then: one S=O (4) + one S–O (2) + two lone pairs on the double-bonded oxygen (4) + three lone pairs on the single-bonded oxygen (6) + one lone pair on sulphur (2) $= 18$. ✓
 
-The double-bonded oxygen has FC $0$, the central sulfur (one lone pair, three bond pairs) has $6 - (2 + 3) = +1$, and the single-bonded oxygen has $6 - (6 + 1) = -1$. $\mathrm{SO_2}$ is the analogue of ozone: bent, with two equivalent resonance forms and average S–O bond order $1\tfrac12$.
+The double-bonded oxygen has FC $0$, the central sulphur (one lone pair, three bond pairs) has $6 - (2 + 3) = +1$, and the single-bonded oxygen has $6 - (6 + 1) = -1$. $\mathrm{SO_2}$ is the analogue of ozone: bent, with two equivalent resonance forms and average S–O bond order $1\tfrac12$.
 
 </details>
 
@@ -104,7 +104,7 @@ $5 + 4 - 1 = 8$ valence electrons, all four used in four N–H single bonds, lea
 
 <details><summary>Show the reasoning</summary>
 
-With two S=O bonds (FC: S $= 6 - (0+6) = 0$, double-bonded O $0$, single-bonded O $-1$ each), all single-bond version has FC $+2$ on S and $-1$ on each oxygen. The double-bond structure puts charges closer to zero and negative charge on oxygen, so it is the better formal-charge choice; it also expands sulfur's octet to 12, allowed from period 3 onward. True S–O bonds are intermediate: partial double-bond character with d–p π overlap, so all six S–O bonds are shorter than a plain single bond.
+With two S=O bonds (FC: S $= 6 - (0+6) = 0$, double-bonded O $0$, single-bonded O $-1$ each), all single-bond version has FC $+2$ on S and $-1$ on each oxygen. The double-bond structure puts charges closer to zero and negative charge on oxygen, so it is the better formal-charge choice; it also expands sulphur's octet to 12, allowed from period 3 onward. True S–O bonds are intermediate: partial double-bond character with d–p π overlap, so all six S–O bonds are shorter than a plain single bond.
 
 </details>
 

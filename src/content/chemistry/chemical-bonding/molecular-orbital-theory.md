@@ -4,7 +4,7 @@ Pass liquid oxygen through a magnetic field and it sticks to the poles — $\mat
 
 ## 1. Combining atomic orbitals
 
-When two atomic orbitals combine over a molecule, they produce exactly two molecular orbitals by the linear-combination-of-AOs (LCAO) business:
+When two atomic orbitals combine over a molecule, they produce exactly two molecular orbitals by the linear-combination-of-atomic-orbitals (LCAO) method:
 
 | MO formed | Energy | Electron density between nuclei | Fills how many electrons |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ $$
 
 The two orders split because the $s$ and $p$ energy gap matters: for B, C and N the gap is small enough that $s$–$p$ mixing pushes $\sigma 2p_z$ upward, while from O onward the gap widens and the classic order holds. Always check whether the atom sits before or after N in the period.
 
-<learning-block type="concept" title="The 1s core is spectators">
+<learning-block type="concept" title="The 1s core is a spectator">
 
 The $1s$ orbitals are too tightly bound to take part in bonding: $\sigma 1s$ and $\sigma^* 1s$ fill first and cancel each other (two electrons each), contributing nothing to the bond order. Second-period MO diagrams usually skip them. That is why "ten electrons" is the number to think about for $\mathrm{O_2}$: two fill the core, eight distribute over the valence MOs.
 
