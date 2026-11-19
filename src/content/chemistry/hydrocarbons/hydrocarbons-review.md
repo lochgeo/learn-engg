@@ -10,6 +10,8 @@ Hydrocarbons are best learned as four connected reaction families rather than fo
 
 After each lesson, cover the reaction tables and write the reagents and products from memory. The goal is a reflex: given a starting material and a reagent, name the product and the reason.
 
+If two families share a reagent — H₂, for instance — learn what distinguishes them: the catalyst and the geometry of the product.
+
 After this core pass, use the optional **JEE Main timed practice** module for a $50$-minute mixed set.
 
 ## Choose the tool before you write a product
@@ -26,6 +28,8 @@ After this core pass, use the optional **JEE Main timed practice** module for a 
 | a side chain on benzene and hot KMnO₄ | oxidation to benzoic acid |
 
 ## Mixed practice
+
+Work through these without notes. If a question stalls you, the table above usually points to the family it belongs to.
 
 1. What is the product of the Wurtz reaction between two molecules of bromoethane?
 2. How many monochloro derivatives does 2-methylpropane form?

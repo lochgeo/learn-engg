@@ -1,6 +1,6 @@
 ## Benzene: a ring that refuses to behave like an alkene
 
-Benzene has the formula C₆H₆, so its degrees of unsaturation are four. A simple ring with three double bonds would suggest an alkene, but benzene does not decolourise bromine water, does not add HBr readily, and is far more stable than the hypothetical cyclohexatriene. The reason is **delocalisation**: all six π electrons are shared over the whole ring.
+Benzene has the formula C₆H₆, so its degrees of unsaturation are four. A simple ring with three double bonds would suggest an alkene, but benzene does not decolourise bromine water, does not add HBr readily, and is far more stable than the hypothetical cyclohexatriene. The reason is **delocalisation**: all six π electrons are shared over the whole ring. Once you see why that is so stable, the rest of aromatic chemistry follows from one preference: the ring substitutes rather than adds.
 
 ## 1. Structure and bonding
 
@@ -78,7 +78,7 @@ With hydrogen and a nickel catalyst at high temperature and pressure, benzene is
 
 ## 4. Directing effects
 
-A substituent already on the ring controls where the next group goes.
+So far the ring has been bare. In real synthesis it usually carries a substituent, and that group decides where the next one goes.
 
 | Group | Effect on ring | Directs to |
 | --- | --- | --- |
@@ -101,7 +101,7 @@ The pattern follows from the stability of the arenium ion:
 
 ## 5. Side-chain reactions
 
-The benzene ring is stable, but an attached alkyl chain is not.
+The benzene ring is stable, but an attached alkyl chain is not. Two reactions exploit that difference: one attacks the chain with an oxidising agent, the other with light and chlorine.
 
 **Oxidation:** hot alkaline KMnO₄ oxidises an alkyl side chain to –COOH, provided the benzylic carbon has at least one hydrogen. Ethylbenzene gives benzoic acid; tert-butylbenzene does not react under these conditions.
 
@@ -112,6 +112,8 @@ The benzene ring is stable, but an attached alkyl chain is not.
 Benzene is toxic and causes bone-marrow damage and leukaemia with prolonged exposure. Polycyclic aromatic hydrocarbons such as benzopyrene, formed in tobacco smoke and in charred food, are carcinogenic after metabolic activation. Aromatic amines are also associated with cancer. These are reasons aromatic chemistry is handled with care in the laboratory, not just exam facts.
 
 ## 7. Worked examples
+
+These four examples take the ideas in order: directing effects, Friedel–Crafts synthesis, side-chain oxidation, and relative reactivity.
 
 ### Example 1: nitration of toluene
 

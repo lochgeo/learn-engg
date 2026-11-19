@@ -2,7 +2,7 @@
 
 Alkynes contain a C≡C bond: one σ and two π bonds. Each carbon is $sp$ hybridised, so the four atoms around the triple bond lie on a straight line with a bond angle of 180°. The general formula for one triple bond in an open chain is $C_nH_{2n-2}$.
 
-The high s-character of the $sp$ orbital holds the bonding electrons closer to carbon, which makes a hydrogen attached to a terminal alkyne weakly acidic — a property alkenes and alkanes do not share.
+The high s-character of the $sp$ orbital holds the bonding electrons closer to carbon, which makes a hydrogen attached to a terminal alkyne weakly acidic — a property alkenes and alkanes do not share. That acidity explains the standard laboratory test for a terminal triple bond.
 
 ## 1. Structure and acidity
 
@@ -26,7 +26,9 @@ Silver acetylide is white; copper(I) acetylide is red. Internal alkynes do not r
 
 ## 2. Preparation
 
-**From calcium carbide**
+Alkynes are made much as alkenes are: remove groups from a saturated framework to leave a multiple bond. Because a triple bond needs more unsaturation, these routes usually either eliminate twice or start from a ready-made C₂ unit.
+
+**From calcium carbide** — the industrial route, which needs only water:
 
 $$
 \mathrm{CaC_2 + 2H_2O \rightarrow HC{\equiv}CH + Ca(OH)_2}
@@ -73,7 +75,7 @@ $$
 
 ### Water
 
-Hydration needs mercury(II) sulphate in dilute sulphuric acid. The initial product is an **enol**, which tautomerises to a ketone:
+Hydration needs mercury(II) sulphate in dilute sulphuric acid. The initial product is an **enol** — an alkene carrying an –OH on one of the double-bond carbons — which tautomerises (rearranges to the more stable carbonyl form) to a ketone:
 
 $$
 \mathrm{CH_3C{\equiv}CH + H_2O \xrightarrow{HgSO_4/H_2SO_4} CH_3COCH_3}
@@ -95,6 +97,8 @@ The second product is acrylonitrile, the monomer for acrylic fibres.
 
 ## 4. Oxidation and polymerisation
 
+The triple bond can also be cut apart, or stitched into larger structures.
+
 Ozonolysis cleaves the triple bond. A terminal alkyne gives a carboxylic acid plus carbon dioxide; an internal alkyne gives two carboxylic acids.
 
 $$
@@ -108,6 +112,8 @@ Ethyne polymerises in different ways depending on conditions:
 - with copper(I) chloride, it dimerises to vinylacetylene.
 
 ## 5. Worked examples
+
+Each example applies one of the reaction patterns above.
 
 ### Example 1: hydration of propyne
 

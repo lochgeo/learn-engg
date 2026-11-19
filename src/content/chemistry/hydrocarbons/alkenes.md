@@ -1,6 +1,6 @@
 ## A double bond changes everything
 
-Alkenes contain a C=C bond: one σ and one π. The π bond is weaker and more exposed, so alkenes undergo **addition** reactions readily, while alkanes mostly substitute. The two carbons of the double bond are $sp^2$, the six atoms attached to them are coplanar, and rotation is blocked — which creates geometric isomerism.
+Alkenes contain a C=C bond: one σ and one π. The π bond is weaker and more exposed, so alkenes undergo **addition** reactions readily, while alkanes mostly substitute. That one change in bonding explains most of the chemistry in this lesson — and it is why alkenes are the starting materials for plastics. The two carbons of the double bond are $sp^2$, the six atoms attached to them are coplanar, and rotation is blocked — which creates geometric isomerism.
 
 General formula: $C_nH_{2n}$ for one double bond in an open chain.
 
@@ -21,6 +21,8 @@ $$
 
 ## 2. Preparation
 
+Most preparations here work backwards from a saturated molecule: remove two groups from adjacent carbons, and the electron pair left behind becomes the π bond.
+
 **Dehydration of alcohols** — concentrated sulphuric acid or phosphoric acid, about 443 K:
 
 $$
@@ -37,7 +39,7 @@ $$
 
 When two alkenes are possible, **Saytzeff's rule** favours the more substituted, more stable alkene.
 
-**Dehalogenation of vicinal dihalides** — zinc dust removes both halogens:
+**Dehalogenation of vicinal dihalides** — zinc dust removes both halogens from adjacent carbons:
 
 $$
 \mathrm{CH_2BrCH_2Br + Zn \rightarrow CH_2{=}CH_2 + ZnBr_2}
@@ -47,7 +49,7 @@ $$
 
 ## 3. Electrophilic addition
 
-The π electrons attack an electrophile, forming a carbocation, which is then captured by a nucleophile.
+The π electrons attack an electrophile (an electron-poor species), forming a carbocation, which is then captured by a nucleophile. This two-step pattern — attack, then capture — underlies most of the additions below, with one radical exception.
 
 ### Hydrogen halides and Markovnikov's rule
 
@@ -87,6 +89,8 @@ Bromine in carbon tetrachloride is decolourised by alkenes — the standard test
 
 ## 4. Oxidation
 
+Oxidation can be gentle or brutal, and the products tell you which conditions were used.
+
 **Cold dilute alkaline KMnO₄** adds two OH groups across the double bond, giving a cis-diol. The purple colour fades and a brown precipitate of MnO₂ forms (Baeyer's test).
 
 **Hot acidic KMnO₄** cleaves the double bond completely; the products depend on the substituents and can include ketones, carboxylic acids and CO₂.
@@ -103,7 +107,7 @@ Ozonolysis is the standard way to locate a double bond from the products.
 
 ## 5. Polymerisation
 
-Alkenes join into long chains through addition polymerisation:
+The same addition, repeated thousands of times, turns a gas into a solid plastic. Alkenes join into long chains through addition polymerisation:
 
 $$
 n\,\mathrm{CH_2{=}CH_2 \rightarrow (-CH_2-CH_2-)_n}

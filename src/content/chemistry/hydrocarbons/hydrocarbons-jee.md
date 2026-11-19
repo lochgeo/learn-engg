@@ -177,6 +177,8 @@ Which group directs electrophilic substitution to the meta position?
 
 ## Section B — 10 numerical questions
 
+These are quick, but write the equation or the count before you answer. Most lost marks here come from skipping a step, not from not knowing it.
+
 ### 11. Monochloro derivatives of propane
 
 How many structural monochloro derivatives does propane form?
@@ -279,6 +281,8 @@ Three: but-1-ene, but-2-ene and 2-methylpropene.
 
 ## Section C — 5 mixed-method questions
 
+Each answer needs a sentence of reasoning, not just a product.
+
 ### 21. Explain the peroxide effect
 
 Why does the peroxide effect occur with HBr but not with HCl or HI?
@@ -334,6 +338,8 @@ Join the carbonyl carbons with a double bond: (CH₃)₂C=CHCH₃, which is **2-
 </details>
 
 ## Section D — 2 full-length numericals
+
+Write these out in full, as you would in the exam, then check the worked answers.
 
 ### 26. Mechanism and regiochemistry
 

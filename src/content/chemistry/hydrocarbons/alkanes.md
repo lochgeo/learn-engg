@@ -1,11 +1,13 @@
 ## The simplest hydrocarbons
 
+Every reaction later in organic chemistry is judged against the alkanes: they are the simplest hydrocarbons, and the least willing to react. This lesson asks how they are built, why they are so unreactive, and what it takes to make them react.
+
 Hydrocarbons contain only carbon and hydrogen. They divide into:
 
 - **open-chain (aliphatic)** compounds, with straight or branched carbon chains;
 - **cyclic** compounds, including alicyclic rings and aromatic rings such as benzene.
 
-Alkanes are saturated open-chain hydrocarbons with the general formula $C_nH_{2n+2}$. Every carbon is $sp^3$ hybridised, every bond is a σ bond, and the molecules are non-polar and comparatively unreactive. That low reactivity is exactly why alkanes are useful as fuels and solvents — and why their reactions need heat, light or a catalyst.
+Alkanes are **saturated** open-chain hydrocarbons — *saturated* because every carbon–carbon bond is single — with the general formula $C_nH_{2n+2}$. Every carbon is $sp^3$ hybridised, every bond is a σ bond, and the molecules are non-polar and comparatively unreactive. That low reactivity is exactly why alkanes are useful as fuels and solvents — and why their reactions need heat, light or a catalyst.
 
 ## 1. Structure and conformations
 
@@ -30,7 +32,9 @@ Two isomers have the same formula and the same number of electrons. The straight
 
 ## 3. Preparation of alkanes
 
-**Hydrogenation of alkenes or alkynes**
+Each method below builds a C–C or C–H bond in one step, and each has a niche. Read them as a small toolkit rather than a list to memorise.
+
+**Hydrogenation of alkenes or alkynes** — the simplest route, adding H₂ across a multiple bond:
 
 $$
 \mathrm{CH_2{=}CH_2 + H_2 \xrightarrow{Ni,\ \Delta} CH_3CH_3}
@@ -56,7 +60,7 @@ $$
 \mathrm{2RCOOK + 2H_2O \xrightarrow{electrolysis} R{-}R + 2CO_2 + H_2 + 2KOH}
 $$
 
-**Decarboxylation** — a sodium carboxylate heated with soda lime:
+**Decarboxylation** — a sodium carboxylate heated with soda lime (a mixture of NaOH and CaO):
 
 $$
 \mathrm{RCOONa + NaOH \xrightarrow{CaO,\ \Delta} R{-}H + Na_2CO_3}
@@ -69,6 +73,8 @@ $$
 $$
 
 ## 4. Reactions of alkanes
+
+With no π bond and no lone pair, an alkane offers nothing for a reagent to attack directly. Instead, the reactions below are forced: a radical, a flame, or a hot catalyst starts them.
 
 ### Halogenation
 
@@ -106,6 +112,8 @@ Combustion is highly exothermic, which is why alkanes are fuels. In limited oxyg
 Alkanes also undergo nitration and sulphonation under drastic conditions (vapour phase, concentrated acids, high temperature), but these are not their characteristic reactions.
 
 ## 5. Worked examples
+
+These examples show the two skills this chapter tests: counting distinct products, and using selectivity to predict which one dominates.
 
 ### Example 1: monochloro products
 
