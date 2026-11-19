@@ -22,7 +22,7 @@ This produces **carbocations** and **carbanions** and is favoured in polar solve
 
 ## 2. The three key intermediates
 
-**Carbocation** — carbon with three bonds and a positive charge. It is $sp^2$, planar, and has an empty p orbital, so it is electron-poor (a Lewis acid). Stability:
+**Carbocation** — carbon with three bonds and a positive charge. It is $sp^2$, planar, and has an empty p orbital, so it is electron-poor (a Lewis acid). Here $1^\circ$, $2^\circ$ and $3^\circ$ mean the charged carbon is bonded to one, two or three other carbons. Stability:
 
 $$
 3^\circ > 2^\circ > 1^\circ > \mathrm{CH_3^+}
@@ -81,6 +81,8 @@ The more **α-hydrogens** (hydrogens on the carbon next to the unsaturated centr
 - **Saytzeff rule:** in elimination, the more substituted alkene usually predominates because it is more stable.
 
 ## 7. Electrophiles, nucleophiles and reaction types
+
+With the intermediates in hand, the next question is what attacks them, and how. The answer starts with two complementary types of reagent.
 
 An **electrophile** is electron-poor and accepts an electron pair: H⁺, NO₂⁺, Br⁺, carbocations, carbonyl carbons.
 

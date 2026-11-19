@@ -17,6 +17,8 @@ Example: **3-methylbutan-2-ol** = a four-carbon chain (but), all single bonds (a
 
 ## 1. The rules, in the order you apply them
 
+Apply these steps in order. Each one narrows the choices left by the one before.
+
 1. **Find the parent chain.** It must contain the principal functional group and the maximum number of multiple bonds, and it should be the longest such chain. The chain may bend; it need not be drawn horizontally.
 2. **Number the parent chain.** Give the principal functional group the lowest possible locant. If there is no principal group, give the multiple bonds the lowest set of locants. Then give the substituents the lowest set.
 3. **Name substituents as prefixes** and list them **alphabetically**. The multiplying prefixes di-, tri- and tetra- are **not** counted when alphabetising, but the substituent name itself is.
@@ -27,7 +29,7 @@ When two numbering directions give different locant sets, compare the sets term 
 
 ## 2. Principal-group priority
 
-When several groups are present, only the highest-priority one becomes the suffix; the rest appear as prefixes.
+When several groups are present, only the highest-priority one becomes the suffix; the rest appear as prefixes. Read the table from the top down: the higher a group sits, the more strongly it claims the suffix.
 
 | Priority | Group | Suffix |
 | --- | --- | --- |
@@ -61,6 +63,8 @@ CH≡C–CH₂–CH=CH₂ has multiple bonds at positions 1 and 4 counting from 
 </learning-block>
 
 ## 4. Rings and benzene
+
+Rings follow the same logic, with a few extra conventions for numbering and for the special case of benzene.
 
 - A saturated carbon ring is named **cyclo** + root + suffix: cyclohexane, cyclopropane.
 - Number the ring to give substituents the lowest locants; a single substituent needs no locant: methylcyclohexane.

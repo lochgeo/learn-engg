@@ -4,6 +4,8 @@ Qualitative analysis answers “which elements are present?”. Quantitative ana
 
 ## 1. Qualitative analysis
 
+The tests below work by converting an element into a product with an unmistakable sign — a gas that turns limewater milky, a coloured precipitate, or a distinctive flame.
+
 ### Carbon and hydrogen
 
 Heat the compound with dry copper(II) oxide. Carbon is oxidised to CO₂, which turns limewater milky, and hydrogen becomes water, which turns anhydrous copper(II) sulphate from white to blue.
@@ -46,6 +48,8 @@ If nitrogen and sulphur are both present, sodium thiocyanate forms and iron(III)
 A copper wire dipped in the compound and held in a flame gives a green colour if a halogen is present (Beilstein test). It is a quick screening test, not a proof.
 
 ## 2. Quantitative analysis
+
+Quantitative methods use the same chemistry, but this time the products are weighed or their volumes measured.
 
 ### Carbon and hydrogen: combustion
 
@@ -100,6 +104,8 @@ $$
 **Oxygen** is usually found by difference: subtract the percentages of all other elements from 100.
 
 ## 3. Empirical and molecular formulae
+
+Once the percentages are known, the formula follows from a fixed recipe.
 
 1. Divide each percentage by the atomic mass to get moles.
 2. Divide every value by the smallest.

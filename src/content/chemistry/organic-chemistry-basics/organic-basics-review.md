@@ -1,5 +1,7 @@
 ## Your study plan for this chapter
 
+This page is the control room for the chapter: it tells you which tool to reach for, then gives mixed questions that switch between tools.
+
 Organic basics rewards precision more than speed. A focused first pass takes about **3 hours**, plus a short break:
 
 1. **Carbon, bonding and shape** — 25 min
@@ -29,6 +31,8 @@ After this core pass, use the optional **JEE Main timed practice** module for a 
 | “Find the formula” | percentage → moles → simplest ratio → divide by empirical mass |
 
 ## Mixed practice
+
+These questions no longer announce which tool to use. Name the method before you start each one.
 
 1. Name CH₃–CH₂–CH(CH₃)–CH₂–CH₂–CH₃.
 2. Name CH₃–CH=C(CH₃)–CH₂–CH₃.

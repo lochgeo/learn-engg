@@ -17,6 +17,8 @@ A reaction rarely gives a clean product. Unreacted starting material, solvents, 
 
 ## 2. Crystallisation
 
+Crystallisation is the standard choice when the product is a solid and the impurity is not.
+
 The impure solid is dissolved in the **minimum** volume of a hot solvent, filtered while hot to remove insoluble material, then cooled slowly. The compound crystallises while most impurities stay in solution. The crystals are filtered and dried.
 
 The solvent is chosen so that the compound dissolves easily when hot but only sparingly when cold, and so that impurities are either insoluble when hot or very soluble when cold. Typical examples: sugar, benzoic acid, urea.
@@ -52,7 +54,7 @@ For example, benzoic acid can be extracted from an aqueous solution into ether. 
 
 ## 6. Chromatography
 
-Chromatography separates components by their different rates of movement between a **stationary phase** and a **mobile phase**.
+Chromatography works on a different principle from the methods above: it separates components by their different rates of movement between a **stationary phase** and a **mobile phase**.
 
 - **Adsorption chromatography** — the stationary phase is a solid such as silica gel or alumina; components adsorb to different extents. Column chromatography and thin-layer chromatography (TLC) work this way.
 - **Partition chromatography** — the stationary phase is a liquid held on a solid support; components partition differently between the two liquid phases. Paper chromatography is the classic example.

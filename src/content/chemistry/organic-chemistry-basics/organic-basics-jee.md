@@ -6,6 +6,8 @@ Before writing an answer, say which tool you are using: naming rules, isomer cou
 
 ## Conditions sheet
 
+Keep this sheet beside you. It is the decision table from the review lesson, compressed for speed.
+
 | Situation | Start with | Check before using it |
 | --- | --- | --- |
 | Name a structure | longest chain containing the principal group | principal group numbered first; prefixes alphabetical |
@@ -278,6 +280,8 @@ Moles: C 3.33, H 6.67, O 3.33. Divide by 3.33: CH₂O.
 
 ## Section C — 5 mixed-method questions
 
+From here the questions stop announcing their method. Choose the tool first, then calculate.
+
 ### 21. Name and justify
 
 Name CH₂=C(CH₃)–CH₂–CH₃ and explain why the numbering starts where it does.
@@ -335,6 +339,8 @@ The silver mirror indicates an aldehyde: **propanal**, CH₃CH₂CHO. Its functi
 </details>
 
 ## Section D — 2 full-length numericals
+
+Finally, two longer problems that combine several steps. Write each stage down; do not try to hold it all in your head.
 
 ### 26. Counting alkene isomers
 

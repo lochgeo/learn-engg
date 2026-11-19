@@ -13,6 +13,8 @@ Check the degree of unsaturation first. Two molecules can only be isomers if the
 
 ## 1. Structural isomerism
 
+Structural isomers are the ones you can separate by writing out the connections. Five varieties appear at this level.
+
 **Chain isomerism** — different carbon skeletons.
 
 - C₄H₁₀: butane and 2-methylpropane.
@@ -44,6 +46,8 @@ The keto form usually dominates, but the enol can be stabilised by conjugation o
 
 ## 2. Geometric isomerism
 
+The first kind of stereoisomerism comes from the double bond itself.
+
 A double bond cannot rotate, so groups on the two carbons are locked on the same side (cis) or opposite sides (trans). The requirement is that **each** double-bond carbon carries two different groups.
 
 - but-2-ene: cis and trans
@@ -69,6 +73,8 @@ If Br and CH₃ lie on the same side, the high-priority groups match: **Z**. If 
 Rings can also show cis–trans isomerism. In 1,2-dimethylcyclohexane, both methyls on the same face is cis; on opposite faces is trans. E/Z notation is not used for these ring cases.
 
 ## 3. Optical isomerism
+
+The second kind of stereoisomerism is about handedness: two molecules can be mirror images even when every atom is joined to the same partner.
 
 A carbon atom bonded to **four different groups** is a **chiral centre** (stereocentre). Its mirror image cannot be superimposed on it, just as a left hand cannot be laid exactly over a right hand.
 

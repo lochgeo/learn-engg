@@ -44,6 +44,8 @@ Do not assume that a triple bond is three times as strong as a single bond. The 
 
 ## 2. Three ways to write the same molecule
 
+Once you know which atoms are joined, you need a quick way to record it. Organic chemists use three notations, each suited to a different job.
+
 **Full Lewis structure** shows every atom and every valence electron. It is useful for checking octets but slow to draw.
 
 **Condensed formula** writes the atoms in order and uses brackets to show branches:
@@ -67,6 +69,8 @@ Name it: the longest chain containing the –OH is five carbons long, so the par
 </learning-block>
 
 ## 3. Classification and functional groups
+
+Begin with the skeleton, then add the bonding label.
 
 Organic compounds are first divided by skeleton:
 
@@ -103,7 +107,7 @@ A **homologous series** is a family with the same functional group and the same 
 
 ## 4. Degrees of unsaturation
 
-A molecular formula alone tells you how many rings and π bonds are present. For a formula containing C, H, N and halogens,
+The **degree of unsaturation (DoU)** counts how many rings and π bonds a molecular formula can accommodate. For a formula containing C, H, N and halogens,
 
 $$
 \text{DoU}=\frac{2C+2+N-H-X}{2}.
