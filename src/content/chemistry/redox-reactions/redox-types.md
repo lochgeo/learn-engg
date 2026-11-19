@@ -30,7 +30,7 @@ Chlorine drops from $+5$ to $-1$; oxygen rises from $-2$ to $0$. Two elements in
 
 One element pushes another out of its compound, and the pusher is always the more electron-hungry (or electron-giving) of the two.
 
-**Metal displacement** follows the activity series: a more elective metal reduces the ions of a less elective one.
+**Metal displacement** follows the activity series: a more reactive metal reduces the ions of a less reactive one.
 
 $$
 \mathrm{Cu + 2AgNO_3 \rightarrow Cu(NO_3)_2 + 2Ag}
@@ -60,7 +60,7 @@ $$
 
 oxygen enters at $-1$ and leaves as $-2$ (in water) and 0 (as $\mathrm{O_2}$).
 
-The logic of the same numbers from the oxidation-number module: disproportionation is only possible for an element sitting in an **intermediate** oxidation state, one that has both a lower and a higher state to fall to and rise to. Chlorine at 0 lies between $-1$ and $+1$; oxygen at $-1$ lies between $-2$ and $0$.
+The same logic as in the oxidation-number module: disproportionation is only possible for an element sitting in an **intermediate** oxidation state, one that has both a lower and a higher state to fall to and rise to. Chlorine at 0 lies between $-1$ and $+1$; oxygen at $-1$ lies between $-2$ and $0$.
 
 ## 5. Comproportionation
 

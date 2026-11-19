@@ -18,13 +18,9 @@ For a molecule-level equation, prefer this method:
 
 **Worked example: MnO₂ and hydrochloric acid.** Skeleton: $\mathrm{MnO_2 + HCl \rightarrow MnCl_2 + Cl_2 + H_2O}$.
 
-Oxidation numbers: Mn $+4 \rightarrow +2$ (gains 2 electrons, reduction); Cl in $\mathrm{HCl}$ $-1 \rightarrow 0$ (loses 1 electron, oxidation). Balance the ledger: one Mn takes 2 electrons, so 2 chloride ions must climb to 0 — multiply the chlorine side by 2:
+Oxidation numbers: Mn $+4 \rightarrow +2$ (gains 2 electrons, reduction); Cl in $\mathrm{HCl}$ $-1 \rightarrow 0$ (loses 1 electron, oxidation). Balance the ledger: one Mn takes 2 electrons, so 2 chloride ions must climb to 0 — and those two chlorides supply one $\mathrm{Cl_2}$ molecule.
 
-$$
-\mathrm{MnO_2 + \,2\,HCl_{(net)} \rightarrow MnCl_2 + Cl_2}
-$$
-
-Now count the leftover atoms. Manganese: 1 and 1. Oxygen: 2 on the left fixed by $2\ \mathrm{H_2O}$ on the right. Hydrogen: the 2 written waters use 4 H, so 4 HCl are consumed in total — but only 2 of them lose an electron each; the other 2 are **spectators** riding through as chloride in $\mathrm{MnCl_2}$:
+Now count the leftover atoms. Manganese balances at 1 and 1. Oxygen: 2 on the left need $2\ \mathrm{H_2O}$ on the right. Hydrogen: those 2 waters contain 4 H, so 4 HCl are consumed in total — but only 2 of them lose an electron each; the other 2 are **spectators** riding through as chloride in $\mathrm{MnCl_2}$:
 
 $$
 \mathrm{MnO_2 + 4HCl \rightarrow MnCl_2 + Cl_2 + 2H_2O}
@@ -34,7 +30,7 @@ Sanity check: atoms — Mn 1 : 1; Cl 4 : 2 + 2 = 4; O 2 : 2; H 4 : 4. Charge is 
 
 ## 2. The half-reaction method in acidic medium
 
-For the magnesium-copper and permanganate–iron equations of the earlier modules, split into the two couples that were introduced there. The systematic procedure:
+As with the zinc–copper and permanganate–iron equations of the earlier modules, split the skeleton into the two couples introduced there. The systematic procedure:
 
 1. Split the skeleton into the two couples (oxidation state parts).
 2. Balance all atoms except O and H in each half-reaction.

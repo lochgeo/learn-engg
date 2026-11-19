@@ -52,7 +52,7 @@ $$
 \mathrm{Cr_2O_7^{2-} + 6e^- + 14H^+ \rightarrow 2Cr^{3+} + 7H_2O}
 $$
 
-six electrons per ion; it is stable on the shelf and leaves chloride alone:
+Six electrons per ion — a stable, shelf-keeping oxidant that leaves chloride alone:
 
 $$
 \mathrm{Cr_2O_7^{2-} + 6Fe^{2+} + 14H^+ \rightarrow 2Cr^{3+} + 6Fe^{3+} + 7H_2O} \qquad (1:6)
@@ -104,7 +104,7 @@ The **$n$-factor** is the number of electrons exchanged per formula unit:
 | $\mathrm{C_2O_4^{2-} \rightarrow 2CO_2}$ | 2 | loses 2 e per ion |
 | $\mathrm{I_2 \rightarrow 2I^-}$ | 2 | gains 2 e |
 
-At the equivalence point **electronic equivalents from both sides add up**, which gives the working rule $n_{\text{oxidant}} \times V_{\text{oxidant}} \times M_{\text{oxidant}} = n_{\text{reductant}} \times V_{\text{reductant}} \times M_{\text{reductant}}$ when volumes and molarities are directly compared. Keep the same medium on both sides of the multiplication — an $n$-factor of 5 for permanganate only holds in acid (Section 3 makes this point very visibly).
+At the equivalence point **electronic equivalents from both sides add up**, which gives the working rule $n_{\text{oxidant}} \times V_{\text{oxidant}} \times M_{\text{oxidant}} = n_{\text{reductant}} \times V_{\text{reductant}} \times M_{\text{reductant}}$ when volumes and molarities are directly compared. Keep the same medium on both sides of the multiplication — an $n$-factor of 5 for permanganate only holds in acid (the medium column of the table above makes this point very visibly).
 
 ## 5. From titration bench to galvanic cell
 
@@ -141,7 +141,7 @@ Equivalent mass = molar mass $\div$ $n$-factor $= 158/5 = 31.6\ \text{g}$ per eq
 
 </details>
 
-**C.** In a K$\mathrm{IO_3}$–thiosulphate iodometric determination, iodate oxidises iodide in acid: the released $\mathrm{I_2}$ is titrated with $\mathrm{S_2O_3^{2-}}$, giving $\mathrm{S_4O_6^{2-}}$. Write the two reactions and combine them to find the ratio $\mathrm{IO_3^- : S_2O_3^{2-}}$.
+**C.** In a $\mathrm{KIO_3}$–thiosulphate iodometric determination, iodate oxidises iodide in acid: the released $\mathrm{I_2}$ is titrated with $\mathrm{S_2O_3^{2-}}$, giving $\mathrm{S_4O_6^{2-}}$. Write the two reactions and combine them to find the ratio $\mathrm{IO_3^- : S_2O_3^{2-}}$.
 
 <details><summary>Show the reasoning</summary>
 

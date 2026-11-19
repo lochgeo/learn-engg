@@ -1,12 +1,12 @@
 ## A number for the electron ledger
 
-In the zinc–copper reaction the electron transfer was easy to see because ions carried written charges. But in
+In the zinc–copper reaction the electron transfer was easy to see because ions carried written charges. But consider
 
 $$
 \mathrm{Fe_2O_3 + 3CO \rightarrow 2Fe + 3CO_2}
 $$
 
-there is not a single ion in sight, yet iron has been reduced and carbon oxidised. To run the electron audit on neutral molecules we agree to convert each bond, provisionally, into a purely ionic one and ask what charge each atom would then carry. That hypothetical charge is the **oxidation number** (or oxidation state). It is bookkeeping, not reality — real bonds between unlike elements are rarely 100 per cent ionic — but the convention is exact enough to detect every electron transfer, and it is the workhorse of the JEE redox questions.
+Here there is not a single ion in sight, yet iron has been reduced and carbon oxidised. To run the electron audit on neutral molecules we agree to convert each bond, provisionally, into a purely ionic one and ask what charge each atom would then carry. That hypothetical charge is the **oxidation number** (or oxidation state). It is bookkeeping, not reality — real bonds between unlike elements are rarely 100 per cent ionic — but the convention is exact enough to detect every electron transfer, and it is the workhorse of the JEE redox questions.
 
 ## 1. The rules for assigning oxidation numbers
 
@@ -98,7 +98,7 @@ Potassium is always $+1$: four of them give $+4$. Oxygen is $-2$ seven times, gi
 
 </details>
 
-**B.** A compound has the formula $\mathrm{KI O_3}$ written informally; iodine sits in the oxyanion $\mathrm{IO_3^-}$. What is the oxidation number of iodine?
+**B.** Iodine sits in the oxyanion $\mathrm{IO_3^-}$ of potassium iodate, $\mathrm{KIO_3}$. What is the oxidation number of iodine?
 
 <details><summary>Show the reasoning</summary>
 
