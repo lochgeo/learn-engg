@@ -1,6 +1,6 @@
 ## Four lines of `query()` hide a hundred decisions
 
-Here is a complete agent in the Claude Agent SDK:
+From the outside, an agent looks deceptively small. Here is a complete one in the Claude Agent SDK:
 
 ```python
 async for message in query(prompt="Audit this repo for risky migrations."):
@@ -52,7 +52,9 @@ If the user might say "now do the other one", you want `ClaudeSDKClient`. If it 
 | `mcp_servers` | external tool servers | reaching systems the built-ins cannot |
 | `hooks` | deterministic callbacks around tool use | policy a prompt cannot enforce |
 
-Two deserve emphasis. **`allowed_tools` is an allowlist, not a suggestion:** an unlisted tool is unavailable no matter what the system prompt says, which is how you enforce read-only review — and conversely, rules the run must obey belong in code, not in `system_prompt`, which only sets role and output shape. **`setting_sources` is your isolation switch:** the SDK loads no filesystem settings by default, so opting in to `["project"]` is a deliberate decision to inherit `CLAUDE.md` and project config. Check the current docs for defaults in your pinned version. Permission modes then run from ask-everything to ask-nothing:
+Two deserve emphasis. **`allowed_tools` is an allowlist, not a suggestion:** an unlisted tool is unavailable no matter what the system prompt says, which is how you enforce read-only review. Conversely, rules the run must obey belong in code, not in `system_prompt`, which only sets role and output shape.
+
+**`setting_sources` is your isolation switch:** the SDK loads no filesystem settings by default, so opting in to `["project"]` is a deliberate decision to inherit `CLAUDE.md` and project config. Check the current docs for defaults in your pinned version. Permission modes then run from ask-everything to ask-nothing:
 
 | Mode | Behaviour | Use when |
 | --- | --- | --- |

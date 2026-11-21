@@ -34,7 +34,9 @@ Two questions classify any pattern. **Is the next step fixed in code, or chosen 
 
 **Reflection** is the cheap special case — same model, self-critique, rewrite. It catches surface slips and cannot catch a fact the generator also believes. Use it for polish; use a test, schema or retrieved document when correctness matters.
 
-**Memory** is anything outliving one context window: a scratchpad, task list, notes store, vector index, project `CLAUDE.md`. It needs a write policy, or it becomes a landfill the model retrieves from indiscriminately. **Planning** makes the task list explicit so work can resume and a human can inspect intent; a plan with no replanning trigger is worse than none.
+**Memory** is anything outliving one context window: a scratchpad, task list, notes store, vector index, project `CLAUDE.md`. It needs a write policy, or it becomes a landfill the model retrieves from indiscriminately.
+
+**Planning** makes the task list explicit so work can resume and a human can inspect intent; a plan with no replanning trigger is worse than none.
 
 <learning-block type="mistake" title="Reflection is not verification">
 
@@ -77,6 +79,8 @@ for _ in range(3):                     # the cap lives in code, not in the promp
 The rubric named evidence and invented API names as *failures*, so the judge has something concrete to look for; "make it better" would produce polite, useless notes and an endless loop. And a score of 4 with open issues still earns a revision — the stop condition is the conjunction, not the score alone.
 
 ## Frameworks: same patterns, different ergonomics
+
+The patterns above are framework-neutral. The libraries below package them with different ergonomics and different defaults.
 
 | Framework | Mental model | Strengths | Watch out for |
 | --- | --- | --- | --- |

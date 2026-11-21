@@ -38,7 +38,11 @@ prompt + tool definitions
   → repeat until stop_reason is not "tool_use", or a turn cap fires
 ```
 
-Three properties follow. **The model chooses the tool; your code only executes it** — that is what makes the system agentic, and if a router chose the tool you would have a workflow instead. **Context accumulates**, so a ten-turn run pays for turn one ten times. And **you need a hard stop**, because the loop has no sense of "too expensive to continue".
+Three properties follow.
+
+- **The model chooses the tool; your code only executes it.** That is what makes the system agentic; if a router chose the tool, you would have a workflow instead.
+- **Context accumulates**, so a ten-turn run pays for turn one ten times.
+- **You need a hard stop**, because the loop has no sense of "too expensive to continue".
 
 ## Supervisors and subagents
 
@@ -93,6 +97,8 @@ async def supervise(task: str) -> str:
 The `asyncio.gather` is the parallel win: two clean contexts at once. `REPORT_SCHEMA` is the reliability win: a worker returning prose fails validation and gets one retry with the error attached, rather than quietly degrading the synthesis.
 
 ## The trade-off ledger
+
+The worked example shows one shape in action; the ledger below puts all three side by side on the axes exam questions probe.
 
 | Axis | Workflow | Single agent | Supervisor + subagents |
 | --- | --- | --- | --- |

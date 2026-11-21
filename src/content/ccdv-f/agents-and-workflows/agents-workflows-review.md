@@ -1,5 +1,7 @@
 ## Study plan for this domain
 
+This lesson turns the chapter into a timed rehearsal: a short plan, then scenario questions written in the style the exam uses.
+
 Agents and Workflows is 14.7% of the paper and rewards judgement more than recall. Budget about **two hours**:
 
 1. **Architecture: workflow, agent or supervisor** — 25 min. Re-read the decision order and the trade-off ledger.
