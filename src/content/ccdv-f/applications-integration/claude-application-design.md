@@ -2,7 +2,7 @@
 
 Prompts are the visible part of a Claude application and the least important part of its architecture. What decides whether the system is fast, affordable, auditable and safe is where you put the seams: what streams, what is retried, what is cached, what a human approves, and what happens when the model is unavailable or wrong.
 
-Application design is the heaviest sub-skill in this domain at 8.6% of CCDV-F. Expect scenario questions: here is a workload, which mode, which layer, which failure plan.
+Application design is the heaviest sub-skill in this domain at 8.6% of CCDV-F. Expect scenario questions: here is a workload, which mode, which layer, which failure plan. We will build the layer map, choose a processing mode, then walk a full support-assistant design from requirements to evaluations.
 
 ## The big idea
 
@@ -97,7 +97,9 @@ Never let the bottom rung be an unhandled exception or a blank panel. The ladder
              └──────────────────────────────────────────────┘
 ```
 
-**Request flow.** The edge authenticates and stamps a trace ID. The orchestrator retrieves help-centre passages scoped to the tenant, assembles a prompt whose stable prefix is cache-marked, and streams a response. If the model emits `tool_use` for `lookup_order`, the orchestrator executes it and returns `tool_result`; if it emits `tool_use` for `issue_refund`, the call is withheld, an approval task is created, and the user is told a human will confirm. If `stop_reason` is `max_tokens`, the partial answer is discarded and the fallback ladder engages. If retrieval returns nothing above threshold, the prompt says so and the orchestrator offers a handoff rather than letting the model improvise.
+**Request flow.** The edge authenticates and stamps a trace ID. The orchestrator retrieves help-centre passages scoped to the tenant, assembles a prompt whose stable prefix is cache-marked, and streams a response. If the model emits `tool_use` for `lookup_order`, the orchestrator executes it and returns `tool_result`; if it emits `tool_use` for `issue_refund`, the call is withheld, an approval task is created, and the user is told a human will confirm.
+
+If `stop_reason` is `max_tokens`, the partial answer is discarded and the fallback ladder engages. If retrieval returns nothing above threshold, the prompt says so and the orchestrator offers a handoff rather than letting the model improvise.
 
 **SLOs and budgets.** p95 time-to-first-token under two seconds; 99.5% availability of the chat path; task success on the evaluation set at or above the agreed threshold; escalation rate monitored as a scope signal; a per-conversation cost ceiling enforced by iteration and token caps.
 
@@ -111,7 +113,7 @@ Never let the bottom rung be an unhandled exception or a blank panel. The ladder
 
 ## On the exam
 
-<learning-block type="check" title="On the exam">
+<learning-block type="check" title="What the exam asks">
 
 Scenario questions reward matching workload to mode (interactive chat → streaming; nightly bulk → Batch API) and identifying which layer should own a rule (authorisation → domain service, not prompt). If a question offers "instruct the model to refuse" versus "filter before the model sees it", the second is almost always right for privacy.
 

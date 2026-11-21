@@ -2,7 +2,7 @@
 
 In a Claude application, "configuration" includes things ordinary apps never had: the prompt text, the model tier, the effort level, the retrieval thresholds. Change any one of them and behaviour changes as surely as a code edit — but none of them shows up in a diff review unless you deliberately put them there.
 
-Configuration and environment management is 4.1% of CCDV-F. The exam likes the operational questions: which values belong in a secret manager, how you validate config at startup, and how you roll back a bad prompt in under a minute.
+Configuration and environment management is 4.1% of CCDV-F. The exam likes the operational questions: which values belong in a secret manager, how you validate config at startup, and how you roll back a bad prompt in under a minute. We will sort values into the right homes, validate them at boot, version prompts and models, and roll changes out behind flags.
 
 ## The big idea
 
@@ -85,11 +85,13 @@ Keys leak through prompts ("here is the API key so you can call the tool"), thro
 
 ## Worked example
 
-An engineer wants to raise `max_tokens` from 512 to 1024 for one endpoint because replies are truncating. The change touches a config file, not code. CI runs the evaluation set with the new value; the cost/latency gate shows p95 output tokens up 30% and per-request cost above budget. The engineer instead raises the ceiling only for the long-form endpoint, adds a truncation-rate metric, and ships behind a 10% canary. After a day with no increase in `max_tokens` stop reasons and cost inside budget, the canary goes to 100%. The flag is deleted a week later. Nothing about that sequence required a model change, and everything about it was governed.
+An engineer wants to raise `max_tokens` from 512 to 1024 for one endpoint because replies are truncating. The change touches a config file, not code. CI runs the evaluation set with the new value; the cost/latency gate shows p95 output tokens up 30% and per-request cost above budget.
+
+The engineer instead raises the ceiling only for the long-form endpoint, adds a truncation-rate metric, and ships behind a 10% canary. After a day with no increase in `max_tokens` stop reasons and cost inside budget, the canary goes to 100%. The flag is deleted a week later. Nothing about that sequence required a model change, and everything about it was governed.
 
 ## On the exam
 
-<learning-block type="check" title="On the exam">
+<learning-block type="check" title="What the exam asks">
 
 Expect distinctions between secrets, environment identity and behavioural tuning, and questions about where a prompt belongs (versioned file plus registry, not a string literal). Remember that production pins model identifiers, canary limits blast radius, and rollback should be a configuration change rather than a redeploy. Validation happens at startup, with `extra="forbid"` or its zod equivalent.
 

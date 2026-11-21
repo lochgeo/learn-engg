@@ -1,6 +1,6 @@
 ## One endpoint, six ways to stop
 
-Strip away the SDKs and the frameworks and every Claude application is the same conversation: you POST a list of messages to `/v1/messages`, you get back a list of content blocks and a reason the model stopped. Learn that shape properly and most "why is my app behaving oddly?" questions answer themselves. API mechanics is 6.8% of CCDV-F, the third-largest of this domain's six sub-skills, and it rewards precision: the exam will happily ask what `stop_reason: "tool_use"` obliges *you* to do next.
+Strip away the SDKs and the frameworks and every Claude application is the same conversation: you POST a list of messages to `/v1/messages`, you get back a list of content blocks and a reason the model stopped. Learn that shape properly and most "why is my app behaving oddly?" questions answer themselves. This lesson follows a single request from body to response, then shows what each field obliges your code to do. API mechanics is 6.8% of CCDV-F, the third-largest of this domain's six sub-skills, and it rewards precision: the exam will happily ask what `stop_reason: "tool_use"` obliges *you* to do next.
 
 ## The big idea
 
@@ -39,7 +39,9 @@ The response mirrors the request's block structure:
 }
 ```
 
-`content` is a **list of blocks**. Today it might hold one text block; with tools it holds `tool_use` blocks, and with extended thinking it can hold thinking blocks. Code that assumes `response.content[0].text` exists will break the first time a tool is involved — iterate and switch on `type`. `usage` is your cost meter: input and output tokens on every response, plus cache counters when prompt caching is active.
+`content` is a **list of blocks**. Today it might hold one text block; with tools it holds `tool_use` blocks, and with extended thinking it can hold thinking blocks. Code that assumes `response.content[0].text` exists will break the first time a tool is involved — iterate and switch on `type`.
+
+`usage` is your cost meter: input and output tokens on every response, plus cache counters when prompt caching is active.
 
 ### The six stop reasons
 
@@ -54,7 +56,9 @@ The response mirrors the request's block structure:
 
 ### Turns and roles
 
-Messages alternate `user` and `assistant`. Consecutive messages with the same role are combined into a single turn, and conversations conventionally start with `user`. An `assistant` message placed last acts as a **prefill**: the model continues from your partial text, a neat way to force JSON or suppress a preamble, though it interacts with extended thinking — verify current constraints. Tool results go back as a `user` message containing `tool_result` blocks whose `tool_use_id` matches the earlier `tool_use` block's `id`; mixing up those identifiers is the classic multi-turn tool bug.
+Messages alternate `user` and `assistant`. Consecutive messages with the same role are combined into a single turn, and conversations conventionally start with `user`. An `assistant` message placed last acts as a **prefill**: the model continues from your partial text, a neat way to force JSON or suppress a preamble, though it interacts with extended thinking — verify current constraints.
+
+Tool results go back as a `user` message containing `tool_result` blocks whose `tool_use_id` matches the earlier `tool_use` block's `id`; mixing up those identifiers is the classic multi-turn tool bug.
 
 ### Streaming
 
@@ -68,7 +72,9 @@ Tool arguments arrive as **fragments of a JSON string**, so concatenate them and
 
 ### Images, documents and token counting
 
-Multimodal input uses content blocks too: an `image` block with a base64 or URL source, or a `document` block for a PDF or plain text. Both consume input tokens, often heavily, so cost estimates must account for them; size and format limits change over time, so check the current docs rather than memorising numbers. To estimate before sending, call `POST /v1/messages/count_tokens` with the same body and read `input_tokens` — it generates nothing, so it is safe as a pre-flight budget guard.
+Multimodal input uses content blocks too: an `image` block with a base64 or URL source, or a `document` block for a PDF or plain text. Both consume input tokens, often heavily, so cost estimates must account for them; size and format limits change over time, so check the current docs rather than memorising numbers.
+
+To estimate before sending, call `POST /v1/messages/count_tokens` with the same body and read `input_tokens` — it generates nothing, so it is safe as a pre-flight budget guard.
 
 ### Errors and retryability
 

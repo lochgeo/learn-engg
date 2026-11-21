@@ -2,7 +2,7 @@
 
 Traditional software is released when the code stops changing. A Claude application is released when the *model, prompt, retrieval corpus and evaluation set* are momentarily in agreement — and any of those can move underneath you next week. That is why the life cycle for AI applications stretches past deployment into monitoring, controlled change, and eventually retirement.
 
-This is 2.8% of CCDV-F: a small slice, but it supplies the frame that the bigger design questions hang on.
+This is 2.8% of CCDV-F: a small slice, but it supplies the frame that the bigger design questions hang on. This lesson walks the five phases, the artifacts worth versioning, and the gates that keep a changing system honest.
 
 ## The big idea
 
@@ -68,7 +68,9 @@ The same job should publish the report as an artifact so reviewers can see *whic
 
 ### Operating: monitoring and drift
 
-Production monitoring has four layers. Infrastructure metrics (error rate, latency) come free from your platform. Token and cost accounting comes from the `usage` field on every response. Behavioural monitoring samples real traffic and scores it, either with a rubric-based judge or with human review. Finally, input-distribution monitoring watches for drift: a new product launch changes the vocabulary of tickets, and yesterday's prompt no longer covers it.
+Production monitoring has four layers. Infrastructure metrics (error rate, latency) come free from your platform. Token and cost accounting comes from the `usage` field on every response.
+
+Behavioural monitoring samples real traffic and scores it, either with a rubric-based judge or with human review. Finally, input-distribution monitoring watches for drift: a new product launch changes the vocabulary of tickets, and yesterday's prompt no longer covers it.
 
 Drift has three common sources — a shifted input mix, a changed retrieval corpus, and a model or prompt upgrade. All three show up the same way: quality metrics sag while error rates stay flat.
 
@@ -100,7 +102,7 @@ The fix is a corpus refresh plus a regression case per renamed plan. The lasting
 
 ## On the exam
 
-<learning-block type="check" title="On the exam">
+<learning-block type="check" title="What the exam asks">
 
 Questions here tend to ask which phase owns an activity, or what to do when behaviour degrades without a code change. Anchor on two ideas: every behaviour-changing artifact is versioned and evaluated, and the first incident response is to identify and pin back the version triple. Also expect the distinction between availability monitoring and quality monitoring — a system can be up and wrong.
 

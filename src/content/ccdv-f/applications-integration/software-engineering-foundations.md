@@ -2,7 +2,7 @@
 
 A Claude call is a network request to a rate-limited, occasionally slow, occasionally overloaded service that returns variable output. That is not exotic — it is the same profile as any third-party API — yet teams routinely call it from inside a request handler with no timeout, no retry policy, no type safety and no trace ID. This lesson is the ordinary software engineering that makes the extraordinary part survivable.
 
-Software engineering foundations is 7.4% of CCDV-F, the second-largest sub-skill here. Exam questions tend to be concrete: which error do you retry, where does the idempotency key live, why jitter.
+Software engineering foundations is 7.4% of CCDV-F, the second-largest sub-skill here. Exam questions tend to be concrete: which error do you retry, where does the idempotency key live, why jitter. We will start with the client boundary, then add timeouts, retries, idempotency, queues and the logging that makes incidents diagnosable.
 
 ## The big idea
 

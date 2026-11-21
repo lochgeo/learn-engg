@@ -2,13 +2,13 @@
 
 Most Claude projects that disappoint do not fail at the model call. They fail because nobody agreed in advance what a correct answer looks like, who checks it, and how much it may cost. A requirements document is how you make that agreement concrete: it fixes which parts of the problem the model should own, which parts must stay deterministic, and how you will know the system works when the output differs slightly on every run.
 
-This lesson sits in Applications and Integration, the largest CCDV-F domain at 33.1% of the exam. Understanding requirements is a 3.4% slice, and it is the slice that every later design question quietly assumes.
+This lesson sits in Applications and Integration, the largest CCDV-F domain at 33.1% of the exam blueprint. Understanding requirements is a 3.4% slice, and it is the slice that every later design question quietly assumes. We will look at what a requirement must capture, who owns each job, and how to turn a vague ask into a gate that runs on every change.
 
 ## The big idea
 
 Requirements are a contract with three parties: the business that pays for the system, the users who depend on it, and the engineers who must operate it at 3 a.m. For a Claude application you need a fourth clause that ordinary software does not need: a **tolerance for variation**. "Correct" becomes a distribution, not a single string.
 
-So requirements work has two jobs. First, separate what the system must *do* from how well it must do it. Second, decide deliberately where the model stops and code begins — because a probabilistic component inside a deterministic guarantee is a bug waiting to happen.
+In practice, requirements work has two jobs. First, separate what the system must *do* from how well it must do it. Second, decide deliberately where the model stops and code begins — because a probabilistic component inside a deterministic guarantee is a bug waiting to happen.
 
 ## Start here
 
@@ -116,7 +116,9 @@ Writing "the reply must equal this exact text" as an acceptance criterion. Claud
 
 <details><summary>Reveal the explanation</summary>
 
-Split it. "Answer billing questions" is functional, and needs a definition of *answer* plus a labelled set. "Under two seconds" is a non-functional latency requirement, but ambiguous: time to first token or time to complete? For a chat interface, specify p95 time-to-first-token, which streaming can meet. "Never reveal another customer's data" is a safety requirement that must not rest on prompt wording alone: enforce it in the retrieval layer by scoping every query to the authenticated customer's ID, then test with adversarial prompts. A model instruction is a mitigation; an access-control filter is a guarantee.
+Split it. "Answer billing questions" is functional, and needs a definition of *answer* plus a labelled set. "Under two seconds" is a non-functional latency requirement, but ambiguous: time to first token or time to complete? For a chat interface, specify p95 time-to-first-token, which streaming can meet.
+
+"Never reveal another customer's data" is a safety requirement that must not rest on prompt wording alone: enforce it in the retrieval layer by scoping every query to the authenticated customer's ID, then test with adversarial prompts. A model instruction is a mitigation; an access-control filter is a guarantee.
 </details>
 
 ## Remember

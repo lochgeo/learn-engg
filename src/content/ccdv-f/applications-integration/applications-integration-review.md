@@ -28,7 +28,7 @@ Mark a lesson complete only when you can explain *why* a design choice applies, 
 
 ## Mastery check
 
-Try each without looking first. For multiple-choice items, be able to say why the other options are wrong — that is where the marks actually live.
+Try each without looking first. For multiple-choice items, be able to say why the other options are wrong — that is where the marks actually live. Each answer below explains the reasoning, so read it even when you chose correctly.
 
 ### 1. Classify the requirement
 
@@ -78,7 +78,9 @@ Select all that your client should retry automatically with backoff: **400**, **
 
 <details><summary>Answer and reasoning</summary>
 
-**429, 500 and 529.** Rate limiting and transient server or capacity faults are the only categories where the same request may succeed later. **400** is a malformed request — bad parameter, bad schema, unusable input — and will fail identically forever. **401** is a credential problem: retrying cannot fix a wrong key, and a hot loop of unauthorised calls is noise that can mask the real fault. Remember that 429 carries a retry hint worth honouring, and that jitter prevents a fleet from retrying in lockstep.
+**429, 500 and 529.** Rate limiting and transient server or capacity faults are the only categories where the same request may succeed later. **400** is a malformed request — bad parameter, bad schema, unusable input — and will fail identically forever.
+
+**401** is a credential problem: retrying cannot fix a wrong key, and a hot loop of unauthorised calls is noise that can mask the real fault. Remember that 429 carries a retry hint worth honouring, and that jitter prevents a fleet from retrying in lockstep.
 </details>
 
 ### 5. Mode for a nightly backfill
