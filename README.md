@@ -53,7 +53,7 @@ The site is a static Vite build with no server-side code, so it deploys to Cloud
 
 1. Push this repository to GitHub.
 2. In the Cloudflare dashboard go to **Workers & Pages → Create → Pages → Connect to Git**, and pick the repository.
-3. Name the project **`studyroom`** (not `learn-engg`). Cloudflare derives the free URL from the project name, so this gives `https://studyroom.pages.dev`. Project names are unique, so if `studyroom` is already taken you will need a variant such as `studyroom-app`; the URL follows whatever name you choose. `wrangler.toml` records the same name for CLI deploys.
+3. Name the project **`studyroomz`**. Cloudflare derives the free URL from the project name, so this gives `https://studyroomz.pages.dev`. The plain `studyroom` name was already taken — project names are globally unique, and a taken name gets random characters appended instead of failing outright, so check the subdomain preview under the name field. Names are also permanent: `*.pages.dev` subdomains cannot be renamed, only recreated. `wrangler.toml` records the same name for CLI deploys.
 4. Use these build settings:
 
    | Setting | Value |
@@ -64,7 +64,7 @@ The site is a static Vite build with no server-side code, so it deploys to Cloud
    | Build output directory | `dist` |
    | Root directory | *(leave empty)* |
 
-5. Save and deploy. Every later push to `main` redeploys automatically, and other branches get preview URLs such as `https://<branch>.studyroom.pages.dev`.
+5. Save and deploy. Every later push to `main` redeploys automatically, and other branches get preview URLs such as `https://<branch>.studyroomz.pages.dev`.
 
 The preset is only a shortcut — it fills in `npm run build` and `dist`. If the dashboard shows `None`, enter those two values manually; no other setting changes.
 
@@ -81,7 +81,7 @@ npm run build
 npx wrangler pages deploy
 ```
 
-`wrangler.toml` supplies the `studyroom` project name and the `dist` output directory, so no extra flags are needed.
+`wrangler.toml` supplies the `studyroomz` project name and the `dist` output directory, so no extra flags are needed.
 
 ## GitHub Pages deployment
 

@@ -1,4 +1,4 @@
 # Cloudflare Pages project settings.
-# The project name determines the default URL: https://studyroom.pages.dev
-name = "studyroom"
+# The project name determines the default URL: https://studyroomz.pages.dev
+name = "studyroomz"
 pages_build_output_dir = "dist"
