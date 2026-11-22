@@ -24,7 +24,9 @@ More context is not automatically better. Extra tokens dilute attention, add lat
 
 ## Order: documents first, question last
 
-Anthropic's long-context guidance is blunt: put long documents near the top and the query at the end. In its own tests, moving the query after a large multi-document input improved quality by up to 30%. The effect has two names: **lost in the middle** (material in the centre of a long context is recalled least reliably) and **context rot** (accuracy falls as the window fills, even when the extra text is irrelevant).
+Anthropic's long-context guidance is blunt: put long documents near the top and the query at the end. In its own tests, moving the query after a large multi-document input improved quality by up to 30%.
+
+The effect has two names: **lost in the middle** (material in the centre of a long context is recalled least reliably) and **context rot** (accuracy falls as the window fills, even when the extra text is irrelevant).
 
 A reliable order for a document question:
 
@@ -48,7 +50,7 @@ A greeting such as "Good morning, Priya — it is 09:41 on Tuesday" at the top o
 - **Compaction** applies the same idea near the window limit: keep recent turns verbatim, summarise the rest, continue.
 - **Memory** is storage outside the window — a file, a database, a memory tool. Memory is not automatically visible; it must be retrieved into context like any document.
 
-Both summarisation and compaction are lossy. They keep the narrative and drop the exact identifier, the error code, the user's "actually, use euros". After compacting, re-inject constraints that must survive, and keep exact values (ids, paths, numbers) in a structured note rather than in prose.
+Summarisation and compaction are both lossy. They keep the narrative and drop the exact identifier, the error code, the user's "actually, use euros". After compacting, re-inject constraints that must survive, and keep exact values (ids, paths, numbers) in a structured note rather than in prose.
 
 <learning-block type="mistake" title="Assuming memory means presence">
 

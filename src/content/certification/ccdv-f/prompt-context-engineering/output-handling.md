@@ -117,7 +117,9 @@ A classifier returns `stop_reason: "end_turn"` and the text `Sure! Here is the J
 
 <details><summary>Reveal the explanation</summary>
 
-First, stop asking for JSON in prose: use structured outputs with an enum schema for `label`, or a forced tool whose `input_schema` has that enum. The fence and preamble disappear because the constraint applies at generation, not at parsing. Second, if that route is unavailable, prefill the assistant turn with `{` so the reply must start inside the object. A regex that strips fences is a fallback, not a fix: it breaks on a nested fence, a different preamble, or a truncated reply. Ship the schema route, keep the strip as a last-resort guard, and still check `stop_reason` and validate.
+First, stop asking for JSON in prose: use structured outputs with an enum schema for `label`, or a forced tool whose `input_schema` has that enum. The fence and preamble disappear because the constraint applies at generation, not at parsing.
+
+Second, if that route is unavailable, prefill the assistant turn with `{` so the reply must start inside the object. A regex that strips fences is a fallback, not a fix: it breaks on a nested fence, a different preamble, or a truncated reply. Ship the schema route, keep the strip as a last-resort guard, and still check `stop_reason` and validate.
 
 </details>
 

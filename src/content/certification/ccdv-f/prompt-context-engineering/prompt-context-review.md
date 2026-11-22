@@ -13,6 +13,8 @@ After each lesson, close it and rebuild its main table from memory. Mark it comp
 
 ## First choose the tool
 
+Most questions describe a failure; name it first, and the fix usually follows. Use this table as a lookup.
+
 | Clue in the question | Reach for |
 | --- | --- |
 | Output keeps drifting in shape | JSON schema / structured outputs, or prefill |

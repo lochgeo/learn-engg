@@ -50,7 +50,9 @@ Use one consistent vocabulary per prompt, close every tag, and never let user te
 - **Single-shot** — one worked example. Fixes format and tone cheaply; the model copies its shape.
 - **Multi-shot** — several examples covering the decision boundary, including a tricky negative case.
 
-Put examples in the messages as real user/assistant pairs rather than pasting them into the system prompt as prose: the model then sees the turn structure it must imitate. Three to five well-chosen examples usually beat twenty near-duplicates, and unbalanced sets teach the wrong prior — five examples that are all "approve" produce an assistant that approves.
+Put examples in the messages as real user/assistant pairs rather than pasting them into the system prompt as prose: the model then sees the turn structure it must imitate.
+
+Three to five well-chosen examples usually beat twenty near-duplicates, and unbalanced sets teach the wrong prior — five examples that are all "approve" produce an assistant that approves.
 
 <learning-block type="mistake" title="Few-shot does not mean format-only">
 
@@ -60,7 +62,9 @@ Examples teach judgement as well as shape. If every example is a clean, obvious 
 
 ## Prefill: start the reply for the model
 
-An **assistant prefill** is a partial assistant turn you supply; the model continues from it. Send it as the final assistant message — for example with content `{"vendor":` — and the reply continues inside the object, so you get JSON without a code fence. Prefill also steers tone ("Here is the blunt assessment:") and suppresses a preamble. Two limits: **Claude 4.6 and later models reject last-assistant-turn prefill** — use structured outputs there — and prefill may be unavailable alongside other modes, so check the current docs. Prefill constrains the *start*, not the correctness; you still validate the result.
+An **assistant prefill** is a partial assistant turn you supply; the model continues from it. Send it as the final assistant message — for example with content `{"vendor":` — and the reply continues inside the object, so you get JSON without a code fence. Prefill also steers tone ("Here is the blunt assessment:") and suppresses a preamble.
+
+Two limits: **Claude 4.6 and later models reject last-assistant-turn prefill** — use structured outputs there — and prefill may be unavailable alongside other modes, so check the current docs. Prefill constrains the *start*, not the correctness; you still validate the result.
 
 ## Chain of thought versus extended thinking
 
@@ -84,7 +88,9 @@ Extended thinking improves hard reasoning; it does not fix a vague task, missing
 
 ## Ambiguity: ask, assume, or flag
 
-Pick deliberately. **Ask** when a wrong guess is expensive and a short question is cheap (destructive operations, legal wording). **Assume and flag** when a sensible default exists: "If no currency is given, assume GBP and list it under assumptions." **Proceed silently** only when every reasonable interpretation gives the same answer. The failure mode is a prompt that neither asks nor states a default, so the model chooses quietly and the choice is invisible downstream.
+Pick deliberately. **Ask** when a wrong guess is expensive and a short question is cheap (destructive operations, legal wording). **Assume and flag** when a sensible default exists: "If no currency is given, assume GBP and list it under assumptions." **Proceed silently** only when every reasonable interpretation gives the same answer.
+
+The failure mode is a prompt that neither asks nor states a default, so the model chooses quietly and the choice is invisible downstream.
 
 ## Keep untrusted content in its lane
 
