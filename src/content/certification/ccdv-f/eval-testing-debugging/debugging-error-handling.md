@@ -4,6 +4,8 @@ The model returns an empty string, your UI shows "Something went wrong", and the
 
 This is Domain 4, **Debugging and Error Handling**, worth about 2.6% of CCDV-F. The questions are practical: given a symptom, which signal do you trust, and what do you tell the user?
 
+The lesson gives you three tools for that: an error taxonomy to name the fault, a short workflow to isolate it, and rules for retries, fallbacks and honest messages.
+
 ## The big idea
 
 Treat a model response as untrusted input from a remote service. That habit generates most of the correct answers:
@@ -13,6 +15,8 @@ Treat a model response as untrusted input from a remote service. That habit gene
 - Every retry needs a reason. Retrying a deterministic 400 wastes time; retrying a 429 without backoff makes it worse.
 
 ## Start here
+
+Start by naming the fault. The taxonomy below maps each symptom to the signal that confirms it, so the fix follows from the layer rather than from guesswork.
 
 ### The error taxonomy
 
@@ -47,6 +51,8 @@ A 200 with `stop_reason: "max_tokens"` is not an API error, and no retry will fi
 
 ## A workflow that beats guessing
 
+Naming the fault is only half the job; you still have to locate it. This four-step loop narrows the search without changing code you have no evidence against:
+
 1. **Reproduce** with the smallest failing input. Keep the exact prompt, model setting, tool list and retrieved context; a bug you cannot replay is a rumour.
 2. **Isolate** the layer. Call the API alone, then add parsing, then tools, then retrieval. The first layer that fails is the one to fix.
 3. **Trace** the request end to end: request id, prompt version, token counts, latency, `stop_reason`, tool calls, validation errors.
@@ -60,7 +66,7 @@ Rewording the instruction is tempting. But if `stop_reason` is `max_tokens`, or 
 
 ## Worked example
 
-A support assistant calls an order-lookup tool. One request in twenty crashes instead of answering. The fix is a boundary check:
+Consider a support assistant that calls an order-lookup tool. One request in twenty crashes instead of answering, and the fix is a boundary check:
 
 ```python
 class OrderArgs(BaseModel):
@@ -96,7 +102,7 @@ tool=lookup_order latency_ms=1180 cache_read=0 retries=0
 
 <learning-block type="example" title="Retries and fallbacks, chosen by cause">
 
-Retry only what can succeed again: 429, 408, 409, 5xx, timeouts. The official SDKs retry a small number of times by default with exponential backoff — check the current defaults rather than assuming them. Add jitter, cap attempts, use idempotency keys for writes, and open a circuit breaker after repeated failure. A fallback model is a product decision; one that silently changes quality is a trap.
+Retry only what can succeed again: 429 (rate limited), 408 (request timeout), 409 (conflict), 5xx (server faults), and network timeouts. The official SDKs retry a small number of times by default with exponential backoff — check the current defaults rather than assuming them. Add jitter, cap attempts, use idempotency keys for writes, and open a circuit breaker after repeated failure. A fallback model is a product decision; one that silently changes quality is a trap.
 
 </learning-block>
 
@@ -111,6 +117,8 @@ Retry only what can succeed again: 429, 408, 409, 5xx, timeouts. The official SD
 </learning-block>
 
 ### Honest user-facing errors
+
+The same evidence should shape what the user sees. Each cause below has a message that says what happened and what to do next, rather than a generic failure:
 
 | Cause | Bad message | Better message |
 | --- | --- | --- |

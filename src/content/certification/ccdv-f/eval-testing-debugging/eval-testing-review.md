@@ -8,12 +8,14 @@ This check spans evaluation, testing and debugging together, because in practice
 
 Budget about **100 minutes**, in four passes:
 
-1. **Eval design** — 25 min. Build a small golden set: representative inputs, expected outcomes and edge cases, with the rubric or assertion for each.
-2. **Testing and regression** — 25 min. Version prompts and eval sets together; practise reading a score by slice, not just the average.
+1. **Eval design** — 25 min. Build a small golden set (a fixed collection of inputs with agreed expected outcomes): representative inputs, edge cases, and the rubric or assertion for each.
+2. **Testing and regression** — 25 min. Version prompts and eval sets together; practise reading a score by slice — a subgroup such as refunds or one language — not just the average.
 3. **Debugging with evidence** — 25 min. Work the taxonomy: status codes, `stop_reason`, validator errors, retrieval scores, token counts, latency.
 4. **This mastery check** — 25 min. Answer from a blank page, then explain each wrong option back to yourself.
 
 ## First choose the tool
+
+Most exam scenarios hand you a symptom and ask for the next move. Use this table to go from the clue in the question to the right starting point:
 
 | Clue in the question | Start with |
 | --- | --- |
@@ -30,6 +32,8 @@ Budget about **100 minutes**, in four passes:
 | A user sees a spinner forever | Define timeout, retry and honest failure states |
 
 ## Mastery check
+
+Answer from memory first, then open each reveal to check the reasoning — a question you get right by reading the options is not yet learned.
 
 ### 1. Choosing the measure
 
@@ -150,6 +154,8 @@ A chat feature's cost per conversation rises every turn, while `max_tokens` stay
 </details>
 
 ## Exam-day checklist
+
+Run through these in the last few minutes before the exam:
 
 - Ask whether the task has one correct answer; if so, assert, do not judge.
 - Check that the eval set is representative, held out and versioned.
