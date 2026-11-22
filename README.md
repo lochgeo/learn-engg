@@ -55,6 +55,20 @@ To add or revise a lesson:
 
 Class 11 Mathematics and the whole of Class 12 are planned curriculum at the moment; their chapter maps are visible, but their lessons are still being written. Progress is stored in browser local storage and does not sync between devices. There is no backend, account, analytics, or API call.
 
+## Install as an app (PWA)
+
+The site is a Progressive Web App: on Android, open it in Chrome, use the **⋮** menu and choose **Install app** (or **Add to Home screen**). It then launches full screen from its own icon, and keeps working offline once a lesson has been visited. iOS Safari offers **Share → Add to Home Screen** with the same behaviour.
+
+How it is wired up:
+
+- `vite-plugin-pwa` (dev dependency) generates `dist/manifest.webmanifest` and the Workbox service worker `dist/sw.js` at build time. `vite.config.ts` holds the manifest and cache rules; there is no hand-written service worker to maintain.
+- `registerType: 'autoUpdate'` means a new deployment reaches an installed app on its next launch without a reload prompt. `public/_headers` tells Cloudflare to revalidate `/sw.js` so updates are not stuck behind a cached copy.
+- The whole build — HTML, JS, CSS, KaTeX fonts and lesson images — is precached (about 4.8 MB), so the app opens and reads offline. Google Fonts are cached at runtime with a one-year expiry.
+- Icons live in `public/`: `icon.svg` and `icon-maskable.svg` are the sources, rendered to `pwa-192x192.png`, `pwa-512x512.png`, `pwa-maskable-512x512.png`, `apple-touch-icon.png` and `favicon-32x32.png`. To change the mark, edit the SVGs and re-render with `npx sharp-cli -i public/icon.svg -o public/pwa-512x512.png resize 512 512`.
+- The service worker is not enabled in `npm run dev`. Test PWA behaviour with `npm run build && npm run preview`, then open the preview URL in Chrome.
+
+Deep links such as `/lesson/<id>` need a host fallback to the app shell. GitHub Pages has none, so `.github/workflows/deploy.yml` copies `dist/index.html` to `dist/404.html`; Cloudflare Pages serves the app for unknown paths on its own. The service worker's navigation fallback covers both hosts when offline.
+
 ## Cloudflare Pages deployment
 
 The site is a static Vite build with no server-side code, so it deploys to Cloudflare Pages as-is. Nothing runs at request time: progress, theme and reading size live in `localStorage`.

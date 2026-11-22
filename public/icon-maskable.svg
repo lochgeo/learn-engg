@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Studyroom">
+  <rect width="512" height="512" fill="#45664f"/>
+  <g transform="translate(256 248) scale(0.78) translate(-256 -248)">
+    <path d="M256 178c-26-17-62-24-96-19v158c34-5 70 2 96 19z" fill="#ffffff"/>
+    <path d="M256 178c26-17 62-24 96-19v158c-34-5-70 2-96 19z" fill="#cfe2d4"/>
+    <path d="M256 178v158" stroke="#45664f" stroke-width="10"/>
+    <circle cx="256" cy="392" r="9" fill="#9dbfa4"/>
+  </g>
+</svg>
