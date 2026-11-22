@@ -4,7 +4,9 @@ Two requests to the same model can behave very differently — in latency, outpu
 
 ## The big idea
 
-A request is a bundle of independent controls. Thinking controls whether the model reasons before answering; effort controls how much work it does overall; `max_tokens` is a hard ceiling; streaming is only a delivery mechanism; speed selects a faster inference configuration; caching reuses a prefix. Confusing one control with another is the classic exam error. Model tiers follow the same logic: **Opus** is the most capable, **Sonnet** balances capability with speed and cost, and **Haiku** optimises latency and price at high volume. Exact IDs and context sizes change — check the current model overview.
+A request is a bundle of independent controls. Thinking controls whether the model reasons before answering; effort controls how much work it does overall; `max_tokens` is a hard ceiling; streaming is only a delivery mechanism; speed selects a faster inference configuration; caching reuses a prefix. Confusing one control with another is the classic exam error.
+
+Model tiers follow the same logic: **Opus** is the most capable, **Sonnet** balances capability with speed and cost, and **Haiku** optimises latency and price at high volume. Exact IDs and context sizes change — check the current model overview.
 
 | Control | What it changes | What it does not change |
 | --- | --- | --- |
@@ -41,13 +43,15 @@ A team switches from `medium` to `high` effort, keeps `max_tokens` at 1,024, and
 
 ### Streaming and server-sent events
 
-The Messages API streams over ordinary HTTP using **server-sent events (SSE)**. No WebSocket is required, and the SDKs wrap the same event stream.
+The Messages API streams over ordinary HTTP using **server-sent events (SSE)** — a plain text stream of `event:` and `data:` lines. No WebSocket is required, and the SDKs wrap the same event stream.
 
 A streamed response follows a predictable sequence: `message_start`, then for each block `content_block_start`, repeated `content_block_delta`, and `content_block_stop`, then `message_delta` with the stop reason and final usage, and `message_stop`. Delta types include `text_delta`, `input_json_delta` for tool arguments, and `thinking_delta` plus `signature_delta` for reasoning. `ping` events keep the connection alive.
 
 Streaming improves perceived latency, avoids client and server timeouts on long outputs, and lets you cancel work early. It does not make the full answer arrive sooner. SDK helpers also accumulate the final message, so you can stream to the user and still inspect `usage` and `stop_reason` at the end.
 
-Use the async client in a web server so one slow request does not block others, and cap concurrency with a semaphore so you stay inside rate limits. Independent calls — several documents, several classification batches — can run concurrently to hide latency; a **single** conversation cannot, because each turn depends on the previous one. Use the synchronous client for scripts and notebooks, and rely on SDK retries with backoff for transient errors.
+Use the async client in a web server so one slow request does not block others, and cap concurrency with a semaphore so you stay inside rate limits.
+
+Independent calls — several documents, several classification batches — can run concurrently to hide latency; a **single** conversation cannot, because each turn depends on the previous one. Use the synchronous client for scripts and notebooks, and rely on SDK retries with backoff for transient errors.
 
 ### Counting, prefill and stop sequences
 
@@ -61,7 +65,9 @@ Tool definitions describe name, description and JSON schema. When the model want
 
 ### Prompt caching
 
-`cache_control: {"type": "ephemeral"}` marks a cacheable prefix. It can be set once at the top level (automatic caching, which moves the breakpoint forward as a conversation grows) or on individual blocks (explicit breakpoints, up to four). The default lifetime is five minutes, and a one-hour TTL is available at higher write cost. Cache the stable prefix — tools, system prompt, documents, examples — and keep the varying user question after it.
+`cache_control: {"type": "ephemeral"}` marks a cacheable prefix. It can be set once at the top level (automatic caching, which moves the breakpoint forward as a conversation grows) or on individual blocks (explicit breakpoints, up to four).
+
+The default lifetime is five minutes, and a one-hour TTL is available at higher write cost. Cache the stable prefix — tools, system prompt, documents, examples — and keep the varying user question after it.
 
 ## Worked example
 

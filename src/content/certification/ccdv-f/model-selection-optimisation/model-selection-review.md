@@ -9,9 +9,11 @@ Domain 5 is smaller than the big engineering domains, but it is unusually easy t
 3. **Selection and cost together** — 30 min. Pick a model for two workloads from your own experience, then compute a cost per successful task with placeholder prices.
 4. **This mastery check** — 35 min. Answer first, reveal second. For every wrong option, write the reason it is wrong.
 
-Do not read the answers until you have committed to a choice.
+Do not read the answers until you have committed to a choice. Each step feeds the next, and the mastery check assumes you have done the first three.
 
 ## First choose the tool
+
+When a scenario question appears, scan it for the deciding clue before comparing model names.
 
 | Clue in the question | Start with |
 | --- | --- |

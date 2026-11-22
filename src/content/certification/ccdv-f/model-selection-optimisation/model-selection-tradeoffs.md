@@ -1,6 +1,6 @@
 ## The cheapest model that passes your evals is the right one
 
-Model selection is not a search for the "best" model. It is constraint satisfaction: find the least expensive option that clears a quality bar inside a latency budget, a context limit and a modality requirement. This sub-skill is worth 2.7%, and its questions are usually scenarios where the most capable model is technically correct but commercially wrong.
+Model selection is not a search for the "best" model. It is constraint satisfaction: find the least expensive option that clears a quality bar inside a latency budget, a context limit and a modality requirement (text, images or PDFs). This sub-skill is worth 2.7%, and its questions are usually scenarios where the most capable model is technically correct but commercially wrong.
 
 ## The big idea
 
@@ -15,6 +15,8 @@ Capability, latency and cost trade against each other, but not smoothly: the exp
 ## Start here
 
 ### The three tiers
+
+Three tiers cover almost every workload:
 
 | Tier | Positioning | Typical work | Cost of being wrong |
 | --- | --- | --- | --- |
@@ -62,7 +64,9 @@ $$
 C_{\text{avg}} = C_c + r\,C_s
 $$
 
-With $C_c = 1$ unit, $C_s = 10$ units and $r = 0.15$, the average is $2.5$ units against $10$ for routing everything to the strong model. The saving is real only if the gate is accurate: a weak gate escalates too little (quality fails) or too often (you pay twice and add latency to the escalated path). Evaluate the gate separately from the models.
+With $C_c = 1$ unit, $C_s = 10$ units and $r = 0.15$, the average is $2.5$ units against $10$ for routing everything to the strong model.
+
+The saving is real only if the gate is accurate: a weak gate escalates too little (quality fails) or too often (you pay twice and add latency to the escalated path). Evaluate the gate separately from the models.
 
 ### Eval-driven selection
 
@@ -76,7 +80,9 @@ Public benchmarks are a prior, not evidence. They rarely match your data distrib
 
 ### Upgrades and deprecations
 
-Pin model IDs in configuration, never in scattered code. Before an upgrade, read the migration guide for breaking changes — thinking configuration, prefill support and tool-choice behaviour have all changed between generations. Then run shadow traffic against the new model, compare on your eval set, and canary a small percentage before switching. Keep the previous model available as a fallback, and track retirement dates. Prompts tuned for one model often need re-tuning for the next, including a fresh effort sweep.
+Pin model IDs in configuration, never in scattered code. Before an upgrade, read the migration guide for breaking changes — thinking configuration, prefill support and tool-choice behaviour have all changed between generations.
+
+Then run shadow traffic against the new model, compare on your eval set, and canary a small percentage before switching. Keep the previous model available as a fallback, and track retirement dates. Prompts tuned for one model often need re-tuning for the next, including a fresh effort sweep.
 
 ## Worked example: three workloads, three answers
 

@@ -10,6 +10,8 @@ You are billed per token, and not all input tokens cost the same. Uncached input
 
 ### The four buckets
 
+Almost every invoice line comes from one of four buckets:
+
 | Bucket | What it counts | Multiplier on base input price |
 | --- | --- | --- |
 | Input | Tokens after the last cache breakpoint | $1$ |
@@ -55,7 +57,9 @@ A conversation that grows without bound eventually fails on the context window, 
 2. **Drop or prune old turns**, or summarise at a natural boundary, keeping pinned facts.
 3. **Cap tool output**, since one verbose tool result can dwarf the conversation.
 
-Trimming has a caching consequence: the cache covers `tools`, then `system`, then `messages` as a prefix. Removing early messages changes that prefix and invalidates the cache from the edit onward. Summarise deliberately, then let a new cache entry form, rather than editing the front of the prompt on every turn. Keep `max_tokens` tight enough to stop runaway generation, but loose enough for legitimate long answers.
+Trimming has a caching consequence: the cache covers `tools`, then `system`, then `messages` as a prefix. Removing early messages changes that prefix and invalidates the cache from the edit onward.
+
+Summarise deliberately, then let a new cache entry form, rather than editing the front of the prompt on every turn. Keep `max_tokens` tight enough to stop runaway generation, but loose enough for legitimate long answers.
 
 ### Monitoring, budgets and alerts
 
@@ -69,6 +73,8 @@ Every response carries `usage`: `input_tokens`, `cache_creation_input_tokens`, `
 Console usage and cost analytics give the organisation view; application logs give the per-feature view. You need both to answer "which endpoint caused this?"
 
 ### Cost per successful task
+
+One more formula turns per-request cost into a business metric:
 
 $$
 C_{\text{success}} = \frac{C_{\text{attempt}} \times n_{\text{attempts}}}{n_{\text{success}}}

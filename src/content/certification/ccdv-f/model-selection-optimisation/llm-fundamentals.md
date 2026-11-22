@@ -2,6 +2,8 @@
 
 Every cost, latency and quality decision in this domain rests on one mental model: a large language model (LLM) is a next-token predictor, not a database and not a program with memory. Get that picture right and context budgets, streaming, caching and model choice become bookkeeping rather than trivia. This sub-skill carries 5.2% — small on its own, but load-bearing for everything after it.
 
+This lesson builds that picture piece by piece — tokens, context, sampling and latency — so the lessons that follow can refer back to it.
+
 ## The big idea
 
 A model receives a sequence of tokens and returns a probability distribution over the next token. Generation is a loop: pick a token, append it, run the model again. Nothing else happens between calls.
@@ -22,7 +24,7 @@ The model maps a token sequence to a distribution over the next token; text is p
 
 ### Tokens are not words
 
-Text is split into **tokens** by a tokeniser. Common English words are often one token; rarer words, code, JSON punctuation and non-Latin scripts split into several. For planning, ordinary English prose is roughly **four characters per token**, or about **three-quarters of a word per token**. Treat that as an estimate, never a guarantee.
+Text is split into **tokens** — the units the model actually reads and generates — by a tokeniser. Common English words are often one token; rarer words, code, JSON punctuation and non-Latin scripts split into several. For planning, ordinary English prose is roughly **four characters per token**, or about **three-quarters of a word per token**. Treat that as an estimate, never a guarantee.
 
 | Content | Rough token cost | Why |
 | --- | --- | --- |
@@ -107,7 +109,9 @@ print(response.usage)                           # input=8412 output=287
 print(response.stop_reason)                     # "end_turn"
 ```
 
-With 8,412 input tokens and a 400-token cap, the request occupies at most 8,812 tokens of the window — comfortably inside a standard window, but only because nothing else is attached. If TTFT is 0.9 s and generation runs at 60 tokens per second, 287 output tokens take about 4.8 s, so the user waits roughly 5.7 s. Halving the answer saves about 2.4 s; shrinking the policy document saves TTFT but risks removing the answer.
+With 8,412 input tokens and a 400-token cap, the request occupies at most 8,812 tokens of the window — comfortably inside a standard window, but only because nothing else is attached.
+
+If TTFT is 0.9 s and generation runs at 60 tokens per second, 287 output tokens take about 4.8 s, so the user waits roughly 5.7 s. Halving the answer saves about 2.4 s; shrinking the policy document saves TTFT but risks removing the answer.
 
 ## On the exam
 
