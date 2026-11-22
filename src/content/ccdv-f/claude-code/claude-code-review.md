@@ -1,6 +1,6 @@
 ## Which file, which scope, which mode?
 
-Claude Code questions rarely ask you to define a term. They describe a small failure — the agent ignored a convention, a rule would not stick, the CI job parsed nothing — and ask where you would fix it. Almost every answer comes down to three choices: memory or configuration, shared or personal, interactive or headless. This check drills that choice until it is quick.
+Claude Code questions rarely ask you to define a term. They describe a small failure — the agent ignored a convention, a rule would not stick, the CI job parsed nothing — and ask where you would fix it. Almost every answer comes down to three choices: memory or configuration, shared or personal, interactive or headless. This check drills that choice until it is quick: the plan below, a lookup table, then questions in exam style.
 
 ## Your study plan
 
@@ -12,6 +12,8 @@ Budget about **95 minutes**, in four passes:
 4. **Headless, MCP and this check** — 30 min. Run `claude -p` with JSON output, then answer the questions below from a blank page.
 
 ## First choose the tool
+
+Before the questions, here is the shortcut they are all testing: read the clue on the left, then commit to a starting file or scope.
 
 | Clue in the question | Start with |
 | --- | --- |
@@ -27,6 +29,8 @@ Budget about **95 minutes**, in four passes:
 | "A script must run the agent unattended" | `claude -p` with `--output-format json` or `stream-json` |
 
 ## Mastery check
+
+Answer these from memory first; each explanation names the rule that decides it.
 
 ### 1. The wrong test command
 
@@ -152,6 +156,8 @@ A developer proposes running with `bypassPermissions` in the main repository so 
 </details>
 
 ## Exam-day checklist
+
+Run this list from memory the night before, then again on the day.
 
 - Ask "memory or configuration, shared or personal?" before choosing a file.
 - Recite the settings stack: managed, command line, local, project, user.

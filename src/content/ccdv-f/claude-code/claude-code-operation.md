@@ -2,6 +2,8 @@
 
 A chat window forgets your build command the moment you close it. Claude Code is built around the opposite assumption: the project itself should carry the instructions, the permissions boundary, and the reusable workflows, so that a fresh session starts already knowing how *this* team works. Operating it well is mostly a question of putting each piece of knowledge in the right file.
 
+This lesson maps those pieces — what the agent knows, what it may do, and how you drive it — so that a broken session points you at one file instead of a guess.
+
 This is Domain 3, **Claude Code Operation**, worth about 3.1% of CCDV-F. The weighting is small, but the distinctions it tests — which file wins, which component is model-invoked, what headless mode actually returns — are the ones that quietly break real automation.
 
 ## The big idea
@@ -53,11 +55,13 @@ Permission rules name a tool and often a pattern:
 }
 ```
 
-The permission **mode** sets the baseline: `default` asks before edits and commands, `acceptEdits` auto-accepts file edits, `plan` explores read-only and proposes a plan, `auto` lets a background classifier review risky actions, `dontAsk` denies anything not pre-approved, and `bypassPermissions` skips checks and belongs only in a sandbox or container. Start complex work in plan mode, review each diff before accepting it, then narrow permissions deliberately.
+The permission **mode** sets the baseline: `default` asks before edits and commands, `acceptEdits` auto-accepts file edits, `plan` explores read-only and proposes a plan, `auto` lets a background classifier review risky actions, `dontAsk` denies anything not pre-approved, and `bypassPermissions` skips checks and belongs only in a sandbox or container.
+
+Start complex work in plan mode, review each diff before accepting it, then narrow permissions deliberately.
 
 ## Worked example
 
-A team wants a repeatable "review the diff" workflow and a nightly headless check. First the interactive setup:
+A team wants a repeatable "review the diff" workflow and a nightly headless check — a non-interactive run that CI can schedule. First the interactive setup:
 
 ```text
 $ claude
@@ -87,7 +91,9 @@ Review the staged changes, concentrating on $ARGUMENTS.
 Report correctness bugs first, then missing tests. Do not edit files.
 ```
 
-Typing `/review caching` substitutes the argument. A skill does something similar but is discovered by the model from its `description`; it is the right home for a capability the agent should reach for on its own, while a command is a button a human presses. A subagent is a separate context window with its own prompt and tool list, which keeps a long review from flooding the main conversation; its definition lives in `.claude/agents/`, so changes to an agent are reviewed like code, while its memory comes from the same `CLAUDE.md` hierarchy.
+Typing `/review caching` substitutes the argument. A skill does something similar but is discovered by the model from its `description`; it is the right home for a capability the agent should reach for on its own, while a command is a button a human presses.
+
+A subagent is a separate context window with its own prompt and tool list, which keeps a long review from flooding the main conversation; its definition lives in `.claude/agents/`, so changes to an agent are reviewed like code, while its memory comes from the same `CLAUDE.md` hierarchy.
 
 Now the headless run, in CI:
 
@@ -97,7 +103,9 @@ claude -p "Run the test suite and summarise failures" \
   --output-format json > result.json
 ```
 
-`-p` is non-interactive: it prints the final answer and exits. `--output-format json` returns one object containing `result`, `session_id`, `is_error`, `usage` and cost metadata; `stream-json` emits one JSON event per line instead, which is what you parse for progress. `--include-partial-messages` adds token-level events. For a machine-readable answer rather than prose, pass a JSON schema with the run. Use `--max-turns` to cap agentic loops, and resume with `--resume SESSION_ID` when the job needs a second pass.
+`-p` is non-interactive: it prints the final answer and exits. `--output-format json` returns one object containing `result`, `session_id`, `is_error`, `usage` and cost metadata; `stream-json` emits one JSON event per line instead, which is what you parse for progress. `--include-partial-messages` adds token-level events.
+
+For a machine-readable answer rather than prose, pass a JSON schema with the run. Use `--max-turns` to cap agentic loops, and resume with `--resume SESSION_ID` when the job needs a second pass.
 
 <learning-block type="example" title="Streaming JSON is a log, not a document">
 
@@ -107,7 +115,7 @@ With `--output-format stream-json`, each line is a complete event. A typical seq
 
 ## On the exam
 
-Expect questions that give you a symptom and ask for the correct component or scope, plus a few on headless output.
+So far you have built the map; on the exam you read symptoms against it. Expect questions that give you a symptom and ask for the correct component or scope, plus a few on headless output.
 
 <learning-block type="check" title="The four distinctions that get tested">
 
