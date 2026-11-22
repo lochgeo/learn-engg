@@ -461,6 +461,10 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
         const completedCount = pathLessons.filter((lesson) => completed.includes(lesson.id)).length
         const progress = pathLessons.length ? Math.round(completedCount / pathLessons.length * 100) : null
         const pathSubjects = subjects.filter((subject) => subject.track === track.id)
+        const liveSubjects = pathSubjects.filter((subject) => lessons.some((lesson) => lesson.subjectId === subject.id)).length
+        const subjectLine = pathSubjects
+          .map((subject) => (liveSubjects > 0 && !lessons.some((lesson) => lesson.subjectId === subject.id) ? `${subject.name} (soon)` : subject.name))
+          .join(' · ')
         return <button
           key={track.id}
           className={`course-card path-card card-${track.color} ${activeTrackId === track.id ? 'card-selected' : ''}`}
@@ -472,7 +476,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
             <span className="chapter-total">{liveChapters.length ? `${liveChapters.length} of ${pathChapters.length} live` : `${pathChapters.length} planned`}</span>
           </div>
           <p>{track.description}</p>
-          <div className="path-subject-line">{pathSubjects.map((subject) => subject.name).join(' · ')}</div>
+          <div className="path-subject-line">{subjectLine}</div>
           <div className="course-progress">
             <span className="progress-track"><span style={{ width: `${progress ?? 0}%` }} /></span>
             <span>{progress === null ? 'In production' : `${progress}%`}</span>
