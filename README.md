@@ -45,9 +45,47 @@ To add or revise a lesson:
 
 Mathematics remains a placeholder for future work; the Chemistry cards open the two organic units, and the CCDV-F card opens the certification track. Progress is stored in browser local storage and does not sync between devices. There is no backend, account, analytics, or API call.
 
+## Cloudflare Pages deployment
+
+The site is a static Vite build with no server-side code, so it deploys to Cloudflare Pages as-is. Nothing runs at request time: progress, theme and reading size live in `localStorage`.
+
+**One-time setup (dashboard, Git integration):**
+
+1. Push this repository to GitHub.
+2. In the Cloudflare dashboard go to **Workers & Pages → Create → Pages → Connect to Git**, and pick the repository.
+3. Name the project **`studyroom`** (not `learn-engg`). Cloudflare derives the free URL from the project name, so this gives `https://studyroom.pages.dev`. Project names are unique, so if `studyroom` is already taken you will need a variant such as `studyroom-app`; the URL follows whatever name you choose. `wrangler.toml` records the same name for CLI deploys.
+4. Use these build settings:
+
+   | Setting | Value |
+   | --- | --- |
+   | Production branch | `main` |
+   | Framework preset | `Vite` |
+   | Build command | `npm run build` |
+   | Build output directory | `dist` |
+   | Root directory | *(leave empty)* |
+
+5. Save and deploy. Every later push to `main` redeploys automatically, and other branches get preview URLs such as `https://<branch>.studyroom.pages.dev`.
+
+No environment variables or secrets are required. Vite serves from the domain root on Cloudflare (`base: '/'`); the `GITHUB_ACTIONS` check in `vite.config.ts` only applies the repository subpath when GitHub Actions builds for GitHub Pages. Set `BASE_PATH` if you ever host the build under a subpath elsewhere.
+
+`public/_headers` is copied into `dist` and tells Cloudflare Pages to cache the content-hashed `/assets/*` files immutably and to send `X-Content-Type-Options` and `Referrer-Policy` headers. `.nvmrc` pins Node 22 for the build. On GitHub Pages the `_headers` file is simply published as an inert static file; GitHub Pages ignores it.
+
+Because navigation is React state rather than URL routing, there is no `_redirects` SPA fallback to maintain; every URL is either `/` or a static file.
+
+If you ever want to deploy without the dashboard (for example from a local machine), run:
+
+```sh
+npm run build
+npx wrangler pages deploy
+```
+
+`wrangler.toml` supplies the `studyroom` project name and the `dist` output directory, so no extra flags are needed.
+
 ## GitHub Pages deployment
 
-The included GitHub Actions workflow builds and deploys on pushes to `main`. In repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. Vite uses the repository name as the Pages subpath during Actions builds.
+The included GitHub Actions workflow builds and deploys on pushes to `main`. In repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. Vite uses the repository name as the Pages subpath during Actions builds. Both workflows can stay enabled side by side; disable or delete `.github/workflows/deploy.yml` if Cloudflare Pages becomes the only host.
+
+Adding the Cloudflare setup did not change this path: `BASE_PATH` is unset in Actions, so the `GITHUB_ACTIONS` branch in `vite.config.ts` still applies `/<repo>/` as the base, and renamed repositories pick up the new subpath automatically. Only set `BASE_PATH` manually if a host needs a different prefix.
 
 ## Project structure
 
@@ -71,10 +109,13 @@ src/
   main.tsx
   styles.css
 public/
+  _headers
   images/
     work-energy/*.jpg
     work-energy/CREDITS.md
     organic-chemistry/*.png, *.jpg
     organic-chemistry/CREDITS.md
+.nvmrc
+wrangler.toml
 .github/workflows/deploy.yml
 ```
