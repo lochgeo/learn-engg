@@ -4,6 +4,7 @@
   /* Type */
   --font-sans: 'DM Sans', sans-serif;
   --serif: 'Manrope', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Consolas, 'Liberation Mono', monospace;
 
   /* Surfaces */
   --paper: #f7f7f4;

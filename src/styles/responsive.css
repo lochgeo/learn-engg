@@ -417,6 +417,19 @@
 
   .lesson-prose .katex-display > .katex { font-size: 1.02em }
 
+  /* Phones wrap code instead of asking for a sideways scroll. */
+  .lesson-prose pre {
+    padding: 10px 11px;
+    font-size: 10px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .lesson-prose pre code {
+    white-space: inherit;
+    overflow-wrap: inherit;
+  }
+
   .learning-block { padding: 12px 13px; margin: 17px 0 }
 
   .lesson-prose figure.lesson-figure { margin: 20px 0 }

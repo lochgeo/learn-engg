@@ -3,6 +3,8 @@
   font-size: 12px;
   line-height: 1.85;
   color: var(--ink-body);
+  /* Long identifiers and URLs wrap instead of pushing the lesson column wider. */
+  overflow-wrap: break-word;
 }
 
 .lesson-prose h2 {
@@ -27,6 +29,44 @@
   background: #f1f4ee;
   color: #6c7868;
   font: italic 12px/1.7 var(--serif);
+}
+
+/* Inline code may break mid-token so it never widens a paragraph. */
+.lesson-prose code {
+  font-family: var(--font-mono);
+  font-size: .92em;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--surface-sunken);
+  overflow-wrap: anywhere;
+}
+
+/* Fenced blocks scroll inside their own box; the page itself never scrolls
+   sideways. Scrollbar styling matches the maths cards. */
+.lesson-prose pre {
+  max-width: 100%;
+  margin: 14px 0 18px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  font-size: .9em;
+  line-height: 1.6;
+  tab-size: 2;
+  scrollbar-width: thin;
+  scrollbar-color: #c7d2c4 transparent;
+}
+
+.lesson-prose pre code {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  font-size: inherit;
+  overflow-wrap: normal;
+  white-space: pre;
 }
 
 .lesson-prose table {

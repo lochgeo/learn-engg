@@ -203,6 +203,19 @@
   color: #c6d6c8;
 }
 
+.dark .lesson-prose code {
+  background: #22302d;
+  color: #d5e5d7;
+}
+
+.dark .lesson-prose pre {
+  background: #1b2926;
+  border-color: #354345;
+  scrollbar-color: #52675a transparent;
+}
+
+.dark .lesson-prose pre code { background: none }
+
 .dark .toc-card a { color: #b8c6bd; border-color: #303e3f }
 
 .dark .toc-card a.toc-active { color: var(--accent-ink) }
