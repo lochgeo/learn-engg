@@ -430,7 +430,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
               ? `A ${continueLesson.duration}-minute lesson to build your understanding, one idea at a time.`
               : 'The chapter map is ready. Lessons will appear here as they are written.'}</p>
             <div className="continue-bottom">
-              <span className="resume-button">{continueLesson ? 'Resume lesson' : 'Preview syllabus'} <span>→</span></span>
+              <span className="resume-button">{continueLesson ? (lastLesson ? 'Resume lesson' : 'Start lesson') : 'Preview syllabus'} <span>→</span></span>
               <span className="lesson-time">{continueLesson ? <>◷ {continueLesson.duration} min</> : 'Chapter by chapter'}</span>
             </div>
           </div>
