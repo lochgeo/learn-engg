@@ -1,6 +1,8 @@
 ## Your data does not speak JSON-RPC yet
 
-A tool written into one agent is trapped there. MCP exists so that one server exposing your ticketing system, files or database works in Claude Code, in a desktop client, and in a custom Agent SDK application without a rewrite. The exam treats it as an interface contract: who may call what, over which transport, after which handshake. It is a small sub-skill — 2.1% of CCDV-F — but its vocabulary recurs in half the scenario questions in this domain.
+A tool written into one agent is trapped there. MCP — the Model Context Protocol — exists so that one server exposing your ticketing system, files or database works in Claude Code, in a desktop client, and in a custom Agent SDK application without a rewrite.
+
+This lesson is about building that server and understanding the contract around it. The exam treats MCP as an interface contract: who may call what, over which transport, after which handshake. It is a small sub-skill — 2.1% of CCDV-F — but its vocabulary recurs in half the scenario questions in this domain.
 
 ## The big idea
 
@@ -16,9 +18,13 @@ The model never talks to your server. The **host** (the application the user run
 
 ### JSON-RPC 2.0
 
+With the roles in place, the messages themselves are plain JSON-RPC 2.0.
+
 Every message is a request (has `id`, expects a response), a notification (no `id`, never answered), or a response carrying either `result` or `error`. Errors carry a numeric `code`, a `message` and optional `data`; reserved codes cover method-not-found and invalid params. MCP defines methods and payloads; the envelope is stock JSON-RPC 2.0.
 
 ### Two transports
+
+Two transports cover almost every deployment.
 
 | Transport | Where it runs | Mechanics |
 | --- | --- | --- |
@@ -26,6 +32,8 @@ Every message is a request (has `id`, expects a response), a notification (no `i
 | Streamable HTTP | Remote service | HTTP POST for client messages, with server messages streamed back; sessions and auth live at the HTTP layer |
 
 ### Three primitives
+
+MCP exposes three primitives, and who controls each differs.
 
 | Primitive | Controlled by | What it is |
 | --- | --- | --- |
@@ -85,6 +93,8 @@ Bad arguments are a JSON-RPC error at this layer. A tool that ran and found no s
 
 ## Security boundaries
 
+A server that works is not yet a safe server.
+
 - **Scope tokens to the server's job.** A ticketing server gets ticket scopes, not a tenant-wide admin token.
 - **Never pass the client's token upstream.** Forwarding it makes your server a confused deputy acting with borrowed authority.
 - **Treat everything a server returns as untrusted input.** A resource can carry injected instructions; the host must not promote it to system-level trust.
@@ -93,7 +103,9 @@ Bad arguments are a JSON-RPC error at this layer. A tool that ran and found no s
 
 ## Testing it
 
-Use **MCP Inspector** to drive the handshake by hand: list capabilities, call tools, read resources, and watch the raw messages. Then repeat with a **real client** in both transports, because a server that works over stdio can still fail on a remote HTTP session. Exercise the boring cases — unknown method, invalid params, a tool that raises, cancellation, and a request sent before the handshake finishes.
+Use **MCP Inspector** to drive the handshake by hand: list capabilities, call tools, read resources, and watch the raw messages. Then repeat with a **real client** in both transports, because a server that works over stdio can still fail on a remote HTTP session.
+
+Exercise the boring cases — unknown method, invalid params, a tool that raises, cancellation, and a request sent before the handshake finishes.
 
 ## On the exam
 

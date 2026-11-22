@@ -1,6 +1,8 @@
 ## Tools and MCPs: practice & mastery check
 
-This domain is 10.6% of CCDV-F and it rewards a particular kind of judgement: given a failure, name the layer it came from. Tool definitions fail at the contract, MCP integrations fail at the protocol boundary, and customisations fail at the "wrong mechanism for the job" boundary. The questions below are written the way the exam writes them — a situation, four plausible responses, one that actually fixes the cause.
+This domain is 10.6% of CCDV-F and it rewards a particular kind of judgement: given a failure, name the layer it came from. Tool definitions fail at the contract, MCP integrations fail at the protocol boundary, and customisations fail at the "wrong mechanism for the job" boundary.
+
+The questions below are written the way the exam writes them — a situation, four plausible responses, one that actually fixes the cause. For each one, name the failing layer and the reason every distractor is wrong before you open the reveal.
 
 ## Your study plan for today
 
@@ -27,6 +29,8 @@ About **100 minutes**, with a short break after the second block:
 | A third-party data source the user must approve | An MCP server, consented to per host |
 
 ## Mastery check
+
+With the map in front of you, work through the questions without opening the reveals first.
 
 ### 1. The missing observation
 

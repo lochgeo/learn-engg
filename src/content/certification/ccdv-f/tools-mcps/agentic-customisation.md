@@ -1,6 +1,8 @@
 ## The agent is not the place to put your process
 
-Every team that adopts an agent accumulates instructions fast: a paragraph appended to the system prompt, a rule nobody reads, three skills that overlap, a subagent that exists because someone was curious. Agentic customisation is the discipline of choosing the smallest mechanism that fixes the observed problem. It is 4.1% of CCDV-F, and the exam asks it as a series of "which mechanism" scenarios rather than as definitions.
+Every team that adopts an agent accumulates instructions fast: a paragraph appended to the system prompt, a rule nobody reads, three skills that overlap, a subagent that exists because someone was curious. Agentic customisation is the discipline of choosing the smallest mechanism that fixes the observed problem.
+
+This lesson gives you a way to compare those mechanisms, then a checklist for keeping the collection small. It is 4.1% of CCDV-F, and the exam asks it as a series of "which mechanism" scenarios rather than as definitions.
 
 ## The big idea
 
@@ -36,11 +38,15 @@ A skill is a folder, not a prompt:
   scripts/check_versions.py
 ```
 
-`SKILL.md` opens with front matter — `name` and `description` — then the procedure itself. Loading happens in three stages: the **description is always available** because it is the trigger surface; the **body loads when the skill is invoked**; **bundled files load only when the skill tells the model to read them**. That is progressive disclosure, and it is why the description must state both when to use the skill and when not to, while the body stays short and points at references instead of inlining them.
+`SKILL.md` opens with front matter — `name` and `description` — then the procedure itself. Loading happens in three stages: the **description is always available** because it is the trigger surface; the **body loads when the skill is invoked**; **bundled files load only when the skill tells the model to read them**.
+
+That is progressive disclosure, and it is why the description must state both when to use the skill and when not to, while the body stays short and points at references instead of inlining them.
 
 ### Subagents: briefs and context isolation
 
-A subagent starts with a fresh context. It does not inherit the conversation, the files already read, or the conclusions already reached, so the brief must be self-contained: the goal, the inputs (paths, ids, versions), the constraints, the return format, and what "done" means. In exchange you get isolation — exploration noise and dead ends stay out of the main thread — plus parallelism and a narrower tool set. The cost is that the summary is lossy: anything the main agent needs later must be in the return contract.
+A subagent starts with a fresh context. It does not inherit the conversation, the files already read, or the conclusions already reached, so the brief must be self-contained: the goal, the inputs (paths, ids, versions), the constraints, the return format, and what "done" means.
+
+In exchange you get isolation — exploration noise and dead ends stay out of the main thread — plus parallelism and a narrower tool set. The cost is that the summary is lossy: anything the main agent needs later must be in the return contract.
 
 <learning-block type="example" title="A skill and a subagent for the same repository">
 
@@ -77,6 +83,8 @@ The skill encodes a procedure the main agent should follow. The subagent encodes
 </learning-block>
 
 ## Choosing, then keeping it small
+
+With the mechanisms laid out, the job is to choose the smallest one that fits and then keep the collection small.
 
 Work down this list and stop at the first match:
 

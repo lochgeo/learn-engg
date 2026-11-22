@@ -1,6 +1,8 @@
 ## A tool is only as good as the sentence that describes it
 
-A capable model can read a schema and call a tool correctly — or call it at the wrong moment, with a plausible-looking id that does not exist, and then apologise to the user instead of retrying. The difference is rarely model quality. It is how the tool was written down: its name, its description, its schema, and the shape of what comes back. Tool implementation carries 4.4% of CCDV-F, and it is the part you can reason about from first principles, because every failure has a visible cause.
+A capable model can read a schema and call a tool correctly — or call it at the wrong moment, with a plausible-looking id that does not exist, and then apologise to the user instead of retrying. The difference is rarely model quality. It is how the tool was written down: its name, its description, its schema, and the shape of what comes back.
+
+This lesson is about writing that contract well: what goes into a definition, how to answer a call, and how to fail in a way the model can recover from. Tool implementation carries 4.4% of CCDV-F, and it is the part you can reason about from first principles, because every failure has a visible cause.
 
 ## The big idea
 
@@ -40,9 +42,9 @@ The description is the highest-leverage text in the integration. A good one cove
 
 ### Prefer narrow, idempotent tools
 
-One tool that does five things forces the model to encode a mode into an argument, and a mode is exactly the field models get wrong. Split it: `get_order`, `cancel_order`, `refund_order`. Narrow tools also give you narrow permissions and readable logs.
+Scope is the next lever: one tool that does five things forces the model to encode a mode into an argument, and a mode is exactly the field models get wrong. Split it: `get_order`, `cancel_order`, `refund_order`. Narrow tools also give you narrow permissions and readable logs.
 
-Idempotency matters most for writes. If a call times out, the model's reasonable next move is to retry. A tool that creates a *second* refund on retry is a production incident. Accept an idempotency key, or design the operation to be naturally repeatable ("set status to shipped" rather than "advance status").
+Idempotency is the other half of the design, and it matters most for writes. If a call times out, the model's reasonable next move is to retry. A tool that creates a *second* refund on retry is a production incident. Accept an idempotency key, or design the operation to be naturally repeatable ("set status to shipped" rather than "advance status").
 
 <learning-block type="mistake" title="The retry that duplicates a payment">
 
@@ -104,6 +106,8 @@ This is an error the model can act on: it names the failure, offers a candidate,
 
 ## Errors, confirmation and timeouts
 
+The definition is only half the contract; the other half is how you answer a call and how you fail.
+
 - **`is_error: true` is for failures the model should reason about** — not found, permission denied, invalid argument, upstream down. Include the failing input and the next step.
 - **Never return an empty success on failure.** A `tool_result` saying "OK" when nothing happened teaches the model to trust a lie.
 - **Confirmation belongs in the design.** For irreversible actions, expose a read-only preview and a separate commit tool, or require human approval in your own code. "Please confirm first" in a system prompt is a preference, not a control.
@@ -126,7 +130,9 @@ Expect a bad definition and a question about what the model will do with it. The
 
 <details><summary>Reveal the explanation</summary>
 
-The parameter description probably says nothing about what belongs in the query, so the model has no rule for building one. Add: "A specific natural-language question of one or two sentences, including product names and error codes; never a bare word such as 'help'." Put a worked example in the description. Loosening the schema would make it worse, and a bigger model would only mask the ambiguity.
+The parameter description probably says nothing about what belongs in the query, so the model has no rule for building one. Add: "A specific natural-language question of one or two sentences, including product names and error codes; never a bare word such as 'help'." Put a worked example in the description.
+
+Loosening the schema would make it worse, and a bigger model would only mask the ambiguity.
 
 </details>
 
