@@ -70,6 +70,12 @@
     border-radius: var(--radius-lg);
   }
 
+  .path-card { min-height: 208px }
+
+  .path-card .course-title { font-size: 18px }
+
+  .path-subject-line { font-size: 11px }
+
   .course-icon { width: 34px; height: 34px; font-size: 18px }
 
   .course-name { font-size: 16px; margin-top: 14px }
@@ -323,7 +329,11 @@
 
   .course-card { min-height: 126px }
 
+  .path-card { min-height: 160px }
+
   .course-card p { margin-bottom: 10px }
+
+  .path-subject-cards-single { max-width: none }
 
   .lesson-title-row { align-items: flex-start; flex-direction: column; gap: 12px }
 

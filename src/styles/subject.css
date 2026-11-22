@@ -138,6 +138,29 @@
   color: #84917e;
 }
 
+/* Path overview: the subjects inside one destination. */
+.path-subject-cards {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.path-subject-cards-single { max-width: 420px }
+
+.catalog-chapter-planned { background: var(--surface-soft) }
+
+.catalog-chapter-planned .catalog-chapter-heading {
+  background: transparent;
+  border-bottom-color: var(--line-soft);
+}
+
+.catalog-chapter-planned .catalog-number { color: #b9c0b4 }
+
+.catalog-planned-note {
+  padding: 13px 17px 15px;
+  color: #8a9286;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .subject-coming-soon {
   padding: 28px;
   border: 1px solid var(--line);

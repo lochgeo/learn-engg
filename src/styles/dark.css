@@ -276,3 +276,31 @@
   .dark .lesson-prose,
   .dark .lesson-deck { color: #bdc9c2 }
 }
+
+/* Path cards, planned chapters and search filters */
+.dark .path-card.card-selected {
+  border-color: #4a6558;
+  box-shadow: inset 0 0 0 1px #263a32;
+}
+
+.dark .path-subject-line { color: #a9b7ae }
+
+.dark .catalog-chapter-planned { background: #1c2826 }
+
+.dark .catalog-chapter-planned .catalog-chapter-heading { border-color: #303e3f }
+
+.dark .catalog-chapter-planned .catalog-number,
+.dark .catalog-planned-note { color: #a6b4ac }
+
+.dark .search-filter {
+  border-color: #354448;
+  color: #bdc8c1;
+}
+
+.dark .search-filter:hover { background: #202d2c }
+
+.dark .search-filter-active {
+  background: #263a32;
+  border-color: #3d5a49;
+  color: #d7ebd9;
+}

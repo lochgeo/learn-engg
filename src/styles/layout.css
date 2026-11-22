@@ -78,6 +78,17 @@
   padding-bottom: 9px;
 }
 
+.track-group + .track-group { margin-top: 17px }
+
+.track-label {
+  padding: 0 9px 7px;
+  margin-top: 17px;
+}
+
+.track-group:first-child .track-label { margin-top: 14px }
+
+.subject-planned { color: #b9bdb5 }
+
 .subject-link { height: 40px }
 
 .subject-link:hover,
