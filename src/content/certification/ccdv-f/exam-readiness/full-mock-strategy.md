@@ -21,7 +21,7 @@ If you look up at item 30 and the clock says 85, you are 17 minutes behind and o
 
 ### The two-pass approach
 
-- **Pass 1, minutes 0–95.** Answer what you can inside about 90 seconds. The moment an item needs a real calculation, a memory you do not have, or a third re-read, choose your best option, flag it, and move. Never leave a blank in pass 1.
+- **Pass 1, minutes 0–95.** Answer what you can inside about 90 seconds. The moment an item needs a real calculation, a memory you do not have, or a third re-read, choose your best option, flag it (mark for review), and move. Never leave a blank in pass 1.
 - **Pass 2, minutes 95–118.** Return to flags. Now you have time to think, and thinking is cheaper when the rest of the paper is already answered.
 - **Minutes 118–120.** Confirm nothing is blank. Do not start a new train of thought.
 
@@ -43,7 +43,7 @@ Do not assume partial credit exists for these items. Check the current official 
 
 ## Scenario questions: eliminate against requirements
 
-Scenario items are long because they contain constraints, and the correct option is the one that satisfies all of them with the least machinery. Read the final question first, then hunt the constraints:
+Scenario items are long because they contain constraints, and the correct option is the one that satisfies all of them with the least machinery. Treat the stem as a requirements document, not a story. Read the final question first, then hunt the constraints:
 
 1. **Does it meet every stated requirement?** One unmet constraint disqualifies an option, however elegant the rest of it.
 2. **Is it the smallest change that works?** A rewrite is rarely the answer when the scenario describes a working system with one defect.
@@ -58,6 +58,8 @@ The most common elimination error is ruling out the correct option because it so
 
 ## The distractors that keep winning
 
+Each distractor sells a feeling; the check in the right-hand column is what kills it.
+
 | Distractor | Why it attracts | The check that kills it |
 | --- | --- | --- |
 | More agency | Autonomy sounds like a better product | Does the scenario ask for determinism, auditability or a bounded task? Agency fights all three |
@@ -69,6 +71,8 @@ The most common elimination error is ruling out the correct option because it so
 Notice the pattern: each distractor trades a real property — determinism, concision, verification, structure, least privilege — for the feeling of doing more.
 
 ## When to change an answer
+
+Most answer changes make the score worse; make one only when you can state the reason in a single sentence.
 
 | Change it | Leave it |
 | --- | --- |

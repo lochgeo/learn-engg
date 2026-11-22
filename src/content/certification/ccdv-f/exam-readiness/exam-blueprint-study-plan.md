@@ -6,6 +6,8 @@ This is an **unofficial study guide**. It is built from the published exam facts
 
 ## What you are actually sitting
 
+Memorise these eight facts; everything else in this lesson builds on them.
+
 | Fact | Detail |
 | --- | --- |
 | Items | 53 |
@@ -20,6 +22,8 @@ This is an **unofficial study guide**. It is built from the published exam facts
 Two consequences follow immediately. First, a 720 pass line on a 100–1000 scale means you cannot coast on a strong domain: the paper is small, so a handful of items carries real weight. Second, $125 and a 14-day minimum wait make a speculative attempt expensive — in money, and in the fortnight you lose before you may sit it again.
 
 ## The eight domains and what they weigh
+
+The published weights, turned into item counts so you can feel the size of each domain.
 
 | Domain | Weight | Share of 53 items (approx.) |
 | --- | --- | --- |
@@ -39,6 +43,8 @@ Read the table as a budget. **Applications and Integration alone is a third of t
 Weight is not the same as difficulty, though. A 2.6% domain can still contain the item you miss, and Evaluation, Testing and Debugging supplies a habit of mind — build a test set, check the output, diagnose the failure — that leaks into the big scenario questions. Cover everything; invest by weight.
 
 ## A four-week plan that front-loads the weight
+
+With the weights in hand, the order of study is almost forced.
 
 Four weeks at roughly eight hours each is about 32 hours. Front-loading means the two heaviest domains land while your energy is highest and while there is still time to revisit them.
 
@@ -84,6 +90,8 @@ A worked re-weighting shows why this beats chasing a total. Suppose you sit 18 A
 - One short, mixed set of ten items for timing feel, then stop. Do not chase a score at 9 p.m.
 - Confirm the appointment, the test-centre location and the identification you must bring. Check the current official guide for the accepted ID rules.
 - Sleep. A 120-minute proctored paper rewards a rested reader more than a final hour of revision.
+
+The aim is to arrive rested and clear, not to squeeze in one more topic.
 
 <learning-block type="recap" title="On the exam">
 
