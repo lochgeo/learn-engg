@@ -135,11 +135,6 @@
   font-weight: 400;
 }
 
-.catalog-lesson-arrow {
-  margin-left: auto;
-  color: #84917e;
-}
-
 /* Path overview: the subjects inside one destination. */
 .path-subject-cards {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

@@ -330,13 +330,16 @@ function App() {
             const liveIds = new Set(subjectLessons.map((lesson) => lesson.chapter))
             const liveChapters = subjectChapters.filter((chapter) => liveIds.has(chapter.id))
             const isCurrent = activeSubjectId === subject.id
+            // Highlight the current subject, but only expand its chapter rail
+            // while the reader is actually inside that subject.
+            const showChapters = isCurrent && (view === 'subject' || view === 'lesson')
             const chapter = isCurrent
               ? liveChapters.find((item) => item.id === activeLesson.chapter) ?? liveChapters[0] ?? subjectChapters[0]
               : undefined
             const chapterLessons = chapter ? lessonsByChapter.get(chapter.id) ?? [] : []
             return <div className="subject-group" key={subject.id}>
               <a
-                aria-expanded={isCurrent && subjectChapters.length > 0}
+                aria-expanded={showChapters && subjectChapters.length > 0}
                 href={routeHref.subject(subject.id)}
                 onClick={followLink(() => openSubject(subject.id))}
                 className={`subject-link ${isCurrent ? 'subject-current' : ''}`}
@@ -344,9 +347,9 @@ function App() {
                 <span className={`subject-dot ${subject.color}`}>{subject.icon}</span>
                 <span className="subject-name">{subject.name}</span>
                 <span className={`subject-count ${liveChapters.length === 0 ? 'subject-planned' : ''}`}>{subject.plannedChapters ? String(subject.plannedChapters).padStart(2, '0') : 'Soon'}</span>
-                {subjectChapters.length > 0 && <span className="subject-caret">{isCurrent ? '⌄' : '›'}</span>}
+                {subjectChapters.length > 0 && <span className="subject-caret">{showChapters ? '⌄' : '›'}</span>}
               </a>
-              {isCurrent && chapter && <div className="chapter-nav" role="group" aria-label={`${subject.name} chapters`}>
+              {showChapters && chapter && <div className="chapter-nav" role="group" aria-label={`${subject.name} chapters`}>
                 <a
                   className={`chapter-heading ${view === 'lesson' && activeLesson.chapter === chapter.id ? 'chapter-current' : ''}`}
                   href={chapterLessons[0] ? routeHref.lesson(chapterLessons[0].id) : routeHref.subject(subject.id)}
@@ -377,7 +380,7 @@ function App() {
       </nav>
       <div className="sidebar-bottom">
         <div className="streak-card">
-          <div className="streak-top"><span>✳</span><span className="streak-days">{completed.length ? '1' : '0'} day streak</span></div>
+          <div className="streak-top"><span className="streak-days">{completed.length ? '1' : '0'} day streak</span></div>
           <p>A little progress each day adds up.</p>
           <div className="streak-bars">{['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((day, index) => <div key={index} className="streak-day"><span className={index < completed.length ? 'streak-filled' : ''} />{day}</div>)}</div>
         </div>
@@ -490,7 +493,7 @@ function App() {
             >
               <span className="result-icon">{subject?.icon ?? '◉'}</span>
               <span>{lesson.title}<small>{track?.name} · {subject?.name} · {lesson.chapterTitle}</small></span>
-              <span className="result-time">{lesson.duration} min ↗</span>
+              <span className="result-time">{lesson.duration} min</span>
             </a>
           }) : <div className="empty-search">No lessons found. Try a different search or path.</div>}
         </div>
@@ -519,7 +522,6 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
 
   return <div className="home-view">
     <div className="welcome-line">
-      <span className="welcome-pill"><span /> YOUR LEARNING SPACE</span>
       <span className="welcome-date">{new Intl.DateTimeFormat('en-IN', { weekday: 'long', month: 'long', day: '2-digit' }).format(new Date()).toUpperCase()}</span>
     </div>
     <section className="welcome-heading">
@@ -537,7 +539,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
 
     <div className="learning-grid">
       <section className="continue-section">
-        <div className="section-heading compact"><div><span className="eyebrow">KEEP THE MOMENTUM</span><h2>Continue learning</h2></div></div>
+        <div className="section-heading compact"><h2>Continue learning</h2></div>
         <a
           className="continue-card"
           href={continueLesson ? routeHref.lesson(continueLesson.id) : routeHref.path(activeTrackId)}
@@ -547,21 +549,20 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
             <div className="ring ring-a" /><div className="ring ring-b" />
             <span className="art-symbol">{continueSubject?.icon ?? activeTrack.icon}</span>
             <span className="art-caption">{continueSubject?.short ?? activeTrack.short}</span>
-            <span className="art-star">✳</span>
           </div>
           <div className="continue-info">
             <div className="continue-meta">
               <span className={`mini-dot ${continueSubject?.name.toLowerCase() ?? 'ccdv-f'}`} />
               {continueLesson && continueTrack && continueSubject
-                ? <>{continueTrack.name.toUpperCase()} <span className="meta-divider">·</span> {continueSubject.name.toUpperCase()}</>
-                : <>{activeTrack.name.toUpperCase()} <span className="meta-divider">·</span> IN PRODUCTION</>}
+                ? <>{continueTrack.name} <span className="meta-divider">·</span> {continueSubject.name}</>
+                : <>{activeTrack.name} <span className="meta-divider">·</span> in production</>}
             </div>
             <h3>{continueLesson ? continueLesson.title : `${activeTrack.name} is taking shape`}</h3>
             <p>{continueLesson
               ? `A ${continueLesson.duration}-minute lesson to build your understanding, one idea at a time.`
               : 'The chapter map is ready. Lessons will appear here as they are written.'}</p>
             <div className="continue-bottom">
-              <span className="resume-button">{continueLesson ? (lastLesson ? 'Resume lesson' : 'Start lesson') : 'Preview syllabus'} <span>→</span></span>
+              <span className="resume-button">{continueLesson ? (lastLesson ? 'Resume lesson' : 'Start lesson') : 'Preview syllabus'}</span>
               <span className="lesson-time">{continueLesson ? <>◷ {continueLesson.duration} min</> : 'Chapter by chapter'}</span>
             </div>
           </div>
@@ -569,8 +570,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
       </section>
       <aside className="weekly-card">
         <div className="weekly-top">
-          <div><span className="eyebrow">YOUR RHYTHM</span><h3>A steady pace<br />goes a long way.</h3></div>
-          <span className="weekly-icon">↗</span>
+          <div><h3>A steady pace<br />goes a long way.</h3></div>
         </div>
         <p>{activePathLessons.length
           ? <>You’ve completed <strong>{completedInPath} of {activePathLessons.length}</strong> live lessons in {activeTrack.name}.</>
@@ -579,11 +579,11 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
           <div className="weekly-progress-header"><span>PATH PROGRESS</span><strong>{activePathLessons.length ? `${pathProgress}%` : 'Soon'}</strong></div>
           <span className="progress-track"><span style={{ width: `${pathProgress}%` }} /></span>
         </div>
-        <div className="weekly-note"><span>✳</span> {nextLesson ? `Next up: ${nextLesson.title}` : activePathLessons.length ? 'Start with one lesson today.' : 'First chapter in production.'}</div>
+        <div className="weekly-note">{nextLesson ? `Next up: ${nextLesson.title}` : activePathLessons.length ? 'Start with one lesson today.' : 'First chapter in production.'}</div>
       </aside>
     </div>
 
-    <div className="section-heading"><div><span className="eyebrow">YOUR PATHS</span><h2>Choose a path</h2></div></div>
+    <div className="section-heading"><h2>Choose a path</h2></div>
     <div className="subject-cards">
       {tracks.map((track) => {
         const pathChapters = curriculum.filter((chapter) => chapter.track === track.id)
@@ -602,7 +602,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
           className={`course-card path-card card-${track.color} ${activeTrackId === track.id ? 'card-selected' : ''}`}
           onClick={followLink(() => openPath(track.id))}
         >
-          <div className="course-top"><span className="course-icon">{track.icon}</span><span className="course-arrow">↗</span></div>
+          <div className="course-top"><span className="course-icon">{track.icon}</span></div>
           <div className="course-name">
             <span className="course-title">{track.name}</span>
             <span className="chapter-total">{liveChapters.length ? `${liveChapters.length} of ${pathChapters.length} live` : `${pathChapters.length} planned`}</span>
@@ -636,7 +636,7 @@ function PathPage({ trackId, completed, openSubject, onBack }: {
     <a className="back-link" href={routeHref.home} onClick={followLink(onBack)}>← <span>All paths</span></a>
     <div className="subject-page-heading">
       <span className={`subject-page-icon ${track.color}`}>{track.icon}</span>
-      <div><span className="eyebrow">{track.label} · PATH</span><h1>{track.name}</h1><p>{track.description}</p></div>
+      <div><h1>{track.name}</h1><p>{track.description}</p></div>
     </div>
     <div className="subject-progress-summary">
       <span>{liveChapters.length} of {pathChapters.length} chapters live</span>
@@ -657,7 +657,7 @@ function PathPage({ trackId, completed, openSubject, onBack }: {
           className={`course-card card-${subject.color}`}
           onClick={followLink(() => openSubject(subject.id))}
         >
-          <div className="course-top"><span className="course-icon">{subject.icon}</span><span className="course-arrow">↗</span></div>
+          <div className="course-top"><span className="course-icon">{subject.icon}</span></div>
           <div className="course-name">
             <span className="course-title">{subject.name}</span>
             <span className="chapter-total">{subjectLive.length ? `${subjectLive.length} of ${chapters.length} live` : `${chapters.length} planned`}</span>
@@ -696,7 +696,7 @@ function SubjectPage({ subjectId, completed, openLesson, onBack }: {
     <a className="back-link" href={routeHref.path(track.id)} onClick={followLink(onBack)}>← <span>{track.name}</span></a>
     <div className="subject-page-heading">
       <span className={`subject-page-icon ${subject.color}`}>{subject.icon}</span>
-      <div><span className="eyebrow">{track.label} · SUBJECT</span><h1>{subject.name}</h1><p>{subject.description}</p></div>
+      <div><h1>{subject.name}</h1><p>{subject.description}</p></div>
     </div>
     {chapters.length ? <>
       <div className="subject-progress-summary">
@@ -711,7 +711,6 @@ function SubjectPage({ subjectId, completed, openLesson, onBack }: {
           <div className="catalog-chapter-heading">
             <span className="catalog-number">{String(chapter.number).padStart(2, '0')}</span>
             <div>
-              <span className="eyebrow">CHAPTER {chapter.number}{isLive ? '' : ' · PLANNED'}</span>
               <h2>{chapter.title}</h2>
               <p>{isLive ? `${chapterLessons.length} ${chapterLessons.length === 1 ? 'lesson' : 'lessons'} live` : `${chapter.plannedLessons} lessons planned`}</p>
             </div>
@@ -720,7 +719,6 @@ function SubjectPage({ subjectId, completed, openLesson, onBack }: {
             ? <div className="catalog-lessons">{chapterLessons.map((lesson) => <a key={lesson.id} className="catalog-lesson" href={routeHref.lesson(lesson.id)} onClick={followLink(() => openLesson(lesson))}>
               <span className="catalog-lesson-status">{completed.includes(lesson.id) ? '✓' : '○'}</span>
               <span className="catalog-lesson-title">{lesson.title}<small>{lesson.duration} min · {completed.includes(lesson.id) ? 'Completed' : 'Ready to study'}</small></span>
-              <span className="catalog-lesson-arrow">→</span>
             </a>)}</div>
             : <div className="catalog-planned-note">Lessons for this chapter are being written.</div>}
         </section>
@@ -756,8 +754,8 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
     <a className="back-link" href={routeHref.subject(lesson.subjectId)} onClick={followLink(onBack)}>← <span>All lessons</span></a>
     <div className="lesson-kicker">
       <span className="lesson-subject-dot">◉</span>
-      <span>{track?.name.toUpperCase()}</span>
-      <span aria-hidden="true">·</span>
+      <span className="lesson-kicker-track">{track?.name.toUpperCase()}</span>
+      <span className="lesson-kicker-track" aria-hidden="true">·</span>
       <span>{lesson.subject.toUpperCase()}</span>
       <span aria-hidden="true">·</span>
       <span>{lesson.chapterTitle.toUpperCase()}</span>
@@ -765,11 +763,10 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
     <div className="lesson-title-row">
       <div>
         <h1>{lesson.title}</h1>
-        <p className="lesson-deck">A clear, practical introduction. Learn the idea, see it at work, then try it yourself.</p>
       </div>
       <button className={`complete-button ${completed ? 'is-complete' : ''}`} onClick={onComplete}>{completed ? '✓ Completed' : '○ Mark complete'}</button>
     </div>
-    <div className="lesson-meta"><span>◷ {lesson.duration} min read</span><span>·</span><span>Updated for your learning path</span></div>
+    <div className="lesson-meta"><span>◷ {lesson.duration} min read</span></div>
     <div className="lesson-layout">
       <aside className="lesson-aside">
         <nav className={`toc-card ${compactRail && tocOpen ? 'is-open' : ''}`} aria-label="In this lesson">

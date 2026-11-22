@@ -28,6 +28,16 @@
 
 .lesson-kicker > span { white-space: nowrap }
 
+/* Desktop breadcrumbs already carry the same context; the kicker is for phones. */
+@media (min-width: 681px) {
+  .lesson-kicker { display: none }
+}
+
+/* Phones show subject and chapter; the path name lives in the breadcrumb. */
+@media (max-width: 680px) {
+  .lesson-kicker-track { display: none }
+}
+
 .lesson-subject-dot { color: #7092a1; font-size: 14px }
 
 .lesson-title-row {
@@ -42,13 +52,6 @@
   font: 600 32px/1.2 var(--serif);
   letter-spacing: -1.3px;
   margin: 0;
-}
-
-.lesson-deck {
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--muted-soft);
-  margin: 9px 0 0;
 }
 
 .complete-button {

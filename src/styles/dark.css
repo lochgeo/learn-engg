@@ -84,13 +84,6 @@
 
 .dark .reading-label { color: #aab8b1 }
 
-.dark .welcome-pill {
-  background: #24372f;
-  color: #b9d3ad;
-}
-
-.dark .welcome-pill span { background: #9cbd89 }
-
 .dark .resume-button { color: #b2c9a6 }
 
 .dark .welcome-date,
@@ -151,8 +144,8 @@
 .dark .art-caption { color: #b3c0ab }
 
 .dark .weekly-card {
-  background: #1d2a27;
-  border-color: #31423c;
+  background: transparent;
+  border-color: #2d3b3d;
 }
 
 .dark .weekly-card > p,
@@ -161,8 +154,6 @@
 
 .dark .weekly-card > p strong,
 .dark .weekly-progress-header strong { color: #c2d5b7 }
-
-.dark .weekly-icon { background: #2c4035; color: #b7ccaa }
 
 .dark .weekly-note { border-color: #34463e }
 
@@ -181,7 +172,6 @@
 .dark .lesson-prose h2,
 .dark .lesson-prose h3 { color: #e5eeea }
 
-.dark .lesson-deck,
 .dark .lesson-prose,
 .dark .lesson-aside,
 .dark .lesson-meta { color: #bdc9c2 }
@@ -290,8 +280,7 @@
 @media (min-width: 1200px) {
   .dark .course-card p,
   .dark .continue-info > p,
-  .dark .lesson-prose,
-  .dark .lesson-deck { color: #bdc9c2 }
+  .dark .lesson-prose { color: #bdc9c2 }
 }
 
 /* Path cards, planned chapters and search filters */

@@ -2,27 +2,7 @@
 .welcome-line {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.welcome-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #4d6249;
-  background: #eff3ec;
-  border-radius: var(--radius-pill);
-  padding: 6px 9px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .9px;
-}
-
-.welcome-pill span {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #78946f;
+  justify-content: flex-end;
 }
 
 .welcome-date {
@@ -188,8 +168,6 @@
 
 .card-teal .course-icon { background: #eaf3f1; color: #4e8b85 }
 
-.course-arrow { color: #adb2aa; font-size: 13px }
-
 .course-name {
   display: flex;
   justify-content: space-between;
@@ -333,19 +311,12 @@
   color: #6f7c66;
 }
 
-.art-star {
-  position: absolute;
-  right: 22px;
-  top: 21px;
-  color: #a3ad8b;
-}
-
 .continue-info { padding: 16px 17px 12px }
 
 .continue-meta {
   font-size: 10px;
-  letter-spacing: .6px;
-  font-weight: 700;
+  letter-spacing: .2px;
+  font-weight: 600;
   color: var(--muted-soft);
   display: flex;
   align-items: center;
@@ -394,15 +365,14 @@
   color: #49634d;
 }
 
-.resume-button span { padding-left: 7px }
-
 .lesson-time { font-size: 10px; color: var(--muted-soft) }
 
 .weekly-card {
-  border: 1px solid #e6e9df;
-  border-radius: var(--radius-md);
-  background: #f0f2eb;
-  padding: 17px 16px 13px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 18px 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -413,17 +383,6 @@
   font: 500 15px/1.4 var(--serif);
   letter-spacing: -.4px;
   margin: 8px 0 0;
-}
-
-.weekly-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #e2e8dc;
-  color: #839078;
-  font-size: 12px;
 }
 
 .weekly-card > p {
