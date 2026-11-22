@@ -108,6 +108,8 @@
   border-bottom: 1px solid var(--line);
   background: transparent;
   text-align: left;
+  text-decoration: none;
+  color: inherit;
 }
 
 .catalog-lesson:last-child { border-bottom: 0 }

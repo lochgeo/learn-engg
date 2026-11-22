@@ -10,6 +10,7 @@
   color: var(--muted-soft);
   font-size: 12px;
   padding: 2px 0 22px;
+  text-decoration: none;
 }
 
 .back-link span { margin-left: 5px }
@@ -173,11 +174,12 @@
   padding-top: 15px;
 }
 
-.lesson-pagination button {
+.lesson-pagination a {
   border: 0;
   background: none;
   color: #556b52;
   font-size: 11px;
+  text-decoration: none;
 }
 
 .lesson-pagination span { padding: 0 5px }

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent, type ReactNode } from 'react'
 import ReactMarkdown, { type Components } from 'react-markdown'
 import { createPortal } from 'react-dom'
 import remarkGfm from 'remark-gfm'
@@ -16,12 +16,20 @@ import {
   type Lesson,
   type TrackId,
 } from './content/manifest'
+import { hrefForRoute, isRootPath, routeFromPath, routeHref, type Route, type View } from './router'
 import 'katex/dist/katex.min.css'
 
-type View = 'home' | 'path' | 'subject' | 'lesson'
 type Heading = { id: string; label: string; level: 2 | 3 }
 const readingScales = [1, 1.2, 1.35, 1.5] as const
 const defaultReadingScale = 1.2
+
+// Internal navigation uses real links; modified clicks keep the browser's own
+// new-tab/new-window behaviour.
+const followLink = (navigate: () => void) => (event: MouseEvent<HTMLAnchorElement>) => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+  event.preventDefault()
+  navigate()
+}
 
 const subjectById = new Map(subjects.map((subject) => [subject.id, subject]))
 const trackById = new Map(tracks.map((track) => [track.id, track]))
@@ -36,6 +44,15 @@ for (const chapter of curriculum) {
   chaptersBySubject.set(chapter.subjectId, [...(chaptersBySubject.get(chapter.subjectId) ?? []), chapter])
 }
 for (const chapters of chaptersBySubject.values()) chapters.sort((a, b) => a.number - b.number)
+
+const initialRoute = routeFromPath(window.location.pathname)
+const initialLesson = initialRoute.view === 'lesson' ? lessons.find((lesson) => lesson.id === initialRoute.lessonId) : undefined
+const initialSubject = initialRoute.view === 'subject'
+  ? subjectById.get(initialRoute.subjectId)
+  : initialLesson ? subjectById.get(initialLesson.subjectId) : undefined
+const initialTrackId: TrackId = initialRoute.view === 'path'
+  ? initialRoute.trackId
+  : initialSubject?.track ?? 'class-11'
 
 const headingId = (value: string) => value
   .toLowerCase()
@@ -96,11 +113,11 @@ const useMediaQuery = (query: string) => {
 }
 
 function App() {
-  const [view, setView] = useState<View>('home')
-  const [activeId, setActiveId] = useState(lessons[0].id)
-  const [activeTrackId, setActiveTrackId] = useState<TrackId>('class-11')
-  const [activeSubjectId, setActiveSubjectId] = useState('class-11-physics')
-  const [lastLessonId, setLastLessonId] = useState(() => localStorage.getItem('studyroom-last-lesson') ?? '')
+  const [view, setView] = useState<View>(initialRoute.view)
+  const [activeId, setActiveId] = useState(initialLesson?.id ?? lessons[0].id)
+  const [activeTrackId, setActiveTrackId] = useState<TrackId>(initialTrackId)
+  const [activeSubjectId, setActiveSubjectId] = useState(initialSubject?.id ?? 'class-11-physics')
+  const [lastLessonId, setLastLessonId] = useState(() => initialLesson?.id ?? localStorage.getItem('studyroom-last-lesson') ?? '')
   const [completed, setCompleted] = useState<string[]>(() => saved('studyroom-completed', []))
   const [query, setQuery] = useState('')
   const [searchOpen, setSearchOpen] = useState(false)
@@ -126,6 +143,7 @@ function App() {
   const drawerMode = useMediaQuery('(max-width: 1024px)')
   const searchTriggerRef = useRef<HTMLButtonElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const currentPath = useRef(window.location.pathname)
 
   useEffect(() => { localStorage.setItem('studyroom-completed', JSON.stringify(completed)) }, [completed])
   useEffect(() => {
@@ -166,6 +184,46 @@ function App() {
   const activeSubject = subjectById.get(activeSubjectId) ?? subjects[0]
   const activeTrack = trackById.get(activeTrackId) ?? tracks[0]
 
+  // Browser back/forward moves between routes. Same-path hash changes are left
+  // alone so in-page heading anchors keep native scroll restoration.
+  useEffect(() => {
+    const handlePop = () => {
+      if (window.location.pathname === currentPath.current) return
+      applyRoute(routeFromPath(window.location.pathname))
+      currentPath.current = window.location.pathname
+      setSearchOpen(false)
+      setMobileMenu(false)
+      window.scrollTo(0, 0)
+    }
+    window.addEventListener('popstate', handlePop)
+    return () => window.removeEventListener('popstate', handlePop)
+  }, [])
+
+  // Unknown entry URLs fall back to home; a deep-linked heading is restored
+  // once the lesson has rendered.
+  useEffect(() => {
+    if (initialRoute.view === 'home' && !isRootPath(window.location.pathname)) {
+      history.replaceState(null, '', routeHref.home)
+      currentPath.current = window.location.pathname
+    }
+    const hash = window.location.hash.slice(1)
+    if (!hash) return
+    // Fonts can shift the page after first paint; reveal once layout settles.
+    const reveal = () => document.getElementById(hash)?.scrollIntoView()
+    requestAnimationFrame(reveal)
+    document.fonts?.ready.then(reveal)
+  }, [])
+
+  useEffect(() => {
+    document.title = view === 'lesson'
+      ? `${activeLesson.title} · ${activeSubject.name} · Studyroom`
+      : view === 'subject'
+        ? `${activeSubject.name} · ${activeTrack.name} · Studyroom`
+        : view === 'path'
+          ? `${activeTrack.name} · Studyroom`
+          : 'Studyroom - Class 11, Class 12 and Certification'
+  }, [view, activeId, activeSubjectId, activeTrackId])
+
   const filteredLessons = useMemo(() => {
     const term = query.trim().toLowerCase()
     return lessons
@@ -193,36 +251,46 @@ function App() {
     if (id) document.getElementById(`search-${id}`)?.scrollIntoView({ block: 'nearest' })
   }, [searchOpen, searchIndex, filteredLessons])
 
+  function applyRoute(route: Route) {
+    setView(route.view)
+    if (route.view === 'lesson') {
+      const lesson = lessons.find((item) => item.id === route.lessonId)
+      if (!lesson) return
+      setActiveId(lesson.id)
+      setActiveSubjectId(lesson.subjectId)
+      setActiveTrackId(lesson.track)
+      setLastLessonId(lesson.id)
+      localStorage.setItem('studyroom-last-lesson', lesson.id)
+    } else if (route.view === 'subject') {
+      const subject = subjectById.get(route.subjectId)
+      if (!subject) return
+      setActiveSubjectId(subject.id)
+      setActiveTrackId(subject.track)
+    } else if (route.view === 'path') {
+      setActiveTrackId(route.trackId)
+      const first = subjects.find((subject) => subject.track === route.trackId)
+      if (first) setActiveSubjectId(first.id)
+    }
+  }
+
+  function go(route: Route, replace = false) {
+    applyRoute(route)
+    const href = hrefForRoute(route)
+    if (replace) history.replaceState(null, '', href)
+    else history.pushState(null, '', href)
+    currentPath.current = window.location.pathname
+    setMobileMenu(false)
+    window.scrollTo(0, 0)
+  }
+
   function openLesson(lesson: Lesson) {
-    setActiveId(lesson.id)
-    setActiveSubjectId(lesson.subjectId)
-    setActiveTrackId(lesson.track)
-    setLastLessonId(lesson.id)
-    localStorage.setItem('studyroom-last-lesson', lesson.id)
-    setView('lesson')
+    go({ view: 'lesson', lessonId: lesson.id })
     setSearchOpen(false)
     setQuery('')
-    setMobileMenu(false)
-    window.scrollTo(0, 0)
   }
-  function openPath(trackId: TrackId) {
-    const first = subjects.find((subject) => subject.track === trackId)
-    setActiveTrackId(trackId)
-    if (first) setActiveSubjectId(first.id)
-    setView('path')
-    setMobileMenu(false)
-    window.scrollTo(0, 0)
-  }
-  function openSubject(subjectId: string) {
-    const subject = subjectById.get(subjectId)
-    if (!subject) return
-    setActiveSubjectId(subjectId)
-    setActiveTrackId(subject.track)
-    setView('subject')
-    setMobileMenu(false)
-    window.scrollTo(0, 0)
-  }
-  function goHome() { setView('home'); setMobileMenu(false); window.scrollTo(0, 0) }
+  function openPath(trackId: TrackId) { go({ view: 'path', trackId }) }
+  function openSubject(subjectId: string) { if (subjectById.has(subjectId)) go({ view: 'subject', subjectId }) }
+  function goHome() { go({ view: 'home' }) }
   function toggleComplete() { setCompleted((items) => items.includes(activeId) ? items.filter((id) => id !== activeId) : [...items, activeId]) }
   function goTo(offset: number) {
     const siblings = lessons.filter((lesson) => lesson.subjectId === activeLesson.subjectId)
@@ -245,14 +313,14 @@ function App() {
     <a className="skip-link" href="#main-content">Skip to content</a>
     {mobileMenu && <div className="sidebar-backdrop" onClick={() => setMobileMenu(false)} aria-hidden="true" />}
     <aside className={`sidebar ${mobileMenu ? 'sidebar-open' : ''}`} inert={drawerMode && !mobileMenu}>
-      <button className="brand" onClick={goHome} aria-label="Studyroom home">
+      <a className="brand" href={routeHref.home} onClick={followLink(goHome)} aria-label="Studyroom home">
         <span className="brand-mark">s.</span>
         <span>studyroom<span className="brand-dot">.</span></span>
-      </button>
+      </a>
       <div className="sidebar-label">YOUR CLASSROOM</div>
-      <button className={`nav-link ${view === 'home' ? 'selected' : ''}`} onClick={goHome}>
+      <a className={`nav-link ${view === 'home' ? 'selected' : ''}`} href={routeHref.home} onClick={followLink(goHome)}>
         <span className="nav-icon">⌂</span> Overview <span className="nav-arrow">⌘ 1</span>
-      </button>
+      </a>
       <nav className="subject-nav" aria-label="Paths and subjects">
         {tracks.map((track) => <div className="track-group" key={track.id}>
           <div className="sidebar-label track-label">{track.label}</div>
@@ -267,38 +335,41 @@ function App() {
               : undefined
             const chapterLessons = chapter ? lessonsByChapter.get(chapter.id) ?? [] : []
             return <div className="subject-group" key={subject.id}>
-              <button
+              <a
                 aria-expanded={isCurrent && subjectChapters.length > 0}
-                onClick={() => openSubject(subject.id)}
+                href={routeHref.subject(subject.id)}
+                onClick={followLink(() => openSubject(subject.id))}
                 className={`subject-link ${isCurrent ? 'subject-current' : ''}`}
               >
                 <span className={`subject-dot ${subject.color}`}>{subject.icon}</span>
                 <span className="subject-name">{subject.name}</span>
                 <span className={`subject-count ${liveChapters.length === 0 ? 'subject-planned' : ''}`}>{subject.plannedChapters ? String(subject.plannedChapters).padStart(2, '0') : 'Soon'}</span>
                 {subjectChapters.length > 0 && <span className="subject-caret">{isCurrent ? '⌄' : '›'}</span>}
-              </button>
+              </a>
               {isCurrent && chapter && <div className="chapter-nav" role="group" aria-label={`${subject.name} chapters`}>
-                <button
+                <a
                   className={`chapter-heading ${view === 'lesson' && activeLesson.chapter === chapter.id ? 'chapter-current' : ''}`}
-                  onClick={() => {
+                  href={chapterLessons[0] ? routeHref.lesson(chapterLessons[0].id) : routeHref.subject(subject.id)}
+                  onClick={followLink(() => {
                     const first = chapterLessons[0]
                     if (first) openLesson(first)
                     else openSubject(subject.id)
-                  }}
+                  })}
                 >
                   <span className="chapter-number">{String(chapter.number).padStart(2, '0')}</span>
                   {chapter.title}
-                </button>
-                {view === 'lesson' && activeLesson.chapter === chapter.id && chapterLessons.map((lesson) => <button
+                </a>
+                {view === 'lesson' && activeLesson.chapter === chapter.id && chapterLessons.map((lesson) => <a
                   key={lesson.id}
                   className={`chapter-link ${lesson.id === activeId ? 'chapter-active' : ''}`}
-                  onClick={() => openLesson(lesson)}
+                  href={routeHref.lesson(lesson.id)}
+                  onClick={followLink(() => openLesson(lesson))}
                 >
                   <span className="chapter-line" />{lesson.title}
-                </button>)}
-                <button className="chapter-more" onClick={() => openSubject(subject.id)}>
+                </a>)}
+                <a className="chapter-more" href={routeHref.subject(subject.id)} onClick={followLink(() => openSubject(subject.id))}>
                   All chapters <span>→</span>
-                </button>
+                </a>
               </div>}
             </div>
           })}
@@ -330,7 +401,7 @@ function App() {
           {view === 'home'
             ? <span className="crumb-root">All paths</span>
             : <>
-              <span className="crumb-root">{activeTrack.name}</span>
+              <a className="crumb-root" href={routeHref.path(activeTrack.id)} onClick={followLink(() => openPath(activeTrack.id))}>{activeTrack.name}</a>
               {view !== 'path' && <>
                 <span className="crumb-divider">/</span>
                 <span>{activeSubject.name}</span>
@@ -409,17 +480,18 @@ function App() {
           {filteredLessons.length ? filteredLessons.map((lesson, index) => {
             const subject = subjectById.get(lesson.subjectId)
             const track = trackById.get(lesson.track)
-            return <button
+            return <a
               id={`search-${lesson.id}`}
               key={lesson.id}
+              href={routeHref.lesson(lesson.id)}
               className={`search-result ${index === searchIndex ? 'search-result-active' : ''}`}
               onMouseMove={() => setSearchIndex(index)}
-              onClick={() => openLesson(lesson)}
+              onClick={followLink(() => openLesson(lesson))}
             >
               <span className="result-icon">{subject?.icon ?? '◉'}</span>
               <span>{lesson.title}<small>{track?.name} · {subject?.name} · {lesson.chapterTitle}</small></span>
               <span className="result-time">{lesson.duration} min ↗</span>
-            </button>
+            </a>
           }) : <div className="empty-search">No lessons found. Try a different search or path.</div>}
         </div>
         <div className="search-footer">↑↓ to navigate <span>↵ to open</span></div>
@@ -466,7 +538,11 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
     <div className="learning-grid">
       <section className="continue-section">
         <div className="section-heading compact"><div><span className="eyebrow">KEEP THE MOMENTUM</span><h2>Continue learning</h2></div></div>
-        <button className="continue-card" onClick={() => continueLesson ? openLesson(continueLesson) : openPath(activeTrackId)}>
+        <a
+          className="continue-card"
+          href={continueLesson ? routeHref.lesson(continueLesson.id) : routeHref.path(activeTrackId)}
+          onClick={followLink(() => continueLesson ? openLesson(continueLesson) : openPath(activeTrackId))}
+        >
           <div className="continue-art">
             <div className="ring ring-a" /><div className="ring ring-b" />
             <span className="art-symbol">{continueSubject?.icon ?? activeTrack.icon}</span>
@@ -489,7 +565,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
               <span className="lesson-time">{continueLesson ? <>◷ {continueLesson.duration} min</> : 'Chapter by chapter'}</span>
             </div>
           </div>
-        </button>
+        </a>
       </section>
       <aside className="weekly-card">
         <div className="weekly-top">
@@ -520,10 +596,11 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
         const subjectLine = pathSubjects
           .map((subject) => (liveSubjects > 0 && !lessons.some((lesson) => lesson.subjectId === subject.id) ? `${subject.name} (soon)` : subject.name))
           .join(' · ')
-        return <button
+        return <a
           key={track.id}
+          href={routeHref.path(track.id)}
           className={`course-card path-card card-${track.color} ${activeTrackId === track.id ? 'card-selected' : ''}`}
-          onClick={() => openPath(track.id)}
+          onClick={followLink(() => openPath(track.id))}
         >
           <div className="course-top"><span className="course-icon">{track.icon}</span><span className="course-arrow">↗</span></div>
           <div className="course-name">
@@ -536,7 +613,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
             <span className="progress-track"><span style={{ width: `${progress ?? 0}%` }} /></span>
             <span>{progress === null ? 'In production' : `${progress}%`}</span>
           </div>
-        </button>
+        </a>
       })}
     </div>
   </div>
@@ -556,7 +633,7 @@ function PathPage({ trackId, completed, openSubject, onBack }: {
   const pathSubjects = subjects.filter((subject) => subject.track === trackId)
 
   return <div className="subject-page path-page">
-    <button className="back-link" onClick={onBack}>← <span>All paths</span></button>
+    <a className="back-link" href={routeHref.home} onClick={followLink(onBack)}>← <span>All paths</span></a>
     <div className="subject-page-heading">
       <span className={`subject-page-icon ${track.color}`}>{track.icon}</span>
       <div><span className="eyebrow">{track.label} · PATH</span><h1>{track.name}</h1><p>{track.description}</p></div>
@@ -574,10 +651,11 @@ function PathPage({ trackId, completed, openSubject, onBack }: {
         const subjectLive = chapters.filter((chapter) => liveIds.has(chapter.id))
         const subjectCompleted = subjectLessons.filter((lesson) => completed.includes(lesson.id)).length
         const progress = subjectLessons.length ? Math.round(subjectCompleted / subjectLessons.length * 100) : null
-        return <button
+        return <a
           key={subject.id}
+          href={routeHref.subject(subject.id)}
           className={`course-card card-${subject.color}`}
-          onClick={() => openSubject(subject.id)}
+          onClick={followLink(() => openSubject(subject.id))}
         >
           <div className="course-top"><span className="course-icon">{subject.icon}</span><span className="course-arrow">↗</span></div>
           <div className="course-name">
@@ -589,7 +667,7 @@ function PathPage({ trackId, completed, openSubject, onBack }: {
             <span className="progress-track"><span style={{ width: `${progress ?? 0}%` }} /></span>
             <span>{progress === null ? 'In production' : `${progress}%`}</span>
           </div>
-        </button>
+        </a>
       })}
     </div>
   </div>
@@ -615,7 +693,7 @@ function SubjectPage({ subjectId, completed, openLesson, onBack }: {
   const completedCount = subjectLessons.filter((lesson) => completed.includes(lesson.id)).length
 
   return <div className="subject-page">
-    <button className="back-link" onClick={onBack}>← <span>{track.name}</span></button>
+    <a className="back-link" href={routeHref.path(track.id)} onClick={followLink(onBack)}>← <span>{track.name}</span></a>
     <div className="subject-page-heading">
       <span className={`subject-page-icon ${subject.color}`}>{subject.icon}</span>
       <div><span className="eyebrow">{track.label} · SUBJECT</span><h1>{subject.name}</h1><p>{subject.description}</p></div>
@@ -639,11 +717,11 @@ function SubjectPage({ subjectId, completed, openLesson, onBack }: {
             </div>
           </div>
           {isLive
-            ? <div className="catalog-lessons">{chapterLessons.map((lesson) => <button key={lesson.id} className="catalog-lesson" onClick={() => openLesson(lesson)}>
+            ? <div className="catalog-lessons">{chapterLessons.map((lesson) => <a key={lesson.id} className="catalog-lesson" href={routeHref.lesson(lesson.id)} onClick={followLink(() => openLesson(lesson))}>
               <span className="catalog-lesson-status">{completed.includes(lesson.id) ? '✓' : '○'}</span>
               <span className="catalog-lesson-title">{lesson.title}<small>{lesson.duration} min · {completed.includes(lesson.id) ? 'Completed' : 'Ready to study'}</small></span>
               <span className="catalog-lesson-arrow">→</span>
-            </button>)}</div>
+            </a>)}</div>
             : <div className="catalog-planned-note">Lessons for this chapter are being written.</div>}
         </section>
       })}</div>
@@ -659,6 +737,10 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
   const [tocOpen, setTocOpen] = useState(false)
   const [objectivesOpen, setObjectivesOpen] = useState(false)
   const track = trackById.get(lesson.track)
+  const siblings = lessons.filter((item) => item.subjectId === lesson.subjectId)
+  const siblingIndex = siblings.findIndex((item) => item.id === lesson.id)
+  const previousLesson = siblings[siblingIndex - 1]
+  const nextLesson = siblings[siblingIndex + 1]
 
   useEffect(() => {
     setActiveHeading(headings[0]?.id)
@@ -671,7 +753,7 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
   }, [headings])
 
   return <article className="lesson-page">
-    <button className="back-link" onClick={onBack}>← <span>All lessons</span></button>
+    <a className="back-link" href={routeHref.subject(lesson.subjectId)} onClick={followLink(onBack)}>← <span>All lessons</span></a>
     <div className="lesson-kicker">
       <span className="lesson-subject-dot">◉</span>
       <span>{track?.name.toUpperCase()}</span>
@@ -738,8 +820,12 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
           <span>Nice work showing up today.</span>
         </div>
         <div className="lesson-pagination">
-          <button onClick={() => onNavigate(-1)}>← <span>Previous lesson</span></button>
-          <button onClick={() => onNavigate(1)}><span>Next lesson</span> →</button>
+          {previousLesson
+            ? <a href={routeHref.lesson(previousLesson.id)} onClick={followLink(() => onNavigate(-1))}>← <span>Previous lesson</span></a>
+            : <span />}
+          {nextLesson
+            ? <a href={routeHref.lesson(nextLesson.id)} onClick={followLink(() => onNavigate(1))}><span>Next lesson</span> →</a>
+            : <span />}
         </div>
       </div>
     </div>

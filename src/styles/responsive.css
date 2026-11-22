@@ -167,7 +167,7 @@
   .complete-button { font-size: 11px; padding: 10px 13px }
 
   .lesson-actions > span,
-  .lesson-pagination button { font-size: 11px }
+  .lesson-pagination a { font-size: 11px }
 
   .lesson-prose .katex-display { margin: 1.65rem auto; padding: 1.2rem 1.6rem }
 
@@ -403,7 +403,7 @@
 
   .lesson-prose h2 { font-size: 17px }
 
-  .lesson-pagination button { font-size: 10px }
+  .lesson-pagination a { font-size: 10px }
 
   .lesson-meta { font-size: 10px }
 
