@@ -10,7 +10,7 @@ Treat Claude as a **confused deputy**, not as a security principal.
 
 A confused deputy is a program with real authority that can be talked into using it on someone else's behalf. The model has no identity of its own worth trusting and no reliable way to tell your instructions from an attacker's instructions, because both arrive as tokens in the same context window. Anything that reaches the context — a user turn, a retrieved document, a tool result, a file, a web page — can influence the next action.
 
-So the security question is never "how do I stop the model being fooled?" That is unwinnable. The question is: **if the model is fooled, what can it actually reach?** Every control in this lesson limits blast radius rather than intent.
+So the security question is never "how do I stop the model being fooled?" That is unwinnable. The question is: **if the model is fooled, what can it actually reach?** Every control in this lesson limits blast radius — the damage a fooled model can still do — rather than trying to change its intent.
 
 Two consequences follow, and they carry most of the marks:
 
@@ -36,6 +36,8 @@ The OWASP Top 10 for LLM Applications is the usual vocabulary. The names matter 
 | **System prompt leakage** | Internal instructions, keys or customer IDs end up in output | Never put secrets in prompts; assume prompts are readable |
 
 ### Trust boundaries you should be able to draw
+
+A threat only becomes actionable once you can say where it crosses from one party to another. These are the five crossings worth drawing:
 
 1. **User to application.** Everything from the user is untrusted, including uploaded files and their filenames.
 2. **Application to model.** Your prompt, tool definitions and retrieved context all share one channel; the model cannot cryptographically separate them.

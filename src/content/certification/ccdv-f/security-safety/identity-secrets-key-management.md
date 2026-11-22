@@ -97,6 +97,8 @@ def get_customer_orders(tenant_id: str, user: dict, order_id: str) -> list[dict]
 
 Four things are deliberately absent: the secret in the return value, the secret in the model's context, a model-supplied tenant id used unverified, and any write path. Each absence is a control.
 
+Issuing a credential is the easy part; its lifetime and scope are controls you have to keep operating.
+
 ### Rotation
 
 - **Automate it.** Manual rotation is a task that gets deferred until an incident forces it.

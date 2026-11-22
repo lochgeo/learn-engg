@@ -29,6 +29,8 @@ Match the clue in the stem to the control it demands.
 | Something is wrong in production right now | Contain first: kill switch to the deterministic fallback, then investigate |
 | A user is in distress, or the stakes are legal or medical | Escalate to a human, whatever the model says |
 
+Work through the table until the mapping feels automatic, then take the check below closed book.
+
 ## Mastery check
 
 ### 1. The poisoned PDF

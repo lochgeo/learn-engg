@@ -84,6 +84,8 @@ async function triage(ticket: Ticket, user: User) {
 
 Note the shape of the design: bounded attempts, typed enums instead of free text where a category is needed, PII redaction on the way out, and a human queue as the fallback rather than a guessed answer.
 
+A validated endpoint is only half the work; the other half is getting it into production without exposing everyone at once.
+
 ### Roll it out in stages
 
 1. **Red-team before launch.** Run a repeatable suite: jailbreak prompts, injection strings inside documents, PII-extraction attempts, tool-abuse chains, and ordinary edge cases (empty input, huge input, other languages). Keep it in CI so a prompt change cannot silently reopen a hole.

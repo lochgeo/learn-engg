@@ -1,6 +1,8 @@
 ## When "please don't" is not enough
 
-A line in `CLAUDE.md` that says "never run destructive commands" is advice. Claude usually follows it, and occasionally does not — because it is a language model reading text, and text can be ambiguous, stale, or contradicted by something else in the context. For a rule that must hold every time, you need code that runs whether the model cooperates or not. That is what **Claude Code hooks** are: commands your harness runs at defined lifecycle points, the deterministic layer under the probabilistic one, worth about **1%** of this exam — usually a single question on which control belongs in a hook rather than a prompt.
+A line in `CLAUDE.md` that says "never run destructive commands" is advice. Claude usually follows it, and occasionally does not — because it is a language model reading text, and text can be ambiguous, stale, or contradicted by something else in the context. For a rule that must hold every time, you need code that runs whether the model cooperates or not.
+
+That is what **Claude Code hooks** are: commands your harness runs at defined lifecycle points, the deterministic layer under the probabilistic one. Hooks are worth about **1%** of this exam — usually a single question on which control belongs in a hook rather than a prompt.
 
 ## The big idea
 
@@ -106,6 +108,8 @@ except Exception as exc:  # parse failure, missing field, anything unexpected
 ```
 
 The `except` branch is the point of the exercise. Without it, a malformed payload becomes an allow.
+
+A hook that blocks silently is only half a control. The other half is knowing what it decided, and why.
 
 ### Auditing and observability
 
