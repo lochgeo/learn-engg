@@ -36,7 +36,7 @@ input:focus-visible {
 .sidebar-label,
 .eyebrow {
   color: var(--muted-soft);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1.15px;
   font-weight: 700;
 }

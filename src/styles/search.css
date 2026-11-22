@@ -68,7 +68,7 @@
   color: var(--muted-soft);
   border-radius: var(--radius-pill);
   padding: 4px 8px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.2;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .search-caption {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: var(--muted-soft);
   padding: 15px 8px 7px;
@@ -128,7 +128,7 @@
 .result-time {
   margin-left: auto;
   color: var(--muted-soft);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .empty-search {
@@ -141,7 +141,7 @@
   border-top: 1px solid var(--line);
   padding: 9px 8px 2px;
   color: var(--muted-soft);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .search-footer span { margin-left: 15px }

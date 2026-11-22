@@ -6,7 +6,7 @@
 }
 
 .welcome-date {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   color: var(--muted-soft);
 }
@@ -188,7 +188,7 @@
 .chapter-total {
   flex: none;
   white-space: nowrap;
-  font: 9px 'DM Sans', sans-serif;
+  font: 11px 'DM Sans', sans-serif;
   color: var(--muted-soft);
 }
 
@@ -203,7 +203,7 @@
   align-items: center;
   gap: 9px;
   color: var(--muted-soft);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* Path cards: three destinations, with their subjects and live progress. */
@@ -226,9 +226,16 @@
 
 .path-subject-line {
   color: var(--muted-soft);
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.55;
   margin-bottom: 11px;
+}
+
+.path-next {
+  color: var(--muted-soft);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .path-card .course-progress { margin-top: auto }
@@ -306,7 +313,7 @@
   position: absolute;
   bottom: 16px;
   left: 14px;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 1.5px;
   color: #6f7c66;
 }
@@ -314,7 +321,7 @@
 .continue-info { padding: 16px 17px 12px }
 
 .continue-meta {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .2px;
   font-weight: 600;
   color: var(--muted-soft);
@@ -365,7 +372,7 @@
   color: #49634d;
 }
 
-.lesson-time { font-size: 10px; color: var(--muted-soft) }
+.lesson-time { font-size: 11px; color: var(--muted-soft) }
 
 .weekly-card {
   border: 0;
@@ -386,7 +393,7 @@
 }
 
 .weekly-card > p {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.65;
   color: var(--muted-soft);
   margin: 14px 0 19px;
@@ -397,14 +404,14 @@
 .weekly-progress-header {
   display: flex;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .8px;
   color: var(--muted-soft);
   margin-bottom: 7px;
 }
 
 .weekly-progress-header strong {
-  font-size: 10px;
+  font-size: 11px;
   color: #4e6248;
   letter-spacing: 0;
 }
@@ -414,7 +421,43 @@
   margin-top: 15px;
   padding-top: 11px;
   color: var(--muted-soft);
-  font-size: 9px;
+  font-size: 10px;
 }
 
-.weekly-note span { color: #91a17b; margin-right: 5px }
+.up-next {
+  border-top: 1px solid var(--line);
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.up-next h4 {
+  font: 600 12px/1.4 var(--serif);
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.up-next a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink-body);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.up-next a:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.up-next a:hover { color: var(--accent-ink) }
+
+.up-next a span:last-child {
+  flex: none;
+  color: var(--muted-soft);
+  font-size: 11px;
+}

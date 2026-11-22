@@ -18,7 +18,7 @@
   .search-trigger kbd { font-size: 10px }
 
   .page-content {
-    max-width: 1320px;
+    max-width: 1440px;
     padding: 45px clamp(40px, 4.6vw, 72px) 84px;
   }
 
@@ -35,15 +35,15 @@
 
   .subject-count { font-size: 11px }
 
-  .chapter-heading { font-size: 10px; padding-block: 8px }
+  .chapter-heading { font-size: 11px; padding-block: 8px }
 
   .chapter-link { font-size: 11px; padding-block: 8px }
 
-  .chapter-more { font-size: 10px }
+  .chapter-more { font-size: 11px }
 
-  .welcome-date { font-size: 10px }
+  .welcome-date { font-size: 11px }
 
-  .welcome-heading { min-height: 246px; margin-top: 12px }
+  .welcome-heading { min-height: 220px; margin-top: 12px }
 
   .welcome-heading h1 { font-size: 56px; letter-spacing: -3px }
 
@@ -58,7 +58,7 @@
 
   .section-heading h2 { font-size: 22px }
 
-  .eyebrow { font-size: 10px; letter-spacing: 1.4px }
+  .eyebrow { font-size: 11px; letter-spacing: 1.4px }
 
   .subject-cards { gap: 16px }
 
@@ -68,7 +68,7 @@
     border-radius: var(--radius-lg);
   }
 
-  .path-card { min-height: 208px }
+  .path-card { min-height: 188px }
 
   .path-card .course-title { font-size: 18px }
 
@@ -82,7 +82,7 @@
 
   .course-card p { font-size: 12px; margin: 6px 0 15px }
 
-  .course-progress { font-size: 10px }
+  .course-progress { font-size: 11px }
 
   .learning-grid { gap: 22px; margin-top: 38px }
 
@@ -100,7 +100,7 @@
 
   .continue-info { padding: 21px 22px 16px }
 
-  .continue-meta { font-size: 10px }
+  .continue-meta { font-size: 11px }
 
   .continue-info h3 { font-size: 18px; margin: 12px 0 7px }
 
@@ -110,25 +110,29 @@
 
   .resume-button { font-size: 11px }
 
-  .lesson-time { font-size: 10px }
+  .lesson-time { font-size: 11px }
 
-  .weekly-card { padding: 22px 0 0 }
+  .weekly-card {
+    border-top: 0;
+    border-left: 1px solid var(--line);
+    padding: 2px 0 0 26px;
+  }
 
   .weekly-top h3 { font-size: 19px }
 
   .weekly-card > p { font-size: 11px }
 
-  .weekly-progress-header { font-size: 9px }
+  .weekly-progress-header { font-size: 10px }
 
   .weekly-progress-header strong { font-size: 11px }
 
-  .weekly-note { font-size: 10px }
+  .weekly-note { font-size: 11px }
 
   .lesson-page { max-width: 980px }
 
   .lesson-title-row h1 { font-size: 40px }
 
-  .lesson-meta { font-size: 11px }
+  .lesson-meta { font-size: 12px }
 
   .lesson-layout {
     grid-template-columns: 205px minmax(0, 1fr);
@@ -250,7 +254,7 @@
     gap: 6px;
     margin-left: 5px;
     margin-right: 8px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .breadcrumb > *:not(:last-child) { display: none }
@@ -281,12 +285,12 @@
 
   .welcome-heading h1 { font-size: 38px }
 
-  .welcome-heading p { font-size: 10px }
+  .welcome-heading p { font-size: 11px }
 
   /* Decorative orbit only competes with the resume card on a phone. */
   .welcome-illustration { display: none }
 
-  .welcome-date { font-size: 9px }
+  .welcome-date { font-size: 10px }
 
   .learning-grid { margin-top: 20px }
 
@@ -297,7 +301,7 @@
 
   .weekly-top h3 { display: none }
 
-  .weekly-card > p { font-size: 10px; margin: 10px 0 12px }
+  .weekly-card > p { font-size: 11px; margin: 10px 0 12px }
 
   .weekly-note { display: none }
 
@@ -311,13 +315,13 @@
 
   .continue-info { padding: 13px 11px }
 
-  .continue-meta { font-size: 9px; flex-wrap: wrap }
+  .continue-meta { font-size: 10px; flex-wrap: wrap }
 
-  .continue-info h3 { font-size: 13px; line-height: 1.4 }
+  .continue-info h3 { font-size: 14px; line-height: 1.4 }
 
-  .continue-info > p { font-size: 10px }
+  .continue-info > p { font-size: 11px }
 
-  .resume-button { font-size: 10px }
+  .resume-button { font-size: 11px }
 
   .section-heading { margin-top: 25px }
 
@@ -395,13 +399,13 @@
 
   .objectives-card p { font-size: 12px }
 
-  .lesson-prose { font-size: 13px }
+  .lesson-prose { font-size: 14px }
 
   .lesson-prose h2 { font-size: 17px }
 
-  .lesson-pagination a { font-size: 10px }
+  .lesson-pagination a { font-size: 11px }
 
-  .lesson-meta { font-size: 10px }
+  .lesson-meta { font-size: 11px }
 
   .desktop-break { display: none }
 
@@ -416,7 +420,7 @@
   /* Phones wrap code instead of asking for a sideways scroll. */
   .lesson-prose pre {
     padding: 10px 11px;
-    font-size: 10px;
+    font-size: 11px;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
   }
@@ -430,13 +434,13 @@
 
   .lesson-prose figure.lesson-figure { margin: 20px 0 }
 
-  .lesson-prose figure.lesson-figure figcaption { font-size: 10px }
+  .lesson-prose figure.lesson-figure figcaption { font-size: 11px }
 
   .lesson-prose figure.lesson-figure--portrait { max-width: 290px }
 
   .font-controls { padding: 1px }
 
-  .font-size-button { font-size: 10px; padding: 6px 4px }
+  .font-size-button { font-size: 11px; padding: 6px 4px }
 
   .reading-label { display: none }
 

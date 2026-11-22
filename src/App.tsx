@@ -21,7 +21,7 @@ import 'katex/dist/katex.min.css'
 
 type Heading = { id: string; label: string; level: 2 | 3 }
 const readingScales = [1, 1.2, 1.35, 1.5] as const
-const defaultReadingScale = 1.2
+const defaultReadingScale = 1
 
 // Internal navigation uses real links; modified clicks keep the browser's own
 // new-tab/new-window behaviour.
@@ -131,9 +131,9 @@ function App() {
   const [fontScale, setFontScale] = useState(() => {
     const savedScale = Number(localStorage.getItem('studyroom-reading-scale'))
     if (!readingScales.includes(savedScale as typeof readingScales[number])) return defaultReadingScale
-    // One-time upgrade: anyone still on the old 100% default moves to the new larger default.
-    if (savedScale === 1 && localStorage.getItem('studyroom-reading-scale-v2') !== 'done') {
-      localStorage.setItem('studyroom-reading-scale-v2', 'done')
+    // 1.2 was the old default, so a stored 1.2 means "never chose"; reset it once.
+    if (savedScale === 1.2 && localStorage.getItem('studyroom-reading-scale-v3') !== 'done') {
+      localStorage.setItem('studyroom-reading-scale-v3', 'done')
       return defaultReadingScale
     }
     return savedScale
@@ -518,7 +518,10 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
   const continueTrack = continueLesson ? trackById.get(continueLesson.track) : undefined
   const completedInPath = activePathLessons.filter((lesson) => completed.includes(lesson.id)).length
   const pathProgress = activePathLessons.length ? Math.round(completedInPath / activePathLessons.length * 100) : 0
-  const nextLesson = activePathLessons.find((lesson) => !completed.includes(lesson.id))
+  const continueIndex = continueLesson ? activePathLessons.findIndex((lesson) => lesson.id === continueLesson.id) : -1
+  const upNext = (continueIndex >= 0 ? activePathLessons.slice(continueIndex + 1) : activePathLessons)
+    .filter((lesson) => !completed.includes(lesson.id))
+    .slice(0, 2)
 
   return <div className="home-view">
     <div className="welcome-line">
@@ -579,7 +582,19 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
           <div className="weekly-progress-header"><span>PATH PROGRESS</span><strong>{activePathLessons.length ? `${pathProgress}%` : 'Soon'}</strong></div>
           <span className="progress-track"><span style={{ width: `${pathProgress}%` }} /></span>
         </div>
-        <div className="weekly-note">{nextLesson ? `Next up: ${nextLesson.title}` : activePathLessons.length ? 'Start with one lesson today.' : 'First chapter in production.'}</div>
+        {upNext.length
+          ? <div className="up-next">
+            <h4>Up next</h4>
+            {upNext.map((lesson) => <a
+              key={lesson.id}
+              href={routeHref.lesson(lesson.id)}
+              onClick={followLink(() => openLesson(lesson))}
+            >
+              <span>{lesson.title}</span>
+              <span>{lesson.duration} min</span>
+            </a>)}
+          </div>
+          : <div className="weekly-note">{activePathLessons.length ? 'Every live lesson in this path is complete.' : 'First chapter in production.'}</div>}
       </aside>
     </div>
 
@@ -593,6 +608,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
         const progress = pathLessons.length ? Math.round(completedCount / pathLessons.length * 100) : null
         const pathSubjects = subjects.filter((subject) => subject.track === track.id)
         const liveSubjects = pathSubjects.filter((subject) => lessons.some((lesson) => lesson.subjectId === subject.id)).length
+        const nextPathLesson = pathLessons.find((lesson) => !completed.includes(lesson.id))
         const subjectLine = pathSubjects
           .map((subject) => (liveSubjects > 0 && !lessons.some((lesson) => lesson.subjectId === subject.id) ? `${subject.name} (soon)` : subject.name))
           .join(' · ')
@@ -609,6 +625,7 @@ function Home({ activeTrackId, lastLessonId, completed, openPath, openLesson }: 
           </div>
           <p>{track.description}</p>
           <div className="path-subject-line">{subjectLine}</div>
+          {pathLessons.length > 0 && <div className="path-next">{nextPathLesson ? `Next up: ${nextPathLesson.title}` : 'All live lessons complete'}</div>}
           <div className="course-progress">
             <span className="progress-track"><span style={{ width: `${progress ?? 0}%` }} /></span>
             <span>{progress === null ? 'In production' : `${progress}%`}</span>
