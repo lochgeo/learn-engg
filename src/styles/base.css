@@ -5,6 +5,7 @@ body {
   margin: 0;
   min-width: 360px;
   background: var(--paper);
+  color: var(--ink);
 }
 
 button {
@@ -32,8 +33,30 @@ input:focus-visible {
 /* Shared label treatment used by the sidebar, section headers and cards */
 .sidebar-label,
 .eyebrow {
-  color: #999e94;
-  font-size: 9px;
-  letter-spacing: 1.25px;
+  color: var(--muted-soft);
+  font-size: 10px;
+  letter-spacing: 1.15px;
   font-weight: 700;
 }
+
+/* First tab stop: jumps past the sidebar and top bar into the page. */
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 50;
+  transform: translateY(-160%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--accent-deep);
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-pop);
+}
+
+.skip-link:focus-visible { transform: none }
+
+#main-content { scroll-margin-top: 78px }

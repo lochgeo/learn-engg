@@ -228,6 +228,8 @@
 
 .dark .lesson-actions > span { color: #a6b4ad }
 
+.dark .lesson-kicker { color: #9fbd97 }
+
 .dark .lesson-pagination button,
 .dark .back-link { color: #b8d1b5 }
 
@@ -272,6 +274,8 @@
 .dark .lesson-prose figure.lesson-figure figcaption em { color: #87968d }
 
 /* Subject page */
+.dark .subject-page-heading p { color: #bdc9c2 }
+
 .dark .catalog-chapter-heading { background: #202d29 }
 
 .dark .catalog-number { color: #a9c29f }

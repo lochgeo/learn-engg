@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import ReactMarkdown, { type Components } from 'react-markdown'
+import { createPortal } from 'react-dom'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -105,7 +106,11 @@ function App() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchIndex, setSearchIndex] = useState(0)
   const [searchTrack, setSearchTrack] = useState<TrackId | 'all'>('all')
-  const [dark, setDark] = useState(() => localStorage.getItem('studyroom-theme') === 'dark')
+  const [dark, setDark] = useState(() => {
+    const savedTheme = localStorage.getItem('studyroom-theme')
+    if (savedTheme) return savedTheme === 'dark'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
   const [fontScale, setFontScale] = useState(() => {
     const savedScale = Number(localStorage.getItem('studyroom-reading-scale'))
     if (!readingScales.includes(savedScale as typeof readingScales[number])) return defaultReadingScale
@@ -119,10 +124,25 @@ function App() {
   const [mobileMenu, setMobileMenu] = useState(false)
   // Below the drawer breakpoint the sidebar is off-canvas, so it must leave the tab order.
   const drawerMode = useMediaQuery('(max-width: 1024px)')
+  const searchTriggerRef = useRef<HTMLButtonElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => { localStorage.setItem('studyroom-completed', JSON.stringify(completed)) }, [completed])
-  useEffect(() => { localStorage.setItem('studyroom-theme', dark ? 'dark' : 'light') }, [dark])
+  useEffect(() => {
+    localStorage.setItem('studyroom-theme', dark ? 'dark' : 'light')
+    // Theme lives on <html> so native UI (scrollbars, controls) follows it too.
+    const root = document.documentElement
+    root.classList.toggle('dark', dark)
+    root.style.colorScheme = dark ? 'dark' : 'light'
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101719' : '#f7f7f4')
+  }, [dark])
   useEffect(() => { localStorage.setItem('studyroom-reading-scale', String(fontScale)) }, [fontScale])
+  // Closing the drawer returns focus to the menu button instead of leaving it off-canvas.
+  useEffect(() => {
+    if (!drawerMode || mobileMenu) return
+    const active = document.activeElement
+    if (active && document.querySelector('.sidebar')?.contains(active)) menuButtonRef.current?.focus()
+  }, [mobileMenu, drawerMode])
   useEffect(() => {
     const handleShortcut = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
@@ -130,7 +150,13 @@ function App() {
         setSearchTrack('all')
         setSearchOpen(true)
       }
-      if (event.key === 'Escape') { setSearchOpen(false); setMobileMenu(false) }
+      if (event.key === 'Escape') {
+        if (document.querySelector('.search-modal')) {
+          setSearchOpen(false)
+          searchTriggerRef.current?.focus()
+        }
+        setMobileMenu(false)
+      }
     }
     window.addEventListener('keydown', handleShortcut)
     return () => window.removeEventListener('keydown', handleShortcut)
@@ -159,6 +185,13 @@ function App() {
   const markdown = content[`./${activeLesson.file}`] ?? ''
 
   useEffect(() => { setSearchIndex(0) }, [query, searchOpen, searchTrack])
+
+  // Keep the keyboard cursor visible while arrowing through a long result list.
+  useEffect(() => {
+    if (!searchOpen) return
+    const id = filteredLessons[searchIndex]?.id
+    if (id) document.getElementById(`search-${id}`)?.scrollIntoView({ block: 'nearest' })
+  }, [searchOpen, searchIndex, filteredLessons])
 
   function openLesson(lesson: Lesson) {
     setActiveId(lesson.id)
@@ -201,10 +234,15 @@ function App() {
     setSearchTrack('all')
     setSearchOpen(true)
   }
+  function closeSearch() {
+    setSearchOpen(false)
+    searchTriggerRef.current?.focus()
+  }
   const readingScaleIndex = readingScales.indexOf(fontScale as typeof readingScales[number])
   function changeReadingSize(direction: -1 | 1) { setFontScale(readingScales[Math.max(0, Math.min(readingScales.length - 1, readingScaleIndex + direction))]) }
 
-  return <div className={`app-shell ${dark ? 'dark' : ''}`} style={{ '--reading-scale': fontScale } as CSSProperties}>
+  return <div className="app-shell" style={{ '--reading-scale': fontScale } as CSSProperties}>
+    <a className="skip-link" href="#main-content">Skip to content</a>
     {mobileMenu && <div className="sidebar-backdrop" onClick={() => setMobileMenu(false)} aria-hidden="true" />}
     <aside className={`sidebar ${mobileMenu ? 'sidebar-open' : ''}`} inert={drawerMode && !mobileMenu}>
       <button className="brand" onClick={goHome} aria-label="Studyroom home">
@@ -279,9 +317,10 @@ function App() {
         </div>
       </div>
     </aside>
-    <main className="main-panel">
+    <main className="main-panel" id="main-content" tabIndex={-1}>
       <header className="topbar">
         <button
+          ref={menuButtonRef}
           className="mobile-menu"
           onClick={() => setMobileMenu(!mobileMenu)}
           aria-label={mobileMenu ? 'Close navigation' : 'Open navigation'}
@@ -303,7 +342,7 @@ function App() {
             </>}
         </div>
         <div className="top-actions">
-          <button className="search-trigger" onClick={openSearch}>
+          <button ref={searchTriggerRef} className="search-trigger" onClick={openSearch}>
             <span>⌕</span> Search anything <kbd>⌘ K</kbd>
           </button>
           <div className="font-controls" aria-label="Reading size">
@@ -324,8 +363,22 @@ function App() {
               : <LessonPage lesson={activeLesson} markdown={markdown} completed={completed.includes(activeId)} onComplete={toggleComplete} onBack={() => openSubject(activeLesson.subjectId)} onNavigate={goTo} />}
       </div>
     </main>
-    {searchOpen && <div className="search-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) setSearchOpen(false) }}>
-      <div className="search-modal" role="dialog" aria-modal="true" aria-label="Search lessons">
+    {searchOpen && createPortal(<div className="search-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) closeSearch() }}>
+      <div
+        className="search-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search lessons"
+        onKeyDown={(e) => {
+          if (e.key !== 'Tab') return
+          const items = e.currentTarget.querySelectorAll<HTMLElement>('input, button:not([disabled]), [href]')
+          if (!items.length) return
+          const first = items[0]
+          const last = items[items.length - 1]
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
+        }}
+      >
         <div className="search-input-row">
           <span>⌕</span>
           <input
@@ -335,7 +388,7 @@ function App() {
             aria-activedescendant={filteredLessons[searchIndex] ? `search-${filteredLessons[searchIndex].id}` : undefined}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => {
-              if (e.key === 'Escape') setSearchOpen(false)
+              if (e.key === 'Escape') closeSearch()
               if (e.key === 'ArrowDown') { e.preventDefault(); setSearchIndex((index) => Math.min(index + 1, filteredLessons.length - 1)) }
               if (e.key === 'ArrowUp') { e.preventDefault(); setSearchIndex((index) => Math.max(index - 1, 0)) }
               if (e.key === 'Enter' && filteredLessons[searchIndex]) openLesson(filteredLessons[searchIndex])
@@ -352,24 +405,26 @@ function App() {
           >{track.name}</button>)}
         </div>
         <div className="search-caption">{query ? `${filteredLessons.length} RESULT${filteredLessons.length === 1 ? '' : 'S'}` : 'QUICK JUMP'}</div>
-        {filteredLessons.length ? filteredLessons.map((lesson, index) => {
-          const subject = subjectById.get(lesson.subjectId)
-          const track = trackById.get(lesson.track)
-          return <button
-            id={`search-${lesson.id}`}
-            key={lesson.id}
-            className={`search-result ${index === searchIndex ? 'search-result-active' : ''}`}
-            onMouseMove={() => setSearchIndex(index)}
-            onClick={() => openLesson(lesson)}
-          >
-            <span className="result-icon">{subject?.icon ?? '◉'}</span>
-            <span>{lesson.title}<small>{track?.name} · {subject?.name} · {lesson.chapterTitle}</small></span>
-            <span className="result-time">{lesson.duration} min ↗</span>
-          </button>
-        }) : <div className="empty-search">No lessons found. Try a different search or path.</div>}
+        <div className="search-results">
+          {filteredLessons.length ? filteredLessons.map((lesson, index) => {
+            const subject = subjectById.get(lesson.subjectId)
+            const track = trackById.get(lesson.track)
+            return <button
+              id={`search-${lesson.id}`}
+              key={lesson.id}
+              className={`search-result ${index === searchIndex ? 'search-result-active' : ''}`}
+              onMouseMove={() => setSearchIndex(index)}
+              onClick={() => openLesson(lesson)}
+            >
+              <span className="result-icon">{subject?.icon ?? '◉'}</span>
+              <span>{lesson.title}<small>{track?.name} · {subject?.name} · {lesson.chapterTitle}</small></span>
+              <span className="result-time">{lesson.duration} min ↗</span>
+            </button>
+          }) : <div className="empty-search">No lessons found. Try a different search or path.</div>}
+        </div>
         <div className="search-footer">↑↓ to navigate <span>↵ to open</span></div>
       </div>
-    </div>}
+    </div>, document.body)}
   </div>
 }
 
@@ -617,7 +672,14 @@ function LessonPage({ lesson, markdown, completed, onComplete, onBack, onNavigat
 
   return <article className="lesson-page">
     <button className="back-link" onClick={onBack}>← <span>All lessons</span></button>
-    <div className="lesson-kicker"><span className="lesson-subject-dot">◉</span>{track?.name.toUpperCase()} · {lesson.subject.toUpperCase()}<span>·</span>{lesson.chapterTitle.toUpperCase()}</div>
+    <div className="lesson-kicker">
+      <span className="lesson-subject-dot">◉</span>
+      <span>{track?.name.toUpperCase()}</span>
+      <span aria-hidden="true">·</span>
+      <span>{lesson.subject.toUpperCase()}</span>
+      <span aria-hidden="true">·</span>
+      <span>{lesson.chapterTitle.toUpperCase()}</span>
+    </div>
     <div className="lesson-title-row">
       <div>
         <h1>{lesson.title}</h1>

@@ -290,7 +290,7 @@
   /* Decorative orbit only competes with the resume card on a phone. */
   .welcome-illustration { display: none }
 
-  .welcome-date { font-size: 7px }
+  .welcome-date { font-size: 9px }
 
   .learning-grid { margin-top: 20px }
 
@@ -301,7 +301,7 @@
 
   .weekly-top h3 { display: none }
 
-  .weekly-card > p { font-size: 9px; margin: 10px 0 12px }
+  .weekly-card > p { font-size: 10px; margin: 10px 0 12px }
 
   .weekly-note { display: none }
 
@@ -315,13 +315,13 @@
 
   .continue-info { padding: 13px 11px }
 
-  .continue-meta { font-size: 7px; flex-wrap: wrap }
+  .continue-meta { font-size: 9px; flex-wrap: wrap }
 
-  .continue-info h3 { font-size: 12px; line-height: 1.4 }
+  .continue-info h3 { font-size: 13px; line-height: 1.4 }
 
-  .continue-info > p { font-size: 8px }
+  .continue-info > p { font-size: 10px }
 
-  .resume-button { font-size: 8px }
+  .resume-button { font-size: 10px }
 
   .section-heading { margin-top: 25px }
 
@@ -399,13 +399,13 @@
 
   .objectives-card p { font-size: 12px }
 
-  .lesson-prose { font-size: 11px }
+  .lesson-prose { font-size: 13px }
 
   .lesson-prose h2 { font-size: 17px }
 
-  .lesson-pagination button { font-size: 9px }
+  .lesson-pagination button { font-size: 10px }
 
-  .lesson-meta { font-size: 8px }
+  .lesson-meta { font-size: 10px }
 
   .desktop-break { display: none }
 
@@ -440,7 +440,7 @@
 
   .font-controls { padding: 1px }
 
-  .font-size-button { font-size: 9px; padding: 6px 4px }
+  .font-size-button { font-size: 10px; padding: 6px 4px }
 
   .reading-label { display: none }
 

@@ -114,8 +114,8 @@
 
 .subject-count {
   margin-left: auto;
-  font-size: 10px;
-  color: #b1b4ad;
+  font-size: 11px;
+  color: var(--muted-soft);
 }
 
 /* Chapter rail: only the open subject expands, and it scrolls on its own */
@@ -134,10 +134,10 @@
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1.4;
   font-weight: 600;
-  color: #646b60;
+  color: #596052;
   padding: 7px 3px;
   width: 100%;
   border: 0;
@@ -149,8 +149,8 @@
 .chapter-heading.chapter-current { color: var(--accent-ink) }
 
 .chapter-number {
-  color: #a1a79d;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 9px;
   min-width: 14px;
   padding-top: 1px;
 }
@@ -163,8 +163,8 @@
   background: transparent;
   width: 100%;
   text-align: left;
-  color: #858a82;
-  font-size: 10px;
+  color: var(--muted-soft);
+  font-size: 11px;
   line-height: 1.45;
   padding: 7px 3px;
 }
@@ -197,7 +197,7 @@
   border: 0;
   background: transparent;
   color: var(--accent-ink);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   padding: 9px 3px 7px;
   text-align: left;
@@ -265,22 +265,22 @@
 .streak-top > span:first-child { font-size: 16px }
 
 .streak-days {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  color: #56634f;
+  color: #4f5c49;
 }
 
 .streak-card p {
-  font-size: 10px;
-  color: #92968f;
+  font-size: 11px;
+  color: var(--muted-soft);
   margin: 4px 0 12px;
 }
 
 .streak-bars { display: flex; justify-content: space-between }
 
 .streak-day {
-  font-size: 8px;
-  color: #a3a79f;
+  font-size: 9px;
+  color: var(--muted-soft);
   text-align: center;
   display: grid;
   gap: 5px;
@@ -320,15 +320,15 @@
 }
 
 .profile-name {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.5;
 }
 
 .profile-name small {
   display: block;
-  font-size: 9px;
-  color: #979b93;
+  font-size: 10px;
+  color: var(--muted-soft);
   font-weight: 400;
 }
 
@@ -363,8 +363,8 @@
   align-items: center;
   gap: 10px;
   min-width: 0;
-  font-size: 10px;
-  color: #858a82;
+  font-size: 11px;
+  color: var(--muted-soft);
 }
 
 /* Every crumb may shrink and ellipsis rather than wrap the sticky bar. */
@@ -392,8 +392,8 @@
   border: 1px solid #eceee8;
   border-radius: 6px;
   background: var(--surface-soft);
-  color: #898e86;
-  font-size: 10px;
+  color: var(--muted-soft);
+  font-size: 11px;
   padding: 7px 9px;
   min-width: 212px;
   text-align: left;
@@ -415,7 +415,7 @@
 .icon-button {
   border: 0;
   background: transparent;
-  color: #81877d;
+  color: var(--muted-soft);
   font-size: 17px;
 }
 
@@ -446,7 +446,7 @@
   border-radius: 4px;
   background: transparent;
   color: #526151;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   line-height: 1;
   padding: 6px 5px;
@@ -465,7 +465,7 @@
 .reading-label {
   min-width: 28px;
   text-align: center;
-  color: #778075;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 10px;
   font-weight: 700;
 }

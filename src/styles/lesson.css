@@ -7,8 +7,8 @@
 .back-link {
   border: 0;
   background: none;
-  color: #838980;
-  font-size: 11px;
+  color: var(--muted-soft);
+  font-size: 12px;
   padding: 2px 0 22px;
 }
 
@@ -17,12 +17,15 @@
 .lesson-kicker {
   display: flex;
   align-items: center;
-  gap: 7px;
-  color: #829079;
-  font-size: 8px;
+  flex-wrap: wrap;
+  gap: 2px 7px;
+  color: #71805f;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+.lesson-kicker > span { white-space: nowrap }
 
 .lesson-subject-dot { color: #7092a1; font-size: 14px }
 
@@ -41,9 +44,9 @@
 }
 
 .lesson-deck {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
-  color: #899087;
+  color: var(--muted-soft);
   margin: 9px 0 0;
 }
 
@@ -54,7 +57,7 @@
   background: var(--complete-bg);
   color: var(--complete-ink);
   padding: 9px 11px;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -68,8 +71,8 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #a0a49c;
-  font-size: 9px;
+  color: var(--muted-soft);
+  font-size: 11px;
   padding: 17px 0 20px;
   border-bottom: 1px solid var(--line);
 }
@@ -113,7 +116,7 @@
 
 .toc-card a {
   display: block;
-  color: #777e74;
+  color: var(--muted-soft);
   text-decoration: none;
   font-size: 13px;
   line-height: 1.5;
@@ -135,7 +138,7 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  color: #848a81;
+  color: var(--muted-soft);
   font-size: 13px;
   line-height: 1.55;
   margin: 10px 0;
@@ -159,8 +162,8 @@
 }
 
 .lesson-actions > span {
-  font-size: 9px;
-  color: #9a9f96;
+  font-size: 10px;
+  color: var(--muted-soft);
 }
 
 .lesson-pagination {
@@ -173,8 +176,8 @@
 .lesson-pagination button {
   border: 0;
   background: none;
-  color: #62775f;
-  font-size: 10px;
+  color: #556b52;
+  font-size: 11px;
 }
 
 .lesson-pagination span { padding: 0 5px }

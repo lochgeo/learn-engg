@@ -9,11 +9,11 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #5f755c;
+  color: #4d6249;
   background: #eff3ec;
   border-radius: var(--radius-pill);
   padding: 6px 9px;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: .9px;
 }
@@ -26,9 +26,9 @@
 }
 
 .welcome-date {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1px;
-  color: #a2a69d;
+  color: var(--muted-soft);
 }
 
 .welcome-heading {
@@ -54,9 +54,9 @@
 }
 
 .welcome-heading p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
-  color: #888e84;
+  color: #5f665c;
   margin: 0;
 }
 
@@ -212,8 +212,8 @@
 }
 
 .course-card p {
-  font-size: 9px;
-  color: #858b82;
+  font-size: 11px;
+  color: var(--muted-soft);
   margin: 4px 0 13px;
 }
 
@@ -221,8 +221,8 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #899084;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 10px;
 }
 
 /* Path cards: three destinations, with their subjects and live progress. */
@@ -244,8 +244,8 @@
 }
 
 .path-subject-line {
-  color: #8b9388;
-  font-size: 9px;
+  color: var(--muted-soft);
+  font-size: 10px;
   line-height: 1.55;
   margin-bottom: 11px;
 }
@@ -323,9 +323,9 @@
   position: absolute;
   bottom: 16px;
   left: 14px;
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 1.5px;
-  color: #899480;
+  color: #6f7c66;
 }
 
 .art-star {
@@ -338,10 +338,10 @@
 .continue-info { padding: 16px 17px 12px }
 
 .continue-meta {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: .6px;
   font-weight: 700;
-  color: #8d9389;
+  color: var(--muted-soft);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -369,9 +369,9 @@
 }
 
 .continue-info > p {
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.55;
-  color: #92978e;
+  color: var(--muted-soft);
   margin: 0;
   max-width: 370px;
 }
@@ -384,14 +384,14 @@
 }
 
 .resume-button {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   color: #49634d;
 }
 
 .resume-button span { padding-left: 7px }
 
-.lesson-time { font-size: 8px; color: #a0a49b }
+.lesson-time { font-size: 10px; color: var(--muted-soft) }
 
 .weekly-card {
   border: 1px solid #e6e9df;
@@ -422,26 +422,26 @@
 }
 
 .weekly-card > p {
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1.65;
-  color: #82897e;
+  color: var(--muted-soft);
   margin: 14px 0 19px;
 }
 
-.weekly-card > p strong { font-weight: 700; color: #5d6857 }
+.weekly-card > p strong { font-weight: 700; color: #4f5a49 }
 
 .weekly-progress-header {
   display: flex;
   justify-content: space-between;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: .8px;
-  color: #91978c;
+  color: var(--muted-soft);
   margin-bottom: 7px;
 }
 
 .weekly-progress-header strong {
-  font-size: 9px;
-  color: #63785e;
+  font-size: 10px;
+  color: #4e6248;
   letter-spacing: 0;
 }
 
@@ -449,8 +449,8 @@
   border-top: 1px solid #dfe4d9;
   margin-top: 15px;
   padding-top: 11px;
-  color: #858d7f;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 9px;
 }
 
 .weekly-note span { color: #91a17b; margin-right: 5px }

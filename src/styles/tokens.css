@@ -17,7 +17,8 @@
   --ink: #262a25;
   --ink-strong: #2b302b;
   --ink-body: #4e554b;
-  --muted-soft: #999e95;
+  /* 4.5:1 on both --paper and --surface, so muted labels stay legible. */
+  --muted-soft: #6b7368;
 
   /* Lines */
   --line: #e9eae4;
@@ -80,6 +81,8 @@
   /* Motion */
   --ease: .15s ease;
 
+  color-scheme: light;
+
   font-family: var(--font-sans);
   /* Page-level text colour differs slightly from the app ink (#252923 vs #262a25). */
   color: #252923;
@@ -91,6 +94,8 @@
 }
 
 .dark {
+  color-scheme: dark;
+
   --paper: #101719;
   --surface: #192326;
   --surface-soft: #202c2f;

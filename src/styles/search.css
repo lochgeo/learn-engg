@@ -12,11 +12,25 @@
 
 .search-modal {
   width: min(510px, calc(100vw - 30px));
+  max-height: min(76vh, 640px);
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-pop);
   border-radius: var(--radius-lg);
   padding: 9px;
+  color: var(--ink);
+}
+
+/* Results scroll inside the dialog; header, filters and footer stay put. */
+.search-results {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #c7d2c4 transparent;
 }
 
 .search-input-row {
@@ -39,7 +53,7 @@
   flex: 1;
 }
 
-.search-input-row input::placeholder { color: #a0a69c }
+.search-input-row input::placeholder { color: var(--muted-soft) }
 
 .search-filters {
   display: flex;
@@ -51,10 +65,10 @@
 .search-filter {
   border: 1px solid var(--line);
   background: transparent;
-  color: #858b82;
+  color: var(--muted-soft);
   border-radius: var(--radius-pill);
   padding: 4px 8px;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.2;
 }
 
@@ -68,9 +82,9 @@
 }
 
 .search-caption {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1px;
-  color: #999f94;
+  color: var(--muted-soft);
   padding: 15px 8px 7px;
   font-weight: 700;
 }
@@ -85,7 +99,7 @@
   background: transparent;
   text-align: left;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .search-result:hover { background: #f3f5f0 }
@@ -104,28 +118,28 @@
 
 .search-result small {
   display: block;
-  color: #979d92;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 11px;
   margin-top: 3px;
 }
 
 .result-time {
   margin-left: auto;
-  color: #9da397;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 10px;
 }
 
 .empty-search {
   padding: 18px 8px;
-  color: #979d92;
-  font-size: 10px;
+  color: var(--muted-soft);
+  font-size: 11px;
 }
 
 .search-footer {
   border-top: 1px solid var(--line);
   padding: 9px 8px 2px;
-  color: #a0a59d;
-  font-size: 8px;
+  color: var(--muted-soft);
+  font-size: 10px;
 }
 
 .search-footer span { margin-left: 15px }

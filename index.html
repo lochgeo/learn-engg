@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f7f4" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // Apply the saved or system theme before first paint to avoid a light flash.
+      (() => {
+        try {
+          const stored = localStorage.getItem('studyroom-theme')
+          const dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (!dark) return
+          document.documentElement.classList.add('dark')
+          document.documentElement.style.colorScheme = 'dark'
+          const meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', '#101719')
+        } catch {}
+      })()
+    </script>
     <meta name="description" content="A thoughtful, self-paced learning hub for Class 11, Class 12 and a professional certification." />
     <title>Studyroom - Class 11, Class 12 and Certification</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
