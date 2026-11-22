@@ -59,12 +59,14 @@ The site is a static Vite build with no server-side code, so it deploys to Cloud
    | Setting | Value |
    | --- | --- |
    | Production branch | `main` |
-   | Framework preset | `Vite` |
+   | Framework preset | `React (Vite)` — or `None` and type the command/output yourself |
    | Build command | `npm run build` |
    | Build output directory | `dist` |
    | Root directory | *(leave empty)* |
 
 5. Save and deploy. Every later push to `main` redeploys automatically, and other branches get preview URLs such as `https://<branch>.studyroom.pages.dev`.
+
+The preset is only a shortcut — it fills in `npm run build` and `dist`. If the dashboard shows `None`, enter those two values manually; no other setting changes.
 
 No environment variables or secrets are required. Vite serves from the domain root on Cloudflare (`base: '/'`); the `GITHUB_ACTIONS` check in `vite.config.ts` only applies the repository subpath when GitHub Actions builds for GitHub Pages. Set `BASE_PATH` if you ever host the build under a subpath elsewhere.
 
