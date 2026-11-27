@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import {
-  content,
+  contentLoaders,
   curriculum,
   lessons,
   subjects,
@@ -123,6 +123,9 @@ function App() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchIndex, setSearchIndex] = useState(0)
   const [searchTrack, setSearchTrack] = useState<TrackId | 'all'>('all')
+  const [searchContent, setSearchContent] = useState<Record<string, string>>({})
+  const searchContentLoaded = useRef(false)
+  const [markdown, setMarkdown] = useState('')
   const [dark, setDark] = useState(() => {
     const savedTheme = localStorage.getItem('studyroom-theme')
     if (savedTheme) return savedTheme === 'dark'
@@ -224,6 +227,33 @@ function App() {
           : 'Studyroom - Class 11, Class 12 and Certification'
   }, [view, activeId, activeSubjectId, activeTrackId])
 
+  // Lessons are separate lazy chunks; load only the active lesson for rendering.
+  useEffect(() => {
+    let cancelled = false
+    setMarkdown('')
+    const loader = contentLoaders[`./${activeLesson.file}`]
+    if (!loader) return () => { cancelled = true }
+    loader()
+      .then((text) => { if (!cancelled) setMarkdown(text) })
+      .catch(() => { if (!cancelled) setMarkdown('') })
+    return () => { cancelled = true }
+  }, [activeLesson.file])
+
+  // Full-text search needs every body, but only once and only when search opens.
+  useEffect(() => {
+    if (!searchOpen || searchContentLoaded.current) return
+    let cancelled = false
+    const keys = lessons.map((lesson) => `./${lesson.file}`)
+    Promise.all(keys.map(async (key) => [key, await (contentLoaders[key]?.() ?? '')] as const))
+      .then((entries) => {
+        if (cancelled) return
+        searchContentLoaded.current = true
+        setSearchContent(Object.fromEntries(entries))
+      })
+      .catch(() => { /* Title search remains available if a lazy chunk cannot load. */ })
+    return () => { cancelled = true }
+  }, [searchOpen])
+
   const filteredLessons = useMemo(() => {
     const term = query.trim().toLowerCase()
     return lessons
@@ -231,16 +261,14 @@ function App() {
         const subject = subjectById.get(lesson.subjectId)
         const track = trackById.get(lesson.track)
         const title = `${lesson.title} ${lesson.chapterTitle} ${lesson.subject} ${subject?.name ?? ''} ${track?.name ?? ''}`.toLowerCase()
-        const body = (content[`./${lesson.file}`] ?? '').replace(/[`*_#>[\]()]/g, ' ').toLowerCase()
+        const body = (searchContent[`./${lesson.file}`] ?? '').replace(/[`*_#>[\]()]/g, ' ').toLowerCase()
         const rank = title.includes(term) ? 0 : body.includes(term) ? 1 : 2
         return { lesson, rank }
       })
       .filter(({ lesson, rank }) => (searchTrack === 'all' || lesson.track === searchTrack) && (!term || rank < 2))
       .sort((a, b) => a.rank - b.rank)
       .map(({ lesson }) => lesson)
-  }, [query, searchTrack])
-
-  const markdown = content[`./${activeLesson.file}`] ?? ''
+  }, [query, searchTrack, searchContent])
 
   useEffect(() => { setSearchIndex(0) }, [query, searchOpen, searchTrack])
 

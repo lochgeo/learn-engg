@@ -693,4 +693,4 @@ export const lessons: Lesson[] = [
   { id: 'full-mock-strategy', title: 'Full mock: timing, question strategy and review', chapter: 'certification-ccdv-f-exam-readiness', chapterTitle: 'Exam Readiness', chapterNumber: 9, subject: 'CCDV-F', track: 'certification', subjectId: 'certification-ccdv-f', duration: 30, objectives: ['Pace 53 questions across 120 minutes', 'Read multiple-response items without over-selecting', 'Eliminate plausible-but-wrong options', 'Convert a mock debrief into the next study block'], prerequisites: ['The CCDV-F blueprint and a study plan'], file: 'certification/ccdv-f/exam-readiness/full-mock-strategy.md' },
 ]
 
-export const content = import.meta.glob('./**/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>
+export const contentLoaders = import.meta.glob('./**/*.md', { query: '?raw', import: 'default' }) as Record<string, () => Promise<string>>

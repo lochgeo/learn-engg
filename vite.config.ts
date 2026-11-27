@@ -40,8 +40,9 @@ export default defineConfig({
         // Every lesson, image and font is small enough to precache in full, so
         // the whole library reads offline, not just the pages already visited.
         globPatterns: ['**/*.{js,css,html,svg,png,jpg,jpeg,webp,woff,woff2}'],
-        // Every lesson is bundled into the main chunk (~2.5 MB), so the default
-        // 2 MiB precache ceiling would skip the app shell entirely.
+        // Apply a per-file ceiling large enough for any single generated asset.
+        // Lessons are separate lazy chunks, so lesson growth no longer inflates
+        // the main application-shell file.
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
